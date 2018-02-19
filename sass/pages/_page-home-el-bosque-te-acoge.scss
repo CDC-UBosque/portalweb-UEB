@@ -1,0 +1,229 @@
+// URL: /el-bosque-te-acoge/
+.page-home-el-bosque-te-acoge {
+	.title-bosque-acoge {
+		text-align: center;
+	    padding: 0;
+		h2 {
+			color: white;
+			font-size: 39px;
+			line-height: 24px;
+			letter-spacing: -1px;
+			font-family: $font-bsb;
+		}
+
+		.field--name-field-bocadillo {
+			color: white;
+			line-height: 37px;
+			font-size: 39px;
+			font-family: $font-bli;
+		}
+	}
+
+	/*
+	.field--name-field-image {
+		@include grilla-3-columns-bs('.main-bosque-acoge-forms form', '.form-item');
+		background: url(../images/main-image-bosque-acoge.jpg) no-repeat 50% 0;
+		background-size: 100% auto;
+		padding: 30px 0;
+	}*/
+
+    .node--type-bosque-008-main-image {
+        .field--name-field-image {
+            z-index: -1000;
+        }
+    }
+
+    .main-image {
+        .field--name-field-titulo-2 {
+            position: relative;
+        }
+    }
+    .container-form-filter {
+        position: absolute;
+        bottom: 50px;
+        padding: 0px;
+        text-align: center;
+        width: 80%;
+        padding-left: 10%;
+
+        @media only screen and (max-width: $tablet) {
+            width: 96%;
+            padding-left: 2%;
+        }
+
+        .field--name-field-bocadillo-150 {
+            @include acherus_grotesqueultralight(38px);
+            line-height: 43px;
+            color: white;
+            margin-bottom: 70px;
+
+            @media only screen and (max-width: $tablet) {
+                @include acherus_grotesqueultralight(24px);
+                line-height: 26px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .field--name-field-titulo-2 {
+            padding: 0px;
+            padding-bottom: 5px;
+
+            @media only screen and (max-width: $tablet) {
+                @include acherus_black(32px);
+                line-height: 100%;
+            }
+        }
+        
+        label {
+            display: none;
+        }
+
+        .js-form-type-select {
+            @include inline-block(top);
+            padding: 0 10px;
+            width: 33.33%;
+            box-sizing: border-box;
+            margin-bottom: 35px;
+
+            @media only screen and (max-width: $tablet) {
+                margin-bottom: 10px;
+            }
+        }
+
+        form {
+            @include ib-grid;
+            margin: 0 -10px;
+        }
+
+        .form-actions,
+        .field--name-field-enlace {
+            display: inline-block;
+        }
+
+        .form-actions {
+            padding-right: 10px;
+            input {
+                @include buton-xl-white;
+                cursor: pointer;             
+            }          
+        }
+
+        .field--name-field-enlace {
+            padding-left: 10px;
+            a {
+                @include buton-xl-green;
+            }
+        }
+    }
+
+    .boton-bosque-te-acoge {
+        text-align: center;
+        display: block;
+        width: 25%;
+        margin-top: -94px;
+        float: right;
+        margin-right: 32%;
+        a {
+            @include buton-xl-green;
+            padding: 10px 25px !important;
+        }
+    }
+
+    .main-bosque-acoge-forms {
+        .form-actions {
+            .form-submit {
+                margin-right: 20%;
+                @include buton-xl-white;
+            }
+        }
+    }
+
+    .SumoSelect {
+        width: 100%;
+        .CaptionCont {
+            padding: 19px 15px 19px 0;
+            padding-left: 0px;
+            border-radius: 5px;
+
+            span {
+                text-align: left;
+                padding-left: 10px;
+				background: url(../images/svg/ArrowGreenDown-2.svg) no-repeat 100% 50%;
+            }
+        }
+
+        &:focus,
+        &:hover,
+        &.open {
+            
+            >.optWrapper {
+                top: 70px;
+                border-radius: 5px;
+            }
+            
+        }
+
+        .optWrapper {
+            >.options {
+                li.opt {
+                    text-align: left;
+                    position: relative;
+                    padding: 13px 8px;
+
+                    @media only screen and (max-width: $tablet) {
+                        padding: 8px 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    #prefooter {
+        
+
+        .prefooter-container {
+            position: relative;
+
+            &::before {
+                @include punto-title;
+                content: "";
+            }
+        }
+
+        .pre_footer {
+            padding-top: 20px;
+        }
+
+        .information-additional {
+            h2 {
+                @include latoblack(11px);
+                line-height: 100%;
+            }
+
+            .field--type-text-with-summary {
+                p {
+                    @include latoregular(11px);
+                    line-height: 13px;
+                }
+            }
+        }
+
+        @media only screen and (min-width: $tablet) {
+            .block {
+                &:first-child {
+                    width: 40%;
+                }
+            }
+            .block-addtoany {
+                width: 35%;
+            }
+
+            .information-additional {
+                @include inline-block(top);
+                box-sizing: border-box;
+                padding-left: 20px;
+                width: 25%;                
+            }
+        }
+    }
+}

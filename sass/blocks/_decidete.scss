@@ -1,0 +1,278 @@
+.decidete {
+	$mobile: 580px;
+
+	.js-decidete-inner {
+		@include ib-grid;
+		overflow: hidden;
+		position: relative;
+	}
+
+	@include ib-grid;
+	background: #f9f9f9;
+	position: relative;
+	margin-bottom: 80px;
+	
+	@media only screen and (max-width: $tablet) {
+		@include bg-laterales(#f9f9f9, 100%);
+		margin-bottom: 30px;
+	}
+
+	@media only screen and (max-width: $mobile) {
+		margin-bottom: 0;
+	}
+
+	@mixin local-border {
+		content: "";
+		height: 100%;
+		width: 1px;
+		background: $color_gray_15;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 100%;
+	}
+
+	.text-content,
+	.video-content,
+	.field--name-field-fortalezas-del-programa {
+		@include inline-block(top);
+		height: 100%;
+		box-sizing: border-box;
+	}
+	.video-embed-field-responsive-video {
+		width: 100%;
+		
+	}
+	.text-content {
+		@include content-title-light('.field--type-ds > p', '.field--name-field-titulo-decidete', '.field--type-link > a');
+		width: 24%;
+		padding: 95px 30px 0px 38px;
+		
+		&::before {
+			@include local-border;
+			left: 24%;
+		}
+
+		&::after {
+			@include local-border;
+			left: auto;
+			left: 58%;
+		}
+		@media only screen and (max-width: $tablet) {
+			width: 17%;
+			padding: 19px 17px 10px 0; //19px 17px 10px 15px;
+			&::before {
+				@include local-border;
+				left: 17%;
+			}
+			&::after {
+				@include local-border;
+				left: auto;
+				left: 59%;
+			}
+		}
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+			&::before {
+				display: none;
+			}
+			&::after {
+				display: none;
+			}
+		}
+
+		.field--name-field-titulo-decidete {
+			line-height: 39px;
+			@media only screen and (max-width: $tablet) {
+				letter-spacing: -0.5px;
+				padding-bottom: 0;
+			}
+	
+			// Estorban en: /cursos-preuniversitarios/ingenierias-y-ciencias-ambientales
+			// Creo que estorban solo en mobile, los pongo en tablet únicamente
+			// Necesario en: /cursos-preuniversitarios/curso-formacion-musical
+			@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+				line-height: 24px;
+				font-size: 20px;
+				width: 110%; // Para que se corte en la 'en': "Por qué estudiar en El Bosque"
+			}
+		}
+
+		.field--type-ds{
+			p {
+				padding-bottom: 0px;
+				@media only screen and (max-width: $tablet) {
+					padding-bottom: 15px;
+				}				
+			}
+		} 
+	}
+
+	.video-content {
+		width: 42%; //42%;
+		padding: 65px 38px 55px;
+		min-height: 480px;
+		@media only screen and (max-width: $tablet) {
+			padding: 48px 0px 55px;
+			width: 41%;
+		}	
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+			padding: 15px 0px 25px;
+			position: relative;
+			min-height: auto;
+
+			&:before {
+				content: "";
+				background-color: #ededed;
+				display: block;
+				position: absolute;
+				top: 0px;
+				left: 0;
+				width: 100%;
+				height: 1px;
+			}
+		}
+	}
+
+	.field--name-field-frase-decidete-videos {
+		@include acherus_grotesqueultralight(20px);
+		padding: 0 20px 40px;
+
+		@media only screen and (max-width: $mobile) {
+			// padding-top: 50px; estorba en http://uat_ubosque.d8.seedoven.co/cursos-preuniversitarios/curso-formacion-musical
+			padding-bottom: 20px;
+		}
+
+		p {
+			@include inherit;
+			margin: 0;
+
+			& + p {
+				display: none;
+			}
+		}
+	}
+
+	.field--name-field-fortalezas-del-programa {
+		@include ib-grid;
+		@include clearfix;
+		width: 34%;
+		position: relative;
+
+		@media only screen and (max-width: $tablet) {
+			width: 42%;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			width: auto;
+			margin: 0 -10px;
+			overflow: hidden;
+		}
+
+		.fortaleza-group {
+			border-bottom: 1px solid $color_gray_15;
+			overflow: hidden;
+
+			&:last-child {
+				border: 0;
+			}
+
+			.field__item__3 {
+				&::before {
+					@include local-border;
+					height: 200%;
+					left: 50%;
+				}
+			}
+			
+			.field__item__3 {
+				@include acherus_grotesquebold(14px);
+				float: right;
+				
+			}
+
+			.field__item__4 {
+				border-bottom: 1px solid $color_gray_15;
+			}
+
+			.field__item__5 {
+				clear: left;
+			}
+
+			.field__item__6 {
+				@include acherus_grotesquebold(14px);
+			}
+		}
+
+		.js_field__item__group {
+			overflow: hidden;
+			float: left;
+			width: 100%;
+		}
+		
+		.field__item {
+			@include latolight(16px);
+			padding: 19px 17px 10px 21px;
+			box-sizing: border-box;
+			width: 50%;
+			float: left;
+			@media only screen and (max-width: $tablet) {
+				padding: 19px 10px 10px;
+			}
+		}
+	}
+
+	.field--name-field-imagen-facultad,
+	.field--name-field-video {
+		box-sizing: border-box;
+		
+		@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+			padding-left: 10px;
+		}
+
+		@media only screen and (min-width: 1200px) {
+			margin-left: -37px;
+			margin-right: -49px;
+			position: absolute;
+			bottom: 0;
+			width: 42%;
+		}
+
+		img {
+			display: block;
+		}
+	}
+
+	.field--name-field-video-decidete,
+	.field--type-file {
+		// margin: 0 -45px -55px;
+
+		
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 42% !important;
+		@media only screen and (max-width: $tablet) {
+			position: inherit;
+			width: 100% !important;
+		}
+		//max-height: 275px !important;
+
+		.video-js {
+			width: 42% !important;
+			max-height: 275px !important;
+
+			> * {
+				width: 100% !important;
+				max-height: 275px !important;
+			}
+		}
+	}
+	@media only screen and (max-width: $tablet) {
+		.field--name-field-video-decidete {
+			margin: 0 0 0;
+		}
+	}
+	
+}

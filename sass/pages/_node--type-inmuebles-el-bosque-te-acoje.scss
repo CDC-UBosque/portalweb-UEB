@@ -1,0 +1,350 @@
+.node--type-inmuebles-el-bosque-te-acoje {
+	$mobile-1: 500px;
+
+    .content-top {
+        @include ib-grid;
+        padding-bottom: 40px;
+
+	    .text-content {
+	        @include inline-block(bottom);
+	        @include two-text-inline ('.field__label', '.field__item');
+	        box-sizing: border-box;
+
+			@media only screen and (min-width: 500px) and (max-width: $tablet) {
+				width: calc(100% - 350px);
+				padding-left: 10px;
+			}
+
+			@media only screen and (min-width: $tablet) {
+				width: 45%;
+				padding-left: 10px;
+			}
+
+	        > .field {
+	            padding-bottom: 5px;
+	        }
+
+	        .field--name-field-presencial {
+	            .field__item {
+	                border-bottom: 1px solid $color-brand;
+	            }
+	        } 
+	    }
+    }
+
+    .image-content {
+        @include inline-block(top);
+		width: 55%;
+        // width: 490px;
+        box-sizing: border-box;
+        padding-right: 10px;
+
+		@media only screen and (max-width: $tablet) {
+			width: 49%;
+			min-width: 350px;
+		}
+
+		@media only screen and (max-width: $mobile-1) {
+			width: 100%;
+			min-width: inherit;
+			padding-right: 0;
+		}
+    }
+
+
+	.field--name-field-presencial {
+		word-wrap: break-word;
+	}
+
+    .content-middle {
+        @include two-text-inline ('.field__label', '.field__item, .field__items');
+
+		.field--name-field-catergoria {
+			.field__label {
+				&::after {
+					content: ": ";
+				}
+			}
+		}
+
+		@media only screen and (max-width: $mobile) {
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+
+        .data-content {
+            @include ib-grid;
+            background-color: #f9f9f9;
+            padding: 30px; // 40px;
+            margin-bottom: 40px;
+        }
+
+        .column-text {
+            @include inline-block(top);
+            width: 33.33%;
+
+			@media only screen and (max-width: $mobile) {
+				width: 50%;
+			}
+
+            > .field {
+                padding-bottom: 10px;
+                line-height: 100%;
+                font-size: 16px;
+            }
+        }
+
+		.column-text-3 {
+			@media only screen and (max-width: $mobile) {
+				margin-top: 25px;
+			}
+		}
+
+        .price-group {
+            background-color: white;
+            margin-top: 15px;
+            padding: 20px;
+			overflow: hidden;
+
+            .field__label,
+            .field__item {
+                @include acherus_grotesqueultralight(17px);
+                line-height: 100%;
+            }
+
+			.field--name-field-extranjeros {
+				margin-bottom: 25px;
+			}
+
+			@media only screen and (min-width: $mobile) {
+	            .field--name-field-extranjeros {
+	            	float: left;
+					width: 68%;
+					margin-bottom: 0;
+	            }
+
+	            .field--name-field-numeric-entero {
+	            	float: right;
+					width: 30%;
+	            }
+			}
+        }      
+    }
+
+     .content-bottom {
+        @include ib-grid;
+
+        .field__label {
+            @include latoblack(19px);
+            line-height: 100%;
+            padding-bottom: 10px;
+        }
+
+        .field__item {
+            @include paragraphs_large;
+        }
+
+        .field--name-field-recomendaciones-prueba {
+			padding-bottom: 42px;
+
+			@media only screen and (min-width: $mobile) {
+	            @include inline-block(top);
+	            width: 54%;
+	            box-sizing: border-box;
+	            padding-right: 10px;
+				padding-bottom: 0;
+			}
+        }
+
+        .field--name-field-localizacion {
+			.field__label {
+				@media only screen and (max-width: $mobile) {
+					padding-bottom: 18px;
+				}
+			}
+
+			@media only screen and (min-width: $mobile) {
+	            @include inline-block(top);
+	            width: 45%;
+	            box-sizing: border-box;
+	            padding-left: 10px;
+			}
+        }
+
+        .geolocation-google-map {
+            height: 215px !important;
+        }
+    }
+	
+	&.node--view-mode-full {
+		.field--name-field-imagenes-multiples {
+			overflow: hidden;
+			height: 212px;
+			position: relative;
+
+			@media only screen and (max-width: $tablet) {
+				height: 153px;
+			}
+
+			@media only screen and (max-width: $mobile-1) {
+				height: 250px;
+				margin-left: -30px;
+				margin-right: -30px;
+				padding-bottom: 35px;
+			}
+
+			.field__item {
+				width: 80px;
+				height: 50px;
+				overflow: hidden;
+				position: absolute;
+				left: 0;
+				top: 0;
+				transition: .3s ease-out all;
+				cursor: pointer;
+
+				img {
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
+
+				&.active {
+					position: absolute;
+					transition: .3s ease-out all;
+					width: 375px; //300px;
+					height: auto;
+					left: 100px;
+					top: 0 !important;
+					cursor: default;
+
+					img {
+						display: block;
+						height: auto;
+						width: auto;
+					}
+				}
+			}
+
+			@for $i from 0 through 5 {
+				[data-num="#{$i+1}"] {
+				 	top: 55px * $i;
+				}
+			}
+
+			@media only screen and (max-width: $tablet) {
+				.field__item {
+					width: 57px;
+					height: 30px;
+
+					&.active {
+						width: 275px;
+						left: 73px;
+					}
+				}
+
+				@for $i from 0 through 5 {
+					[data-num="#{$i+1}"] {
+					 	top: 38px * $i;
+					}
+				}
+			}
+
+			@media only screen and (max-width: $mobile-1) {
+				.field__item {
+					width: 57px;
+					height: 30px;
+					top: 220px;
+
+					&.active {
+						width: 100%; //275px;
+						height: 200px;
+						top: 0;
+						left: 0;
+
+						img {
+							width: 100%;
+						}
+					}
+				}
+
+				@for $i from 1 through 4 {
+					[data-num="#{$i}"] {
+					 	left: (70px * $i) - 35px;
+					}
+				}
+			}
+		}
+	}
+	
+	&.node--view-mode-teaser {
+		@media only screen and (max-width: $mobile) {
+			.field--name-field-imagenes-multiples {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+		}
+
+		.text-content {
+			background-color: white;
+			padding: 14px 20px;
+
+			@media only screen and (max-width: $mobile) {
+				padding: 20px;
+			}
+		}
+
+		.field {
+			margin-bottom: 8px;
+			line-height: 100%;
+		}
+
+		.field__items {
+			display: inline;
+		}
+
+		.field--name-field-imagenes-multiples {
+			display: block;
+			margin-bottom: 0;
+
+			.field__item {
+				display: block;
+			}
+
+			img {
+				display: block;
+			}
+		}
+
+		.field__label {
+			@include acherus_black(16px);
+			// line-height: 100%;
+			display: inline;
+
+			&::after {
+				content: ": ";
+			}
+		}
+
+		.field__item {
+			@include latoregular(16px);
+			line-height: 100%;
+			display: inline;
+		}
+		
+		.field--name-node-link {
+			padding-top: 9px;
+			display: block;
+
+			a {
+				@include link-green;
+				font-size: 10px;
+			}
+		}
+
+		.field--name-field-bocadillo-150 {
+			line-height: inherit;
+			font-size: inherit;
+		}
+	}
+}

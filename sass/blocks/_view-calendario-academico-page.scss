@@ -1,0 +1,95 @@
+// @mixin desplegableMaker-outer($wrapper, $parent, $tabContent, $title)
+//@include desplegableMaker-outer('.view-calendario-academico-page', '', '', '.category-tab');
+
+@include desplegableMaker-outer('.desple-1-wrapper', '.desple-1-inner', '.desple-1-content', '.desple-1-button');
+@include desplegableMaker-outer('.desple-2-wrapper', '.desple-2-inner', '.desple-2-content', '.desple-2-button');
+
+.view-calendario-academico-page {
+	> .view-content {
+		padding-bottom: 15px;
+
+		& + .view-footer {
+			padding-top: 38px;
+		}
+	}
+
+	.pager {
+		padding-top: 20px;
+		padding-bottom: 38px;
+	}
+
+	.node--type-eventos {
+		min-height: 71px;
+	}
+
+	.category-tab {
+	//	color: $color_brand;
+		padding-bottom: 14px;
+	}
+	
+	.item-month-day {
+		padding-top: 10px;
+		width: 49px;
+
+		.item-day {
+			font-size: 24px;
+		}
+	}
+
+	h3 {
+		margin-bottom: 6px;
+	}
+
+	.field--name-node-title {
+		padding-left: 107px;
+		max-width: 500px;
+		> * {
+			@include title_light_acherus_l;
+			letter-spacing: -0.5px;
+		}
+	}
+	.field--name-field-noticias-taxonomia {
+		display: none;
+	}
+	.field--name-field-fecha-fin-evento {
+		.item-month-day {
+			box-sizing: border-box;
+			padding-left: 10px;
+			margin-left: -10px;
+			position: relative;
+			
+			&::before {
+				content: "";
+				width: 1px;
+				height: 43px;
+				background-color: #d7d9d0;
+				position: absolute;
+				left: -1px;
+				top: 10px;
+			}
+			
+		}
+	}
+
+	.node--type-eventos {
+		border-bottom: 1px solid #D7D9D0;
+		position: relative;
+		padding: 10px 0 10px 0;
+		&:before {
+			content: '';
+			background: #7BC142;
+			width: 43px;
+			height: 4px;
+			display: inline-block;
+			position: absolute;
+			bottom: -2.3px;
+			left: 0;
+		}
+	}
+	.pager__item {
+		text-align: center;
+		a {
+			@include buton-l-green;
+		}
+	}
+}

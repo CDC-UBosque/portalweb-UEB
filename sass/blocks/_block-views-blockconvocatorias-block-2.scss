@@ -1,0 +1,98 @@
+// views-row-list-date($views-row, $date, $category, $title)
+.block-views-blockconvocatorias-block-1,
+.block-views-blockconvocatorias-block-2 {
+	@media only screen and (max-width: $mobile) {
+		margin-bottom: 30px;
+	}
+
+	h2 {
+		font: {
+			size: 15px;
+			family: $font-bsb;
+		}
+
+		font-size: 15px;
+		letter-spacing: 0.5px;
+		margin-bottom: 1px;
+		margin-top: -4px;
+	}
+	
+	.views-element-container {
+		margin-top: -9px;
+	}
+
+	.view-footer {
+
+		a {
+			@include link-text;
+		}
+	}
+
+	> .block-inner
+	{
+		.field--name-node-title h3
+		{
+            //  El cambia la fuente dependiendo de la resolución
+            @include media_font_size_varible_depending_resolution(15.5px,$laptop-width,14.5px,$tablet-width);
+            @include media_font_size_varible_depending_resolution(13.25px,$tablet-width,11.75px,$mobile-width);
+            @include media_anything_varible_depending_resolution(18.75px,$tablet-width,14.25px,$mobile-width,'line-height');
+		}
+	}
+}
+.block-views-blockconvocatorias-block-1
+{
+	@include inline-block(top);
+	@include Desktop-NoLaptop // Mayor a: $laptop-width: 1024px;
+	{
+		width: pixel-to-percentage(377px,1180px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+	}
+	@include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+	{
+		width: pixel-to-percentage(230px,768px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+		margin-left: pixel-to-percentage(23px,768px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+	}
+
+	@include mobile-max-width;
+
+	@media only screen and (max-width: $mobile) {
+		margin-bottom: 25px;
+	}
+
+	.view-footer {
+		@media only screen and (max-width: $mobile) {
+			text-align: center;
+		}
+	}
+}
+.block-views-blockconvocatorias-block-2
+{
+	@include inline-block(top);
+	@include Desktop-NoLaptop // Mayor a: $laptop-width: 1024px;
+	{
+		width: pixel-to-percentage(377px + 20px,1180px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+	}
+	@include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+	{
+		width: pixel-to-percentage(230px,768px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+		margin-left: pixel-to-percentage(23px,768px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+	}
+	@include mobile-max-width;
+
+	@media only screen and (max-width: $mobile) {
+		margin-bottom: 20px;
+
+		.view-footer {
+			text-align: center;
+		}
+	}
+
+	//@include grid(4, 80, 20);
+	//@include views-row-list-date('.views-row', '.items-data', '.views-field-field-noticias-taxonomia', '.views-field-title');
+	> .block-inner
+	{
+		@include Desktop-NoLaptop // Mayor a: $laptop-width: 1024px;
+		{
+			width: pixel-to-percentage(377px,377px + 20px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+		}
+	}
+}

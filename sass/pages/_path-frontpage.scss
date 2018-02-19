@@ -1,0 +1,205 @@
+.path-frontpage {
+	@include page-with-banner-stick-to-header;
+	
+	.header-inner {
+		height: auto;
+		border-bottom: 0;
+		max-width: 1200px;
+
+		.header_second {
+			width: 85px;
+		}
+	}
+
+	#main {
+		@media only screen and (min-width: $tablet) {
+			padding-bottom: 40px;
+		}
+	}
+
+	.layout-content
+	{
+		padding-top: 0;
+		@include Laptop // Menor a: $laptop-width: 1024px;
+		{
+		//	padding-left: 0;
+		//	padding-right: 0;
+		}
+	}
+
+	.blockgroup-noticias
+	{
+		@include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $tablet-width: 768px;
+	    {
+	        width: pixel-to-percentage(722px,768px);
+	        margin: 0 auto;
+			overflow: hidden;
+	    }
+		.block-inner {
+			@include ib-grid;
+		}
+	}
+
+	//	Escribi "main" para evitar que el otro bloque de publicidad con la misma clase  se vea afectado
+	main .block-views-blockpublicidad-block-1
+	{
+		float: right;
+		width: pixel-to-percentage(369px,1180px);
+		@include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $tablet-width: 768px;
+		{
+			width: pixel-to-percentage(227px,768px);
+			//margin-right: pixel-to-percentage(23px,768px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+		}
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			float: inherit;
+			float: none;
+			display: block;
+			margin: 0 -30px;
+			width: auto;
+
+			.swiper-slide {
+				width: 100% !important;
+			}
+			//margin-right: pixel-to-percentage(23px,768px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+		}
+	}
+
+	.block.social-networks
+	{
+
+		.block-ubosque-instagram-block,
+		.block-ubosque-facebook-block,
+		.block-ubosque-twitter-block
+		{
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				margin-bottom: 25px;
+			}
+			&, & .column-post
+			{
+				&:after
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						//	Quita la barra de la derecha
+						display: none;
+					}
+				}
+			}
+
+		}
+		.block-ubosque-instagram-block
+		{
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				padding-right: 0;
+				padding-left: 0;
+				//width: pixel-to-percentage(223px,375px);
+			}
+		}
+		.block-ubosque-facebook-block
+		{
+			@include Tablet(0px, 31px) // Menor a: $tablet-width: 768px + 31px;
+			{
+				width: auto;
+			}
+			.block-inner
+			{
+				.column-post
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						padding-right: 0;
+						padding-left: 0;
+						width: 100%;
+					}
+					&:last-child
+					{
+						@include Tablet(0px, 31px) // Menor a: $tablet-width: 768px + 31px;
+						{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		.block-ubosque-twitter-block
+		{
+			@include Laptop // Menor a: $laptop-width: 1024px;
+			{
+				width: auto;
+			}
+			.block-inner
+			{
+				.column-post
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						padding-right: 0;
+						padding-left: 0;
+						width: 100%;
+					}
+					&:last-child
+					{
+						@include Tablet(0px, 31px) // Menor a: $tablet-width: 768px + 31px;
+						{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//	Depoendiendo el numero de tabs(.tabMakerWrapperNumChilds3, .tabMakerWrapperNumChilds10), el coloca un % al ancho, de esta manera
+	//	Sin importar el numero de tabs el conservara el ancho
+	//	NOTA: La clase .tabMakerWrapperNumChilds3 coloca al final el numero de tabs existentes, si son 10 el muestra: tabMakerWrapperNumChilds10
+	@for $i from 1 through 40
+	{
+		.tabs-home .tabMakerWrapperNumChilds#{$i} .tabMakerTabs
+		{
+			@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+			{
+				font-size: 0px;
+				text-align: center;
+			}
+			.tabMakerTab
+			{
+				@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+				{
+					width: 90%/$i;
+					margin-right: 4%/$i;
+					margin-left: 4%/$i;
+				}
+			}
+		}
+	}
+		.tabs-home
+		{
+			@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+			{
+				margin-right: pixel-to-percentage(31px,768px);
+				margin-left: pixel-to-percentage(31px,768px);
+			}
+			.tabMakerTabs
+			{
+				@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+				{
+					font-size: 0px;
+					text-align: center;
+				}
+				.tabMakerTab
+				{
+					@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+					{
+						font-size: 13px;
+						text-align: center;
+						display: inline-block;
+						vertical-align: top;
+						box-sizing: border-box;
+					}
+				}
+			}
+		}
+}

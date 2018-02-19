@@ -1,0 +1,504 @@
+.main-menu-open {
+	overflow-y: hidden;
+
+	.menu--menu-principal  {
+		opacity: 1;
+		visibility: visible;
+		
+		&::after {
+			left: 0 !important;
+		}
+
+		.menu-wrapper {
+			left: 0;
+		}
+	}
+}
+
+.menu--menu-principal {
+	$local-width: 334px;
+	$local-transition: 1s ease-out all;
+
+	@media only screen and (max-width: $tablet) {
+		@include lightbox-fondo;
+		z-index: 300;
+		overflow-y: scroll;
+
+		&::after {
+			content: "";
+			width: $local-width;
+			height: 100%;
+			background-color: white;
+			position: absolute;
+			top: 0;
+			left: -100% !important;
+			transition: $local-transition;
+		}
+	}
+
+	@media only screen and (min-width: $tablet) {
+		text-align: right;
+		
+		.arrow-toggle {
+			display: none !important;
+		}
+	}
+	
+	.menu-twig-impreso {
+		@media only screen and (min-width: $tablet) {
+			display: none;
+		}
+
+		> .menu {
+			overflow: visible !important;
+		}
+
+		.block-gtranslate {
+			position: relative !important;
+			top: auto;
+			right: auto;
+		}
+
+		&.twig-info-para {
+			padding-bottom: 25px;
+
+			span {
+				font-family: $font-serif-italic;
+				color: $color_gray_60;
+				font-size: 9px;
+				display: block;
+				padding: 18px 0 4px;
+			}
+
+			a {
+				font-family: $font-baser;
+				font-size: 12px;
+				display: block;
+				color: $color_gray_80;
+				text-decoration: none;
+				padding: 6px 0;
+			}
+
+			@media only screen and (min-width: $tablet) {
+				display: none;
+			}
+		}
+
+		&.twig-sup-dere {
+			.menu-item {
+				&:first-child {
+					display: none;
+				}
+			}
+		}
+
+		// Usar el mismo media query de la clase "btn-facu" que está en blocks/container--header-info
+		&.twig-facu {
+			a {
+				cursor: pointer;
+				padding: 10px 0 !important;
+				text-transform: none !important;
+
+				&.arrow-toggle {
+					padding: 0 !important;
+				}
+			}
+
+			> li > a {
+				text-transform: uppercase !important;
+			}
+
+			@media only screen and (max-width: 680px) {
+				display: block !important;
+			}
+
+			.menu {
+				display: none;
+			}
+
+			> .menu-item {
+				a {
+					&::after {
+						display: none !important;
+					}
+				}
+
+				.menu-item {
+					padding: 3px 0 !important;
+				}
+			}
+		}
+
+		&.twig-info-para {
+			.menu-item {
+				> a {
+					@include inline-block(top);
+					background: url('../images/svg/ArrowRightGrey.svg') no-repeat 100% 50%;
+					padding-right: 8px;
+				}
+			}
+		}
+
+		// Usar mismo media querie de blocks/container--header-info
+		.btn-digi {
+			display: none !important;
+
+			@media only screen and (max-width: 580px) {
+				display: block !important;
+			}
+		}
+
+		.btn-dire {
+			display: none !important;
+
+			@media only screen and (max-width: 485px) {
+				display: block !important;
+			}
+		}
+
+		.btn-idi {
+			display: none !important;
+
+			@media only screen and (max-width: 440px) {
+				display: block !important;
+			}
+		}
+	}
+
+
+	h2,
+	.menu {
+		margin: 0;
+	}
+
+	> .menu-wrapper {
+		//margin-top: 30px;
+		transition: .3s ease-out all;
+
+		@media only screen and (max-width: $tablet) {
+			background-color: white;
+			//height: 100%;
+			max-width: $local-width;
+			width: 100%;
+			padding: 72px 30px 0;
+			box-sizing: border-box;
+			z-index: 20;
+			position: absolute;
+			transition: $local-transition;
+			left: -100%;
+			top: 0;
+			margin-top: 0;
+		}
+	}
+
+	.desplegable-open-1 {
+		> span {
+			transition: .3s ease-out all;
+		}
+	}
+
+	.desplegable-open-1 .desplegable-open-1 {
+		> span {
+			transform: rotate(180deg);
+		}
+	}
+
+	.menu-wrapper {
+		.arrow-toggle {
+			width: 100%;
+
+			span {
+				left: auto;
+			}
+		}
+
+		&  > .menu {
+			overflow: hidden;
+
+			// Ocultamos submenús
+			.menu {
+				@media only screen and (min-width: $tablet) {
+					display: none !important;
+				}
+			}
+
+			& + .menu {
+				@media only screen and (min-width: $mobile) {
+					display: none;
+				}
+			}
+
+			.menu-item {
+				position: relative;
+				cursor: pointer;
+
+				@media only screen and (min-width: $tablet) {
+					padding: 32px 0 31px;
+				}
+			}
+
+			> .menu-item {
+				position: relative;
+				transition: .3s ease-out all;
+
+				@media only screen and (min-width: $tablet) {
+					@include inline-block(top);
+					margin: 0 10px;
+				}
+
+				@media only screen and (min-width: 1150px) {
+					margin: 0 14px;
+				}
+
+				a {				
+					@include item-menu;
+					display: block;
+					text-decoration: none;
+					transition: .3s ease-out all;
+
+					@media only screen and (max-width: $tablet) {
+						border-bottom: 1px solid $color_gray_15;
+						font-family: $font-bm;
+						color: $color_gray_60;
+					}
+
+					&::after {
+						@media only screen and (min-width: $tablet) {
+							content: url("../images/ArrowGreenDown.svg");
+							position: absolute;
+							top: 12px;
+							right: -16px;
+						}
+					}
+					&.menu-compromiso-social {
+						display: none;
+					}
+					&.menu-investigaciones::after,
+					&.menu-compromiso-social::after {
+						display: none;
+					}
+
+					&.arrow-toggle {
+						border: 0;
+					}
+
+					@media only screen and (min-width: $tablet) {
+						@include inline-block(top);
+						line-height: 16px;
+						text-transform: uppercase;
+						padding: 45px 0 43px;
+						position: relative;
+						box-sizing: border-box;
+
+						&::before {
+							@include default-green-hover-bar;
+							content: "";
+							position: absolute;
+							bottom: 5px;
+							left: 0;
+							display: none;
+						}
+
+						&:hover {
+							color: $color_gray_80;
+
+							&::before {
+								display: block;
+							}
+						}
+					}
+				}
+
+				.arrow-toggle {
+					transform: none;
+				}
+
+				> a {
+					padding: 12px 0;
+					text-transform: uppercase;
+					display: block;
+
+					@media only screen and (max-width: $tablet) {
+						padding: 10px 0 9px;
+						white-space: nowrap;
+					}
+				}
+
+				// Second level
+				> .menu {
+					//padding-top: 14px;
+
+					// .second-li
+					> .menu-item {
+						padding: 13px 0;
+						position: relative;
+
+						&.desplegable-open-2 {
+							> a {
+								font-family: $font-baseb;
+								letter-spacing: 1px;
+								color: $color_gray_80;
+							}
+						}
+
+						> a {
+							text-transform: uppercase;
+							position: relative;
+
+							&::after {
+								content: "";
+								width: 320px;
+								height: 1px;
+								background: $color_gray_15;
+								display: block;
+								position: absolute;
+								bottom: -13px;
+								left: 0;
+							}
+						}
+
+						// > a {
+						a {
+							@include underline-hover;
+							display: inline;
+							padding: 0 !important;
+							//padding: 5px 0 4px !important;
+							font-family: $font-baser;
+							font-size: 12px;
+							border: 0;
+						}
+
+						// Third level
+						> .menu {
+							padding-top: 20px;
+
+							// .third-li
+							> .menu-item {
+								padding: 3px 0 4px;
+
+								a {
+									color: $color_gray_80;
+								}
+							}
+						}
+
+						.arrow-toggle {
+							width: 6px; //calc(100% + 10px);
+							height: 14px;
+							right: -10px;
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							margin: auto;
+
+							&:hover {
+								border-bottom: 0;
+							}
+
+							span {
+								background-image: url(../images/menu/flecha-gris-right.svg);
+								transform: rotate(-90deg) !important;
+								width: 6px;
+								height: 4px;
+							}
+						}
+					}
+				}
+
+				&:nth-last-child(1){
+					//padding: 28px 0px;
+
+					&:after {
+						content: none;
+					}
+				}
+				
+				// Estilos para evitar que se rompa el menú durante la transición de desktop a tablet
+				@media only screen and (min-width: $tablet) and (max-width: 1225px) {
+					padding: 26px 0 25px;
+					height: 51px;
+					margin-right: 0;
+					margin-left: 6%;
+
+					> a {
+						text-align: center;
+						line-height: 18px;
+						padding: 10px 0;
+
+						&::after {
+							right: -10px;
+							top: 16px;
+						}
+
+						// Single lined
+						&.menu-inscripciones {
+							width: 110px;
+							margin-top: 6px;
+							
+							&::after {
+								top: 12px;
+							}
+						}
+
+						&.menu-programa-academico {
+							width: 100px;
+						}
+
+						// Single lined
+						&.menu-investigaciones {
+							width: 125px;
+							margin-top: 6px;
+							
+							&::after {
+								top: 12px;
+							}
+						}
+
+						&.menu-nuestro-bosque {
+							width: 70px;
+						}
+
+						&.menu-compromiso-social {
+							width: 100px;
+							margin-right: 20px;
+						}
+					}
+				}
+
+				@media only screen and (min-width: $tablet) and (max-width: 1025px) {
+					margin-left: 5%;
+				}
+
+				@media only screen and (min-width: $tablet) and (max-width: 980px) {
+					margin-left: 4%;
+				}
+
+				@media only screen and (min-width: $tablet) and (max-width: 940px) {
+					margin-left: 3%;
+					width: 1% !important;
+					display: table-cell;
+
+					> a {						
+						&.menu-compromiso-social {
+							margin-right: 5%;
+						}
+					}
+				}
+
+				@media only screen and (min-width: $tablet) and (max-width: 880px) {
+					margin-left: 2.5%;
+				}
+
+				@media only screen and (min-width: $tablet) and (max-width: 860px) {
+					> a {
+						font-size: 12px;
+
+						&::after {
+							display: none !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

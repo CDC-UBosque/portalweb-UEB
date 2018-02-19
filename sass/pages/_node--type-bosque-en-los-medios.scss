@@ -1,0 +1,212 @@
+@include teaser-noticias('.node--type-bosque-en-los-medios.node--view-mode-teaser', '.field--name-field-image', '.field--name-field-catergoria', '.field--name-node-title', '.field--name-field-bocadillo-2', '.field--name-node-link');
+@include teaser-noticias('.node--type-bosque-en-los-medios.node--view-mode-resumen-2', '.field--name-field-image', '.field--name-field-catergoria', '.field--name-node-title', '.field--name-field-bocadillo-2', '.field--name-node-link');
+@include zoom('.node--type-bosque-en-los-medios.node--view-mode-teaser', '.field--name-field-imgen');
+
+.node--type-bosque-en-los-medios {
+
+}
+
+.page-node-type-bosque-en-los-medios {
+	//cambiar lo siguiente para el formulario
+	.view-bosque-en-los-medios {
+		.field--name-field-bocadillo-150 {
+			@include paragraphs_large;
+		}
+
+		.view-filters {
+			display: none;
+			.views-exposed-form {
+
+				.form-item-field-fecha-publicacion-value-min {
+					
+					display: none !important;
+					
+				}
+				
+				.form-item-field-fecha-publicacion-value-max {
+					
+					display: none !important;
+					
+
+					label {
+						display: none !important;
+					}
+				}
+
+				.form-item-field-catergoria-target-id {
+					padding-top: 38px;
+				}
+
+				.form-submit {
+					display: none !important;
+				}
+
+				.form-select {
+					display: none !important;
+				}
+			}
+		}
+	}
+	.text-content {
+		.share-text {
+			padding-top: 5%;
+			text-align: center;
+			.field--name-dynamic-block-fieldnode-redes-sociales {
+				.field__label {
+					text-align: center;
+				}
+			}
+		}
+	}
+	.filters-container {
+		@include form-select('.anno', 'select');
+		@include form-select('.difusion', 'select');
+		$mobile: 520px;
+		padding-bottom: 25px;
+		position: relative;
+
+		@media only screen and (max-width: $mobile) {
+			padding-bottom: 35px;
+		}
+
+		.label-filtro {
+			margin-bottom: 3px;
+		}
+
+		> div {
+			margin-right: 20px;
+		}
+
+		.label-filtro {
+			@include pt_serifitalic(12px);		
+		}
+
+		.bosque-medios-title,
+		.buscar {
+			margin-right: 0;
+		}
+		
+		.buscar {
+			@media only screen and (min-width: $mobile) {
+				position: absolute;
+				bottom: 25px;
+			}
+
+			input {
+				@include buton-l-green;
+				outline: none;
+			}			
+		}
+		.consultar {
+			vertical-align: middle;
+			
+			@media only screen and (max-width: $tablet) {
+				max-width: 100%;
+			}
+
+			a {
+				@include buton-l-green;
+				text-align: center;
+
+				@media only screen and (max-width: $mobile) {
+					display: block;
+				}
+			}	
+			.label-filtro {
+				text-align: center;
+			
+			}		
+		}
+		.anno {
+			max-width: 185px;
+			width: 22%;
+			
+			@media only screen and (min-width: $mobile) and (max-width: 600px) {
+				width: 80px;
+			}
+
+			select {
+				border-width: 1px;
+			}
+		}
+		.difusion {
+			max-width: 280px;
+			width: 31%;
+
+			@media only screen and (min-width: $mobile) and (max-width: 600px) {
+				width: 130px;
+			}
+
+			select {
+				border-width: 1px;
+			}
+		}
+
+		.difusion,
+		.anno {
+			select {
+				outline: none;
+			}
+		}
+
+		.consultar,
+		.anno,
+		.difusion,
+		.buscar {
+			display: inline-block;
+			vertical-align: bottom;
+			
+			@media only screen and (max-width: $mobile) {
+				max-width: none;
+				margin-right: 0;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+		}
+
+		.bosque-medios-title {
+			padding-bottom: 1%;
+			h2 {
+				display: none;
+			}
+		}
+		
+		// $mobile
+		@media only screen and (max-width: $mobile) {
+			.consultar,
+			.anno,
+			.difusion,
+			.buscar {
+				width: 100%;
+			}
+
+			/*
+			.consultar {
+				padding-bottom: 5%;
+				.bosque-medios-all {
+					a {
+						display: block;
+		    			margin: 0;
+		    			text-align: center;
+					}
+				}	
+				.label-filtro {
+					padding-right: 0;
+				}			
+			}
+
+			.difusion {
+				display: inline;
+			}
+
+			.buscar {
+				padding-top: 8%;
+			}*/
+		}
+	}
+	.content.region-content {
+		.bosque-medios-title {
+			display: none;
+		}
+	}
+}

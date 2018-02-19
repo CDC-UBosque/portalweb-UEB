@@ -1,0 +1,68 @@
+
+.centro-informacion-eventos {
+	.sidebar-first {
+		.region-content {
+			padding-right: 20px;
+		}
+
+		.view.view-eventos-repositorio .view-content {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+
+	#main {
+		.view.view-eventos-repositorio .view-content {
+			padding-top: 0;
+		}
+
+		.node--type-eventos.node--view-mode-resumen-3 {
+			padding-top: 10px;
+		}
+	}
+
+	// URL: http://uat_ubosque.d8.seedoven.co/centro-informacion/eventos/facultades
+	&.facult {
+		#main {
+			.block-views-blockfaculty-block-1 {
+				> .block-inner {
+					> h2 {
+						@include font(39px, 42px);
+					}
+				}
+			}
+
+			.view.view-eventos-repositorio {
+				.view-header {
+					font-family: $font-brandb;
+					font-size: 20px;
+					padding: 20px 0 5px;
+					border-top: 1px solid #d7d8d0;
+				}
+			
+				.view-content {
+					padding: 0;
+			
+					.views-row {
+						&:first-child {
+							.node--type-eventos {
+								padding-top: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.views-row {
+				&:first-child {
+					.view.view-eventos-repositorio {
+						.view-header {
+							padding-top: 0;
+							border: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

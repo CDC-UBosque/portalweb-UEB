@@ -1,0 +1,39 @@
+.page-infraestructura {
+	.wrap-content {
+		overflow: visible;
+	}
+
+	#main {
+		padding-bottom: 50px;
+	}
+
+	.block-infraestructura-mapa {
+		.node--type-infraestructura {
+			display: none;
+		}
+
+		.js-infraestructura-block {
+			height: auto;
+		}
+	}
+
+	.js-infraestructura-block {
+		height: 215px;
+		overflow-y: scroll;
+	}
+	
+	&.mapa-chia {
+		#select-facultad {
+			display: none !important;
+		}
+
+		[data-map] {
+			display: none;
+		}
+
+		[data-chia] {
+			display: block;
+		}
+	}
+}
+

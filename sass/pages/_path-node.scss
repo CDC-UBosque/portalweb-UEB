@@ -1,0 +1,24 @@
+.path-node {
+	&.page-node-type-acerca-de-la-facultad {
+		@include sidebar-active-blockmenu-facultades-block(5);
+	}
+
+	&.page-node-type-convenios {
+		@include sidebar-active-blockmenu-facultades-block(6);
+	}
+
+	&.page-node-type-practicas-profesionales {
+		@include sidebar-active-blockmenu-facultades-block(7);
+	}
+
+	&.page-node-type-pagina-productos-academicos {
+		@include sidebar-active-blockmenu-facultades-block(8);
+	}
+}
+
+.path-node,
+.path-facultad {
+	&.calendario-academico {
+		@include sidebar-active-blockmenu-facultades-block(12);
+	}
+}

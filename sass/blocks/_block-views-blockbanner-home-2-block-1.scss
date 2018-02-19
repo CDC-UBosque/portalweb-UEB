@@ -1,0 +1,250 @@
+.view-id-banner_home_2.view-display-id-block_1,
+.block-views-blockbanner-home-2-block-1 {
+	@include desenfoque('.field--name-field-image img');
+
+	@media only screen and (min-width: $tablet) {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+
+	@media only screen and (max-width: $mobile) {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+
+	.video {
+		transition: .3s ease-out all;
+		position: relative;
+
+		@media only screen and (max-width: $tablet) {
+			margin-left: -30%;
+
+		}
+
+		@media only screen and (max-width: 480px) {
+			margin-left: -400px;
+		}
+		
+	}
+
+	img {
+		display: block;
+	}
+	
+	.views-row {
+		position: relative;
+
+		.text-content,
+		.views-field-nothing {
+			position: absolute;
+			bottom: 76px;
+			width: 100%;
+			text-align: center;
+			z-index: 20;
+
+			@media only screen and (max-width: $tablet) {
+				bottom: 32px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				bottom: 45px;
+			}
+		}
+	}
+
+	.content-banner {
+		margin: 0 auto;
+		max-width: 940px;
+		display: block;
+	}
+
+	.field--name-field-frase .field__label,
+	.content-banner--type {
+		color: white;
+		line-height: 17px;
+		position: relative;
+		font: {
+			family: $font-baser;
+			size: 14px;
+		}
+		letter-spacing: 3px;
+		margin-bottom: 51px;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		@media only screen and (max-width: $tablet) {
+			margin-bottom: 31px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 33px;
+		}
+
+		&::before {
+			content: "";
+			width: 40px;
+			height: 8px;
+			background: #fff;
+			position: absolute;
+			bottom: -36px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			transition: .3s ease-out all;
+
+			@media only screen and (max-width: $tablet) {
+				width: 26px;
+				height: 6px;
+				bottom: -20px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				width: 40px;
+				height: 8px;
+				bottom: -17px;
+			}
+		}
+	}
+
+	.field--name-field-image  {
+		overflow: hidden;
+
+		img {
+			transition: none;
+
+			@media only screen and (max-width: 715px) {
+				margin-left: -2%;
+				max-width: none;
+				height: auto;
+			}
+
+			@media only screen and (max-width: 615px) {
+				margin-left: -17%;
+			}
+
+			@media only screen and (max-width: 515px) {
+				margin-left: -46%;	
+			}
+
+			@media only screen and (max-width: $mobile) {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.field--name-field-frase .field__item {
+		color: white;							
+		text-decoration: none;
+		text-transform: uppercase;
+		display: inline-block;
+		line-height: 50px;
+		padding: 0 40px;
+		font: {
+			family: $font-brandb;
+			size: $font-brandb-xxl;							
+		}
+
+		@media only screen and (max-width: $tablet) {
+			font-size: 33px;
+			max-width: 75%;
+			line-height: 37px;
+			letter-spacing: 1.8px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			font-size: 20px;
+		}
+	}
+
+	.content-banner--title {
+		margin-bottom: 45px;
+
+		@media only screen and (max-width: $tablet) {
+			margin-bottom: 23px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 37px;
+		}
+
+		a {
+			color: white;							
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			line-height: 50px;
+			font: {
+				family: $font-brandb;
+				size: $font-brandb-xxl;							
+			}
+
+			@media only screen and (max-width: $tablet) {
+				font-size: 33px;
+				max-width: 75%;
+				line-height: 37px;
+				letter-spacing: 1.8px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				font-size: 20px;
+			}
+
+			//font-size: 30px;
+			@include media_font_size_varible_depending_resolution(30.25px,$mobile-width,16.75px,0px);
+			@include media_line_heght_varible_depending_resolution(31.25px,$mobile-width,17.75px,0px);
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				display: block;
+				margin: 0 auto;
+				width: 100%; //pixel-to-percentage(220px,375px);
+				max-width: 100%;
+			}
+		}
+
+	}
+
+	
+	.content-banner--links {
+		@include ib-grid;
+
+		> div {
+			@include inline-block(top);
+			//margin: 0 19px; Descomentar luego
+		}
+
+		.content-banner--links-read-more {
+			@media only screen and (max-width: $mobile) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+
+	.field--name-node-link {
+		padding-top: 20px;
+
+		a {
+			@include buton-xl-green;				
+		}
+	}
+
+	.content-banner--links-read-more {
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			display: block;
+		}
+		@include media_anything_varible_depending_resolution(30.25px,$mobile-width,16.75px,0px,'margin-bottom');
+		a {
+			@include buton-xl-green;				
+		}
+	}
+
+	.content-banner--links-all-read {
+		
+		display: inline-block;			
+		a{					
+			display: none !important; //Quitar luego	
+			@include buton-xl-transparent;
+			
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.requisitos-grado {
+	.field--name-field-bocadillo-150 {
+		text-align: center;
+	}
+
+	.node-content {
+		.field--name-body {
+			padding-bottom: 35px;
+			max-width: 780px;
+			@media only screen and (max-width: $mobile) {
+				padding-bottom: 0px; 
+			}
+		}
+		
+		h3 {
+			font-family: $font-bsb;
+			color: #979797;
+			letter-spacing: -0.1px;
+			font-size: 28px;
+			line-height: 38px;
+			font-weight: normal;
+		}
+
+		p {
+			margin-bottom: 21px;
+		}
+
+		ul + h3 {
+			margin-top: 23px;
+		}
+
+		p + h3 {
+			margin-top: 26px;
+		}
+	}
+	#prefooter {
+		@media only screen and (max-width: $mobile) {
+			padding-top: 15px;
+		}
+	}
+}

@@ -1,0 +1,447 @@
+.bienestar-semana-induccion {
+  .content.region-content {
+    @media only screen and (max-width: $tablet) {
+      height: 370px;
+      margin: 0 -30px;
+    }
+    @media only screen and (max-width: $mobile) {
+      height: 450px;    
+    }     
+  }
+
+  .node--type-pagina-basica-image-video {
+    .field--name-field-title-format-html {
+      padding-bottom: 35px;
+
+      @media only screen and (max-width: $tablet) {
+        max-width: 600px;
+        padding: 30px 0 30px;
+        font: {
+          family: $font-bli;
+          size: 34px;
+        }
+      }
+
+      @media only screen and (max-width: $mobile) {
+        max-width: 80%;
+        padding: 40px 0 20px;
+      }
+
+      &::first-line {
+        @media only screen and (max-width: $tablet) { 
+          font-family: $font-bli;
+        }        
+      }
+    }
+
+    .field--name-field-image {
+      img {
+        @media only screen and (max-width: $tablet) { 
+          height: 370px;
+        }
+        @media only screen and (max-width: $mobile) {
+          height: 450px;
+        }        
+      }
+    }
+  }
+
+  .block-views-blockfiltro-facultades-semana-induccion-bienestar-u-block-1 {
+    @include form-select('.js-form-type-select', '.form-select');
+    max-width: 350px;
+    margin: 0 auto;
+
+    .view-header {
+      background: url(../images/svg/arrow-down-green.svg) no-repeat center top;
+      color: white;
+      letter-spacing: 2px;
+      font-size: 12px;
+      margin-bottom: 10px;
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    .view-filters {
+      @media only screen and (max-width: $mobile) {
+        max-width: 240px;
+        margin: 0 auto;
+      }
+    }
+
+    .views-field-field-pdf-facultades {
+      display: none;
+    }
+
+    .js-form-type-select {
+      .form-select {
+        background-size: 25px;
+        height: 65px;
+      }
+    }
+  }
+
+  .region-section-1 {
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+
+    .region-content {
+      .block {
+        display: inline-block;
+        float: none;
+        padding: 0 4%;
+        width: 28.33%;
+
+        @media only screen and (max-width: $tablet) {
+          padding: 0;
+          width: 31.33%;
+        }
+
+        @media only screen and (max-width: $mobile) {
+          width: 100%;
+        }        
+      }
+    }
+
+    .estilo-0013 {
+      &:before {
+        height: 145px;
+
+        @media only screen and (max-width: $mobile) {
+          height: 1px;
+          left: 50%;
+          margin-left: -125px;
+          width: 250px;
+        }        
+      }
+
+      .block-inner {
+        padding: 17px 0 0;
+      }
+
+      .field--name-field-title {
+        h3 {
+          font-size: 20px;
+        }
+      }
+
+      .link {
+        text-align: left;
+
+        .field__item {
+          margin-bottom: 4px;
+        }
+
+        a {
+          color: $color_brand;
+          font: {
+            family: $font-baser;
+          }
+          letter-spacing: initial;
+          padding-left: 15px;
+          position: relative;
+          text-decoration: none;
+          text-transform: initial;     
+          &:before {
+            background: $color_brand;
+            border-radius: 50%;
+            content: '';
+            display: inline-block;
+            height: 5px;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 5px;
+          }
+
+          @media only screen and (max-width: $tablet) {
+            color: $color_gray_80;
+            &:before {
+              background: $color_gray_80;
+            }
+          }     
+        }
+      }
+    }
+  }
+
+  .region-section-2 {
+    .region-content {
+      text-align: center;
+
+      .block-block-content {
+        @include inline-block(top);
+        float: none;
+        margin-right: 1%;
+        padding: 0;
+        width: 27%;
+
+        @media only screen and (max-width: $tablet) {
+          margin-right: 2%;
+          width: 31%;
+        }
+
+        @media only screen and (max-width: $mobile) {
+          margin: 0 0 30px 0;
+          width: 100%;
+        }
+        
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+
+        .text-content {
+          margin-top: 15px;
+          padding: 0 20px;
+          text-align: left;
+          @media only screen and (max-width: $tablet) {
+            padding: 0;
+          }
+
+          @media only screen and (max-width: $mobile) {
+            padding: 0 11px;
+          }        
+        }
+
+        .field--name-field-title2 {
+          font: {
+            family: $font-brandb;
+            size: 20px;
+          }
+          margin-bottom: 10px;
+        }
+
+        .field--name-field-image {
+          @media only screen and (max-width: $mobile) {
+            margin: 0 -30px;
+            position: relative;
+            z-index: 1;
+            
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .region-section-3 {
+    .block-block-content {
+      @media only screen and (max-width: $mobile) {
+        margin-bottom: 35px!important;
+      }
+      
+      .field--name-field-subtitle-block {
+        color: $color_gray_60;
+        font: {
+          family: $font-baseb;
+          size: 10px;
+        }
+        line-height: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        ~ h2 {
+          font-size: 21px;
+          line-height: 1;
+          margin-top: 13px;
+        }
+      }
+
+      .field--name-body {
+        p {
+          font-size: 14px;
+          line-height: 1.2;
+        }
+      }
+
+      .field--name-field-enlace {
+        margin-top: 10px;
+
+        a {
+          @include link-text;
+        }
+      }
+    }
+  }
+
+  .region-section-4 {
+    margin: 30px 0;
+
+    @media only screen and (max-width: $mobile) {
+      margin: 20px -30px;
+    }
+
+    .region-content {
+      .estilo-0006 {
+        margin-right: 2%;
+        padding: 0;
+        width: 49%;
+        
+        @media only screen and (max-width: $mobile) {
+          margin-right: 0;
+          width: 100%;
+
+          .block-inner {
+            min-height: 178px;
+          }
+        }        
+      }
+      
+      .rectangulo-2 {
+        margin-right: 0;
+      }
+    }
+
+    .estilo-0006 {
+      .text-content {
+        height: 175px;
+        @media only screen and (max-width: $tablet) {
+          padding-top: 25px;
+        }
+      }
+
+      .field--name-field-body {
+        max-width: 82%;
+        position: relative;
+        
+        @media only screen and (max-width: $tablet) {
+          max-width: 72%;
+        }        
+        p {
+          color: white;
+          font: {
+            family: $font-bl;
+            size: 34px;
+          }
+          line-height: 0.9;
+          
+          @media only screen and (max-width: $tablet) {
+            font-size: 26px;
+            line-height: 1.2;
+          }
+
+          strong {
+            font-family: $font-bsb;
+
+            @media only screen and (max-width: $tablet) {
+              font-family: $font-bli;          
+            }            
+          }
+        }
+      }
+
+      .link {    
+        @media only screen and (max-width: $tablet) {
+          bottom: 12px;
+        }
+       
+        a {
+          background: rgba(0,0,0, 0.4);
+        }
+      }
+
+      .field--name-field-image {
+        @media only screen and (max-width: $tablet) {
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+
+    .rectangulo-1 {
+      background: #09d983;
+    }
+    .rectangulo-2 {
+      background: #ffa20c;
+    }
+  }
+
+  .region-section-6 {
+    .region-content {
+      display: inline-block;
+      width: 100%;
+    }
+
+    .instagram-block-semana {
+      background: white;
+      float: left;
+      margin-right: 15px;
+      padding: 5px;
+      width: 855px;
+
+      @media only screen and (max-width: $tablet) {
+        box-sizing: border-box;
+        margin-right: 2%;
+        width: 72%;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        float: none;
+        margin: 0;
+        width: 100%;
+      }      
+
+      img {
+        margin: 0.5%;
+        width: 32.33%;
+
+        @media only screen and (max-width: $mobile) {
+          margin: 0 0 10px 0;
+          width: 100%;
+        }
+      }
+
+      .group {
+        &:nth-child(4) {
+          ~ .group {
+            @media only screen and (max-width: $mobile) {
+              display: none;
+            }            
+          }
+        }
+      }
+    }
+
+    .instagram-link {
+      float: left;
+      clear: left;
+      margin-top: 35px;
+      text-align: center;
+      width: 855px;
+      
+      @media only screen and (max-width: $tablet) {
+        width: 72%;      
+      }
+
+      @media only screen and (max-width: $mobile) {
+        float: none;
+        width: 100%;
+      }
+
+      .field--name-field-enlace {
+        a {
+          @include  buton-xl-green;
+        }
+      }
+    }
+    .twitter-block {
+      @media only screen and (max-width: $mobile) {
+        margin-top: 30px;
+      }
+            
+      iframe {
+        @media only screen and (max-width: $tablet) { 
+          height: 370px!important;
+          width: 20%!important;
+        }
+
+        @media only screen and (max-width: $mobile) {
+          height: 400px!important;          
+          width: 100%!important;;
+        }
+      }              
+    }
+  }
+}

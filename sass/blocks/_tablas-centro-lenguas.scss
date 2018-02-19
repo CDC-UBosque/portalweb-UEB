@@ -1,0 +1,1082 @@
+$c-border-th: #979797;
+$c-border-td: #eae3e3;
+$c-bg-td: #f9f9f9;
+
+.tabla-cursos-lenguas {
+  margin-bottom: 30px;
+
+  .tablefield-wrapper {
+    display: none;
+
+    &.table-ready {
+      display: block;
+    }
+
+    &.tabla-mobile {
+      display: none;
+    }
+    
+    @media only screen and (max-width: $mobile) {
+      &.table-ready {
+        display: none;
+      }
+
+      &.tabla-mobile {
+        display: block;
+
+        table {
+          th {
+            width: 49%;
+          }
+          td {
+            padding: 10px 0 !important;
+            width: 49%;
+            min-height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+  .field--name-field-title {
+    margin-bottom: 13px;
+
+    .field__item {
+      @include interna-nodo-titulo;
+      font-size: 33px;
+    }
+  }
+  
+  .field--name-field-titulo-tabla {
+    font: {
+      family: $font-bsb;
+      size: 26px;
+    }
+    margin: 35px 0;    
+  }
+
+  .field--name-field-caption-tabla {
+    color: $color_brand;
+    border-bottom: 2px solid #c0e2a5;
+    border-top: 2px solid #c0e2a5;
+    font: {
+      family: $font-bsb;
+      size: 21px;
+    }
+    padding: 9px 0;
+    text-align: center;
+  }
+  
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 100%;
+
+    th {
+      border-bottom: 2px solid $c-border-th;
+      display: inline-block;
+      font: {
+        family: $font-brandb;
+        size: 14px;
+        weight: normal;
+      }
+      letter-spacing: 1.5px;
+      min-height: 20px;
+      padding: 10px 0;
+      overflow: hidden;            
+      //width: 133px;
+      width: 15%;
+
+      @media only screen and (max-width: $tablet) {
+        font-size: 14px;
+      }
+
+      @media only screen and (max-width: $mobile) {
+        font-size: 13px;            
+      }
+    }
+
+    td {
+      border-bottom: 1px solid $c-border-td;
+      display: inline-block;
+      min-height: 19px;
+      overflow: hidden;
+      padding: 10px 0;
+      @media only screen and (max-width: $tablet) {
+        font-size: 14px;
+      }
+      @media only screen and (max-width: $mobile) {
+        font-size: 13px!important;      
+      }
+    }
+  }
+}
+
+// /centro-de-lenguas/cursos-ingles
+.curso-presencial-ingles {
+  .field--name-body {
+    .field__item {
+      @include inline-block(top);
+      width: 65%;
+      @media only screen and (max-width: $mobile) {
+        width: 100%;
+      }      
+      &:nth-child(2) {
+        border-left: 1px solid #c2c4c7;
+        margin-left: 2%;
+        padding-bottom: 30px;
+        padding-left: 2%;
+        width: 30%;
+
+        @media only screen and (max-width: $mobile) {
+          border: none;
+          margin: 20px 0 0 0;
+          padding: 0;
+          width: 100%;
+        }
+
+        h3 {
+          color: $color_brand;
+          font: {
+            family: $font-bsb;
+            size: 18px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.3;
+        }
+      } 
+    }
+  }
+
+  table {
+    td.col_0 {
+      border-right: 1px solid $c-border-td;
+      font: {
+        family: $font-brandb;
+        size: 14px;
+      }
+      letter-spacing: 1.5px;
+      //padding-right: 45px;
+      padding-right: 5.2%;
+      text-align: left;
+      //width: 133px;
+      width: 15%;
+    }
+
+    th {
+      &.col_0 {
+        //padding-right: 45px;        
+        text-align: left;
+        //width: 133px;
+        padding-right: 5.2%;
+        width: 15%;
+
+        @media only screen and (max-width: $tablet) {
+          padding-right: 0;
+          width: 20%;
+        }
+      }
+    }
+  }
+  
+  #tablefield-0 {
+    th {
+      &.col_2 {
+        //width: 182px;
+        width: 21%;
+      }
+
+      &.col_1 {
+        //width: 514px;
+        width: 58.5%;
+      }
+    }
+    td {
+      &.col_2 {
+        border-left: 1px solid $c-border-td;
+        width: 21%;        
+        //width: 182px;   
+      }
+      &.col_1 {
+        //width: 514px;
+        width: 58%;
+      }
+
+      &.row_1 {
+        &.col_2,
+        &.col_1,{
+          background: $c-bg-td;          
+        }
+      }
+    }
+  }
+  #tablefield-1 {
+    th {
+      &.col_1,
+      &.col_2,
+      &.col_3 {
+        //width: 170px;
+        width: 19.33%;
+      }
+
+      &.col_4 {
+        //width: 183px;
+        width: 21%;
+      }
+    }
+    td {
+      &.col_0 {
+        border-bottom: none;
+      }
+
+      &.col_1,
+      &.col_2,
+      &.col_3 {
+      //width: 170px;
+        width: 19.33%;
+        
+      }
+      
+      &.col_4 {
+        border-bottom: none;
+        border-left: 1px solid $c-border-td;
+        //width: 182px;
+        width: 21%;    
+      }
+
+      // &.row_3 {
+      //   &.col_4,
+      //   &.col_0 {
+      //     border-bottom: 1px solid $c-border-td;
+      //   }
+      // }
+
+      &.row_2 {
+        &.col_0 {
+          //padding: 2px 45px 2px 0;
+          padding: 2px 5.2% 2px 0;        
+        }
+        &.col_1,
+        &.col_2,
+        &.col_3 {
+          background: $c-bg-td;
+        }
+      }
+    }
+    tr:last-child {
+      td.col_4,
+      td.col_0 {
+          border-bottom: 1px solid $c-border-td;
+        }
+    }
+  }
+
+  .tablefield-wrapper {
+    &.tabla-mobile {
+      th {
+        &.col_0 {
+          text-align: center;
+          width: 100%;
+        }      
+        &.col_1 {
+          display: none;
+        }
+      }
+
+      td {
+        max-height: 19px;
+        &.col_0 {
+          font-size: 13px;
+        }        
+
+        &.row_3 {
+          &.col_0 {
+            border-right: none;
+            text-align: center;
+            width: 100%;
+          }
+
+          &.col_1 {
+            display: none;
+          }
+        }
+
+        &.row_14,
+        &.row_12,
+        &.row_8,
+        &.row_6 {
+          &.col_0 {
+            border-right: 0;
+          }
+          &.col_1 {
+            font: {
+              family: $font-brandb;
+              weight: normal;
+            }
+            letter-spacing: 1.5px;
+          }
+        }
+
+        &.row_13,
+        &.row_7 {
+          &.col_1 {
+            padding: 14px 0;
+          }
+        }
+
+        &.row_1,        
+        &.row_10,
+        &.row_4 {
+          &.col_1 {
+            background: $c-bg-td;
+          }
+        }
+
+        &.row_15,
+        &.row_10 {
+          &.col_0 {
+            padding: 6px 0;
+          }
+        } 
+       
+        &.row_10,
+        &.row_9 {
+         &.col_0,
+         &.col_1 {
+           border-bottom: none;
+         }
+        }
+      }
+    }
+  }
+}
+
+// /centro-de-lenguas/cursos-ingles
+.curso-vacacional-ingles {
+  .field--name-body {
+    max-width: 65%;
+
+    @media only screen and (max-width: $mobile) {
+      max-width: 100%;
+    }
+  }
+
+  table {
+    td {
+      &.col_0 {
+        border-right: 1px solid $c-border-td;
+        font: {
+          family: $font-brandb;
+          size: 14px;
+        }
+        letter-spacing: 1.5px;
+        text-align: left;
+        //width: 132px;
+        width: 15%;    
+      }
+    }
+
+    th {
+      &.col_0 {
+        text-align: left;
+      }      
+    }
+  }
+
+  #tablefield-0 {
+    th {
+      &.col_1 {
+        //width: 748px;  
+        width: 85%;
+      }
+    }
+    td {
+      &.col_1 {
+        //width: 748px;
+        width: 84%;
+        
+      }
+
+      &.row_2 {
+        &.col_1 {
+          background: $c-bg-td; 
+        }
+      }
+    }
+  }
+
+  #tablefield-1 {
+    td {
+      &.col_1,
+      &.col_2,
+      &.col_3,
+      &.col_4,
+      &.col_5 {
+        //width: 149px;
+        width: 16.9%;
+
+        @media only screen and (max-width: $tablet) {
+          width: 15.9%;
+        }
+
+        &.col_3 {
+          @media only screen and (max-width: $tablet) {
+            // width: 19.9%;
+          }         
+        }
+      }
+
+      &.col_0 {
+        border-bottom: none;
+      }
+
+      &.row_1 {
+        min-height: 32px;
+        &.col_0 {
+          padding-bottom: 0;
+          padding-top: 20px; 
+        }
+      }
+
+      &.row_2 {
+        min-height: 32px;
+        &.col_0 {
+          border-bottom: 1px solid $c-border-td;
+          padding-bottom: 20px;
+          padding-top: 0;
+        }
+        
+        &.col_1,
+        &.col_2,
+        &.col_3,
+        &.col_4,
+        &.col_5 {
+          background: $c-bg-td;
+        }
+      }
+    }
+
+    th {
+      &.col_1,
+      &.col_2,
+      &.col_3,
+      &.col_4,
+      &.col_5 {
+        padding: 16px 0;
+        //width: 149px;
+        width: 16.9%;
+        @media only screen and (max-width: $tablet) {
+          width: 15.9%;
+        }
+      }
+      
+      &.col_0 {
+        //padding-right: 28px;
+        //width: 108px;
+        padding-right: 5%;
+        width: 10%;
+      }
+      &.col_3 {
+        @media only screen and (max-width: $tablet) {
+          width: 19.9%;
+        }         
+      }
+    }
+  }
+  .tablefield-wrapper {
+    &.tabla-mobile {
+      th {
+        &.col_0 {
+          text-align: center;
+          width: 100%;
+        }      
+        &.col_1 {
+          display: none;
+        }
+      }
+
+      td {
+        td.col_0 {
+          font-size: 13px;
+        }
+
+        &.row_12,
+        &.row_10,
+        &.row_5,
+        &.row_7,        
+        &.row_3 {
+          &.col_0 {
+            border-right: 0;
+          }
+          &.col_1 {
+            font: {
+              family: $font-brandb;
+              weight: normal;
+            }
+            letter-spacing: 1.5px;
+          }
+        }
+
+        &.row_6,
+        &.row_11,
+        &.row_13,
+        &.row_4 {
+          &.col_0 {
+            padding: 6px 0;
+          }
+        }
+
+        &.row_8 {
+          &.col_0 {
+            border-bottom: none;
+            padding: 20px 0 0 0;
+          }
+        }
+
+         &.row_9 {
+          &.col_0 {
+            padding: 0 0 20px 0;          
+          }
+         }
+      }
+    }
+  }
+}
+
+// /centro-de-lenguas/cursos-ingles
+.curso-virtual-ingles {
+  .field--name-body {
+    max-width: 65%;
+
+    @media only screen and (max-width: $mobile) {
+      max-width: 100%;
+    }
+  }
+  
+  table {
+    th {
+      &.col_0 {
+        text-align: left;
+        //width: 224px;
+        width: 24%
+      }
+
+      &.col_1 {
+        //width: 656px;
+        width: 75%;        
+      }
+    }
+
+    td {
+      &.col_0 {
+        text-align: left;
+        font: {
+          family: $font-brandb;
+          size: 14px;
+          weight: normal;
+        }
+        letter-spacing: 1.5px;        
+        //width: 224px;
+        width: 24%
+        
+      }
+      &.col_1 {
+        //width: 656px;
+        width: 75%
+      }
+
+      @media only screen and (max-width: $mobile) {
+        min-height: 30px;
+      }
+    }
+  }
+
+  #tablefield-0 {
+    th {
+      border-bottom: 1px solid $c-border-td;
+      
+      &.col_0 {
+        border-right: 1px solid $c-border-td;
+      }
+
+      &.col_1 {
+        font: {
+          family: $font-baser;
+          size: 16px;
+        }
+        letter-spacing: initial;
+      }
+    }
+    td {
+      &.col_0 {
+        border-right: 1px solid $c-border-td;    
+      }
+
+      &.col_1 {
+        background: $c-bg-td;
+      }   
+    }
+  }
+
+  #tablefield-1 {
+    td {
+      &.col_0 {
+        border-right: 1px solid $c-border-td;    
+      }
+      &.col_1 {
+        padding: 10px 0;
+        @media only screen and (max-width: $tablet) {
+          padding: 17px 0 16px;
+        }
+      }
+    } 
+  }
+
+  .tablefield-wrapper {
+    &.tabla-mobile {
+      th {
+        &.row_0 {
+          &.col_1 {
+            font: {
+              family: $font-baser;
+            }
+          }
+        }
+
+        &.col_0 {
+          padding: 14px 0;
+          border-right: 1px solid $c-border-td;
+        }
+      }
+      td {
+        &.col_0 {
+          border-right: 1px solid $c-border-td;       
+          padding: 14px 0;
+        }
+
+        &.row_1 {
+          &.col_1 {
+            background: $c-bg-td;
+          }
+        }        
+
+        &.row_3 {
+          &.col_0 {
+            padding: 6px 0;
+          }        
+        }
+
+        &.row_2 {
+          &.col_0 {
+            border-right: none;
+            padding: 12px 0 31px 0;
+          }
+
+          &.col_1 {
+            font-family: $font-brandb;
+          }
+        }
+      }
+    }
+  }
+}
+
+// /centro-de-lenguas/clubes-converzacion
+.horario-club-frances,
+.horario-club-ingles {
+  table {
+    th {
+      border-right: 2px solid $color_brand;
+      border-bottom: 2px solid $color_brand;
+      border-top: 2px solid $color_brand;
+      color: $color-brand;
+      font-size: 20px;
+      //width: 218px;
+      width: 24.8%;
+      @media only screen and (max-width: $tablet) {
+        width: 24.7%;
+      }
+      &.col_3 {
+        border-right: none;
+      } 
+    }
+    td {
+      border-right: 1px solid $c-border-td;
+      //width: 219px;
+      width: 24.8%;
+
+      @media only screen and (max-width: $tablet) {
+        width: 24.8%;
+      }
+      &.col_0 {
+        font: {
+        family: $font-brandb;
+          size: 14px;
+          weight: normal;
+        }
+        letter-spacing: 1.5px;
+        text-align: left;
+      }
+
+      &.col_3 {
+        border-bottom: none;
+        border-right: none;
+      }
+
+      &.row_2 {
+        &.col_0 {
+          border-bottom: none;
+          padding-bottom: 0;        
+          padding-top: 20px;      
+        }
+
+        &.col_1,
+        &.col_2 {
+          background: $c-bg-td;
+        }
+      }
+
+      &.row_4 {
+        &.col_0,
+        &.col_1,
+        &.col_2 {
+          background: $c-bg-td;
+        }
+      }
+      &.row_5 {
+        &.col_3 {
+          border-bottom: 1px solid $c-border-td;
+        }
+      }
+    }
+  }
+
+  .tablefield-wrapper {
+    &.tabla-mobile {
+      th {
+        &.col_1 {
+          border-bottom: 1px solid $c-border-td;
+          border-top: 1px solid $c-border-td;
+          border-right: none;
+          font: {
+            family: $font-baser;
+            size: 13px;
+          }
+          color: #4A4A4A;
+        }
+
+        &.col_0 {
+          font-size: 13px;
+          color: #4A4A4A;
+        }
+      }
+      td {
+        &.col_0 {
+          background: #fff;
+          border-right: 2px solid $color_brand;
+          border-bottom: 2px solid $color_brand;
+          padding: 10px 0;
+          text-align: center;
+        }
+
+        &.col_1 {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+.horario-club-ingles {
+  margin-top: 50px;
+  .tablefield-wrapper {
+    &.tabla-mobile {
+      th {
+        &.row_0 {
+          background: $c-bg-td;
+        }
+      }
+
+      td {
+        &.row_19,
+        &.row_18,
+        &.row_17,
+        &.row_16,        
+        &.row_11,
+        &.row_10,   
+        &.row_9,
+        &.row_8,        
+        &.row_2,
+        &.row_1,   
+        &.row_3 {
+          background: $c-bg-td;
+        }
+
+        &.row_4 {
+          &.col_1 {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.horario-club-frances {
+  table {
+    td {
+      &.col_3 {
+        border-bottom: 1px solid $c-border-td;
+      }
+    }
+  }
+
+  .tablefield-wrapper {
+    &.tabla-mobile {
+      th {
+        background: $c-bg-td;        
+      }
+      td {
+        background: $c-bg-td;
+
+        &.col_0 {
+          background: $c-bg-td;        
+        }
+      }    
+    }
+  }
+}
+
+// centro-de-lenguas/cursos-frances
+.curso-presencial-frances {
+  .field--name-body {
+    .field__item {
+      @include inline-block(top);
+      width: 65%;
+      
+      @media only screen and (max-width: $mobile) {
+        width: 100%;
+      }      
+      &:nth-child(2) {
+        border-left: 1px solid #c2c4c7;
+        margin-left: 2%;
+        padding-bottom: 30px;
+        padding-left: 2%;
+        width: 30%;
+
+        @media only screen and (max-width: $mobile) {
+          border-left: none;
+          margin: 20px 0 0 0;
+          padding: 0;
+          width: 100%;
+        }        
+        h3 {
+          color: $color_brand;
+          font: {
+            family: $font-bsb;
+            size: 18px;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.3;
+        }
+      } 
+    }
+  }
+
+  .field--name-field-titulo-tabla {
+    margin-bottom: 15px;
+  }
+
+  .tablefield-wrapper.table-ready {
+    @media only screen and (max-width: $mobile) {
+      display: block;
+    }    
+  }
+  table {
+    th {
+      &.col_0 {
+        //width: 181px;
+        width: 20%;
+        @media only screen and (max-width: $mobile) {
+          display: none;      
+        }      
+      }
+
+      &.col_1 {
+        //width: 700px;
+        width: 80%;
+
+        @media only screen and (max-width: $mobile) {
+          width: 100%;
+        }        
+      }
+    }
+
+    td {
+      &.col_0 {
+        border-right: 1px solid $c-border-td;
+        font: {
+          family: $font-brandb;
+          size: 14px;
+          weight: normal;
+        }
+        letter-spacing: 1.5px;
+        text-align: left;
+        //width: 180px;
+        width: 19%;
+        @media only screen and (max-width: $mobile) {
+          width: 49%;
+        }      
+      }
+
+      &.row_1 {
+        &.col_1 {
+          @media only screen and (max-width: $mobile) {
+            background: $c-bg-td;
+          }            
+        }        
+      }
+      &.col_1 {
+        //width: 700px;
+        width: 80%;
+        @media only screen and (max-width: $mobile) {
+          width: 49%;
+        }     
+      }
+    }
+  }
+
+  #tablefield-1 {
+    th {
+      &.col_0 {
+        @media only screen and (max-width: $mobile) {
+          display: inline-block;
+          width: 49%;          
+        }   
+        text-align: left;
+      }
+
+      &.col_1 {
+        @media only screen and (max-width: $mobile) {
+          display: inline-block;
+          width: 49%;
+        }
+      }      
+    }
+
+    td {
+      &.col_0 {
+        //padding-right: 29px;
+        //width: 150px;
+        padding-right: 4%;
+        width: 15%;
+        @media only screen and (max-width: $mobile) {
+          padding-right: 0;
+          width: 49%;
+        }         
+      }
+
+      &.col_1 {
+        padding: 16px 0;
+        @media only screen and (max-width: $mobile) {
+          background: none;
+          padding: 14px 0;
+        }        
+      }
+    }
+  }
+}
+
+// /centro-de-lenguas/examen-suficiencia
+.calendario-suficiencia-tabla {
+  .field--name-body {
+    max-width: 600px;
+    margin-bottom: 15px;
+  }
+
+  table {
+    th {
+      //width: 220px;
+      width: 25%;
+
+      @media only screen and (max-width: $tablet) {
+        &.col_2,
+        &.col_0 {
+          padding: 16px 0;
+        }
+      }
+
+    }
+
+    td {
+      border-right: 1px solid $c-border-td;
+      //width: 219px;
+      width: 24.9%;
+
+      @media only screen and (max-width: $tablet) {
+        width: 24.8%;
+      }
+      
+      &.col_3 {
+        border-right: none;
+      }
+
+      &.col_0,
+      &.col_2 {
+        font: {
+          family: $font-brandb;
+          size: 14px;
+          weight: normal;
+        }
+      }
+
+      &.row_1,
+      &.row_3,
+      &.row_5 {
+        background: $c-bg-td;
+      }
+    }
+  }
+
+  .tablefield-wrapper {
+    &.tabla-mobile {
+      th {
+        &.col_0 {
+          padding: 14px 0;      
+        }
+      }
+
+      td {
+        &.row_7  {
+          &.col_1 {
+            font: {
+              family: $font-brandb;
+              weight: normal;
+            }
+          }
+
+          &.col_0 {
+            border-right: none;
+            padding: 14px 0;      
+          }
+        }
+        
+        &.col_1 { 
+          border-right: none;
+        }
+        
+        &.row_13,
+        &.row_11,
+        &.row_9 {
+          background: $c-bg-td;
+        }
+      }
+    }
+  }
+}

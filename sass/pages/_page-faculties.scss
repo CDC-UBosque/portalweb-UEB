@@ -1,0 +1,149 @@
+.page-faculties {
+	@include page-specific-color($color_facu_diseno, $color_facu_diseno);
+
+	.main-image {
+		position: relative;
+	}
+	//Quitar lo siguiente para la segunda fase
+	.search-professor {
+		display: none;
+	}
+	//Quitar para la segunda fase
+	.block-views-blockrepresentantes-block-1 {
+		display: none;
+	}
+
+	.lateral-button {
+		display: block;
+	}
+
+	.sidebar_first {
+		padding: 0;
+	}
+
+	&.lateral-menu-open {
+		.block-menu.menu--menu-facultades {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.menu--menu-facultades {
+			.menu {
+				right: 0;
+			}
+		}
+	}
+
+	.investigative-culture-faculty {
+		
+		p {
+			margin: 0;
+		}
+
+		.cita {
+			margin-bottom: 35px;
+		}
+	}
+
+	.social-networks {
+		overflow: hidden;
+
+		.block-inner {
+		//	width: 120%;
+		}
+		.block-twitter-block {
+			max-width: 200px;
+
+			.column-post {
+				& + .column-post {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+body[class^="page-faculties"] {
+	
+	// /facultad/creacion-comunicacion/
+	&.faculty-creacion-comunicacion {
+		//@include page-specific-color($color_facu_diseno, $color_facu_diseno);
+	}
+
+	// /facultad/ciencias
+	&.faculty-ciencias {
+		@include page-specific-color($color_facu_ciencias, $color_facu_ciencias);
+		@include menufacultades-active(1);
+	}
+
+	&.page-facultad-de-ciencias {
+		@include page-specific-color($color_facu_ciencias, $color_facu_ciencias);
+		@include menufacultades-active(1);
+	}
+
+	&.page-facultad-de-ciencias-economicas-y-administrativas {
+		@include page-specific-color($color_facu_economia, $color_facu_economia);
+		@include menufacultades-active(2);
+	}
+
+	&.page-facultad-de-ciencias-politicas-y-juridicas {
+		@include page-specific-color($color_facu_derecho, $color_facu_derecho);
+		@include menufacultades-active(3);
+	}
+
+	&.page-facultad-de-creacion-y-comunicacion {
+		@include page-specific-color($color_facu_diseno, $color_facu_diseno);
+		@include menufacultades-active(4);
+	}
+
+	&.page-facultad-de-educacion {
+		@include page-specific-color($color_facu_educacion, $color_facu_educacion);
+		@include menufacultades-active(5);
+	}
+
+	&.page-facultad-de-enfermeria {
+		@include page-specific-color($color_facu_enfermeria, $color_facu_enfermeria);
+		@include menufacultades-active(6);
+	}
+
+	&.page-facultad-de-ingenieria {
+		@include page-specific-color($color_facu_ingenieria, $color_facu_ingenieria);
+		@include menufacultades-active(7);
+	}
+
+	&.page-facultad-de-medicina {
+		@include page-specific-color($color_facu_medicina, $color_facu_medicina);
+		@include menufacultades-active(8);
+	}
+	
+	&.page-facultad-de-odontologia {
+		@include page-specific-color($color_facu_odontologia, $color_facu_odontologia);
+		@include menufacultades-active(9);
+	}
+
+	&.page-facultad-de-psicologia {
+		@include page-specific-color($color_facu_psicologia, $color_facu_psicologia);
+		@include menufacultades-active(10);
+	}
+
+	&.page-departamento-de-humanidades {
+		@include page-specific-color($color_facu_bioetica, $color_facu_bioetica);
+		@include menufacultades-active(11);
+	}
+}
+
+/*
+config.scss
+$color_facu_derecho: #0075C9; // Facultad de Ciencias Políticas y Jurídicas
+$color_facu_economia: #003A5D; // Facultad de Ciencias Administrativas y Económicas
+$color_facu_ingenieria: #0B7984; // Facultad de Ingeniería
+$color_facu_ciencias: #88AB02; // Facultad de Ciencias
+$color_facu_educacion: #52B8B3; // Facultad de Educación
+$color_facu_psicologia: #F9B700; // Facultad de Psicología
+$color_facu_enfermeria: #639FDB; // Facultad de Enfermeria
+$color_facu_medicina: #EE7700; // Facultad de Medicina
+$color_facu_odontologia: #E84B37; // Facultad de Odontología
+$color_facu_diseno: #D7006D; // Facultad de Diseño Imagen y Comunicación
+$color_facu_artes: #A12C4D; // Facultad de Artes
+$color_facu_bioetica: #788939; // Departamento de Bioética
+*/

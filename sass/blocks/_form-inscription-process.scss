@@ -1,0 +1,191 @@
+// http://uat_ubosque.d8.seedoven.co/bienestar-universitario/deportes
+// http://uat_ubosque.d8.seedoven.co/internacionalizacion/becas-internacionales
+.form-inscription-process {
+	@include arrow_before ('h2', 15px 0px 0px 0px);
+	background: #F2F2F2;
+	position: relative;
+	top: 0; //-20px;
+	width: 100% !important;
+	box-sizing: border-box; 
+	padding: 30px 80px;
+	padding-top: 0px;
+
+	.close-cerrar {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 10;
+	}
+	
+	
+	
+	h2 {
+		@include title_acherusblack_m;
+		letter-spacing: -0.5px;
+		margin: 0px;
+		padding-bottom: 5px;
+		color: #494c4d;
+		text-align: center;
+		padding-bottom: 10px;
+
+		@media only screen and (max-width: $mobile) {
+			font-size: 19px;
+            line-height: 1.2;
+
+            &:before {
+                margin-bottom: 10px;
+            }
+		}
+	}
+
+	&::after {
+		display: none;
+	}
+
+	@media only screen and (max-width: $tablet) {
+		margin-left: -40px;
+		margin-right: -40px;
+        padding: 10px 40px 25px;
+	}
+	
+	@media only screen and (max-width: $mobile) {
+		padding: 5px 15px 20px;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.webform-submission-form {
+		@include ib-grid;
+		@include clearfix;
+
+		.form-item-condiciones {
+            font-family: 'latoregular';
+            font-size: 10px !important;
+			padding-left: 27px; // útil en /doctorado/ciencias-biomedicas
+
+            a {
+                color: #9B9B9B;
+                text-decoration: none;
+                border-bottom: 1px solid $color-brand;
+                letter-spacing: 1px;
+            }
+		}
+
+		.form-item {
+			@include inline-block(top);
+			width: 50%;
+			box-sizing: border-box;
+			margin-bottom: 15px; // URL: /doctorado/ciencias-biomedicas
+
+			.form-item {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				display: block;
+			}
+
+			// &.form-item-nombre-completo {
+			&:nth-of-type(2n+1) {
+				padding-right: 10px;
+
+				@media only screen and (max-width: $mobile) {
+					padding-right: 4px;
+				}
+			}
+
+			&:nth-of-type(2n+2) {
+			//&.form-item-email {
+				padding-left: 10px;
+
+				@media only screen and (max-width: $mobile) {
+					padding-left: 4px; 
+				}					
+			}
+		}
+
+		.fields-autorizo-y-terminos {
+			position: relative;
+			padding-top: 5px;
+			margin: 0;
+		}
+
+		.js-form-type-checkbox {
+			// text-align: center; Acá no sirve: http://uat_ubosque.d8.seedoven.co/doctorado/ciencias-biomedicas
+			float: none !important;
+
+			label {
+				@include pt_serifitalic(12px);
+			}
+		}
+
+		.form-actions {
+			float: none !important;
+			text-align: center;
+			padding-top: 15px;
+
+			.form-submit {
+				@include buton-xl-green;
+			}
+		}			
+	}
+	
+	.block-webform-block {
+		@include form-input-select ('.form-item, .js-form-type-textarea', 'input, textarea');
+		@include form-input('.form-item', 'input');
+		@include form-checkbox ('.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion');
+		margin-bottom: 60px;
+		// width: 66%; perturba acá http://uat_ubosque.d8.seedoven.co/audiencia/aspirantes
+
+		@media only screen and (max-width: $tablet-2) {
+			width: 100%;
+		}
+
+		label,
+		.form-text,
+		.form-email,
+		.form-textarea {
+			font-family: $font-baser;
+			color: $color_gray_60;
+			line-height: 17px;
+			font-size: 14px;
+		}
+
+		.form-textarea {
+			padding: 10px;
+		}
+
+
+		.form-item {
+			margin-bottom: 15px;
+		}
+
+		.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion {
+			float: left;
+		}
+
+		.form-actions {
+			float: right;
+			input {
+				@include buton-xl-green;
+
+			}
+		}
+
+		&::after {
+			background: #ededed;
+			content: "";
+			width: 100%;
+			height: 1px;
+			display: block;
+			margin-top: 80px;
+		}
+
+		&.webform-element--title-inline {
+			#formulario-checkbox-error {
+				&::after{
+					display: none;
+				}
+			}
+		}
+	}
+}

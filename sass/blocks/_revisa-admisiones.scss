@@ -1,0 +1,266 @@
+@include grilla-2-columns-bs('.revisa-admisiones > .block-inner', '.block');
+// URL: /programas-academicos
+.revisa-admisiones {
+	margin-bottom: 15px;
+
+	@media only screen and (max-width: $tablet) {
+		margin-left: -20px;
+		margin-right: -20px;
+		// Ahí necesita -20 en vez de -30px, http://ubosque.d8.seedlabs.co/apoyo-financiero
+	}
+
+	@media only screen and (max-width: $mobile) {
+		margin-bottom: 10px;
+	}
+	
+	.block .block-inner {
+		background: none;
+	}
+	
+	> .block-inner {
+		position: relative;
+		overflow: hidden;
+
+		@media only screen and (max-width: $mobile) {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+		.block {
+			@media only screen and (max-width: $tablet-1) {
+				width: 100%;
+			}
+			&:nth-child(2) {
+				.paragraph--type-h2 {
+					width: 60%;
+				}
+			}
+		}
+		>.block-block-content {
+			&:nth-child(2), &:nth-child(3) {
+				.field--name-field-bocadillo-150 {
+					width: 90%;
+				}
+			}
+			&:nth-child(4), &:nth-child(5) {
+				margin-bottom: 0px;
+				.field--name-field-bocadillo-150 {
+					width: 75%;
+				}
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 180px;
+		display: block;
+		max-height: 180px;
+	}
+
+	.field--name-field-title-block {
+		@include title-delgado-grande;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 27px 41px 0;
+		box-sizing: border-box;
+	}
+
+	.field--name-field-enlace {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 0 41px 17px;
+		box-sizing: border-box;
+
+		a {
+			@include button-md-white;
+		}
+	}
+
+	.block {
+		.field--name-field-title-block {
+			max-width: 350px;
+		}
+
+		& + .block {
+			.field--name-field-title-block {
+				max-width: 450px;
+				color: white;
+			}
+		}
+	}
+
+	#block-programasacademicosapoyofinanciero-2 {
+		.field--name-field-links {
+			a {
+				
+				@include button-m-border-green;
+				padding: 10px 32px 11px;
+				@media only screen and (max-width: $tablet) {
+					padding: 8px 30px 8px;
+				}
+			}
+		}
+	}
+
+	#block-programasacademicosreconocimientoespfuerzo {
+		.field--name-field-links {
+			a {
+				@include buton-l-green;
+				padding: 10px 32px 11px;
+				@media only screen and (max-width: $tablet) {
+					padding: 8px 30px 8px;
+				}
+			}
+		}
+	}
+
+	.block {
+		margin-bottom: 23px;
+
+		.block-inner {
+			background-color: $color_gray_10;
+		}
+
+		&:nth-of-type(2n+1) {
+			.block-inner {
+				background-color: $color_gray_2;
+			}
+		}
+
+		&:last-child {
+			.paragraph--type-h2 {
+				h2 {
+					color: white;
+				}
+			}
+		}
+	}
+
+	.block-inner .block-inner {
+		min-height: 180px;
+		max-height: 180px;
+		height: 100%;
+		position: relative;
+
+		@media only screen and (max-width: $mobile) {
+			min-height: 180px;
+			margin: 0 -10px;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 180px;
+		display: block;
+		max-height: 180px;
+
+		@media only screen and (max-width: $mobile) {
+			min-height: none;
+			max-height: none;
+		}
+	}
+
+	.field--name-field-images {
+		& + .text-content {
+			max-width: 90%;
+		}
+	}
+
+	.text-content,
+	.field--name-field-title-block {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 27px 41px 0;
+		box-sizing: border-box;
+		@media only screen and (max-width: $tablet) {
+			padding: 20px 15px 0;
+		}
+	}
+
+	.paragraph--type-h2 {
+		width: 85%;
+
+		@media only screen and (max-width: $tablet-1) {
+			width: 100%;
+		}
+
+		h2 {
+			@include delgado-title;
+			padding: 0;
+			@media only screen and (max-width: $tablet) {
+				font-size: 20px;
+				line-height: 100%;
+			}
+			@media only screen and (max-width: $mobile) {
+				font-size: 20px;
+				max-width: 80%;
+			}
+		}
+	}
+
+	.field--name-field-bocadillo-150 {
+		@include lato-regular-normal;
+		@media only screen and (max-width: $tablet) {
+			line-height: 100%;
+		}
+		& + .paragraph--type-links {
+			a {
+				padding-top: 6px;
+				padding-bottom: 6px;
+			}
+		}
+	}
+
+	.field--name-field-links {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 0 41px 17px;
+		box-sizing: border-box;
+		@media only screen and (max-width: $tablet) {
+			padding: 0 15px 25px;
+		}
+		a {
+			@include button-md-white;
+			// max-width: 62px; // estorba en http://uat_ubosque.d8.seedoven.co/inscripciones
+			// width: 100%; // estorba en http://uat_ubosque.d8.seedoven.co/inscripciones
+			text-align: center;
+
+			@media only screen and (max-width: $tablet) {
+				padding: 8px 10px !important;
+			}
+		}
+	}
+	
+	.block {
+		.field--name-field-title-block {
+			max-width: 350px;
+		}
+
+		& + .block {
+			.field--name-field-title-block {
+				max-width: 450px;
+				color: white;
+			}
+		}
+	}
+
+	& + .contact-prefooter {
+		padding-bottom: 60px;
+		margin-top: 50px;
+
+		& + .block-addtoany-block {
+			margin-top: 50px;
+		}
+	}	
+
+}

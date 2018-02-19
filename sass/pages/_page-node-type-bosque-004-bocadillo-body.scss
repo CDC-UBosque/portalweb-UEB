@@ -1,0 +1,21 @@
+.page-node-type-bosque-004-bocadillo-body {
+	.sidebar-first + #main {
+		padding-top: 25px;
+	}
+
+	.node--type-bosque-004-bocadillo-body {
+		@media only screen and (min-width: $tablet) {
+			padding-bottom: 40px;
+		}
+	}
+
+    &.convocatoria-internacional {       
+        .pager__item {
+            text-align: center;
+            padding-bottom: 30px;
+            a {
+                @include buton-xl-green;
+            }
+        }
+    }
+}

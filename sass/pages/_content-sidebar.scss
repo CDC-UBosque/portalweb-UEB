@@ -1,0 +1,45 @@
+
+.content-sidebar {
+	.layout-content {
+		@include ib-grid;
+		padding-left: 0;
+		padding-right: 0;
+
+		#main.content {
+			@include inline-block(top);
+			@include grid-porcentaje(9);
+		}
+
+		.layout-content--post-content {
+			@include inline-block(top);
+			@include grid-porcentaje(3);
+			margin-top: 10px;
+		}
+
+		.post_content {
+			.block {
+				@include sidebar-block-title('h2, .field--name-field-texto-inferior, .field--name-field-etiqueta');
+				@include sidebar-block-content('.views-element-container, .field--name-field-archivos-facultad');
+				@include sidebar-block-bottom;
+				@include border-radius-sm;
+				@include border-line-color;
+				overflow: hidden; // evita que se vea cortado el border-radius
+				h2
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						border-left: 16px solid #fbfbfb;
+						border-right: 16px solid #fbfbfb;
+					}
+				}
+				.view-footer
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						background-color: #fbfbfb;
+					}
+				}
+			}
+		}
+	}
+}

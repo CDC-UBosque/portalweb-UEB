@@ -1,0 +1,29 @@
+.page-nuestro-bosque {
+	.sidebar_modal {
+		@media only screen and (min-width: $mobile) {
+			overflow-y: scroll;
+			height: 600px;
+		}
+	}
+
+	.block-block-contentdda30a33-eed8-46dd-b162-95b101754102 {
+		border-bottom: 1px solid #ededed;
+	}
+
+	.sidebar-menu {
+		margin-bottom: 5px;
+
+		h2 {
+			display: block;
+			line-height: normal;
+			margin-bottom: 0;
+			padding: 6px 0;
+		}
+
+		.menu-item {
+			&:first-child {
+				@include sidebar-menu-title-remove;
+			}
+		}
+	}
+}

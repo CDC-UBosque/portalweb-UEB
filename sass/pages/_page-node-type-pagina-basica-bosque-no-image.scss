@@ -1,0 +1,258 @@
+.page-node-type-pagina-basica-bosque-no-image {
+	.sidebar-first + #main {
+		padding-top: 15px;
+	}
+	.block-content--type-bloque-informacion-decanatura {
+		//width: 100%;
+		//padding-bottom: 0px;
+		//margin-top: 40px;
+	}
+	&.cursos-preuniversitarios {
+		.field--name-node-title {
+			display: none;
+		}
+	}
+	&.inscripciones-estado-admision {
+		.prefooter-container {
+			margin-top: -40px;
+		}
+		.pre_footer {
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				margin-top: 20px;
+				margin: 0 auto;
+				margin-bottom: 40px;
+				width: 4px;
+				height: 4px;
+				border-radius: 4px;
+				background-color: #9b9b9b;
+			}
+		}
+		
+	}
+	&.apoyo-financiero-page {
+		.field--name-body {
+		//	padding-top: 35px;
+		//	padding-bottom: 90px;
+
+	}
+
+	
+}
+
+.node--type-pagina-basica-bosque-no-image {
+
+	.field--name-field-bocadillo-150 {
+			margin-bottom: 25px; //55px;			
+			// Es 25px en: /centro-informacion/bosque-responde
+
+			& + .field--name-body {
+				margin-bottom: 32px;
+			} 
+		}
+
+		.field--name-body {
+			max-width: 600px;
+
+			p {
+				@include interna-parrafo;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.block-block-group6bbc575b-b5d5-4c38-8c5d-e3b628f18fd2,
+	.block-block-group3a1e3993-dfdb-4879-a2e8-cf5c9ba3abfb {
+		margin-bottom: 57px;
+		
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 0px;
+		}
+		
+		> .block-inner {
+			font-size: 0;
+		}
+		
+		.block {
+			@include inline-block(top);
+			width: 49.5%;
+			font-size: 16px;
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+		}
+
+		.field--name-field-title-block {
+			@include delgado-title;
+			padding-bottom: 14px;
+			text-align: center;
+
+			// Fuerza que se rompan los títulos en 2 líneas al mismo tiempo
+			@media only screen and (max-width: 1055px) {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+		}
+		
+		.field--name-body {
+			max-width: 266px;
+			margin: 0 auto 8px;
+			position: relative;
+			padding-top: 30px;
+			@media only screen and (max-width: $mobile) {
+				max-width: 250px;
+			}
+			&::before {
+				@include arrow-bottom-before;
+			}
+
+			p {
+				@include very-small-text;
+				line-height: 16px;
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		.field--name-field-enlace {
+			text-align: center;
+			padding-bottom: 27px;
+
+			a {
+				@include buton-xl-white;
+				padding: 16px 50px;
+			}
+		}
+
+		.field--name-field-archivos-facultad {
+			background-color: white;
+
+			.field__item {
+				border-bottom: 1px solid $color_gray_10;
+				padding: 0;
+				max-width: 99%;
+				position: relative;
+
+				a {
+					font-family: $font-baseb;
+					color: $color_brand;
+					text-transform: none;
+					font-size: 12px;
+					letter-spacing: 2.18px;
+					text-decoration: none;
+					padding: 15px 0 15px 45px;
+					display: block;
+					//background: url("../images/admisiones/iconPdfLarge.svg") no-repeat  10px 9px;
+					
+				}
+
+				&::before {
+					content: "";
+					background: url("../images/admisiones/iconPdfLarge.svg") no-repeat  0 0;
+					//background: url("../images/facultad/IconPDF.svg") no-repeat  0 10px;
+					//background-size: 30px auto;
+					display: inline-block;
+					vertical-align: middle;
+					padding-right: 5px;
+					position: absolute;
+					top: 0;
+					left: 9px;
+					bottom: 0;
+					margin: auto;
+					width: 22px;
+					height: 28px;
+				}
+
+				
+			}
+		}
+		.block-block-content {
+			
+			&:nth-child(3) {
+				.field--name-body {
+
+
+					&::before {
+						@include arrow-white-bottom-before;
+					}
+
+				}
+			}
+		}
+	}
+	.block-block-content3467224f-68a9-4fe2-b0e6-ee933239a5d6 {
+		//@include grid(6, 80, 20);
+		//display: inline-block;
+		//padding-top: 60px;
+	}
+
+
+	#block-pregrado,
+	#block-blockposgradoestadodelprocesoadmision {
+		background-color: $color_gray_15;
+		border-right: 1px solid white;
+	}
+	
+	#block-blockpregradolistadodeadmitidos,
+	#block-blockposgradolistadodeadmitidos {
+		background-color: $color_brand;
+
+		.field--name-field-title-block,
+		.field--name-body p {
+			color: white;
+		}
+	}
+	&.simulador-financiero {
+		@include intro-title('.null', '.field--name-node-title', '.null');
+		.field--name-node-title {
+			h1 {
+				font-size: 33px;
+				line-height: 36px;
+			}
+		}
+		.field--type-text-with-summary {
+
+			max-width: 90%;
+			p {
+				@include cita;
+				padding-left: 105px;
+			}
+		}
+		.block-block-content711a6726-4ead-407e-be52-ecc56b4f6aa9 {
+			padding-bottom: 250px;
+		}
+		iframe {
+			border: none;
+		}
+
+	}
+	&.virtual-run {
+		.sidebar-first {
+			@include sidebar-menu ('.block-content block-content--type-basic', '.field--name-field-subtitle-block');
+			.field--name-field-subtitle-block {
+
+				padding-top: 15px;
+				padding-bottom: 15px;
+				a {
+					@include item-menu-active;
+					text-transform: uppercase;
+					text-decoration: none;
+					&:before {
+						content: url("../images/menu/menu-lateral-arrow-left.svg");
+						display: inline-block;
+						padding-right: 5px;
+						vertical-align: middle;
+
+					}
+					&:hover {
+						border-bottom: 2px solid $color_brand;
+					}
+				}
+			}
+		}
+	}
+}

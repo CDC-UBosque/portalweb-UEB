@@ -1,0 +1,99 @@
+.page-node-type-convenios {
+	.field--name-field-tabs-pregrado-convocatoria {
+		@include default-tabs();
+		padding-bottom: 55px;
+		@media only screen and (max-width: $mobile) {
+			margin: 0 -30px;
+		}
+		.field--name-field-tab-titulo {
+			@include title_latobold_l;
+			padding-bottom: 10px;
+		}
+		.field--name-field-tab-bocadillo {
+			@include pt_serifitalic (14px);
+			letter-spacing: -0.5px;
+		}
+		.field--name-field-tab-enlace {
+			padding-bottom: 40px;
+			position: relative;
+			a {
+				@include link-text;
+				&:before {
+					content: "";
+					height: 1px;
+					width: 880px;
+					top: 45px;
+					left: -25px;
+					background: #dddddd;
+					position: absolute;
+				}				
+			}			
+		}
+		.field--name-field-tabs-pregrado {
+			>.field__item {
+				&:nth-last-child(1) {
+					a {
+						&:before {
+							content: "";
+							height: 0px;
+							width: 0px;
+						}				
+					}		
+				}
+			}
+		}
+		
+		.tabMakerContents {
+			&:after {
+				content: "";
+				width: 0;
+			}
+			&:before {
+				content: "";
+				width: 0;
+			}
+		}
+		.tabMakerContent {
+			padding: 30px 25px 0px 25px;
+		}
+		.field--name-field-titulo-tab-pregrado {
+			display: none;
+
+		}
+	}
+	
+	.field--name-field-bocadillo-150 {
+		@include cita;
+		padding-bottom: 25px;
+		font-size: 31px;
+	}
+	#header,
+	.wrap-content
+	{
+		.field--type-text-with-summary {
+			@include paragraphs_large;
+			padding-bottom: 55px;
+		}
+	}
+	// .field--name-field-informacion-de-la-facultad {
+	// 	@include grid(6, 80, 20);
+	// 	@include contact-prefooter (3, '.field--name-field-datos-de-informacion-decan', '.field__item', 
+	// 		'.field--name-field-acerca-de', '.field--name-field-bloque-legal-snies- ', 0px);
+	// 	display: inline-block;
+	// }
+	// .addtoany_list {
+	// 	@include contact-social-networks (2.95);
+	// 	margin-right: 0;
+	// }
+	
+	.node--type-convenios{
+		.field--name-body{
+			width: 76%;
+			@media only screen and (max-width: $tablet) {
+				width: 100%;
+			}
+		}
+	}
+
+	
+}

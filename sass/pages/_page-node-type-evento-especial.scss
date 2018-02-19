@@ -1,0 +1,116 @@
+.page-node-type-evento-especial {
+	@include addToAny;
+	@include eventos-mobile-menu;
+
+
+
+	.hamburger-button span {
+		background: black;
+	}
+
+	#header {
+		border-top: 7px solid black;
+		height: auto;
+		position: fixed;
+		z-index: 100;
+
+		.header-inner {
+			border: 0;
+			border-bottom: 1px solid black;
+			max-height: none;
+		}
+
+		.header_first {
+			width: auto;
+			float: none;
+			padding: 35px 0 30px;
+
+			@media only screen and (max-width: $tablet) {
+				display: block;
+			}
+		}
+
+		.block {
+			@include inline-block;
+			margin-right: 15px;
+		}
+
+		.menu {
+			padding-top: 10px;
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		.menu-item {
+			@include inline-block;
+			margin-right: 25px;
+
+			a {
+				@include font(15px, 18px, -0.19px);
+				text-transform: lowercase;
+				font-family: $font-bsb;
+				color: #1C140D;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.wrap-content {
+		padding-top: 122px;
+	}
+
+	#prefooter {
+		.prefooter-container {
+			@include grilla-3-columns-bs('.pre_footer', '> .block');
+			border-top: 2px solid black;
+
+			h2,
+			h3 {
+				@include evento-title;
+				@include font(18px, 24px, 0.23px);
+				margin-bottom: 10px;
+			}
+		}
+
+		p {
+			@include font(14px, 19px, 0.21px);
+		}
+
+		a {
+			font-family: $font-basel;
+			color: #1C140D;
+		}
+
+		.share-text {
+			padding-top: 10px;
+		}
+
+		.js-form-type-email {
+			padding-top: 10px;
+		}
+
+		.form-email {
+			@include evento-field;
+		}
+		
+		.form-actions {
+			position: relative;
+		}
+
+		.form-submit {
+			width: 39px;
+			height: 0;
+			padding: 39px 0 0;
+			border: 0;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background: url(../images/svg/flecha-right-blanca.svg) no-repeat;
+			z-index: 5;
+			cursor: pointer;
+		}
+	}
+}
+

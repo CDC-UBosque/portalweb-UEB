@@ -1,0 +1,1218 @@
+.page-formato-1 {
+	@include page-with-banner-stick-to-header;
+	@include grilla-3-columns-bs('.agrupacion-inscripciones > .block-inner', '.block');
+	@include grilla-3-columns-bs('.beneficios-admisiones > .block-inner', '.block');
+	@include grilla-4-columns-bs('.continua-admisiones > .block-inner', '.block');
+	@include artifact-text-1('.beneficios-admisiones', '.field--name-field-boca', '.field--name-field-block-title-h2', '.field--name-field-bocadillo-beneficio-bosque', '.field--name-field-enlace');
+	@include artifact-text-2('.continua-admisiones', '.field--name-field-subtitle-block', '.field--name-field-title-block', '.field--name-body', '.field--name-field-enlace');
+	@include grilla-3-columns-bs('.view-preguntas-frecuentes-por-facultad .view-content', '.views-row');
+	@include form-input-line('.block-webform .js-form-type-textfield', '.form-text');
+	@include form-input-line('.block-webform .js-form-type-tel', '.form-tel');
+	@include form-input-line('.block-webform .js-form-type-email', '.form-email');
+    @include form-input-line('.block-webform .js-form-type-textfield', '.form-email');
+	@include form-input-line('.block-webform .js-form-type-select', '.form-select');
+	@include form-input-line('.block-webform .js-form-type-textarea', '.form-textarea');
+
+	@media only screen and (max-width: $tablet) {
+		@include grilla-2-columns-bs('.continua-admisiones > .block-inner', '.block');
+	}
+
+	@media only screen and (max-width: $mobile) {
+		@include grilla-1-column-bs('.continua-admisiones > .block-inner', '.block');
+	}
+
+	// @include form-input-line('.block-webform .form-item', '.form-select');
+
+	.lateral-button {
+		display: block;
+	}
+
+	.block-webform {
+		position: relative;
+
+		.block-inner {
+			max-width: 280px;
+			transition: .3s ease-out all;
+			margin: 0 auto 30px;
+			overflow: hidden;
+			
+			@media only screen and (min-width: $tablet-1) {
+				position: absolute;
+				top: -425px;
+				right: 0;
+				margin: 0;
+				form {
+					transition: max-height 0.5s;
+					max-height: 400px;
+				}
+				
+				
+			}
+
+			@media only screen and (max-width: $mobile) {
+				margin-bottom: 0;
+			}
+
+			@media only screen and (min-width: 1140px) {
+				right: 200px;
+			}
+
+            
+		}
+		 .js-form-type-textarea {
+			.form-textarea {
+				height: 24px;
+				resize: none;
+			}
+		}
+		
+
+		.js-form-type-checkbox  {
+			padding: 15px 0 15px;
+			overflow: hidden;
+
+			input {
+				float: left;
+				margin-right: 15px;
+				margin-left: 15px;
+			}
+			label {
+				font-family: $font-serif-italic;
+				color: $color_gray_60;
+				font-size: 12px;
+				overflow: hidden;
+				width: 80%;
+			}
+		}
+
+		h2 {
+			background-color: $color_brand;
+			font-family: $font-bm; //$font-brandextra;
+			margin: 0;
+			font-weight: normal;
+			font-size: 11px;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 15px 0;
+			line-height: 100%;
+			letter-spacing: 2px;
+		}
+
+        .form-item-condiciones {
+            font-family: "pt_serifitalic";
+            font-size: 12px;
+            text-align: center;
+            padding: 10px;
+
+            a {
+                color: #9B9B9B;
+            }
+        }
+
+		form {
+			padding: 15px 20px;
+			background-color: $color_gray_5;
+			position: relative;
+			
+		
+		}
+		.form-actions {
+			text-align: center;
+		}
+		.form-submit {
+			@include buton-xl-green;
+		}
+		.form-select {
+			background: url(../images/select-arrows.jpg) no-repeat 100% 50% !important;
+			border: 0;
+			border-radius: 0;
+			width: 100%;
+			appearance: none;
+			text-indent: 1px;
+			text-overflow: '';
+		}
+	}
+	.admisiones-visitanos {
+		position: relative;
+		margin-bottom: 50px;
+        @media only screen and (max-width: $tablet) {
+            margin: 0 -30px;
+        }
+		.field--name-field-images {
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.text-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		.ds-fields-group-intro-title {
+			margin-top: -10px;
+			h2 {
+				font-family: $font-bl;
+				color: white;
+				font-size: 39px;
+				font-weight: normal;
+                @media only screen and (max-width: $mobile) {
+                    font-size: 34px;
+                    line-height: 39px;
+                }
+				&::before {
+					background-color: $color_brand;
+				}
+			}
+		}
+		.field--name-field-links {
+			margin-top: 45px;
+			text-align: center;
+			position: relative;
+			padding-top: 50px;
+			&::before {
+				@include arrow-bottom-before;
+			}
+			.field__item {
+				@include inline-block(top);
+				margin: 0 10px;
+                @media only screen and (max-width: $mobile) {
+                    padding-bottom: 20px;
+                }
+			}
+			a {
+				@include buton-xl-white;
+				min-width: 200px;                
+			}
+		}
+	}
+	.block-views-blockpreguntas-frecuentes-por-facultad-block-3 {
+		@include section-coloreada;
+		@include intro-title('> span', '.view-header h2', '> span + h2');
+		@include bg-laterales($color_gray_5, 100%);
+		@include faq ('.view-header', '.view-content', '.views-row', '.views-field-title', '.views-field-field-respuesta-de-pregunta', '.views-field-view-preguntas-frecuentes', '.view-footer');
+		background-color: $color_gray_5;
+		padding-bottom: 45px;
+		margin-bottom: 35px;
+		text-align: center;
+        //Esto hay que removerlo para la segunda fase
+        display: none;
+
+		.view-content {
+			.views-row {
+				&:nth-of-type(2) {
+					&::before,
+					&::after {
+						content: "";
+						position: absolute;
+						right: 0;
+						top: 0px;
+						width: 1px;
+						height: 50px;
+						background: $color_gray_20;
+
+						@media only screen and (max-width: $mobile) {
+							display: none;
+						}
+					}
+					
+					&::before {
+						right: auto;
+						left: 0;
+					}
+				}
+				
+				
+				/*
+				&:nth-of-type(1) {
+					padding-left: 170px;
+					padding-right: 0px;
+
+					&:after {
+						content: "";
+						position: absolute;
+						right: -35px;
+						top: 0px;
+						width: 1px;
+						height: 50px;
+						background: $color_gray_20;
+					}
+				}
+
+				&:nth-of-type(2) {
+					padding-left: 90px;
+					padding-right: 90px;
+
+					&:after {
+						content: "";
+						position: absolute;
+						right: 25px;
+						top: 0px;
+						width: 1px;
+						height: 50px;
+						background: $color_gray_20;
+					}
+				}
+
+				&:nth-of-type(3) {
+					padding-left: 0px;
+					padding-right: 170px;
+				}
+				*/
+			}
+		}
+    }
+    // .block-block-content3467224f-68a9-4fe2-b0e6-ee933239a5d6 {
+    // 	.block-content--type-bloque-informacion-decanatura {
+    // 		@include grid(8, 80, 20);
+    // 	}
+    // 	@include grid(8, 80, 20);
+    // 	@include contact-prefooter (4, '.field--name-field-datos-de-informacion-decan', '.field__item', '.field--name-field-acerca-de', '.field--name-field-requisitos', 50px);
+    // 	display: inline-block;
+    // 	padding-bottom: 40px;
+    // }
+    // .block-addtoany-block {
+    // 	@include grid(4, 80, 20);
+    // 	margin-right: 0;
+    // 	display: inline-block;
+    // 	.block-addtoany {
+    // 		@include contact-social-networks (4);
+    // 	}
+    // }
+    .continua-admisiones {
+    	position: relative;
+    	margin-bottom: 42px;
+
+		 > .block-inner {
+			.block {
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+				}
+			}
+		}
+
+    	.block .block-inner {
+    		padding-right: 20px;
+    	}
+    	.field--name-field-subtitle-block {
+    		margin-bottom: 8px;
+    	}
+    	.field--name-field-title-block {
+    		margin-bottom: 9px;
+    	}
+    	.field--name-field-enlace {
+    		padding-top: 20px;
+
+			@media only screen and (min-width: $tablet) {
+				padding-top: 0;
+				position: absolute;
+	    		top: 100%;
+			}
+    	}
+    }
+    // Beneficios El Bosque (antes de .beneficios-admisiones)
+    .block-block-content44927fd0-e2cd-43d2-adc8-055da70700e1 {
+    	margin-bottom: 63px;
+    }
+    .beneficios-admisiones {
+    	position: relative;
+    	margin-bottom: 78px;
+    	padding-bottom: 20px;
+
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 0px;
+		}
+
+    	.field--name-field-boca {
+    		margin-bottom: 9px;
+    	}
+    	.field--name-field-block-title-h2 {
+    		max-width: 320px;
+    		margin-bottom: 16px;
+    	}
+    	.field--name-field-bocadillo-beneficio-bosque {
+    		max-width: 320px;
+    	}
+    	.field--name-field-enlace {
+			text-align: center;
+			padding-top: 20px;
+
+			@media only screen and (min-width: $mobile) {
+				position: absolute;
+	    		top: 100%;
+				padding-top: 0;
+			}
+
+    		a {
+    			max-width: 96px;
+    			width: 100%;
+    		}
+    	}
+    	#block-serpilopaga2seccionadmisiones-2 {
+    		text-align: center;
+    		.field--name-field-block-title-h2,
+    		.field--name-field-bocadillo-beneficio-bosque {
+    			margin-left: auto;
+    			margin-right: auto;
+    		}
+    		.field--name-field-bocadillo-beneficio-bosque {
+    			color: $color_gray_60 !important;
+    		}
+    		.field--name-field-enlace {
+    			left: 0;
+    			right: 0;
+    			margin: auto;
+    			max-width: 33.33%;
+    			a {
+    				background-color: $color_brand;
+    				color: white;
+    			}
+    			@media only screen and (max-width: $mobile) {
+    				max-width: none;
+    			}
+    		}
+    	}
+    }
+    .agrupacion-inscripciones {
+    	margin-bottom: 50px;
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 25px;
+		}
+		h2 {
+			@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+				font-size: 23px;
+				line-height: 26px;
+				letter-spacing: 0;
+				margin-bottom: 7px;
+				
+			}
+
+			@media only screen and (max-width: $mobile) {
+				max-width: 70%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		> .block-inner {
+			.block {
+				@media only screen and (max-width: $tablet-1) {
+					max-width: $mobile;
+					width: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					float: none;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+    	.block {
+			.block-inner {
+	    		box-sizing: border-box;
+	    		padding: 26px 26px 20px;
+	    		text-align: center;
+
+				@media only screen and (min-width: $tablet-1) and (max-width: $tablet) {
+					padding: 11px 18px 16px;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					margin-left: -30px;
+					margin-right: -30px;
+				}
+	    	}
+		}
+
+    	.field--name-field-title-block {
+    		@include title-grotesco-big-bold;
+    		padding: 0 30px;
+    		margin-bottom: 15px;
+    	}
+
+		.js-wrapper {
+			margin-bottom: 14px;
+		}
+
+    	.field--name-body {
+    		p {
+    			@include lato-regular-normal;
+    			margin: 0;
+    		}
+    	}
+
+    	.field--name-field-enlace {
+    		text-align: center;
+
+    		a {
+    			@include buton-s-border-green;
+
+				@media only screen and (max-width: $tablet) {
+					max-width: 300px;
+					padding: 7px 21px;
+				}
+				@media only screen and (max-width: $mobile) {
+					font-size: 9px;
+				}
+    		}
+    	}
+
+    	#block-serpilopagaseccionadmisiones {
+    		.block-inner {
+    			background-color: $color_gray_2;
+    			h2 {
+    				color: $color_brand;
+    			}
+    		}
+
+    		.field--name-field-title-block {
+    			color: $color_brand;
+    		}
+    	}
+
+    	#block-inscripcionespregradoseccionadmisiones {
+    		.block-inner {
+    			background-color: $color_brand;
+
+    			h2 {
+    				color: white;
+    			}
+    		}
+    		.field--name-field-title-block {
+    			color: white;
+    		}
+    		.field--name-field-enlace {
+    			a {
+    				color: white;
+    				border-color: white;
+    			}
+    		}
+    	}
+    	#block-inscripcionesposgradoseccionadmisiones {
+    		.block-inner {
+    			background-color: #F0F0F0;
+    		}
+    		.field--name-field-title-block {
+    			color: $color_brand_dark;
+    		}
+    		.field--name-field-enlace {
+    			a {
+    				background-color: white;
+    				border-color: white;
+    				color: $color-brand;
+    			}
+    		}
+    	}
+    }
+    .block-block-groupf896de17-13a9-4dc1-b20d-3de5893b96d7 {
+    	#block-bloquecontinuatucrecimientoconelbosque-2,
+    	#block-bloqueencuentraalojamientoenbogota-2,
+    	#block-bloquetodossomoselbosque-2,
+    	#block-bloquemovilidadsinfronteras-2 {
+    		h2 {
+    			@include field-noticias-title;
+    		}
+    	}
+    }
+    // Banner principal
+    .block-block-contentbcbc6ead-1341-4a5b-ba2f-25daee822f5c {
+    	img {
+    		width: 100%;
+    		height: auto;
+    		display: block;
+    	}
+    }
+
+	// http://ubosque.d8.seedlabs.co/admisiones/
+    .block-block-groupd558f438-0308-4e4f-ba4c-22a9df6674f7 {
+    	@include content-title-light('.field--name-field-subtitle-block', '.field--name-field-title-block', '.field--name-field-enlace a');
+    	
+		> .block-inner {
+    		@include ib-grid;
+
+            > .block-content {
+                @include ib-grid;
+            }
+    	}
+
+    	#block-porqueestudiarenelbosqueseccionadmisiones-2 {
+    		.block-content--type-basic {
+    			h2 {
+    				@include title_light_acherus_lm;
+    				padding-bottom: 55px;
+    			}
+    		}
+    	}
+
+    	#block-porqueestudiarenelbosquebodyseccionadmisiones-2 {
+    		position: relative;
+
+    		&::before,
+    		&::after {
+    			content: "";
+    			background: $color_gray_15;
+    			width: 1px;
+    			height: 100%;
+    			position: absolute;
+    			top: 0;
+    			left: 0;
+
+				@media only screen and (max-width: $tablet-1) {
+					display: none;
+				}
+    		}
+
+    		&::after {
+    			left: auto;
+    			right: 0;
+    		}
+    	}
+
+    	.block {
+    		@include inline-block(top);
+    		padding: 35px 30px 0 23px;
+    		width: 24%;
+    		box-sizing: border-box;
+
+			@media only screen and (max-width: $tablet-1) {
+				width: 100% !important;
+				padding: 0 0 20px !important;
+			}
+
+    		& + .block {
+    			position: relative;
+    			width: 34%;
+    		}
+
+    		& + .block + .block {
+    			padding: 35px 38px 55px;
+    			width: 42%;
+    		}
+    	}
+
+    	.field--name-body {
+    		p {
+    			@include paragraphs_extralarge;
+
+				@media only screen and (max-width: $mobile) {
+					font-size: 14px;
+				}
+    		}
+    	}
+
+    	#block-porqueestudiarenelbosquemediaseccionadmisiones-2 {
+
+            .block-inner {
+                .block-content {
+                    .field--name-field-media-block {
+                        .video-embed-field-responsive-video {
+                            right: 9%;
+                            width: 115%;
+                        }
+
+                    }
+                }
+            }
+
+    		p {
+    			@include acherus_grotesqueultralight(15px);
+                padding-bottom: 30px;
+    		}
+    	}
+    }
+
+	// Ya no se usa
+    .section-oferta-academica {
+    	@include default-tabs();
+    	@include grilla-4-columns-bs('.tabMakerContent', '> .tabMakerContentInner > .field__item');
+    	margin-top: -10px;
+
+		@media only screen and (max-width: $mobile) {
+			@include grilla-2-columns-bs('.tabMakerContent', '> .tabMakerContentInner > .field__item');
+		}
+
+
+    	.field--name-field-tab-carrera {
+    		display: none;
+    	}
+
+		.tabMakerWrapper {
+			@media only screen and (max-width: $mobile) {
+				margin-left: -30px;
+				margin-right: -30px;
+
+				.tabMakerContentInner {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+			}
+		}
+
+    	.field--name-field-tab-nombre-carrera {
+    		@include tab-interna-heading;
+    		border-bottom: 1px solid #babcbf;
+    		padding: 5px 0 14px;
+    	}
+    	.field--name-field-programa {
+    		padding-top: 8px;
+
+    		.field__item {
+    			@include tab-interna-link;
+    			border-bottom: 1px solid #babcbf;
+    			padding: 7px 0 10px;
+
+				a {
+					@include underline-hover;
+				}
+    		}
+    	}
+    }
+    .point-title-text {
+    	@include intro-title('.null', '.block-inner > h2', '.null');
+    	padding-bottom: 60px;
+    	.field--name-field-body {
+    		max-width: 80%;
+    		margin: 0 auto;
+    		text-align: center;
+    		p {
+    			@include acherus_grotesqueultralight(20px);
+    			letter-spacing: -0.5px;
+    			line-height: 24px;
+    		}
+    	}
+        @media only screen and (max-width: $tablet) {   
+            padding-bottom: 40px;         
+            .block-inner > h2 {
+                padding-top: 40px;
+                margin-bottom: 20px;
+                &:before {
+                    top: 25px;
+                    width: 4px;
+                    height: 4px;
+                }
+            }
+        }
+    }
+    .columns-buttons {
+    	padding-bottom: 60px;
+        @media only screen and (max-width: $tablet) {
+            padding-bottom: 40px;
+        }
+    	> .block-inner {
+    		@include ib-grid;
+    		max-width: 80%;
+    		margin: 0 auto;
+    		position: relative;
+    		&:before {
+    			content: "";
+    			position: absolute;
+    			top: -10px;
+    			left: 33.33%;
+    			height: 130px;
+    			width: 1px;
+    			background-color: #ededed;
+
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+    		}
+    		&:after {
+    			content: "";
+    			position: absolute;
+    			top: -10px;
+    			left: 66.66%;
+    			height: 130px;
+    			width: 1px;
+    			background-color: #ededed;
+
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+    		}
+    		> .block-block-content {
+    			text-align: center;
+				margin-bottom: 20px;
+
+				@media only screen and (min-width: $mobile) {
+					@include inline-block(top);	
+	    			width: 33.33%;
+					margin-bottom: 0;
+				}
+                @media only screen and (max-width: $mobile) {
+                    border-bottom: 1px solid #ededed;
+                    padding-bottom: 25px;
+                    &:nth-last-child(1) {
+                        border-bottom: none;
+                        padding-bottom: 0px;
+                    }
+                }
+    			h2 {
+    				@include title_acherusblack_m;
+    				letter-spacing: -0.5px;
+    				line-height: 100%;
+    				margin: 0;
+    				padding-bottom: 15px;
+    			}
+    			.field--name-field-images {
+    				min-height: 55px;
+    			}
+    			.field--name-field-links {
+    				a {
+    					@include buton-s-green;
+                        @media only screen and (max-width: $tablet) {
+                            padding: 6px 25px;
+                        }
+    				}
+    			}
+    		}
+    	}
+    }
+    .columns-buttons-type-2 {
+    	@include tablet-laterals;
+    	max-width: 85%;
+    	margin: 0 auto;
+    	padding-bottom: 60px;
+    	@media only screen and (max-width: $tablet) {
+    		max-width: 100%;
+            padding-bottom: 15px;
+    	}
+    	> .block-inner {
+    		@include ib-grid;
+    		max-width: 80%;
+    		margin: 0 auto;
+    		position: relative;
+    		@media only screen and (max-width: $tablet) {
+    			max-width: 100%
+    		}
+    		> .block-block-content {
+    			@include inline-block(top);
+    			text-align: center;
+    			position: relative;
+    			min-height: 170px;
+                
+				@media only screen and (min-width: $mobile) {
+					width: 25%;
+				}
+                @media only screen and (max-width: $mobile) {
+                    min-height: inherit;
+                    margin-top: 25px;
+                }
+
+    			h2 {
+    				@include title_acherusblack_m;
+    				letter-spacing: -0.5px;
+    				line-height: 100%;
+    				margin: 0;
+    				padding-bottom: 15px;
+    			}
+    			.field--name-field-images {
+    				min-height: 55px;
+    			}
+    			.field--name-field-links {
+    				a {
+    					@include buton-s-border-green;
+    				}
+                    @media only screen and (max-width: $mobile) {
+                        padding-bottom: 25px;
+                    }
+    			}
+    			
+
+    			
+    			.field--name-field-links {
+					@media only screen and (min-width: $mobile) {
+	    				bottom: 0px;
+	    				left: 0px;
+	    				right: 0px;
+					}
+    			}
+    			.paragraph--type-h2 {
+    				max-width: 80%;
+    				padding-left: 10%;
+                    min-height: 95px;
+                    @media only screen and (max-width: $tablet) {
+                        min-height: 115px;
+                    }
+                    @media only screen and (max-width: $mobile) {
+                        min-height: inherit;
+                    }
+    			}
+    			&:after {
+    				content: "";
+    				position: absolute;
+    				left: 0px;
+    				top: -10px;
+    				height: 205px;
+    				width: 1px;
+    				background-color: #ededed;
+                    @media only screen and (max-width: $mobile) {
+                        top: inherit;
+                        bottom: 0px;
+                        height: 1px;
+                        width: 100%;
+                    }
+    			}
+    			&:nth-child(2) {
+    				text-align: left;
+                    @media only screen and (max-width: $mobile) {
+                        margin-top: 0px;
+                    }
+    				.text-content {
+    					padding-right: 10%;
+                        @media only screen and (max-width: $mobile) {
+                            padding-right: 0px;
+                            text-align: center;    
+                            width: 60%;
+                            margin: 0px auto;                        
+                        }
+    				}
+    				.paragraph--type-h2 {
+    					max-width: 100%;
+    					padding-left: 0%;
+    					padding-bottom: 10px;
+                        min-height: inherit;
+    					h2 {
+    						@include title_light_acherus_lms;
+    					}
+    				}
+    				.field--name-field-bocadillo-150 {
+    					@include paragraphs_medium('latoregular');
+    				}
+    				&:after {
+    					display: none;
+    				}
+    			}
+                &:nth-last-child(1) {
+                    @media only screen and (max-width: $mobile) {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+                &:nth-last-child(2) {
+                    @media only screen and (max-width: $mobile) {
+                        width: 100%;
+                    }
+                }
+    		}
+    	}
+    	&.app {
+    		> .block-inner {
+    			> .block-block-content {
+                    //segundo bloque 
+                    //http://ubosque.d8.seedlabs.co/medios-digitales
+                    //columnas con iconos de android y iphone
+                    &:nth-child(3),
+                    &:nth-child(4),
+                    &:nth-child(5) {
+                        @media only screen and (max-width: $mobile) {
+                            width: 100%;
+                        }
+                    	h1 {
+                    		@include title_acherusblack_m;
+                    		letter-spacing: -0.5px;
+                    		line-height: 100%;
+                    		margin: 0;
+                    	}
+                    	.field--name-field-block-title-h2 {
+                    		@include pretitle;
+                    		text-transform: none;
+                    		position: absolute;
+                    		bottom: 90px;
+                    		left: 0px;
+                    		right: 0px;
+                            @media only screen and (max-width: $mobile) {
+                                position: inherit;
+                            }
+                    	}
+                    	.field--name-field-images {
+                    		font-size: 0px;
+                    		position: absolute;
+                    		bottom: 30px;
+                    		left: 0px;
+                    		right: 0px;
+                            @media only screen and (max-width: $mobile) {
+                                position: inherit;
+                            }
+                    		.field__item {
+                    			@include inline-block(top);
+                    			max-width: 50%;
+                    			&:nth-child(1) {
+                    				padding-right: 10px;
+                    			}
+                    		}
+                    	}
+                    	.field--name-field-pre-title {
+                    		@include pretitle;
+                            margin-top: -12px;
+                    	}
+                        .block-content--type-bloque-titulo-image {
+                            margin-top: 12px;
+                        }
+                        .text-content {
+                            display: inline-flex;
+                            margin-top: 34px;
+                            @media only screen and (max-width: $mobile) {
+                                margin-top: 10px;
+                            }
+                            .paragraph--type-image {
+                                padding-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .block-medios_redes {
+    	&:before {
+    		@include paragraphs_medium('latoregular');
+    		color: #4A4A4A;
+    		content: "Síguenos en redes sociales y hagamos que nuestra Universidad se convierta en una tendencia";
+    		text-align: center;
+    	}
+        
+        >.block-inner{
+            padding-top: 10px;   
+        }
+
+    	width: 100%;
+    	text-align: center;
+    	padding-bottom: 50px;
+        @media only screen and (max-width: $tablet) {
+            padding-bottom: 80px;
+        }
+    	.a2a_kit_size_32 {
+    		> a {
+    			height: 30px;
+    			padding-left: 80px;
+    		}
+    		.a2a_button_facebook {
+    			&:after {
+    				margin-left: 40px;
+    			}
+    		}
+    	}
+    }
+    .info-digital {
+    	background-color: #F7F7F7;
+    	@include bg-laterales(#F7F7F7, 100%);
+    	.block-inner {
+    		@include ib-grid;
+    		
+    		padding-top: 20px;
+    		>.block-block-content {
+    			@include inline-block(top);
+    			text-align: center;
+    			width: 33.33%;
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+    			.text-content {
+    				max-width: 82%;
+    				margin: 0 auto;
+                    @media only screen and (max-width: $mobile) {
+                        max-width: 95%;
+                    }
+    			}
+    			.paragraph--type-h2 {
+    				max-width: 100%;
+    				padding-left: 0%;
+    				padding-bottom: 30px;
+    				h2 {
+    					@include title_light_acherus_lms;
+    					margin: 0;
+    				}
+    			}
+    			.field--name-field-bocadillo-150 {
+    				@include paragraphs_medium('latoregular');
+    				padding-bottom: 25px;
+    			}
+    			.paragraph--type-h3 {
+    				h3 {
+    					@include title_acherusblack_m;
+    					letter-spacing: -0.5px;
+    					line-height: 100%;
+    					margin: 0;
+    					padding-bottom: 15px;
+    				}
+    			}
+    			.field--name-field-links {
+    				padding-bottom: 20px;
+    				a {
+    					@include buton-s-border-green;
+    				}
+    			}
+    			
+    			&:nth-child(3) {
+    				.text-content {
+    					max-width: 70%;
+    					margin: 0 auto;
+                        @media only screen and (max-width: $mobile) {
+                            max-width: 80%;
+                        }
+    					
+    				}
+    				.field--name-field-bocadillo-150, .field--type-text-with-summary {
+    					@include pt_serifitalic(14px);
+    					p {
+    						@include pt_serifitalic(14px);
+    						line-height: 100%;
+    					}
+    				}
+    				.field--type-text-with-summary {
+    					padding-bottom: 10px;
+    				}
+    				.field--name-field-bocadillo-150 {
+    					padding-bottom: 5px;
+    				}
+    				.paragraph--type-h2 {
+    					padding-bottom: 17px;
+    				}
+    				.field--name-field-links {
+    					padding-bottom: 35px;
+    				}
+    				
+    			}
+    			
+    		}
+    	}
+    }
+
+    &.without-menu {
+        .lateral-button {
+            display: none;
+        }
+        #prefooter {
+            .prefooter-container {
+                padding: 0;
+            }
+        }
+        .block-medios_redes {
+            @include contact-social-networks;
+            width: 100%;
+            .addtoany_list {
+                font-size: 0px;
+                > a {
+                    height: 25px;
+                    @media only screen and (max-width: $mobile) {
+                        padding-left: 20%;
+                    }
+                }
+            }
+            >.block-inner {
+                width: 45%;
+                margin: 0 auto;
+                @media only screen and (max-width: $tablet) {
+                    width: 70%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }                    
+                >.title {
+                    display: none;
+                }
+                .a2a_button_facebook {
+                    &:after {
+                        left: 70%;
+                    }
+                }
+            }
+        }
+    }
+
+	&.page-entornos-digitales {
+		@media only screen and (max-width: $mobile) {
+			.point-title-text {
+				h2 {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+
+				.field--name-field-body {
+					max-width: 100%;
+					padding: 0 20px;
+				}
+
+				.columns-buttons {
+					padding-bottom: 0;
+				}
+			}
+
+			.columns-buttons-type-2 {
+				padding-bottom: 0;
+
+				 > .block-inner > .block-block-content {
+					margin-top: 15px;
+					width: 100%;
+					/*.paragraph--type-h2 {
+						//padding: 0 80px;
+						max-width: none;
+					}*/
+
+					&#block-mediodgestion-2,
+					&#block-mediodappsubosque-2 {
+						margin-bottom: 10px;
+
+						.paragraph--type-h2 {
+							padding: 0;
+						}
+					}
+				}
+
+				.block .paragraph--type-h2 + .paragraph--type-bocadillo-150 {
+					padding-bottom: 0;
+				}
+			}
+
+			.revisa-admisiones-tipo2 {
+				margin-bottom: 0;
+			}
+
+			.block-block-content7dfdc4d3-ff13-437d-a10a-d75235fabb8c {
+				.block-content--type-block-title h2 {
+					padding-left: 40px;
+					padding-right: 40px;
+					margin-bottom: 20px;
+				}
+			}
+
+			#block-mediodubosque-2,
+			#block-mediodtrymyride-2 {
+				padding-bottom: 20px;
+
+				.field--name-field-images {
+					min-height: auto;
+				}
+			}
+
+			#block-mediodbienestar-2 {
+				padding-bottom: 35px;
+			}
+
+			#block-mediodubosque-2,
+			#block-mediodtrymyride-2,
+			#block-mediodbienestar-2 {
+				h1 {
+					height: 40px;
+				}
+			}
+			
+			#block-mediosdfiliales-2 {
+				padding-bottom: 30px;
+
+				.paragraph--type-h2 + .paragraph--type-bocadillo-150 {
+					padding-bottom: 0;
+				}
+			}
+		}
+	}
+}

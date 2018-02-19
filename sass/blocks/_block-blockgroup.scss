@@ -1,0 +1,1280 @@
+.block-blockgroup {
+	// URL: /nuestro-bosque
+	@include grilla-4-columns-bs('&.texto-links', '.block');
+	@include grilla-2-columns-bs('&.wrapper-rectangulos', '.block');
+
+	// URL: /docentes
+	@include grilla-4-columns-bs('&.columnas-cuatro > .block-inner', '.block');
+
+	// URL: /investigaciones, /docentes
+	// FILES: pages/page-investigaciones, blocks/block-blockgroup
+	&.columna-izquierda,
+	&.columna-derecha {
+		@include blockgroup-columnas-laterales;
+
+		@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+			.block {
+				.block-inner {
+					padding: 10px 10px 0 0;
+				}
+			}
+
+		    .block-content--type-_002-texto-links {
+		        position: relative;
+		        padding-bottom: 10px;
+
+		        .field--name-field-pre-title {
+					font-size: 7px;
+					letter-spacing: 1.4px;
+		        }
+
+		       .field--name-field-title h2 {
+					font-size: 12px;
+					line-height: 12px;
+					letter-spacing: -0.1px;
+					margin-bottom: 5px;
+		        }
+
+		        .field--name-body p {
+					font-size: 8.3px;
+					line-height: 10px;
+		        }
+
+		        .field--name-field-links {
+		            a {
+		                
+		            }
+		        }
+		    }
+		}
+	}
+
+	&.columna-derecha {
+		@include blockgroup-columna-derecha;
+		
+		@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+		    .block {
+				.block-inner {
+					padding: 10px 0 0 10px;
+				}
+			}
+		}
+	}
+
+	&.columna-central {
+		@include blockgroup-columna-central;
+	}
+
+	// URL: /internacionalizacion/convenios
+	&.tabs-formularios {
+		overflow: hidden;
+	}
+
+	&.tabs-acordeon-views {
+		@include default-tabs();
+	}
+
+	&.tabs-formularios {
+		@include default-tabs();
+		@include form-input-select ('.form-item, .js-form-type-textarea', 'input, textarea');
+		@include form-input('.js-form-type-textfield', '.form-text');
+		@include form-input('.js-form-type-textarea', '.form-textarea');
+
+		@media only screen and (max-width: $mobile) {
+			margin: 60px -30px 0;
+			
+			.tabMakerTabMobile,
+			.hovered {
+				padding-left: 30px !important;
+				padding-right: 30px !important;
+				box-sizing: border-box;
+			}
+			
+			.tabMakerContentInner {
+				padding: 30px !important;
+			}
+		}
+
+		.js-form-type-textarea {
+			textarea {
+				padding-top: 10px;
+			}
+		}
+
+		.js-form-type-textarea,
+		.js-form-type-textfield {
+			padding-bottom: 10px;
+		}
+
+		h2 {
+			display: none;
+		}
+
+		.tabMakerContent {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.tabMakerContentInner {
+			padding-right: 30px;
+			padding-left: 30px;
+		}
+
+		.text-bocadillo {
+			padding-bottom: 35px;
+
+			@media only screen and (max-width: $mobile) {
+				padding-bottom: 20px;
+			}
+		}
+
+		.js-form-type-checkbox {
+			padding-bottom: 20px;
+			label {
+				@include pt_serifitalic (12px);
+				vertical-align: middle;
+				color: #babcbf;				
+
+				&::before {
+					vertical-align: middle !important;
+				}
+			}
+		}
+
+		.form-actions {
+			input {
+				@include buton-xl-green;
+			}
+		}
+	}
+
+	&.main-bosque-acoge {
+		$mobile: 480px;
+
+		@include grilla-3-columns-bs('form', '.form-item', 15px);
+		background: url(../images/main-image-bosque-acoge.jpg) no-repeat 50% 0;
+		background-size: auto 479px;
+		padding: 115px 0 0;
+		height: 479px;
+		box-sizing: border-box;
+
+		@media only screen and (max-width: $tablet) {
+			@include grilla-3-columns-bs('form', '.form-item', 8px);
+			margin-left: -30px;
+			margin-right: -30px;
+			padding-top: 90px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			height: 784px;
+			padding-top: 40px;
+			background-size: auto 784px;
+
+			form {
+				.form-item {
+					width: 100%;
+				}
+			}
+		}
+
+		.title-bosque-acoge {
+			text-align: center;
+			max-width: 80%;
+			margin: 0 auto;
+			padding-bottom: 52px;
+			background: url(../images/svg/arrow-down-green.svg) no-repeat 50% 89%;
+
+			@media only screen and (max-width: $tablet) {
+				max-width: 90%;
+				padding-bottom: 63px;
+				background-position: 50% 97%;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				padding-bottom: 35px;
+			}
+
+			.field--name-field-title {
+				h2 {
+					color: white;
+			 		font-family: $font-brandb;
+			 		font-size: 39px;
+					letter-spacing: -1px;
+					line-height: 37px;
+
+					@media only screen and (max-width: $tablet) {
+						line-height: 24px;
+					}
+
+					@media only screen and (max-width: $mobile) {
+						line-height: 34px;
+					}
+				}
+			}
+
+			.field--name-field-bocadillo {
+				color: white;
+				letter-spacing: auto;
+
+				@media only screen and (max-width: $mobile) {
+					font-size: 33px;
+					line-height: 37px;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					padding: 0 20px;
+				}
+			}
+		}
+
+		.main-bosque-acoge-forms {
+			padding: 0 60px 0;
+
+			@media only screen and (max-width: $tablet) {
+				padding: 0 30px 0;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				margin: 0 auto;
+				max-width: 225px;
+			}
+
+			label {
+				display: none;
+			}
+		}
+
+		.form-actions {
+			clear: both;
+			width: 100%;
+			text-align: center;
+			margin: 0;
+			padding: 10px 0 63px;
+
+            input {
+                @include buton-xl-white;
+                cursor: pointer;
+            }
+		}
+	}
+
+	&.blockgroup-noticias {
+		@include mobile-max-width;
+	}
+
+	&.wrapper-rectangulos {
+		margin-top: 30px;
+		margin-bottom: 30px;		
+
+		@media only screen and (max-width: $mobile) {
+			margin-left: -40px;
+			margin-right: -40px;
+		}
+	}
+	// URL: /electivas-institucionales
+	@include grilla-2-columns-bs('&.dos-bloques-electivos > .block-inner', '> .block');
+
+	@media only screen and (max-width: $mobile) {
+		// URL: /electivas-institucionales
+		@include grilla-1-column-bs('&.dos-bloques-electivos > .block-inner', '> .block');
+	}
+	
+	&.dos-bloques-electivos {
+		margin-bottom: 40px;
+
+		@media only screen and (max-width: $mobile) {
+			margin-left: -30px;
+			margin-right: -30px
+		}
+
+		.block-consulta {
+			.block-inner {
+				text-align: center;
+				padding: 75px 0 25px;
+				position: relative;
+
+				@media only screen and (max-width: $mobile) {
+					padding: 40px 0 15px;
+				}
+			}
+		}
+
+		.field--name-field-title {
+			font-family: $font-brandb;
+			font-size: 32px;
+			margin-bottom: 10px;
+		}
+
+		.field--name-body {
+			max-width: 60%;
+			margin: 0 auto 25px;
+
+			@media only screen and (max-width: $mobile) {
+				max-width: 80%;
+			}
+		}
+
+		.consulta-disponibilidad {
+			@media only screen and (max-width: $mobile) {
+				margin-bottom: 10px;
+			}
+
+			.block-inner {
+				background-color: $color-brand;
+			}
+			
+			* {
+				color: white;
+			}
+			
+			.field--name-field-enlace {
+				a {
+					@include buton-xl-transparent;
+
+					@media only screen and (max-width: $mobile) {
+						padding: 6px 0;
+						width: 160px;
+					}
+				}
+			}
+			
+			.field--name-field-imagen {			
+				img {
+					display: block;
+					max-width: 25px;
+					height: auto;
+					margin: 0 auto;
+
+					@media only screen and (max-width: $mobile) {
+						max-width: 18px;
+					}
+				}
+			}
+		}
+
+		.consulta-horario {
+			.block-inner {
+				background-color: $color-gray-10;
+			}
+
+			* {
+				color: $color-gray-80;
+			}
+			
+			.field--name-field-enlace {
+				a {
+					@include button-xl-border-green;
+
+					@media only screen and (max-width: $mobile) {
+						padding: 6px 0;
+						width: 160px;
+					}
+				}
+			}
+
+			.field--name-field-imagen {
+				top: 35px;
+
+				img {
+					display: block;
+					max-width: 40px;
+					height: auto;
+					margin: 0 auto;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					top: 12px;
+
+					img {
+						max-width: 30px;
+					}
+				}
+			}
+		}
+
+		.field--name-field-imagen {
+			position: absolute;
+			top: 30px;
+			left: 0;
+			right: 0;
+			margin: auto;
+
+			@media only screen and (max-width: $mobile) {
+				top: 13px;
+			}
+		}
+
+		
+	}
+
+	// URL: /electivas-institucionales
+	&.tabs-horizontales-1 {
+		@include default-tabs;
+		margin-bottom: 25px;
+
+		@media only screen and (max-width: $mobile) {
+			margin-left: -30px;
+			margin-right: -30px;
+			margin-bottom: 40px;
+
+			.tabMakerContentInner {
+				padding: 40px 30px 30px;
+			}
+		}
+
+		.tabMakerContent {
+			@media only screen and (min-width: $mobile) {
+				padding: 35px 0 45px;
+			}
+		}
+
+		.block-inner {
+			h2 {
+				display: none;
+			}
+		}
+
+		.field--name-body {
+			p {
+				font-family: $font-bl;
+				font-size: 19px;
+				line-height: 25px;	
+			}
+		}
+
+		.field--name-field-body-2 {
+			margin-top: 36px;
+
+			.js-field-label {
+				font-size: 10px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: $color_gray_60;
+				margin-bottom: 2px;
+			}
+
+			p {
+				font-size: 14px;
+			}
+		}
+	}
+
+	// URL: /admisiones
+	&.js-admisiones-blockgroup {
+		@include default-tabs;
+		@include grilla-4-columns-bs('.tabMakerContent', '> .tabMakerContentInner > div');
+
+		@media only screen and (max-width: $tablet-3) {
+			@include grilla-2-columns-bs('.tabMakerContent', '> .tabMakerContentInner > .views-row');
+		}
+
+		@media only screen and (max-width: $mobile) {
+			margin-left: -30px;
+			margin-right: -30px;
+
+			.tabMakerContent {
+				margin-left: 0;
+				margin-right: 0;
+				padding-left: 0;
+				margin-right: 0;
+			}
+		}
+
+		.tabMakerContent {
+			padding-left: 0;
+			padding-right: 0;	
+		}
+
+		.tabMakerContentInner {
+			@include tab-interna-styles('> .views-row > .views-field-label', '> .views-row .views-row > .views-field-label');
+			
+			// Tab especializaciones (tiene una estructura diferente)
+			@include tab-interna-styles('.js-column > .views-row > .views-field-label', '.js-column > .views-row .views-row > .views-field-label');
+
+			@media only screen and (max-width: $mobile) {
+				padding: 20px;
+				overflow: hidden;
+				height: auto !important;
+			}
+
+			> div {
+				@media only screen and (max-width: $tablet-3) {
+					width: 50% !important;
+				}
+			}
+
+			.js-column {
+				> .views-row {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	&.agrupacion-pasos {
+		$mobile: 560px;
+
+		max-width: 830px;
+		position: relative;
+		margin-bottom: 72px;
+
+		@media only screen and (max-width: $tablet) {
+			max-width: 92%;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			max-width: none;
+			margin-left: -30px;
+			margin-right: -30px;
+			margin-bottom: 30px;
+		}
+
+		.block {
+			background-color: $color_gray_5;
+		}
+
+		.buttons-wrapper {
+			height: 64px;
+			width: 100%;
+			text-align: center;
+
+			@media only screen and (min-width: $mobile) {
+				position: absolute;
+				top: 160px;
+				margin: auto;
+				right: -45px;
+				height: 130px;
+				width: 28px;
+			}
+
+			.left,
+			.right {
+				right: auto;
+				left: auto;
+
+				@media only screen and (max-width: $mobile) {
+					@include inline-block(top);
+					position: relative;
+					margin: 20px 15px;
+				}
+			}
+			
+			.left {
+				top: auto;
+			}
+		}
+
+		.block-content--type-bloque-body-double {
+			@include ib-grid;
+		}
+
+		.field--name-body,
+		.field--name-field-body-2 {
+			@include inline-block(top);
+			//column-count: 2;
+			position: relative;
+			width: 54%;
+			//padding-bottom: 15px;
+
+			@media only screen and (max-width: $mobile) {
+				height: auto !important;
+			}
+
+			h3 {
+				@include bocadillo;
+				line-height: 30px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding-bottom: 13px;
+			}
+
+			> * {
+				margin-left: 47px;
+				margin-right: 47px;
+				font-size: 16px;
+
+				@media only screen and (max-width: $tablet) {
+					margin-left: 30px;
+					margin-right: 30px;
+				}
+			}
+
+			a {
+				@include buton-s-border-green;
+				margin-left: 20px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				height: 22px;
+				overflow: hidden;
+			}
+		}
+
+		.field--name-body {
+			@media only screen and (max-width: $mobile) {
+				height: auto !important;
+			}
+
+			> * {
+				margin-left: 47px;
+				margin-right: 47px;
+				font-size: 16px;
+
+				@media only screen and (max-width: $tablet) {
+					margin-left: 30px;
+					margin-right: 30px;
+				}
+				
+				&:first-child {
+					position: absolute;
+					top: 32px;
+					left: 0;
+					color: $color_brand;
+					font-family: $font-baser;
+					font-size: 11px;
+					letter-spacing: 2px;
+					text-transform: uppercase;
+					
+					& + * {
+						margin-top: 70px;
+					}
+				}
+			}
+		}
+
+		.field--name-field-body-2  {
+			@include inline-block('top');
+			font-size: 0;
+			width: 46%;
+			overflow: hidden;
+			padding-top: 66px;
+			position: relative;
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding-top: 0;
+			}
+
+			img {
+				display: block;
+				height: 100%;
+				width: auto;
+				max-width: inherit;
+				margin-left: -47px;
+				margin-top: -66px;
+
+				@media only screen and (max-width: 980px) {
+					min-height: 510px;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					width: auto;
+					max-width: inherit;
+					margin: 0;
+					left: -15%;
+				}
+
+				// $mobile overrided
+				@media only screen and (max-width: $mobile) {
+					position: relative;
+					left: auto;
+					top: 13px;
+					margin: 0;
+					width: 100%;
+				}
+
+				@media only screen and (max-width: 380px) {
+					width: auto;
+					margin: 0 -30px;
+				}
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		#block-apoyofinancieropaso1nuevo {
+			.field--name-body {
+				li {
+					margin-bottom: 33px;
+				}
+			}
+		}
+
+		.apoyo-paso-2 {
+			padding-top: 55px;
+			padding-bottom: 37px;
+
+			.field--name-body {
+				column-count: 2;
+				width: auto;
+				display: block;
+
+				> * {
+					&:first-child {
+						top: -31px;
+
+						& + * {
+							margin-top: 0;
+						}
+					}
+				}
+			}
+			
+			p + ul {
+				break-inside: avoid;
+				-webkit-column-break-inside: avoid;
+			}
+			
+			ul {
+				& + p {
+					@include bocadillo;
+					line-height: 30px;
+					//break-after: column;
+				}
+			}
+			
+			p + p + ul {
+				margin-bottom: 20px;
+			}
+			
+			/*
+			p + p + ul + p {
+				margin-top: -40px;
+				
+				&::before {
+					content: "";
+					height: 40px;
+					width: 100%;
+					background: black;
+				}
+			}*/
+		}
+
+		.apoyo-paso-3 {
+
+		}
+	}
+
+	&.beneficios-financiacion {
+		$mobile: 480px;
+		margin-bottom: 60px;
+
+		> .block-inner {
+			@include ib-grid;
+		}
+
+		h3 {
+			margin-bottom: 1px;
+		}
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		.block {
+			@include inline-block(top);
+			width: 50%;
+			position: relative;
+			padding-right: 60px;
+			box-sizing: border-box;
+
+			@media only screen and (max-width: $tablet) {
+				padding-right: 47px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding-right: 0;
+				margin-bottom: 30px;
+			}
+
+			& + .block {
+				padding-left: 60px;
+				padding-right: 0;
+
+				@media only screen and (max-width: $tablet) {
+					padding-left: 47px;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					padding-left: 0;
+					margin-bottom: 0;
+				}
+
+				&::before {
+					@include rayita-before;
+					left: 0; //-22px;
+					top: 13px;
+
+					@media only screen and (max-width: $mobile) {
+						left: 0;
+						display: none;
+					}
+				}
+			}
+
+			h4 {
+				@include title-line-large;
+				max-width: 300px;
+				margin-bottom: 12px;
+			}
+
+			.field--name-body {
+				max-width: 330px;
+			}
+		}
+	}
+
+	&.blockgroup-001 {
+		$mobile: 480px;
+
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 50px;
+		}
+
+		.block-inner {
+			@include ib-grid;
+
+			h2 {
+				font-size: 33px;
+			}
+		}
+
+		.field--name-field-options-list {
+			.field__item {
+				@include interna-parrafo;
+				@include bullet;
+			}
+		}
+
+		.block {
+			@include inline-block(top);
+			width: 66%;
+			margin-bottom: 50px;
+			padding-right: 35px;
+			position: relative;
+			box-sizing: border-box;
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding-right: 0;
+				margin-bottom: 20px;
+			}
+
+			& + .block {
+				width: 34%;
+				padding-right: 0;
+				padding-left: 13px;
+
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+					margin-bottom: 0;
+				}
+
+				&::before {
+					@include rayita-before;
+					background: $color_gray_50;
+					height: 100%;
+					top: 4px;
+				}
+
+				.field--name-field-title-block {
+					@include title-mini-green;
+					margin-top: -3px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	&.bloques-verticales {
+		@include grilla-4-columns-bs('> .block-inner', '.block');
+		position: relative;
+		margin-bottom: 33px;
+
+		@media only screen and (max-width: $tablet) {
+			margin-left: -30px;
+			margin-right: -30px;
+
+			.block-inner {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+
+		@media only screen and (max-width: 640px) {
+			@include grilla-2-columns-bs('> .block-inner', '.block');
+
+			.block-inner .block-inner {
+			//	height: 410px;
+			}
+		}
+		
+		.block:nth-of-type(1),
+		.block:nth-of-type(2) {
+			.block-inner {
+				@media only screen and  (min-width: $mobile) and (max-width: 640px) {
+					padding-bottom: 90px;
+				}
+			}
+		}
+
+		> .block-inner {
+			overflow: hidden;
+
+			.block-inner {
+				padding: 115px 0 24px; //115px 10px 24px;
+
+
+				&::after {
+					content: "";
+					width: 1px;
+					height: 100%;
+					background: #F0EEEE;
+					position: absolute;
+					top: 0;
+					right: -10px;
+				}
+			}
+
+			> .block {
+				transition: .3s ease-out all;
+
+				&.active,
+				&:hover {
+					background-color: $color_brand;
+
+					h2 {
+						color: white;
+
+						&::before {
+							color: white;
+							border-color: white;
+						}
+					}
+
+					.field--name-field-enlace {
+						a {
+							color: $color_brand;
+							background: white;
+							border-width: 1px;
+						}
+					}
+
+					.field--name-field-step-number-ba {
+						border-color: white;
+						color: white;
+					}
+
+					.pretitle {
+						color: $color_gray_80;
+
+						a {
+							color: $color_gray_80;
+						}
+					}
+
+					.title-bold-green {
+						color: white;
+					}
+				}
+			}
+
+			.pretitle {
+				@include pretitle;
+				margin-bottom: 10px;
+
+				@media only screen and (max-width: $tablet) {
+					margin-bottom: 35px;
+					padding-top: 5px;
+				}
+				a {
+					word-wrap: break-word;
+					text-decoration: none;
+					text-transform: lowercase;
+					font-size: 11px;
+					color: #9B9B9B;
+				}
+			}
+		}
+
+		// 4to bloque
+		#block-appointment-program-block {
+			p {
+				padding: 0 5px;
+			}
+		}
+
+		.field--name-field-step-number-ba {
+			@include numero-circular;
+			background-color: transparent;
+			top: 17px;
+
+			@media only screen and (max-width: $tablet) {
+				top: 30px;
+				height: 70px;
+				width: 70px;
+				padding-top: 13px;
+			}
+		}
+
+		.block-inner {
+			text-align: center;
+			position: relative;
+			box-sizing: border-box;
+
+			h2 {
+				margin-bottom: 23px;
+				font-family: $font-bl;
+				font-weight: normal;
+				font-size: 28px;
+				color: $color_gray_80;
+				line-height: 30px;
+
+				@media only screen and (max-width: $tablet) {
+					margin-bottom: 15px;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					font-size: 22px;
+				}
+			}
+
+			.field--name-body {
+				margin-bottom: 0;
+
+				p {
+					font-family: $font-baser;
+					font-weight: normal;
+					color: $color_gray_80;
+					font-size: 13px;
+					line-height: 16px;
+					letter-spacing: .19px;
+					margin-bottom: 20px;
+				}
+			}
+			
+			.title-light {
+				font-family: $font-bl;
+				font-size: 28px;
+				line-height: 30px;
+				letter-spacing: .1px;
+				margin-bottom: 32px;
+
+				@media only screen and (max-width: $tablet) {
+					margin-bottom: 15px;
+				}
+
+				& + .pretitle {
+					margin-bottom: 3px;
+				}
+			}
+			
+			.title-bold-green {
+				font-family: $font-brandb;
+				color: $color_brand;
+				letter-spacing: .2px;
+				line-height: 32px;
+				font-size: 26px;
+				white-space: nowrap;
+
+				@media only screen and (max-width: $tablet) {
+					font-size: 20px;
+					letter-spacing: -0.6px;
+				}
+			}
+
+			.field--name-field-enlace {
+				position: absolute;
+				bottom: 34px;
+				left: 0;
+				width: 100%;
+
+				@media only screen and (max-width: $mobile) {
+					bottom: 47px;
+				}
+				
+				a {
+					@include bt-line-green-l;
+				}
+			}
+		}
+	}
+
+	&.pasos-transferencia {
+		overflow: hidden;
+		padding-bottom: 18px;
+
+		@media only screen and (max-width: $tablet) {
+			padding-bottom: 38px;
+		}
+	}
+
+	//url /audiencia/aspirantes
+	//bloques multimedia
+	&.audiencia-aspirantes-multimedia {
+		@include clearfix;
+		font-size: 0px;
+		margin: 0 -10px;
+		display: inline-block;
+		margin-top: -30px;
+		padding-top: 30px; 
+		
+		&::before,
+		&::after {
+			display: block;
+		}	
+
+		@media only screen and (max-width: $mobile) {
+			margin: 0px; 
+		}
+		&.tipo-dos {
+			margin-top: -40px;
+			padding-bottom: 20px;
+			.estilo-0010 {
+				&.video-one-estudiantes {
+					clear: none;
+				}				
+			}
+		}
+		&.tipo-tres {
+			@include bg-laterales(#F7F7F7, 100%);
+			background: #F7F7F7;
+			display: inline-block;
+			padding-top: 50px;
+			padding-bottom: 30px;
+			margin-bottom: 20px;
+
+			&::before,
+			&::after {
+				display: block;
+			}	
+		}
+
+	}
+
+	&.group-event-convocatory {
+		
+		.block-inner {
+			@include ib-grid;
+		}
+	}
+
+	&.group-grid {
+		margin-left: -10px;
+		margin-right: -10px;
+		display: inline-block;
+		padding-top: 50px;
+
+		@media only screen and (max-width: $mobile) {
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+
+	&.group-multigrid {
+		display: inline-block;
+	}
+	&.container-multimedia-blog {
+
+		.blog-wordpress {
+			
+			margin-top: -60px;
+			@media only screen and (max-width: $mobile) {
+				display: none;
+			}
+
+			.aggregator-feed {
+				background-color: white;
+				padding-bottom: 20px;
+				h3 {
+					font-size: 20px;
+					padding: 0 20px;
+					line-height: 100%;
+
+					@media only screen and (max-width: $tablet) {
+						padding: 0 15px;
+					}
+
+					a {
+						@include acherus_black(20px);
+						letter-spacing: -0.5px;
+						line-height: 100%;
+						text-decoration: none;
+						color: #4A4A4A;
+
+						@media only screen and (max-width: $tablet) {
+							font-size: 16px;
+							line-height: 16px;
+						}
+					}
+				}
+
+				.field--name-field-image-blog {
+					padding-bottom: 20px;
+
+					@media only screen and (max-width: $tablet) {
+						padding-bottom: 10px;
+					}
+					
+					img {
+						display: block;
+					}
+				}
+
+				.field--type-entity-reference {
+					display: none;
+				}
+				.field--name-link {
+					padding-left: 20px;
+					padding-right: 20px;
+					a {
+						@include link-green;
+						@include underline-hover;
+					}
+				}
+				.feed-description {
+					@include paragraphs_large;
+					padding-left: 20px;
+					padding-right: 20px;
+					padding-bottom: 20px;
+				}
+			}
+		}
+
+		@media only screen and (min-width: $mobile) {
+			
+
+			> .block-inner {
+				@include ib-grid;
+			}
+			.group-multigrid {
+				@include inline-block(top);
+				width: 75%;
+				
+				.block.estilo-0009 {
+					width: 66.66%;
+				}
+
+				.estilo-0010 {
+					width: 66.66%;
+				}
+
+				.estilo-0008 {
+					width: 33.33%;
+				}
+			}
+			.blog-wordpress {
+				@include inline-block(top);
+				box-sizing: border-box;
+				width: 25%;
+				padding-left: 10px;
+				margin-top: initial;
+
+			}
+		}
+	}
+}

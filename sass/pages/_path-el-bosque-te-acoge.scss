@@ -1,0 +1,122 @@
+.path-el-bosque-te-acoge {
+    &.page-filtro-el-bosque-te-acoge {
+		.sidebar-first .region-content {
+			border: 0;
+		}
+
+        // .layout-content,
+        .layout-content--post-content {
+            float: left;
+            clear: both;
+            width: 100%;
+        }
+		
+		.more-link {
+			text-align: center;
+
+			a {
+				@include buton-m-green;
+				padding: 10px 30px;
+			}
+		}
+		
+        @media only screen and (max-width: $tablet) {
+            .sidebar-first {
+                display: block;
+                max-width: 100%;
+                margin-bottom: 40px;
+                .block-views {
+                    display: none;
+                }
+            }
+            &.filtro-is-present {
+                .sidebar-first {
+                    .block-views {
+                        display: block;
+                    }
+                }
+            }
+            .layout-content {
+                padding-top: 33px;
+            }
+        }
+        .view-duplicado-de-filtro-inmuebles-el-bosque-te-acoge {
+            .view-header {
+                padding-top: 10px;
+                padding-bottom: 20px;
+            }
+        }
+        .block-views-exposed-filter-blockduplicado-de-filtro-inmuebles-el-bosque-te-acoge-page-1 {
+            label {
+                @include pt_serifitalic(12px);
+                display: block;
+                padding-bottom: 10px;
+            }
+            select {
+                margin-bottom: 10px;
+            }
+        }
+        .sidebar-first {
+            border-right: none;
+            @media only screen and (max-width: $tablet) {
+                display: block;
+                max-width: 100%;
+                margin-bottom: 15px;
+            }
+            .block-content--type-_002-texto-links {
+                // border-right: 1px solid #EDEDED;
+                @media only screen and (max-width: $tablet) {
+                    border-right: none;
+                }
+            }
+            .block-views-exposed-filter-blockduplicado-de-filtro-inmuebles-el-bosque-te-acoge-page-1 {
+                @media only screen and (max-width: $tablet) {
+                    display: none;
+                }
+            }
+        }
+        .view-duplicado-de-filtro-inmuebles-el-bosque-te-acoge {
+            .view-empty {
+                padding: 15px 0;
+                border-top: 1px solid;
+                border-bottom: 1px solid;
+                border-color: $color_gray_50;
+                font-size: 26px;
+            }
+        }
+    }
+    &.page-filtro-el-bosque-te-acoge {
+		.block-block-content38e5d069-60e2-4593-a919-533c72cf65dd {
+			margin-bottom: 20px;
+		}
+
+        .layout-content--post-content {
+            @include bg-laterales(#F9F9F9, 100%);
+            @include intro-title('.null', '.view-header', '.null');
+            margin-top: 60px;
+            background-color: #F9F9F9;
+            .view-header {
+                @media only screen and (max-width: $mobile) {
+                    margin-bottom: 55px;
+                }
+            }
+            .field--name-node-title {
+                h3 {
+                    @include latoregular(16px);
+                    line-height: 100%;
+                    a {
+                        text-decoration: none;
+                        color: $color_gray_80;
+                    }
+                }
+            }
+            .node--type-inmuebles-el-bosque-te-acoje {
+                >.field {
+                    //    padding-left: 20px;
+                    //    padding-right: 20px; 
+                }
+            }
+        }
+        .sidebar-first {}
+    }
+}

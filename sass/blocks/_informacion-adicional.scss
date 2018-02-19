@@ -1,0 +1,606 @@
+.informacion-adicional {
+	@include bg-laterales($color_brand, 100%);
+	background-color: $color_brand;
+	position: relative;
+	padding-bottom: 40px;
+
+	.block-content--type-block-title {
+		color: white;
+
+		.intro {
+			color: white;
+
+			&::before {
+				background-color: white !important;
+			}
+		}
+
+		.field--name-field-block-title-h2 {
+			color: white;
+		}
+	}	
+
+	.title-group {
+		display: none;
+	}
+
+	// Wrapper
+	.tabMakerWrapper {
+		@media only screen and (min-width: $tablet) {
+			overflow: hidden;
+		}
+	}
+
+	.lavalamp-bar {
+		background: transparent;
+		text-align: center;
+		top: auto;
+		bottom: 0;
+
+		i {
+			@include inline-block(top);
+			background: white;
+			border-radius: 100px;
+			height: 10px;
+			width: 10px;
+		}
+	}
+
+	//contenedor de todos los tabs
+	.field--name-field-informacion-adicional-preg {
+		font-family: 'acherus_grotesquelight'; //$font-bm;
+		margin-top: -10px;
+	}
+
+	// Tab buttons wrapper
+	.tabMakerTabs {
+		position: relative;
+		text-align: center;
+		border-bottom: 1px solid rgba(255,255,255,.5);//$color_facu_diseno-border;
+		padding-bottom: 22px;
+		z-index: 10;
+
+		@media only screen and (max-width: $tablet) {
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+
+		.lavalamp-active {
+			color: $color_gray_2;
+			font-family: $font-bsb;	
+		}
+
+		@media only screen and (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	// Single tab button
+	.tabMakerTab {
+		@include inline-block(top);
+		width: 16%; //180px;
+		margin: 0 10px;
+		padding-bottom: 22px;
+		cursor: pointer;
+		text-align: center;
+		position: relative;
+		transition: .3s ease-out all;
+		color: #fff; //$color_gray_50;
+		font-size: 13px;
+		letter-spacing: 1px;
+
+		* {
+			opacity: .8;
+		}
+
+		@media only screen and (max-width: $tablet) {
+			width: 20%;
+			margin: 0;
+			padding-bottom: 0;
+		}
+
+		@media only screen and (min-width: $mobile) and (max-width: 500px) {
+			font-size: 11px;
+			word-wrap: break-word;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			display: none !important;
+		}
+
+		&::after {
+			display: none;
+		}
+
+		&.lavalamp-active {
+			* {
+				opacity: 1;
+			}
+		}
+
+		div[class*="image"] {
+			height: 50px;
+			width: 100%;
+			position: relative;
+			margin-bottom: 8px;
+
+			img {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+		}
+
+		&:first-child,
+		&:nth-last-of-type(2) {
+			&::before {
+				content: "";
+				position: absolute;
+				//bottom: -24px;
+				top: 110%;
+				right: 50%;
+				width: 500px;
+				height: 40px;
+				background: $color_brand;
+			}
+		}
+
+		&:nth-last-of-type(2) {
+			&::before {
+				right: auto;
+				left: 50%;
+			}
+		}
+
+		// Campo texto, lo centro con absoluto para evitar que el bold en activo mueva todo
+		.field + .field {
+			color: white;
+
+			@media only screen and (min-width: $tablet) {
+				white-space: nowrap;
+			}
+		}
+
+		img {
+			@include inline-block(bottom);
+			width: auto;
+			max-height: 45px;
+			transition: .3s ease-out all;
+
+			@media only screen and (min-width: $mobile) and (max-width: 500px) {
+				max-height: 30px;
+			}
+		}
+	}
+
+	// Single tab button (Mobile)
+	.tabMakerTabMobile {
+		font-family: $font-bsb;
+		font-size: 13px !important;
+		color: #fff; //$color_gray_50;
+		text-align: center;
+		letter-spacing: 1px;
+		line-height: 100%;
+		padding: 15px 0;
+		cursor: pointer;
+		opacity: .8;
+		position: relative;
+		transition: .3s ease-out all;
+
+		.hovered {
+			transition: .3s ease-out all;
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			//height: 100%;
+			line-height: 100%;
+			padding: 12px 0 15px;
+			font-family: $font-brandb;
+			color: $color_gray_80;
+			background: white;
+			z-index: 4;
+		}
+
+		&::before {
+			content: "";
+			background: $color-brand;
+			height: 3px;
+			width: 100%;
+			position: absolute;
+			bottom: -1px;
+			left: -100%;
+			transition: .3s ease-out all;
+			z-index: 5;
+		}
+
+		img {
+			height: 27px;
+			width: auto;
+			display: block;
+			margin: 0 auto 8px;
+		}
+
+		// Fechas
+		.field--name-field-image {
+			img {
+				height: auto;
+				width: 27px;
+			}
+		}
+
+		// Valores
+		.field--name-field-imagen-valores-pregrado {
+			img {
+				height: auto;
+				width: 30px;
+			}
+		}
+
+		@media only screen and (max-width: $mobile) {
+			display: block !important;
+
+			& + .tabMakerContentInner {
+				display: none;
+			}
+		}
+		
+		.active-mobile-tab & {
+			opacity: 1;
+		}
+	}
+	
+	.active-mobile-tab .tabMakerTabMobile {
+		opacity: 1;
+	}
+
+	// Field styles
+	.field--name-field-fecha-fin-evento,
+	.field--name-field-pru,
+	.numeric-field {
+		.field__label {
+			@include tab-label;
+		}
+	}
+
+	.numeric-field {
+		.field__item {
+			@include text-day-date;
+			
+			&::before {
+				content: "COP";
+				display: block;
+				color: white;
+				font-family: $font-basel;
+				font-size: 9px;
+				height: 22px;
+			}
+		}
+	}
+
+	.field--name-field-pru  {
+		.field__label {
+			margin-bottom: 10px;
+		}	
+	}
+
+	.tabMakerContent > .field--name-field-fecha-publicacion, 
+	.tabMakerContent > .field--name-field-inicio-de-inscripciones, 
+	.tabMakerContentInner > .field--name-field-fecha-publicacion, 
+	.tabMakerContentInner > .field--name-field-inicio-de-inscripciones {
+		//padding-left: 12% !important; //100px !important;
+		
+		@media only screen and (min-width: 920px) {
+			padding-left: 12% !important;
+		}
+	}
+
+	.field--name-field-pru,
+	.field-two-columns {
+		.field__item {
+			@include tab-texti;
+			position: relative;
+			padding-left: 15px;
+
+			&::before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				background: white;
+				border-radius: 50px;
+				position: absolute;
+				left: 0;
+				top: 9px;
+			}
+		}
+	}
+
+	.field--name-field-date-prueba-pregrado {
+		overflow: hidden;
+	}
+
+	.field--name-field-recomendaciones-prueba {
+		@include tab-texti;
+		clear: both;
+		margin-top: 10px;
+	}
+	
+	.field--name-field-invitados {
+		@include tab-texti;
+		float: left;
+		color: white;
+		padding-right: 20px !important;
+	}
+
+	.field--name-field-fecha-inicio-inscripcion, .field--name-field-cierre-de-inscripciones-pr {
+		.field__label {
+			color: $color_gray_15;
+			letter-spacing: 2px;
+		}
+		.field__item {
+
+		}
+	}
+
+	.date-label-field {
+		@include tab-label;
+	}
+	
+	//Tab Requisitos
+	.field--name-field-contenido-de-requisitos {
+		@include listas;
+		color: white;
+		width: 100% !important;
+	}
+	
+	//Tab Exámenes y pruebas
+	.field--name-field-pru {
+
+	}
+
+	// Tab contents wrapper
+	.tabMakerContents {
+		position: relative;
+		margin-bottom: 35px;
+
+		&::after {
+			left: auto;
+			right: 100%;
+		}
+	}
+
+	// Single tab content
+	.tabMakerContentInner {
+		@include ib-grid;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		position: relative;
+		// border-top: 1px solid $color_facu_diseno-border;
+
+		@media only screen and (min-width: $tablet) {
+			max-width: 70%; //800px;
+		}
+
+		> .field {
+			@include inline-block(top);
+			//max-width: 390px; //400px;
+			width: 50%; //100%;
+			padding: 20px 30px 0 0;
+			box-sizing: border-box;
+			text-align: left;
+			// border-right: 1px solid $color_facu_diseno-border;
+
+			& + .field {
+				border-right: 0;
+
+				@media only screen and (min-width: $mobile) {
+					padding-left: 30px;
+				}
+			}
+
+			* {
+				color: white;
+			}
+			
+			&::before {
+				content: "";
+				width: 1px;
+				height: 100%;
+				background: rgba(255,255,255,.5); //$color_facu_diseno-border;
+				position: absolute;
+				top: 0px;
+				left: 0;
+				right: 0;
+				margin: auto;
+				z-index: 2;
+				
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+
+			&.field--name-field-horarios-del-programa {
+				//z-index: 5;
+				background-color: $color_brand;
+				position: relative;
+				text-align: center;
+			    width: 100%;
+			    margin-top: -20px;
+			    padding-bottom: 17px;
+			    z-index: 10;
+				&:before {
+					display: none;
+				}
+			}
+		}
+		> .field--name-field-horarios-del-programa {
+			@include ib-grid;
+			max-width: 100%;
+			text-align: center;
+			.field__label, .field__item {
+				@include latobold(12px);
+				letter-spacing: 1px;
+				display: inline-block;
+			}
+			.field__label {
+				color: #000000;
+			}
+			.field__item{
+				padding-left: 10px;
+			}
+
+		}
+		> .courses-group {
+			@include ib-grid;
+			padding-top: 40px;
+			>.column-date {
+				@include inline-block(top);
+				box-sizing: border-box;
+				padding: 0 20px;
+				width: 25%;
+				text-align: left;
+
+				@media only screen and (max-width: $mobile) {
+					overflow: hidden;
+					width: auto;
+					min-width: 100%;
+					padding: 0;
+					margin-left: -20px;
+					margin-right: -20px;
+
+					> .field {
+						float: left;
+						width: 50%;
+						padding: 0 20px;
+						box-sizing: border-box;
+					}
+				}
+
+				.date-label-field {
+					@include latobold (11px);
+					letter-spacing: 2px;
+					color: white;
+					&:after {
+						display: none;
+					}
+				}
+				.item-month-day {
+					float: none;
+				}
+				.item-month {
+					@include latobold(9px);
+					letter-spacing: 2px;
+					color: white;
+				}
+				.item-day {
+					@include acherus_bold(30px);
+					color: white;
+					padding-bottom: 10px;
+				}
+				>.field--name-field-inicio-de-inscripciones-cu, 
+				>.field--name-field-fecha-examen-de-admision, 
+				>.field--name-field-fecha-entrevista {
+					position: relative;
+					&:after {
+						position: absolute;
+						content: "";
+						background-color: white;
+						right: -25px;
+						top: 0;
+						height: 60px;
+						width: 1px;
+
+						@media only screen and (max-width: $mobile) {
+							right: 0;
+						}
+					}
+				}
+
+			}
+			
+		}
+
+		// Los fields con número tienen un ancho o margen distinto
+		.numeric-field {
+			@media only screen and (min-width: $tablet) {
+				max-width: 290px;
+				width: 100%;
+			}
+		}
+
+		// Hay fields múltiples que deben tener apariencia de ser 2 columnas
+		.field-two-columns {
+			//@include ib-grid;
+			max-width: none;
+			font-size: 0px;
+
+			@media only screen and (min-width: $desktop-small) {
+				.column-left {
+					padding-right: 45px;
+
+				}
+				.column-right {
+					padding-left: 45px;
+				}
+			}
+
+			@media only screen and (min-width: $mobile) {
+				.column-left {
+					@include inline-block(top);
+					box-sizing: border-box;
+					padding-right: 9%;
+					width: 50%;
+
+				}
+				.column-right {
+					@include inline-block(top);
+					box-sizing: border-box;
+					padding-left: 9%;
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	// Single tab content
+    .tabMakerContent {
+    	overflow: hidden;
+    	padding: 30px 0; //30px 100px 30px 100px;
+
+		@media only screen and (max-width: $mobile) {
+			display: block !important;
+			padding: 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		}
+	}
+
+	// Prevenimos para que siempre se vean en tablet y desktop
+	.tabMakerContentInner {
+		@media only screen and (min-width: $mobile) {
+			display: block !important;
+		}
+	}
+
+	//button 
+	.node--type-informacion-adicional-pregrado {
+		text-align: center;
+		margin-top: 25px;
+		position: relative;
+
+		&::before {
+			@include arrow-white-bottom-before;
+			top: -35px;
+		}
+
+		a {
+			@include buton-xl-white;
+
+			@media only screen and (max-width: $mobile) {
+				max-width: 160px;
+			}
+		}
+	}
+}

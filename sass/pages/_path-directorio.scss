@@ -1,0 +1,495 @@
+.path-directorio
+{
+	.sidebar-first
+	{
+		border-right: 0px;
+		.field--name-field-subtitle-block
+		{
+			background: none;
+			a
+			{
+				@include inline-block;
+				@include sidebar-menu-title;
+				text-decoration: none;
+			}
+		}
+		.ueb-infoextra-directorio-sidebarfirst
+		{
+			margin-top: 20px;
+			.field--name-body
+			{
+				&, p
+				{
+					font-size: 12px;
+					line-height: 14px;
+					font-family: "pt_serifitalic";
+				}
+				a
+				{
+					color: #333;
+					font-style: none;
+					text-decoration: none;
+					border-bottom: 1px solid #7bc142; // Verde universidad
+					color: #9a9a9a;
+					font-style: normal;
+				}
+				p:last-child
+				{
+					font-family: inherit;
+					a
+					{
+						font-size: 14px;
+						letter-spacing: 1.5px;
+						font-style: normal;
+						font-family: "latoregular";
+					}
+				}
+			}
+		}
+		.buscador-directorio {
+			padding-top: 10px;
+			padding-left: 20px;
+    		padding-bottom: 7px;
+			padding-right: 20px;			
+    		background-color: white;
+			border: 1px solid $color_gray_50;
+    		
+		    border-radius: 4px;
+    		overflow: hidden;
+    		margin-bottom: 10px;
+
+			.form-text {
+				width: 90%;
+    			margin-left: 27px;
+    			font-family: "latoitalic";
+   				font-size: 18px;
+    			color: $color_gray_60;
+    			margin-top: -10px;
+    			border: 0;
+			}
+
+			.form-actions {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			.form-submit {
+				background: url(../images/svg/SearchGreen.svg) no-repeat 0 0;
+    			border: 0;
+				width: 19px;
+				height: 0;
+				padding-top: 19px;
+				overflow: hidden;
+				cursor: pointer;
+				margin-left: -3px;
+			}
+		}
+	}
+		.sidebar-menu
+		{
+			background-color: #fbfbfb;
+			padding: 11px 23px;
+			border: 1px solid #AAA;
+			border-radius: 5px;
+			box-sizing: border-box;
+			width: 100%;
+			ul
+			{
+				margin-bottom: 0px;
+				li
+				{
+					border: 0;
+					position: relative;
+	    			padding-left: 20px;
+					padding-right: 10px;
+	    			width: auto;
+					a
+					{
+						font-size: 12px;
+						font-weight: 600;
+						letter-spacing: 2px;
+						color: #777;
+						line-height: 15px;
+						width: auto;
+						&:before
+						{
+							content: '';
+							border: 1px solid #7bc142;
+							border-radius: 16px;
+							display: inline-block;
+							margin-right: 15px;
+							width: 12px;
+							height: 12px;
+							vertical-align: middle;
+							position: absolute;
+							left: 0;
+						}
+					}
+					&.menu-item--active-trail
+					{
+						padding-left: 20px;
+						&:before,
+						&:after
+						{
+							display: none;
+						}
+						a
+						{
+							&:before
+							{
+								border-width: 5px;
+								width: 6px;
+								height: 6px;
+							}
+						}
+					}
+					&:first-child {
+						background: none;
+						a {
+							font-family: $font-baser;
+						}
+						&.menu-item--active-trail a {
+							font-family: $font-baseb;
+						}
+					}
+				}
+			}
+			.view-filters {
+				@include form-input-select ('.form-item-field-facultades-personal-target-id', 'select');
+				@include form-select('.form-item-field-facultades-personal-target-id', 'select');
+				@include form-input-select ('.form-item-field-programa-academico-target-id', 'select');
+				@include form-select('.form-item-field-programa-academico-target-id', 'select');
+				.form-item-field-facultades-personal-target-id,
+				.form-item-field-programa-academico-target-id {
+					> label {
+						@include pt_serifitalic(12px);
+						display: block;
+						padding-bottom: 5px;
+					}					
+				}
+				.form-select {
+					width: 100%;
+				}
+				.button {
+					display: none;
+				}
+				.form-item-field-facultades-personal-target-id {
+					label:nth-child(n+2) {
+						display: none;
+					}
+				}
+				.form-item-field-programa-academico-target-id {
+					margin-top: 10px;
+					label:first-child,
+					label:nth-child(n+3) {
+						display: none;
+					}
+				}
+			}
+		}
+	.content
+	{
+		.view-header
+		{
+			h2
+			{
+				
+			}
+			.uat-total-resultados
+			{
+				@include acherus_grotesqueregular (23px);
+				border: 1px solid #dfdfdf;
+				background-color: #fbfbfb;
+				padding: 15px 19px 14px;
+				color: #636363;
+				border-radius: 5px;
+				.uat-num-total
+				{
+					@include acherus_black (23px);
+					color: #7bc142;
+					padding-right: 2px;
+					padding-left: 2px;
+				}
+			}
+		}
+		.view-content
+		{
+			text-align: left;
+			margin-top: 35px;
+			a {
+				text-decoration: none;
+
+				.enlace-facultad{
+					@include acherus_medium(11px);
+					line-height: 1px;
+					color: #7ED321;
+					display: inline-block;
+				}
+
+				&:after
+				{
+					content: '>';
+					display: inline-block;
+					color: $color-brand;
+				}
+			}
+			&:after
+			{
+				content: '';
+				display: inline-block;
+				width: 100%;
+			}
+			h3
+			{
+				font-size: 24px;
+				line-height: 20px;
+				margin-bottom: 30px;
+				padding-top: 37px;
+				border-top: 1px solid #d6d7cf;
+				color: #7bc142;
+				clear: both;
+				width: 100%;
+				display: inline-block;
+				margin-top: 12px;
+				letter-spacing: 0px;
+
+				&:first-child
+				{
+					border-top: 0;
+					padding-top: 2px;
+					margin-top: 0px;
+				}
+			}
+			> div > a,
+			> div > p
+			{
+				visibility: hidden;
+				&.uat-visibleblock
+				{
+					visibility: visible;
+				}
+			}
+			> div > p
+			{
+				margin-top: -10px;
+				font-size: 14px;
+				letter-spacing: 2px;
+				line-height: 100%;
+				margin-bottom: 36px;
+			}
+			> div > a
+			{
+				display: block;
+				// float: left;
+				clear: both;
+				text-decoration: none;
+				font-size: 11px;
+				letter-spacing: 0.8px;
+				margin-bottom: 13px;
+				color: #7bc142;
+				position: relative;
+				padding-right: 12px;
+				&:after
+				{
+					content: url("../images/svg/ArrowGreenLeft.svg");
+					display: inline-block;
+					vertical-align: middle;
+			    	transform: scale(0.5);
+				}
+			}
+			.views-row
+			{
+				display: inline-block;
+				vertical-align: top;
+				width: pixel-to-percentage(203px + 60px + 25px,881px);
+				margin-bottom: 30px;
+				@include TabletMedium-NoMobile // Entre: $tablet-medium-width: 597px; ý $mobile-l-width: 425px + 1px;
+				{
+					width: 49%;
+				}
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					width: 100%;
+					margin-bottom: 15px;
+				}
+				&:nth-child(3n+0)
+				{
+					margin-left: 0px;
+				}
+				.views-field-title
+				{
+					//font-weight: bold;
+					@include acherus_bold (18px);
+					line-height: 20px;
+					margin-bottom: 5px;
+					
+				}
+				.views-field-field-lista-directivos,
+				.views-field-field-extencion-directivos,
+				.views-field-field-email-directivos,
+				.views-field-field-text-cargo,
+				.views-field-field-extension-personal,
+				.views-field-field-programa-academico,
+				.views-field-field-facultades-personal,
+				.views-field-field-telef-directo
+				{
+					font-size: 14px;
+					margin-bottom: 5px;
+					.views-label
+					{
+						//font-style: italic;	
+						display: inline;
+						color: #4a4a4a;
+						font-family: "pt_serifitalic";
+					}
+					.field-content
+					{
+						font-size: 13px;
+						display: inline;
+						color: #9a9a9a;
+					}					
+				}
+				.views-field-field-facultades-personal {
+					padding-bottom: 10px;
+					.views-label-field-facultades-personal {
+						display: inline-block;
+						width: 26%;
+						vertical-align: top;
+					}
+					.field-content {
+						display: inline-block;
+						width: 50%;
+						text-align: left;
+						vertical-align: top;
+					}
+				}
+				.views-field-field-lista-directivos
+				{
+					margin-bottom: 5px;
+				}
+				.views-field-field-detalle-academico {
+					.views-label-field-detalle-academico {
+						@include link-text;
+						@include acherus_medium(10px);
+						letter-spacing: 1px;
+						color: $color-brand;
+						text-transform: capitalize;
+						&::after {
+							content: url(../images/arrow-down.png);
+							display: inline-block;
+							transition: transform ease 0.6s;
+							margin-left: 5px;
+							
+						}
+						&.open-desplegable {
+							&::after {
+								transform: rotate(180deg);
+							}
+						}
+					}
+					.field-content {
+						@include latoregular(14px);
+						display: none;
+						text-align: left;
+						box-sizing: border-box;
+						padding-left: 28px;
+    					padding-right: 28px;
+						padding-top: 10px;
+					}
+					.arrow-toggle {
+						right: -18px;
+						span {
+							background: initial;
+							background-image: url(../images/arrow-down.png);
+							background-repeat: no-repeat;
+							background-position: center;
+						}
+						&.open-true {
+							span {
+								background: initial;
+								background-image: url(../images/arrow-down.png);
+								background-repeat: no-repeat;
+								background-position: center;
+							}
+						}
+					}
+					
+				}				
+				.views-field-field-extencion-directivos
+				{
+					
+				}
+				.views-field-field-email-directivos
+				{
+					margin-bottom: 10px;
+					word-break: break-word;
+					.views-label-field-email-directivos {
+						display: none;
+					}
+					.field-content
+					{
+						font-size: 14px;
+						display: inline-block;
+						border-bottom: 1px solid #7bc142;
+						letter-spacing: 1.5px;
+						@include Mobile // Menor a: $mobile-l-width: 425px;
+						{
+							display: block;
+							width: 100%;
+						}
+						a {
+							color: #9a9a9a;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			.row-academics {
+				text-align: center;
+			}
+
+			.view-grouping-header {
+				margin-bottom: 10px;
+			}
+		}
+		.view-footer {
+			a {
+				@include acherus_medium(11px);
+				line-height: 1px;
+				color: #7ED321;
+				&:after {
+					content: url(../images/svg/ArrowGreenLeft.svg);
+					display: inline-block;
+					vertical-align: middle;
+					transform: scale(0.5);
+				}
+			}
+
+		}
+		.js-pager__items.pager
+		{
+			margin-bottom: 68px;
+			padding-right: 60px + 35px;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				padding-right: 0;
+			}
+			.pager__item
+			{
+				text-align: center;
+				.button
+				{
+					@include buton-xl-green;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+	#main {
+		.view-filters {
+			display: none;
+		}
+	}
+}

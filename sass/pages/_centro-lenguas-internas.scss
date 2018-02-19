@@ -1,0 +1,337 @@
+.interna-centro-lenguas {
+    .layout-content {
+        @media only screen and (max-width: $mobile) {
+            padding: 0 30px;
+        }
+    }
+    &.page-node-type-pagina-basica-bosque #main .node--type-pagina-basica-bosque {
+        padding-bottom: 5px;
+    }
+    // /centro-de-lenguas/cursos-ingles
+    .informacion-adicional-curso-ingles {
+        .field--name-body {
+            p {
+                max-width: 65%;
+                @media only screen and (max-width: $mobile) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    // centro-de-lenguas/examen-suficiencia
+    .suficiencia-estructrura {
+        margin-bottom: 50px;
+        .field--name-body {
+            margin-left: 25px;
+            h3 {
+                font: {
+                    family: $font-bsb;
+                }
+            }
+            ul {
+                max-width: 600px;
+            }
+            li {
+                padding-left: 20px;
+                strong {
+                    font: {
+                        family: $font-brandb;
+                    }
+                }
+                &:before {
+                    height: 5px;
+                    width: 5px;
+                }
+            }
+        }
+        .field--name-field-links {
+            margin-left: 45px;
+            @media only screen and (max-width: $mobile) {
+                margin-left: 14px;
+            }
+            a {
+                @include buton-l-green;
+            }
+        }
+    }
+    .suficiencia-info-extra {
+        .field--name-body {
+            p {
+                max-width: 600px;
+            }
+            ul {
+                max-width: 600px;
+                li {
+                    padding-left: 20px;
+                    &:before {
+                        height: 5px;
+                        width: 5px;
+                    }
+                }
+            }
+            h2 {
+                @media only screen and (max-width: $mobile) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    // /centro-de-lenguas/clubes-converzacion
+    .actividades-culturales-club-lenguas {
+        .field--name-field-title h4 {
+            @include interna-nodo-titulo;
+        }
+        .field--name-body {
+            .field__item {
+                &:nth-child(1) {
+                    margin-bottom: 40px;
+                    margin-top: 10px;
+                    p {
+                        @include interna-nodo-bocadillo;
+                        letter-spacing: -0.5px;
+                        line-height: 30px;
+                    }
+                }
+                &:nth-child(2) {
+                    p {
+                        max-width: 600px;
+                    }
+                }
+            }
+        }
+    }
+    // /centro-de-lenguas/devoluciones-y-reservas-cupos
+    &.reglamento-devolucion-lenguas {
+        .node--type-bosque-004-bocadillo-body {
+            @include inline-block(top);
+            margin-right: 2%;
+            width: 63%;
+            @media only screen and (max-width: $mobile) {
+                margin-right: 0;
+                width: 100%;
+            }
+            h1 {
+                width: 880px;
+                margin-bottom: 50px;
+                @media only screen and (max-width: $mobile) {
+                    font-size: 33px;
+                    width: 100%;
+                }
+            }
+            .field--type-text-with-summary {
+                width: 100%;
+            }
+        }
+        .estilo-0004 {
+            @include inline-block(top);
+            margin-top: 135px;
+            width: 32%;
+            @media only screen and (max-width: $mobile) {
+                display: none;
+                width: 100%;
+            }
+            .aside {
+                width: 100%;
+            }
+            .aside p {
+                font-size: 14px;
+                line-height: 18px;
+            }
+            .aside a {
+                color: $color_gray_80;
+                text-transform: none;
+                letter-spacing: 0;
+                font-size: 12px;
+            }
+        }
+    }
+    // /centro-de-lenguas/curso-de-espanol 
+    .node--type-pagina-basica-con-cita-e-imagen {
+        .field--name-body {
+            p {
+                &:nth-child(3) {
+                    width: 640px;
+                    @media only screen and (max-width: $mobile) {
+                        width: 100%;
+                    }
+                }
+            }
+            ul {
+                width: 430px;
+
+                li {
+                    span {
+                        display: block;
+                    }
+                }
+
+                @media only screen and (max-width: $mobile) {
+                    padding-left: 2%;
+                    width: 100%;
+                    li {
+                        padding-left: 17px;
+                    }
+                }
+            }
+        }
+        .field--name-field-image {
+            // margin: 0 -15px;
+            padding-left: 20px;
+            text-align: initial;
+            img {
+                max-width: 120%;
+                width: 100%;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-left: 0;
+                margin:  0 -15px;
+            }
+        }
+        h1 {
+            @media only screen and (max-width: $mobile) {
+                 width: 80%;
+            }
+        }
+    }
+    .como-inscribirse-block {
+        @include inline-block(top);
+        width: 65%;
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+            ol {
+                margin-left: 4%;
+            }
+        }
+    }
+    .prueba-clasificacion {
+        @include inline-block(top);
+        border-left: 1px solid #c2c4c7;
+        margin-left: 2%;
+        padding-left: 2%;
+        width: 30%;
+        @media only screen and (max-width: $mobile) {
+            border: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            width: 100%;
+        }
+        .field--name-field-title {
+            margin-bottom: 13px;
+            .field__item {
+                color: $color_brand;
+                font: {
+                    family: $font-bsb;
+                    size: 18px;
+                }
+                line-height: 31px;
+            }
+            h4 {
+                color: $color-brand;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 19px;
+                }
+            }
+        }
+        .field--name-body {
+            p {
+                font-size: 14px;
+                line-height: 1.3;
+            }
+            em {
+                font-family: $font-serif-italic;
+            }
+        }
+    }
+    .horarios-block {
+        .field--name-field-title {
+            margin-bottom: 15px;
+            .field__item {
+                @include interna-nodo-titulo;
+                font-size: 33px;
+            }
+            h4 {
+                font-size: 33px;
+            }
+        }
+        .field--name-body {
+            max-width: 57%;
+            @media only screen and (max-width: $mobile) {
+                max-width: 100%;
+            }
+        }
+    }
+    // /centro-de-lenguas/servicios-adicionales
+    .node--type-bosque-004-bocadillo-body {
+        .field--name-field-bocadillo {
+            font-size: 22px;
+            padding-bottom: 50px;
+        }
+    }
+
+    // /centro-de-lenguas/electivas-estudiantes
+    .electiva {
+        margin-bottom: 40px;
+        .field--name-body {
+            @include ib-grid;
+            h3 {
+                font-size: 20px;
+                font-family: $font-bsb;
+                color: $color-brand;
+            }
+            em {
+                font-family: $font-serif-italic;
+                font-size: 14px;
+            }
+            .field__item:first-child {
+                @include inline-block(top);
+                box-sizing: border-box;
+                margin-right: 2%;
+                width: 68%;
+
+                @media only screen and (max-width: $tablet) {
+                    padding-right: 26px;
+                    width: 65%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            .field__item:last-child {
+                @include inline-block(top);
+                border-left: 1px solid $color_gray_50;
+                box-sizing: border-box;
+                padding-left: 20px;
+                padding-bottom: 15px;
+                width: 30%;
+                p {
+                    font-size: 14px;
+                    line-height: 17px;
+
+                    &:nth-last-child(2) {
+                        margin-bottom: 0;
+                    }
+                }
+                @media only screen and (max-width: $tablet) {
+                    width: 35%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    padding-left: 0;
+                    margin-top: 15px;
+                    border-left: none;
+                    width: 100%;
+                }
+            }
+        }
+        .field--name-field-title .field__item {
+            font-family: $font-brandb;
+            font-size: 33px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+    }
+    @media only screen and (max-width: $mobile) {
+        &.electivas .field--name-field-image {
+            margin: 0 -21px 30px -20px !important;
+        }
+    }
+}

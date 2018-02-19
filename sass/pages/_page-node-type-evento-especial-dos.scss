@@ -1,0 +1,740 @@
+.page-node-type-evento-especial-dos {
+	@include eventos-mobile-menu;
+
+	#header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 50;
+		background: none;
+
+		.header-inner {
+			border: 0;
+		}
+		
+		.header_first {
+			width: 100%;
+
+			@media only screen and (max-width: $tablet) {
+				display: block;
+			}
+		}
+		
+		.logo-eventos {
+			float: left;
+
+			@media only screen and (max-width: $tablet) {
+				left: 60px;
+				position: relative;
+			}
+		}
+		
+		.block-menu {
+			float: right;
+		}
+		
+		.menu-item {
+			@include inline-block;
+			margin-right: 25px;
+
+			a {
+				@include font(15px, 18px, -0.19px);
+				text-transform: lowercase;
+				font-family: $font-bsb;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.wrap-content {
+		padding: 0;
+	}
+	
+	.layout-content {
+		max-width: inherit;
+		padding: 0;
+	}
+
+	.sobre-evento,
+	.cronograma-evento,
+	.Conferencistas,
+	.inscripciones,
+	.patrocinadores,
+	.ubicacion {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 50px 10px 30px;
+
+		@media only screen and (max-width: $tablet) {
+			h3, .field__label {
+				font-family: $font-bm !important;
+			}
+		}
+
+		@media only screen and (max-width: $mobile) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+
+	.sobre-inner {
+		background: #F9F9F9;
+	}
+
+	.sobre-evento {
+		> h3 {
+			@include font(33px, 39px);
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.field--name-field-body-images {
+			float: left;
+			margin-right: 15px;
+
+			@media only screen and (max-width: $tablet) {
+				max-width: 400px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				max-width: none;
+				width: auto;
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+		}
+
+		.text-content {
+			overflow: hidden;
+			clear: both;
+
+			> span {
+				@include font(20px, 25px, -0.5px);
+				font-family: $font-bl;
+				display: none;
+			}
+
+			@media only screen and (max-width: $tablet) {
+				margin: 0;
+			}
+
+			@media only screen and (max-width: $tablet) {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+		}
+
+		.field--name-body {
+			h2 {
+				@include font(39px, 41px);
+				font-family: $font-bli;
+
+				@media only screen and (max-width: $tablet) {
+					@include font(25px, 32px);
+				}
+
+				@media only screen and (max-width: $mobile) {
+					@include font(39px, 41px);
+				}
+			}
+
+			@media only screen and (max-width: $tablet) {	
+				display: inline-block;
+				width: 40%;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				margin-top: 20px;
+				width: 100%;
+			}
+		}
+
+		.field--name-field-body-2 {
+			@include inline-block(middle);
+			max-width: 380px;
+			background: #9ab1b7;
+			padding: 60px 20px;
+    		box-sizing: border-box;
+
+			h2 {
+				color: white;
+				letter-spacing: 2px;
+
+				@media only screen and (max-width: $tablet) {
+					font-size: 22px;
+					font-family: $font-bli;
+					letter-spacing: 1px;
+					line-height: 24px;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					@include font(33px, 34px);
+				}
+			}
+
+			p {
+				color: white;
+			}
+
+			@media only screen and (max-width: $tablet) {
+				max-width: 243px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				max-width: none;
+				padding: 40px 20px;
+				width: 100%;
+			}
+		}
+
+		.field--name-field-body-3,
+		.field--name-field-body-4 {
+			@include inline-block(middle);
+			box-sizing: border-box;
+			padding: 0 40px;
+			width: calc(100% / 3);
+
+			h2:after {
+				content: "";
+				display: block;
+				width: 50px;
+				height: 4px;
+				background: #918a78;
+				margin-top: 10px;
+			}
+			h5 {
+				font-size: 14px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+
+				@media only screen and (max-width: $tablet) {
+					font-size: 12px;
+				}
+			}
+
+			@media only screen and (max-width: $tablet) {
+				padding: 0 20px;
+
+				h2 {
+					font-size: 22px;
+					font-family: $font-bli;
+					letter-spacing: 1px;
+					line-height: 24px;
+				}
+			}
+
+			@media only screen and (max-width: $mobile) {
+				margin-top: 40px;
+				width: 100%;
+			}
+
+		}
+	}
+	
+	.cronograma-evento {
+		@include default-tabs;
+		background: #382983;
+		position: relative;
+		
+		&::before,
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background: #382983;
+			position: absolute;
+			top: 0;
+			left: 100%;
+		}
+
+		&::after {
+			left: auto;
+			right: 100%;
+		}
+		
+		.tabMakerTabs {
+			text-align: left;
+
+			.tabMakerTab {
+				@include font(17px, 20px, 0.61px);
+				font-family: $font-brandb;
+				color: white;
+				z-index: 10;
+				min-width: 105px;
+				text-align: center;
+				margin: 0 30px 0 0;
+				line-height: 13px;
+				border-bottom: 2px solid #A8CABA;
+
+				&.lavalamp-active {
+					color: white;
+				}
+
+				&::before {
+					display: none;
+				}
+
+				i {
+					display: none;
+				}
+			}
+		}
+
+		.lavalamp-bar {
+			background: rgba(255, 255, 255, 0.07);
+			height: 47px;
+			top: 0;
+			border-top: 2px solid #A8CABA;
+			border-bottom: 2px solid transparent;
+		}
+
+		.tabMakerContents {
+			background: none;
+
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
+
+		.tabMakerContent {
+			padding-left: 0;
+			padding-right: 0;
+
+			.tabMakerContentInner {
+				> .text-content {
+					width: 100%;
+					max-width: inherit;
+					background: #99B2B7;
+					padding: 20px;
+					box-sizing: border-box;
+					margin: 0 0 55px;
+					overflow: hidden;
+				
+					> .field--name-field-image {
+						float: left;
+						max-width: 360px;
+						margin-right: 20px;
+					}
+				}
+			}
+		}
+
+		.field--name-field-cronograma-blog-dos {
+			> .field__label {
+				@include evento-title-2;
+				color: white !important;
+			}
+		}
+
+		p,
+		div {
+			color: white;
+		}
+		
+		.tabMakerContent .text-content {
+			float: none;
+			padding: 11px 0 15px 40px;
+			overflow: hidden !important;
+			width: auto !important;
+			max-width: none !important;
+			border-left: 1px solid white;
+		}
+	}
+	
+	.paragraph--type-cronograma-blog-dos {
+		display: none;
+	}
+	
+	.paragraph--type-contenido-cronograma-blog-dos {
+		overflow: hidden;
+
+		.name-fields {
+			border-bottom: 1px solid white;
+			padding-bottom: 31px;
+		}
+
+		.field--name-field-jornada {
+			@include font(20px, 25px, -0.5px);
+			font-family: $font-bli;
+			float: left;
+			width: 110px;
+			position: relative;
+			margin-top: 11px;
+
+			&::after {
+				content: "";
+				width: 20px;
+				height: 20px;
+				background: white;
+				position: absolute;
+				top: 0;
+				right: -11px;
+				border-radius: 25px;
+			}
+		}
+
+		.field--name-field-title {
+			@include font(20px, 20px);
+			margin-bottom: 15px;
+		}
+
+		.field--name-field-contenido-bloque {
+			margin-bottom: 15px;
+
+			p {
+				@include font(16px, 22px);
+				font-family: $font-baser;
+				margin-bottom: 0;
+			}
+		}
+
+		.field--name-field-image {
+			@include inline-block(middle);
+			margin-right: 25px;
+
+			img {
+				vertical-align: middle;
+			}
+		}
+
+		.field--name-field-tab-nombre-carrera {
+			@include font(18px, 22px, -0.45px);
+			@include inline-block(middle);
+			font-family: $font-bli;
+			margin-bottom: 0;
+			margin-right: 25px;
+		}
+
+		.field--name-field-tab-enlace {
+			@include inline-block(middle);
+			margin-bottom: 0;
+			
+			a {
+				@include font(12px, 14px, 2.25px);
+				@include inline-block(middle);
+				padding: 10px 25px;
+				font-family: $font-bsb;
+				background: #A8CABA;
+				text-transform: uppercase;
+				border-radius: 25px;
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+	
+
+	.first-content-2 {
+		position: relative;
+		
+		.text-content {
+			z-index: 15;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		
+		.text-content-1-inner {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 300px 0 0;
+
+			@media only screen and (max-width: $tablet) {
+				max-width: 500px;
+				padding: 100px 30px 0;
+				margin: 0;
+			}
+		}
+		
+		.field--name-field-imagenes-multiples {
+			
+
+			img {
+				width: 100%;
+				height: auto;
+				vertical-align: top;
+
+				@media only screen and (max-width: $mobile) {
+					height: 431px;
+					object-fit: cover;
+				}
+			}
+		}
+
+		.field--name-node-title {
+			h2 {
+				@include font(50px, 24px, -0.64px);
+				font-family: $font-brandb;
+				color: white;
+
+				@media only screen and (max-width: $tablet) {
+					font-family: $font-bli;
+					font-size: 33px;
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.field--name-field-titulo-2 {
+			@include font(39px, 37px);
+			font-family: $font-brandb;
+			color: white;
+
+			@media only screen and (max-width: $tablet) {
+				font-family: $font-bli;
+				font-size: 25px;
+			}
+
+		}
+
+		.field--name-field-title,
+		.field--name-field-countdown {
+			@include font(15px, 18px, -0.19px);
+			font-family: $font-boldi;
+			color: white;
+		}
+
+		.field--name-dynamic-block-fieldnode-boton-inscribirme {
+			padding-top: 20px;
+
+			a {
+				@include font(15px, 18px, 2.81px);
+				font-family: $font-bsb;
+				background: #382983;
+				color: white;
+				border-radius: 25px;
+				padding: 8px 30px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.Conferencistas {
+		@include grilla-3-columns-bs('.field__items', '> .field__item');
+		@include addToAny;
+
+		.field--name-field-conferencistas {
+			> .field__label {
+				@include evento-title-2;
+			}
+		}
+		
+		.paragraph {
+			overflow: hidden;
+		}
+		
+		.field--name-field-imagen {
+			float: left;
+			margin-right: 18px;
+		}
+
+		.text-content {
+			overflow: hidden;
+		}
+		
+		.field--name-field-tab-titulo {
+			@include font(20px, 20px, -0.5px);
+			font-family: $font-brandb;
+		}
+		
+		.field--name-field-position {
+			@include font(17px, 21px);
+			font-family: $font-bl;
+			padding-bottom: 15px;
+			
+			&::after {
+				content: "";
+				width: 50px;
+				height: 5px;
+				background: #382983;
+				display: block;
+				margin-top: 13px;
+			}
+		}
+		
+		.field--name-field-entrevista {
+			@include font(13px, 16px);
+			font-family: $font-baser;
+			padding-bottom: 15px;
+		}
+
+		@media only screen and (max-width: $tablet) {
+			@include grilla-2-columns-bs('.field__items', '> .field__item');
+		}
+	}
+
+	.inscripciones,
+	.patrocinadores {
+		> h3 {
+			@include evento-title-2;
+		}
+	}
+
+	.inscripciones {
+		@include block-pintadinho;
+		@include grilla-2-columns-bs('.inner-inscripcion', '> div');
+
+		.field--name-field-body {		
+			p {
+				border: 1px solid #382983;
+				margin-bottom: 10px;
+				border-radius: 5px;
+				position: relative;
+				padding-left: 100px;
+				height: 94px;
+				box-sizing: border-box;
+				padding-top: 14px;
+				overflow: hidden;
+
+				strong {
+					font-family: $font-brandb;
+					font-weight: normal;
+				}
+
+				&::before {
+					@include font(50px, 90px, -0.14px);
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: #382983;
+					color: white;
+					font-family: $font-brandb;
+					height: 94px;
+					width: 81px;
+					text-align: center;
+				}
+
+				@media only screen and (max-width: $tablet) {
+					padding-top: 0;
+				}
+			}
+			
+			@for $i from 1 through 3 {
+				p:nth-of-type(#{$i}) {
+					&::before {
+						content: "#{$i}";
+					}
+				}
+			}
+		}
+
+		.field--name-field-formulario-inscripcion {
+
+		}
+
+		.form-item {
+			margin-bottom: 20px;
+		}
+
+		.form-text,
+		.form-select {
+			border: 1px solid #BABCBF;
+			background: white;
+			border-radius: 5px;
+			padding: 17px 10px;
+			font-family: $font-baser;
+			font-size: 14px;
+			line-height: 17px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.js-form-type-select {
+			label {
+				display: none;
+			}
+		}
+
+		.form-submit {
+			@include inline-block;
+			@include font(12px, 14px, 2.25px	);
+			border: 0;
+			background: #A8CABA;
+			color: white;
+			padding: 15px 20px;
+			text-transform: uppercase;
+			border-radius: 20px;
+		}
+	}
+
+	.patrocinadores {
+		@include grilla-4-columns-bs('.field--name-field-sponsors', '.field__item');
+		
+		.field__item {
+			text-align: center;
+
+			img {
+				vertical-align: top;
+			}
+		}
+	}
+
+	#prefooter {
+		background: #382983;
+
+		.prefooter-container {
+			@include grilla-3-columns-bs('.pre_footer', '> .block');
+
+
+
+			h2,
+			h3 {
+				font-family: $font-brandb;
+				@include font(25px, 33px, -0.38px);
+				margin-bottom: 10px;
+				color: white;
+			}
+		}
+
+		p {
+			@include font(14px, 19px, 0.21px);
+			color: white;
+		}
+
+		a {
+			font-family: $font-basel;
+			color: white;
+		}
+
+		.share-text {
+			padding-top: 10px;
+		}
+
+		.js-form-type-email {
+			padding-top: 10px;
+		}
+
+		.form-email {
+			@include evento-field;
+		}
+		
+		.form-actions {
+			position: relative;
+		}
+
+		.form-submit {
+			width: 39px;
+			height: 0;
+			padding: 39px 0 0;
+			border: 0;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			background: url(../images/svg/flecha-right-blanca.svg) no-repeat;
+			z-index: 5;
+			cursor: pointer;
+		}
+	}
+
+	@media only screen and (max-width: $tablet) {
+		.ubicacion {
+			padding-bottom: 0;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+}

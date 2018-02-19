@@ -1,0 +1,14 @@
+.not-logged-in {
+    .wrap-content {
+        padding-top: 101px;
+
+        @media only screen and (max-width: $tablet) {
+            padding-top: 47px; // bien en /inscripciones/estado-admision
+			
+        }
+
+        @media only screen and (max-width: $mobile) {
+            // padding-top: 80px; // muy mal en /inscripciones/estado-admision
+        }
+    }
+}

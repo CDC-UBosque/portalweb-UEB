@@ -1,0 +1,160 @@
+#prefooter,
+.container-prefooter-content {
+	@media only screen and (max-width: $mobile) {
+	//	padding-top: 40px; // acá estorba: http://uat_ubosque.d8.seedoven.co/investigaciones/grupos-investigacion
+	}
+	
+	.prefooter-container {
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		box-sizing: border-box;
+		padding: 43px 10px;
+
+		@media only screen and (max-width: $tablet) {
+			max-width: none;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+	}
+
+	.pre_footer {
+		overflow: hidden;
+		font-size: 0px;
+		position: relative;
+		padding-top: 40px;
+
+		&::before {
+			content: "";
+			width: 4px;
+			height: 4px;
+			background: #9a9a9a;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			border-radius: 20px;
+		}
+	}
+
+	.region-contentnt {
+		@include ib-grid;
+		box-sizing: border-box;
+	}
+
+	.field--name-field-informacion-facultad-bloqu,
+	.block:first-child {
+		@include contact-prefooter (3, '.field--name-field-datos-de-informacion-decan', '.field__item', 
+			'.field--name-field-acerca-de', '.field--name-field-requisitos', 0);
+		margin: 0 0 30px;
+		font-size: 16px;
+
+		@media only screen and (min-width: $mobile) {
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 0;
+		}
+		
+		@media only screen and (min-width: $tablet) {
+			width: 66.5%;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 0;
+		}
+
+		
+		.field--name-field-datos-de-informacion-decan {
+			@include ib-grid;
+			margin: 0 -20px;
+
+			.field--name-field-acerca-de {
+				@media only screen and (max-width: $mobile) {
+					max-width: 80%;
+					padding-bottom: 5px;
+				}
+			}
+
+			> .field__item {
+				@include inline-block(top);
+				width: 50%;
+				box-sizing: border-box;
+				padding: 0 20px;
+			}
+		}
+	}
+	
+	.block-addtoany {
+		@include contact-social-networks();
+		font-size: 16px;
+		display: block;
+
+		@media only screen and (min-width: $mobile) {
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			margin-bottom: 0;
+		}
+
+		@media only screen and (min-width: $tablet) {
+			width: 33.5%;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+
+
+		.title {
+			height: 15px;
+			line-height: 100%;
+			
+			@media only screen and (min-width: $mobile) {
+				margin-left: 9%;
+			}
+		}
+
+		.addtoany_list {
+			@include ib-grid;
+			display: block;
+		}
+
+		a {
+			font-size: 16px;
+		}
+	}
+
+	.paragraph--type-informacion-contacto-facultad,
+	.field--name-field-requisitos  {
+		display: block !important;
+	}
+}
+
+
+#header,
+.container--header-info {
+	// display: none;
+}
+
+.becas-estimulos,
+.page-admisiones-pregrado {
+	#prefooter {
+        .pre_footer {
+            &:before {
+                content: "";
+                display: block;
+                width: 4px;
+                height: 4px;
+                border-radius: 4px;
+                margin: 0 auto;
+                background-color: #9b9b9b;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

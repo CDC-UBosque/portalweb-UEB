@@ -1,0 +1,116 @@
+.page-node-type-practicas-profesionales {
+	.field--name-field-tabs-pregrado-practicas {
+		@include default-tabs();
+	}
+	.field--name-field-bocadillo-150 {
+		@include cita;
+		padding-bottom: 25px;
+		@media only screen and (max-width: $mobile) {
+			width: 90%;
+		}
+		
+	}
+	
+	.node--type-practicas-profesionales {
+		.field--type-text-with-summary {
+			@include paragraphs_large;
+			padding-bottom: 30px;
+			width: 65.5%;
+			@media only screen and (max-width: $tablet) {
+				width: 80%;
+			}
+			@media only screen and (max-width: $mobile) {
+				width: 94%;
+			}
+		}
+	}
+	
+	.field--name-field-bocadillo-2 {
+		@include cita;
+		padding-bottom: 25px;
+		@media only screen and (max-width: $mobile) {
+			width: 92%;
+		}
+	}
+	.field--name-field-bocadillo-3 {
+		@include cita;
+		padding-bottom: 65px;
+		@media only screen and (max-width: $mobile) {
+			width: 95%;
+		}
+	}
+
+	// .field--name-field-informacion-de-la-facultad {
+	// 	@include grid(6, 80, 20);
+	// 	@include contact-prefooter (3, '.field--name-field-datos-de-informacion-decan', '.field__item', 
+	// 		'.field--name-field-acerca-de', '.field--name-field-bloque-legal-snies- ', 0px);
+	// 	display: inline-block;
+	// }
+	// .addtoany_list {
+	// 	@include contact-social-networks (2.95);
+	// 	margin-right: 0;
+	// }
+	.field--name-field-tabs-pregrado-practicas {
+		padding-bottom: 55px;
+		@media only screen and (max-width: $mobile) {
+			margin: 0 -30px;
+		}
+		
+		.paragraph--type--tab-pregrado-2 > .field > .field__item {
+			border-bottom: 1px solid $color_gray_20;
+			margin: 0 -30px;
+			padding: 20px 30px;
+		}
+		
+		.field--name-field-tab-titulo {
+			@include title_latobold_l;
+			padding-bottom: 10px;
+		}
+		.field--name-field-tab-bocadillo {
+			@include pt_serifitalic (14px);
+			letter-spacing: -0.5px;
+		}
+		.field--name-field-tab-enlace {
+			a {
+				@include link-text;
+			}			
+		}
+		.field--name-field-tabs-pregrado {
+			>.field__item {
+				&:nth-last-child(1) {
+					a {
+						&:before {
+							content: "";
+							height: 0px;
+							width: 0px;
+						}				
+					}		
+				}
+			}
+		}
+		
+		.tabMakerContents {
+			&:after {
+				content: "";
+				width: 0;
+			}
+			&:before {
+				content: "";
+				width: 0;
+			}
+		}
+		.tabMakerContent {
+			@media only screen and (min-width: $mobile) {
+				padding: 5px 25px 0px;
+			}
+		}
+
+		.tabMakerContentInner {
+			padding: 0 30px;
+		}
+
+		.field--name-field-titulo-tab-pregrado {
+			display: none;
+		}
+	}
+}

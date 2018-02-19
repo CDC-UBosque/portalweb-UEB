@@ -1,0 +1,705 @@
+.nodo-interno-article {
+	$mobile: 480px;
+
+	.item-month {
+		color: #4A4A4A;
+	}
+
+	//.node--view-mode-full {
+	div[class*="view-mode-full"] {
+		.text-content {
+			max-width: 77%;
+			margin: 0 auto;
+			@media only screen and (max-width: $tablet) {
+				max-width: 82%;
+			}
+			@media only screen and (max-width: $mobile) {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.content {
+		&:before {
+			display: none;
+		}
+
+		.text-content {
+			.field--name-body {
+				h2 {
+					margin-bottom: 27px;
+				}
+
+				h3 {
+					font-family: $font-bsb;
+					font-size: 28px;
+					line-height: 31px;
+					letter-spacing: -0.5px;
+					padding-left: 25px;
+				}
+
+				p,
+				li {
+					font-size: 18px;
+					line-height: 26px;
+					margin-bottom: 25px;
+				}
+				
+				ul,
+				ol {
+					margin-left: 27px;
+					
+					& + h3 {
+						margin-top: 20px;
+					}
+				}
+				
+				li {
+					padding-left: 24px;
+					margin-bottom: 0;
+
+					&::before {
+						width: 6px;
+						height: 6px;
+					}
+				}
+
+				img {
+					vertical-align: top;
+				}
+
+				.align-left {
+					margin-right: 20px;
+					margin-bottom: 20px;
+				}
+
+				.align-right {
+					margin-left: 20px;
+					margin-bottom: 20px;
+				}
+
+				blockquote {
+					margin-left: 0;
+					margin-right: 0;
+
+					p {
+						@include blockquote;
+						margin-bottom: 30px;
+						margin-top: 30px;
+					}
+				}
+			}
+
+			.field--name-field-tags {
+				background: #F9F9F9;
+				padding: 10px;
+				margin-top: 60px;
+
+				.field__label {
+					@include font(11px, 13px, 2.2px);
+					font-family: $font-baseblack;
+					margin-bottom: 5px;
+				}
+
+				.field__item {
+					@include inline-block;
+
+					&::after {
+						content: ", ";
+					}
+
+					a {
+						@include font(14px, 19px);
+						font-family: $font-baseli;
+						color: $color_gray_80;
+						text-decoration: none;
+
+						&::before {
+							content: "#";
+						}
+					}
+
+					&:last-child {
+						&::after {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.field--name-field-link {
+				padding-top: 25px;
+
+				.field__label {
+					font-family: $font-serif-italic;
+					font-size: 16px;
+					line-height: 22px;
+				}
+
+				.field__item {
+					a {
+						@include inline-block;
+						font-family: $font-baser;
+						font-size: 18px;
+						line-height: 22px;
+						letter-spacing: 2px;
+						color: $color_gray_60;
+						text-decoration: none;
+						padding-bottom: 4px;
+						border-bottom: 1px solid rgba(123, 193, 66, 1);
+					}
+				}
+			}
+
+			.share-text {
+				padding-top: 60px;
+
+				@media only screen and (min-width: $mobile) {
+					text-align: center;
+
+					.field__label {
+						text-align: center;
+					}
+				}
+
+				// en blog sirve
+				.field__label {
+					@include font(12px, 15px);
+					font-family: $font-baseli;
+				}
+
+				.field--name-dynamic-block-fieldnode-redes-sociales {
+					max-width: 380px;
+					width: 100%;
+				}
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+
+
+	.node-header {
+		overflow: hidden;
+		box-sizing: border-box;
+		margin-bottom: 26px;
+
+		@media only screen and (min-width: $mobile) {
+			border-right: 1px solid $color_gray_15;
+			padding-right: 23px;
+			float: left;
+			max-width: 80%;
+		}
+	}
+	
+	.node-info {
+		box-sizing: border-box;
+		padding-bottom: 20px;
+		
+		@media only screen and (min-width: $mobile) {
+			float: right;
+			max-width: 30%;
+			padding-left: 15px;
+		}
+
+		.field {
+			margin-bottom: 12px;
+		}
+
+		.field__label {
+			font-family: $font-serif-italic;
+			font-size: 12px;
+			line-height: 15px;
+		}
+
+		.field__item {
+			font-family: $font-bm;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: -0.08px;
+
+			a {
+				font-family: $font-bm;
+				font-size: 16px;
+				line-height: 20px;
+				letter-spacing: -0.08px;
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+
+		.field--name-field-investigadores {
+			.field__item {
+				font-family: $font-bsb;
+			}	
+		}
+	}
+	
+	.node-date {
+		width: 170px;
+		padding-left: 23px;
+		float: right;
+		box-sizing: border-box;
+		@media only screen and (max-width: $tablet) {
+			width: 14%;
+		}
+		
+		// $mobile modificado
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+			padding-left: 0px;
+			float: none;
+		}
+		.field {
+			overflow: hidden;
+			margin-bottom: 9px;
+		}
+
+		.field__label {
+			@include label-date;
+			margin: 0;
+		}
+		
+		.field__item {
+			font-family: $font-baseb;
+			font-size: 11px;
+		}
+	}
+
+	#main {
+		padding: 30px 20px 50px;
+		box-sizing: border-box;
+		@media only screen and (max-width: $tablet) {
+			padding: 30px 0 20px;
+		}
+		.field--name-field-image, 
+		.field--name-field-video-banner,
+		.field--name-field-main-video-banner {
+			margin-bottom: 27px;
+			
+			// $mobile modificado
+			@media only screen and (max-width: $mobile) {
+				margin-left: -50px;
+				margin-right: -50px;
+			}
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			.video-js, .vjs-tech {				
+				width: 100% !important;
+				height: auto !important;
+			}
+			.video-js {
+				background-color: transparent;
+			}
+			.vjs-tech {
+				position: inherit;
+			}
+		}
+
+		.field--type-entity-reference {
+			//margin-bottom: 10px;
+
+			a {
+			//	@include interna-nodo-categoria;
+			}
+		}
+
+		.field--name-node-title {
+			margin-bottom: 23px;
+
+			h2 {
+				@include interna-nodo-titulo;
+				font-family: $font-bm;
+				@media only screen and (max-width: $mobile) {
+					font-size: 33px;
+					line-height: 35px;
+				}
+			}
+		}
+
+		.field--name-field-bocadillo-150 {
+			@include interna-nodo-bocadillo;
+			//min-height: 125px;
+			@media only screen and (max-width: $tablet) {
+				font-size: 22px;
+			}
+		}
+
+		.field--name-body {
+			@include interna-nodo-body;
+		}
+
+		.field--name-field-contenido-1 {
+			margin-bottom: 10px;
+
+			p {
+				@include interna-nodo-contenido-1;
+			}
+		}
+
+		.field--name-field-frase {
+			@include blockquote;
+			margin-bottom: 30px;
+			@media only screen and (max-width: $tablet) {
+				font-size: 22px;
+			}
+		}
+
+		.field--name-field-imagen-secundaria {
+			float: left;
+			margin-right: 18px;
+			margin-bottom: 20px;
+			@media only screen and (max-width: $mobile) {
+				margin-right: 0px;
+			}
+			img {
+				display: block;
+				max-width: 380px;
+				height: auto;
+				@media only screen and (max-width: $mobile) {
+					max-width: 100%;
+				}
+			}
+		}
+
+		.field--name-field-contenido-2 {
+			p {
+				@include interna-parrafo;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.block-views-blocknoticias-1-block-4 {
+		@include grilla-3-columns-bs('.view-content', '.views-row');
+
+		@media only screen and (max-width: $mobile) {
+			@include grilla-1-column-bs('.view-content', '.views-row');
+		}
+
+		.view-content {
+			@media only screen and (max-width: $mobile) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+
+		.text-content {
+			background: white;
+		}
+	}
+
+	.layout-content--post-content {
+		@include bg-laterales(#F9F9F9, 100%);
+		background-color: #F9F9F9;
+		position: relative;
+		padding-bottom: 80px;
+		clear: both;
+	}
+
+	&.page-node-type-relatos{
+		#main {
+			.node-header {
+				padding-right: 21px;
+				.field--name-node-title{
+					width: 100%;
+				}
+			}
+			.text-content {
+				width: 80%;
+				margin: 0 auto;
+				@media only screen and (max-width: $tablet) {
+					width: 82%;
+				}
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+				}
+				.field--name-field-contenido-1 {
+					p {
+						@include paragraphs_extralarge_xl;	
+					}	
+				}
+				.field--name-field-contenido-2 {					
+					p {
+						@include paragraphs_large;	
+					}	
+				}				
+				.share-text {
+					padding-top: 5%;
+					text-align: center;
+					.field--name-dynamic-block-fieldnode-redes-sociales {
+						.field__label {
+							text-align: center;
+						}
+					}
+				}
+			}
+		}	
+	}
+	
+	&.page-node-type-convocatorias {
+		.text-content {
+			.field--name-field-contenido-1 {
+				h3 {
+				 	font-family: "acherus_grotesqueblack";
+    				letter-spacing: -0.5px;
+    				color: #4A4A4A;
+    				padding-bottom: 15px;
+
+    				strong {
+    					font-weight: normal !important;
+    				}
+    			}
+
+    			p {
+    				&:last-child a {
+    					text-decoration: none;
+    					border-bottom: 1px solid #7bc142;
+    					color: #9a9a9a;
+						letter-spacing: 2px;
+    				}
+
+    				padding-bottom: 10px;
+    			}
+			}
+
+			.field--name-field-invitados2 {
+				.field__label {
+					display: none;
+				}
+				
+				h3 {
+					padding-bottom: 10px;
+				}
+
+				p {
+					 font-size: 18px;
+    				 line-height: 26px;
+    				 padding-bottom: 10px;
+				}
+
+				ul {
+					font-size: 18px;
+    				line-height: 26px;
+    				padding-bottom: 10px;
+				} 
+				   
+			}
+
+			.field--name-field-url-web {
+				.field__label {
+					font-family: 'pt_serifitalic';
+    				font-size: 16px;
+    				padding-bottom: 10px;
+				}
+
+				.field__item {
+					
+					    font-size: 18px;
+    				 	line-height: 26px;
+
+					a {
+						text-decoration: none;
+    					border-bottom: 1px solid #7bc142;
+    					color: #9a9a9a;
+						letter-spacing: 2px;
+					}
+				}
+
+				padding-top: 10px;
+			}
+			
+		}
+	}
+
+	&.page-node-type-eventos {
+		.events-title-header {
+			margin-bottom: 22px;
+			font-size: 0px;
+			.events-date {
+				@include inline-block(middle);
+				width: 70%;
+			}
+			.return-events {
+				@include inline-block(middle);
+				width: 30%;
+				text-align: right;
+				a {
+					@include buton-xl-green;
+				}
+			}			
+		}
+		.node-header {
+			min-height: 300px;
+			.field--name-node-title {
+				padding-right: 6%;
+			}
+		}
+		.node-date {
+			@media only screen and (max-width: $mobile) {
+				font-size: 0px;
+				>.field--name-field-inicio-2 {
+					width: 30%;
+					display: inline-block;
+					vertical-align: top;
+				}
+				>.field--name-field-fecha-fin2 {
+					width: 70%;
+					display: inline-block;
+					vertical-align: top;
+				}
+				>.field--name-field-valor-inscripcion-pregrado {
+					width: 30%;
+					display: inline-block;
+					vertical-align: top;
+				}
+				>.field--name-field-cierre-de-inscripciones-pr {
+					width: 20%;
+					display: inline-block;
+					vertical-align: top;
+				}
+				>.item-hour {
+					width: 50%;
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
+			.field--name-field-inicio-2 {
+				margin-bottom: 4px;
+				position: relative;			
+				&:not(.field-custom-date-twig) {
+					//border-bottom: 1px solid red;
+					&::before {
+						content: '';
+						background: #7BC142;
+						width: 45px;
+						height: 7px;
+						display: inline-block;
+						position: absolute;
+						bottom: -3px;
+						left: 0;
+						z-index: 20;
+						@media only screen and (max-width: $mobile) {
+							display: none;
+						}
+					}
+					&::after {
+						content: "";
+						background: #d7d8d0;
+						width: 44%;
+						height: 1px;
+						bottom: 1px;
+						left: 0;
+						position: absolute;
+						@media only screen and (max-width: $mobile) {
+							top: 0px;
+							right: 8px;
+							left: inherit;
+							width: 1px;
+							height: 100%;
+						}
+					}
+				}
+			}
+		}
+		.text-content {		
+			.field--name-field-contenido-1 {
+				display: inline-block;
+				padding-bottom: 35px;
+				ul {
+					list-style: disc;
+					margin: 18px;
+				}
+			}
+			.share-text {
+				padding-top: 5%;
+				text-align: center;
+				.field--name-dynamic-block-fieldnode-redes-sociales {
+					.field__label {
+						text-align: center;
+					}
+				}
+			}
+			.field--name-field-programa-del-evento {
+				padding-top: 5%;
+				.file--mime-application-pdf {
+					a {
+						@include latobold(12px);
+						letter-spacing: 1px;
+						color: $color_gray_80;
+						text-decoration: none;
+						text-transform: uppercase;
+						&::before {
+							content: "";
+							background: #d7d8d0;
+							width: 33%;
+							height: 1px;
+							bottom: 126px;
+							left: 11%;
+							position: absolute;
+						}
+					}
+					&::before {
+						content: url(../images/IconPDF.svg);
+						display: inline-block;
+						vertical-align: top;
+						margin-right: 11px;
+					}					
+				}				
+			}
+			.field--name-field-invitados2 {
+				.field__label {
+					@include pt_serifitalic(16px);		
+					padding-bottom: 10px;			
+				}
+				.field__item {
+					li {
+						@include list-disc;
+					}
+				}
+			}
+		}
+	}
+	&.path-parent-centro-informacion {
+		.field--name-dynamic-block-fieldnode-redes-sociales {
+			width: 55%;
+			@media only screen and (max-width: $tablet) {
+				width: 70%;
+			}		
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+			}	    
+			.addtoany_list {
+				font-size: 0px;
+			}
+		}
+		.layout-content--post-content {
+			padding-bottom: 30px;
+		}
+		#prefooter {
+			.prefooter-container {
+				display: none;
+			}
+		}
+	}
+}
+
+.centro-info-inactive-menu {
+	.wrap-content {
+		.sidebar-first {
+			border-right: none;
+		}
+		.layout-content {
+			.menu--menu-centro-de-informacion {
+				display: none;
+			}
+		}
+	}
+}

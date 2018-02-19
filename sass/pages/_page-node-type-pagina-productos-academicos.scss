@@ -1,0 +1,140 @@
+.page-node-type-pagina-productos-academicos {
+	@include form-select('.paragraphs_large', 'select');
+
+	select {
+		max-width: 253px;
+		outline: none;
+	}
+	
+
+	.field--name-node-title,
+	.cita,
+	.paragraphs_large
+	{
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			margin-left: pixel-to-percentage(28px,375px);
+			width: pixel-to-percentage(375px - (28px * 2),375px);
+		}
+	}
+
+	.field--name-node-title
+	{
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			margin-top: 53px;
+		}
+	}
+
+	.node--type-pagina-productos-academicos {
+		margin-top: -13px;
+	}
+
+	.cita {
+		margin-bottom: 17px;
+		}
+	.layout-content
+	{
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		#main
+		{
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				padding-left: 0;
+			}
+		}
+	}
+
+	.paragraphs_large {
+		padding-bottom: 28px;
+
+		p {
+			max-width: 600px;
+			margin-bottom: 40px;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				margin-bottom: 21px;
+			}
+		}
+		.form-submit {
+			@include buton-l-green;
+			margin-right: 38px;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				margin-bottom: 12px;
+				
+			}
+		}
+		.js-tag-academic-product,
+		.js-tag-academic-product-select {
+			@include pt_serifitalic (12px);
+			display: inline-block;			
+			vertical-align: top;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				display: block;
+				width: pixel-to-percentage(375px - 30px * 2,375px);
+				margin-left: pixel-to-percentage(1px,375px);
+			}
+		}
+
+		.js-tag-academic-product {
+			.js-label {
+				margin-left: 23px;
+				@media only screen and (max-width: $mobile) {
+					margin-left: 0px;
+				}	
+			}
+			@media only screen and (max-width: $mobile) {
+				width: 35%;
+				text-align: center;
+			}
+		}
+		.js-tag-academic-product-select {
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				margin-bottom: 17px;
+			}
+			select
+			{
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					max-width: none;
+					width: 100%;
+					box-sizing: border-box;
+				}
+			}
+		}
+	}
+
+	.view.view-vista-facultad-productos-academicos
+	{
+		.views-row
+		{
+			.field--name-field-bocadillo,
+			.field--name-node-link
+			{
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					margin-left: pixel-to-percentage(30px,375px);
+					width: pixel-to-percentage(375px - (30px * 2),375px);
+				}
+			}
+
+		}
+	}
+	
+	.block.block-addtoany,
+	.block-content--type-bloque-informacion-decanatura
+	{
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			margin-left: pixel-to-percentage(30px,375px);
+			width: pixel-to-percentage(375px - (30px * 2),375px);
+		}
+	}
+}

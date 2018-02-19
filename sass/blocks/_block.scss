@@ -1,0 +1,4143 @@
+.block {
+    // URL: /admisiones/pregrado
+    @include desplegableMaker-outer('&.acordeon-fechas', '.paragraph--type-fechas-facultad-ser-pilo-paga', '.field--name-field-pregrados-paragraphs', '.field--name-field-facultades-paragraphs');
+    @include desplegableMaker-inner('.field--name-field-pregrados-paragraphs', '.field__item', '.formato-labels-children', '.field--name-field-pregrados');
+    // URL: /admisiones/posgrado
+    @include desplegableMaker-outer('&.fechas-posgrado', '.paragraph--type-fechas-maestrias-mayor-posgrados', '.field--name-field-maestrias-mayor-posgrado', '.field--name-field-maestrias-mayor');
+    @include desplegableMaker-inner('.field--name-field-maestrias-mayor-posgrado', '.paragraph--type-fechas-maestria-posgrados', '.field--name-field-posgrados', '.field--name-field-posgrado-paragraph');
+    // URL: /electivas-institucionales
+    @include desplegableMaker-outer('&.acordeon-electiva', '.field--name-field-electiva-parrafo > .field__item', '.bar-desplegable-content', '.bar-desplegable-button');
+    @include desplegableMaker-inner('&.acordeon-electiva .bar-desplegable-content', '.null', '.null', '.null');
+    // URL: /internacionalizacion/becas-internacionales
+    @include desplegableMaker-outer('&.acordeon-becas-inter', '.views-infinite-scroll-content-wrapper > .views-row', '.bar-desplegable-content', '.bar-desplegable-button');
+    @include desplegableMaker-inner('&.acordeon-becas-inter .bar-desplegable-content', '.null', '.null', '.null');
+    // Acordeon para vistas
+    @include desplegableMaker-outer('&.tabs-acordeon-views', '.views-row', '.bar-desplegable-content', '.bar-desplegable-button');
+    @include desplegableMaker-inner('&.tabs-acordeon-views .bar-desplegable-content', '.null', '.null', '.null');
+	
+	// URL: /talento-humano/trabaje-con-nosotros
+	@include desplegableMaker-outer('&.block-views-blockofertas-trabaje-con-nosotros-block-1', '.wrapper-level-1', '.tab-content-level-1', 'h3');
+	@include desplegableMaker-inner('&.block-views-blockofertas-trabaje-con-nosotros-block-1 .tab-content-level-1', '.null', '.null', '.null');
+	
+    // /nuestro-bosque/directivos
+    @include desplegableMaker-outer('&.nuestro-bosque-directivos .field--name-field-dato-paragraphs', '.field__item', '.wrapper-desplegable-nivel-1', '.field--name-field-areas-directivos');
+    @include desplegableMaker-inner('&.nuestro-bosque-directivos .wrapper-desplegable-nivel-1', '.null', '.null', '.null');
+    @include grilla-3-columns-bs('&.nuestro-bosque-directivos .field--name-field-direc-nues-bosq', '> .field__item');
+    @include grilla-3-columns-bs('&.nuestro-bosque-directivos .rowsote', '> .field');
+    // URL: /nuestro-bosque/documentos-de-consulta
+    @include desplegableMaker-outer('.view-view-0005-documentos-consulta.view-display-id-block_1', '.desplegable-wrapper', '.toggle-content', '.taxonomy-button');
+    @include grilla-2-columns-bs('.view-view-0005-documentos-consulta.view-display-id-block_1 .toggle-content', '.views-row');
+
+
+	// URL: /nuestro-bosque/catalogo
+	&.block-carousel {
+		@include owl-nav-3;
+
+		.owl-stage-outer {
+			overflow: hidden;
+		}
+		
+		.view-content {
+			max-width: 1000px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.owl-item {
+			float: left;
+		}
+
+		.owl-nav {
+			background: none;
+			padding-top: 0;
+		}
+
+		@media only screen and (min-width: $mobile) {
+			.owl-nav {
+				padding: 0;
+				position: static;
+
+				.owl-prev,
+				.owl-next {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+				}
+
+				.owl-prev {
+					left: -20px;
+				}
+
+				.owl-next {
+					right: -20px;
+				}
+			}
+
+			.owl-item {
+				float: left;
+				width: 33%;
+			}
+			
+			.node {
+				padding: 0 20px;
+			}
+			
+			.field--name-field-imagenes-multiples {
+				max-width: 190px;
+			}
+		}
+		
+		@media only screen and (min-width: $tablet) {
+			.owl-nav {
+				.owl-prev {
+					left: -40px;
+				}
+
+				.owl-next {
+					right: -40px;
+				}
+			}
+
+			.owl-item {
+				width: 20%;
+			}
+		}
+	}
+	
+	&.menu-fast-food {
+		display: block;
+		
+		.hamburger-button {
+			top: 0;
+			bottom: 0;
+			margin: auto;
+
+			span {
+				text-indent: -9999px;
+			}
+		}
+	}
+	
+	// URL: /blog-dos/capacitacion-docentes
+	&.comments-blog-two {
+		border-top: 1px solid #ddd;
+		padding: 50px 0 30px;
+		margin: 30px auto 0;
+
+		@media only screen and (min-width: $mobile) {
+			padding-top: 40px;
+			max-width: 77%;
+		}
+
+		.field--name-dynamic-token-fieldblock-content-conteo-omentarios-blog-dos {
+			overflow: hidden;
+			padding-bottom: 20px;
+
+			.field__label,
+			.field__item,
+			p {
+				@include inline-block(top);
+				@include font(20px, 25px);
+				font-family: $font-bl;
+				color: $color_gray_80;
+			}
+			
+			.field__item {
+				float: left;
+				margin-right: 10px;
+			}
+		}
+		
+		.field--name-dynamic-token-fieldcomment-imagen-usuario-comentario {
+			float: left;
+			margin-right: 15px;
+		}
+		
+		.text-content {
+			width: auto;
+			overflow: hidden;
+			max-width: inherit;
+			border-bottom: 1px solid #ddd;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+
+			@media only screen and (max-width: $mobile) {
+				clear: left;
+			}
+		}
+
+		.comment {
+			&:last-child {
+				.text-content {
+					border: 0;
+				}
+			}
+		}
+
+		.field--name-field-name-comment {
+			@include font(16px, 23px, -0.5px);
+			font-family: $font-brandb;
+			margin: 0;
+		}
+
+		.field--name-comment-post-date {
+			@include font(14px, 19px);
+			font-family: $font-serif-italic;
+			margin: 0;
+		}
+
+		.field--name-comment-body {
+			@include font(18px, 26px);
+			font-family: $font-baser;
+			margin: 0;
+		}
+
+		form {
+			background: #F9F9F9;
+			padding: 30px;
+
+			.form-wrapper {
+				margin-bottom: 15px;
+			}
+
+			.form-text,
+			.form-email {
+				border: 1px solid #BABCBF;
+				padding: 10px;
+				font-family: $font-baser;
+				font-size: 14px;
+				line-height: 17px;
+			}
+
+			.form-submit {
+				padding: 15px 20px;
+				font-family: $font-baser;
+				font-size: 10px;
+				line-height: 12px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				border-radius: 25px;
+				border: 0;
+				background: #424242;
+				color: white;
+			}
+		}
+	}
+	
+	
+    &.pre-saber {
+        .block-content--type-bloque-basico-con-bocadillo {
+            padding-bottom: 0;
+        }
+    }
+    &.inter-preguntas-frecuentes {
+        text-align: center;
+        .field--name-body {
+            font-family: $font-serif-italic;
+            padding: 0 12px 20px;
+            * {
+                font-style: normal;
+                font-family: $font-serif-italic;
+            }
+        }
+        .field--name-field-body-2 {
+            p {
+                color: $color_gray_60;
+                font-size: 13px;
+                line-height: 16px;
+            }
+        }
+        &.button {
+            .field--name-body {
+                text-align: center;
+                a {
+                    @include button-m-border-green;
+                    padding: 6px 40px;
+                }
+            }
+        }
+    }
+    &.block-views-blockview-0005-documentos-consulta-block-1 {
+        padding-bottom: 50px;
+        .desplegable-wrapper .toggle-content .views-row {
+            padding: 10px 10px;
+        }
+        .views-row {
+			@media only screen and (max-width: 460px) {
+				width: 100% !important;
+			}
+
+			&:nth-of-type(2n+1) {
+				clear: left;
+			}
+
+            .field--name-field-image {
+                float: left;
+                width: 22%;
+                @media only screen and (max-width: 460px) {
+                    max-width: 75%;
+                    width: 100%;
+                    margin: 0 auto;
+                    float: none;
+                    padding-bottom: 10px;
+                }
+            }
+            .field--name-field-documentos-de-consulta {
+                display: none;
+            }
+            .text-content {
+                overflow: hidden;
+            }
+            .field--name-node-title {
+                h2 {
+                    @include acherus_black(16px);
+                    letter-spacing: -0.5px;
+                    line-height: 22px;
+                }
+            }
+            .field--type-text-with-summary {
+                padding-bottom: 20px;
+                p {
+                    @include paragraphs_large;
+                }
+            }
+            .field--name-field-file,
+            .field--name-field-link {
+                @include inline-block(top);
+                width: 50%;
+                padding-bottom: 10px;
+            }
+            .text-content {
+                @include ib-grid;
+                a {
+                    @include link-text;
+                    font-size: 10px;
+                    margin-left: 25px;
+                }
+            }
+            .file--mime-application-pdf {
+                position: relative;
+                &::before {
+                    content: url(../images/iconPDF-green.png);
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+            .field--name-field-link {
+                position: relative;
+                &::before {
+                    content: url(../images/iconIssu.png);
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+    &.nuestro-bosque-directivos {
+        margin-bottom: 60px;
+        .field--name-field-direc-nues-bosq {
+            &>.field__item {
+                &:nth-of-type(3n+1) {
+                    clear: left;
+                }
+            }
+        }
+        .field--name-field-bocadillo-tab-pregrado {
+            @include paragraphs_large;
+            padding-bottom: 20px;
+        }
+        .field--name-field-direc-nues-bosq {
+            .field--name-field-title {
+                @include acherus_bold(18px);
+                line-height: 20px;
+            }
+            .field--name-field-presencial,
+            .field--name-field-tab-nombre-carrera {
+                .field__label,
+                .field__item {
+                    display: inline;
+                }
+                .field__label {
+                    @include pt_serifitalic(14px);
+                }
+                .field__item {
+                    @include latoregular(13px);
+                    color: #9B9B9B;
+                }
+            }
+            .field--name-field-url-image {
+                a {
+                    color: #9B9B9B;
+                    font-size: 14px;
+                    border-bottom: 1px solid #7bc142;
+                    letter-spacing: 1.5px;
+                    text-decoration: none;
+                    word-wrap: break-word;
+                }
+            }
+        }
+        .rowsote {
+            .field__label {
+                @include acherus_grotesqueultralight(17px);
+                color: #4A4A4A;
+                padding-bottom: 20px;
+            }
+            .field__items {
+                @include latoregular(14px);
+            }
+        }
+        .wrapper-desplegable-nivel-1 {
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
+    }
+    &.block-pintadinho {
+        @include block-pintadinho;
+    }
+    &.estilo-0002,
+    &.estilo-0003,
+    &.estilo-0003b,
+    .block-content--type-_016-slider-exito-estudiantil {
+        @include intro-title('.field--name-field-pre-title', '.field--name-field-pre-title + .field--name-field-title', '.field--name-field-pre-title + .field--name-field-title');
+    }
+    &.block-carousel {
+        @include intro-title('.null', 'h3', '.null');
+        padding-bottom: 30px;
+        .view-footer {
+            text-align: center;
+            a {
+                @include buton-s-green;
+            }
+        }
+    }
+    &.estilo-0002 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 740px;
+        padding-bottom: 60px; // estoy adivinando
+        @media only screen and (max-width: $tablet) {
+            max-width: 600px;
+        }
+        .field--name-body {
+            margin-bottom: 20px;
+        }
+        .field--name-field-links {
+            text-align: center;
+            @media only screen and (max-width: $tablet) {
+                margin: 0 -10px;
+            }
+            .field__item {
+                @include inline-block;
+                margin: 0 10px;
+            }
+            a {
+                @include buton-xl-green;
+            }
+        }
+    }
+    &.estilo-0002b {
+        @include artifact-text-3('.block-content--type-_002-texto-links', '.field--name-field-pre-title', '.field--name-field-title h2', '.field--name-body p', '.field--name-field-links');
+    }
+    // URL: /talento-humano
+    &.estilo-0002c {
+        @mixin title($color) {
+            .field--name-field-title {
+                margin-bottom: 15px;
+                h2 {
+                    line-height: 29px;
+                    letter-spacing: -0.5px;
+                    text-align: center;
+                    margin: 0;
+                    color: $color;
+                    &+h2 {
+                        font-family: $font-bli;
+                        font-size: 22px;
+                        line-height: 29px;
+                        letter-spacing: -0.33px;
+                    }
+                }
+            }
+        }
+        @mixin button($color) {
+            .field--name-field-links {
+                text-align: center;
+                padding-top: 20px;
+                a {
+                    @include buton-s-border-green;
+                    @include button-hover-after($color);
+                    border-color: $color;
+                    color: $color;
+                    min-width: 96px;
+                }
+            }
+        }
+        .block-content {
+            padding: 30px 20px;
+        }
+        .field--name-body {
+            p {
+                text-align: center;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        &.col-1 {
+            @include title($color_brand);
+            @include button($color_brand);
+            .block-inner {
+                background-color: #FBFBFB;
+            }
+        }
+        &.col-2 {
+            @include title(white);
+            @include button(white);
+            .block-inner {
+                background-color: $color_brand;
+            }
+        }
+        &.col-3 {
+            @include title(#2B3427);
+            @include button(white);
+            .block-inner {
+                background-color: #F0F0F0;
+            }
+            .field--name-field-links {
+                a {
+                    background-color: white;
+                    color: $color_brand;
+                }
+            }
+        }
+    }
+    // URL: /investigaciones
+    &.estilo-0002d {
+        .block-inner {
+            box-sizing: border-box;
+            padding: 20px 40px 40px;
+        }
+        .field--name-field-pre-title {
+            @include pretitle;
+        }
+        .field--name-field-title {
+            h2 {
+                font-family: $font-bl;
+                line-height: 40px;
+            }
+        }
+        .field--name-body {
+            margin-bottom: 20px;
+        }
+        .field--name-field-links {
+            .field__item {
+                @include inline-block;
+                margin-right: 10px;
+            }
+        }
+        &.opaco {
+            .block-inner {
+                background-color: #F2F2F2;
+            }
+            .field--name-field-links {
+                a {
+                    @include button-m-border-green;
+                    padding: 7px 25px;
+                }
+            }
+        }
+        &.claro {
+            .block-inner {
+                background-color: #FBFBFB;
+            }
+            .field--name-field-links {
+                a {
+                    @include buton-m-green;
+                    padding: 7px 25px;
+                }
+            }
+        }
+    }
+    &.estilo-0003 {
+        @include grilla-3-columns-bs('.image-wrapper', '.col');
+        padding-bottom: 60px; // estoy adivinando
+        max-width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+        .col {
+            position: relative;
+            .field--type-link {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+				right: 0;
+				margin: auto;
+                width: 100%;
+                z-index: 20;
+                text-align: center;
+
+				// URL: /exito-estudiantil
+				@media only screen and (max-width: $mobile) {
+					max-width: 60%;
+				}
+
+                a {
+                    @include button-sm-white;
+                    @media only screen and (max-width: $tablet) {
+                        padding: 5px 8px 5px;
+                    }
+                }
+            }
+        }
+        .field--name-field-bocadillo {
+            // margin-bottom: 40px;
+        }
+        .field--name-field-body {
+            max-width: 740px;
+            margin: 0 auto 30px;
+        }
+        .field--name-field-links {
+            text-align: center;
+            .field__item {
+                @include inline-block;
+                margin: 0 10px;
+                @media only screen and (max-width: $mobile) {
+                    padding-bottom: 20px;
+                    &:nth-of-type(3) {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+            a {
+                @include bt-line-green-l;
+                padding: 11px 35px;
+            }
+        }
+        .image-wrapper {
+            max-width: 980px;
+            margin: 0 auto;
+            padding-top: 40px;
+
+			// URL: /exito-estudiantil
+			@media only screen and (max-width: $mobile) {
+				margin-left: -40px;
+				margin-right: -40px;
+			}
+        }
+        .field--type-image {
+            img {
+                display: block;
+            }
+        }
+    }
+    // URL: /bienestar-universitario
+    &.estilo-0003b {
+        @include grilla-4-columns-bs('.image-wrapper', '.col');
+        padding-bottom: 50px; // estoy adivinando
+        .col {
+            position: relative;
+            .field--type-link {
+                position: absolute;
+                bottom: 35px;
+                left: 0;
+                width: 100%;
+                z-index: 20;
+                text-align: center;
+                a {
+                    @include button-sm-white;
+                    padding: 10px 25px;
+                    @media only screen and (max-width: $tablet) {
+                        padding: 5px 8px 5px;
+                    }
+                }
+            }
+        }
+        .field--name-field-bocadillo {
+            max-width: 97%;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        .field--name-field-body {
+            max-width: 1045px;
+            padding-top: 10px;
+            margin: 0 auto;
+            p {
+                text-align: center;
+            }
+        }
+        .field--name-field-links {
+            text-align: center;
+            .field__item {
+                @include inline-block;
+                margin: 0 10px;
+                @media only screen and (max-width: $mobile) {
+                    padding-bottom: 20px;
+                    &:nth-of-type(3) {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+            a {
+                @include bt-line-green-l;
+                padding: 11px 35px;
+            }
+        }
+        .field--type-image {
+            img {
+                display: block;
+            }
+        }
+    }
+    // URL: /nuestro-bosque/alma-mater
+    &.estilo-0004,
+    &.estilo-0005 {
+        clear: both;
+        .field--name-field-body {
+            h3 {
+                font-family: $font-bsb;
+            }
+            p+h2 {
+                margin-top: 45px;
+            }
+            p+h3 {
+                margin-top: 25px;
+            }
+        }
+        .block-content {
+            @include ib-grid;
+        }
+        .text-content {
+            box-sizing: border-box;
+            display: inline-block;
+            margin-bottom: 50px;
+            padding-right: 35px;
+            position: relative;
+            vertical-align: top;
+            width: 66%;
+			position: relative;
+
+            &::before {
+                background: #babcbf none repeat scroll 0 0;
+                content: "";
+                height: 100%;
+				min-height: 160px;
+                right: 0;
+                position: absolute;
+                top: 0;
+                width: 1px;
+
+                @media only screen and (max-width: $mobile) {
+                    display: none;
+                }
+            }
+			
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+                padding-right: 15px;
+                margin-bottom: 20px;
+            }
+			
+			h2 {
+				@media only screen and (min-width: $tablet) {
+					width: 120%;
+				}
+			}
+        }
+        .field--name-field-title {
+            box-sizing: border-box;
+            // padding-right: 35px;
+            width: 70%; //66%;
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+        .aside,
+        .field-image {
+            @include inline-block;
+            box-sizing: border-box;
+            padding-left: 13px;
+            padding-right: 0;
+            width: 34%;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 50px;
+            @media only screen and (max-width: $mobile) {
+                padding-left: 0px;
+                width: 100%;
+            }
+        }
+        .aside {
+            position: relative;
+			padding-top: 10px;
+
+            &::before {
+                background: #babcbf none repeat scroll 0 0;
+                // content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 4px;
+                width: 1px;
+
+                @media only screen and (max-width: $mobile) {
+                    top: 0;
+                }
+            }
+        }
+        .field--name-field-title2 {
+            color: #7bc142;
+            font-family: "acherus_grotesquebold";
+            font-size: 18px;
+            letter-spacing: -0.5px;
+            line-height: 24px;
+            margin-bottom: 10px;
+            margin-top: -3px;
+            * {
+                @include inherit;
+            }
+        }
+        .field--name-field-body2 {
+            margin-bottom: 10px;
+			
+            p {
+                @include paragraphs_medium;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: auto;
+                margin: 0;
+            }
+        }
+        .field--name-field-file {
+            margin-top: 15px;
+            .file--application-pdf {
+                background: url(../images/icon-pdf-green.svg) no-repeat 0 50%;
+                padding-left: 25px;
+                padding-top: 10px;
+                margin-top: 10px;
+                display: block;
+            }
+            .file--x-office-document {
+                background: url(../images/icon-word-green.svg) no-repeat 0 50%;
+                padding-left: 25px;
+                padding-top: 10px;
+                margin-top: 10px;
+                display: block;
+            }
+            a {
+                @include link-green;
+                @include underline-hover;
+                font-size: 10px;
+            }
+        }
+        img {
+            margin: 0 -30px;
+            max-width: inherit;
+        }
+    }
+    // tiene archivo propio blocks/estilo-0006
+    &.estilo-0006 {}
+    &.estilo-0007 {
+        .block-content {
+            position: relative;
+        }
+        .text-content {
+            width: 410px; // hay que modificar, estoy adivinando el ancho
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: white;
+            height: 100%;
+            z-index: 10;
+            text-align: center;
+            border-bottom: 1px solid #DDDDDD; // estoy adivinando el black, hay que cambiarlo
+            border-left: 1px solid #DDDDDD; // estoy adivinando el black, hay que cambiarlo
+            border-top: 1px solid #DDDDDD; // estoy adivinando el black, hay que cambiarlo
+            @media only screen and (max-width: $mobile) {
+                position: initial;
+                width: 100%;
+                border: 1px solid #DDDDDD;
+            }
+            .inner {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                border-right: 0;
+                height: 220px;
+                margin: auto 0;
+                width: 100%;
+                padding: 20px; // estoy adivinando
+                box-sizing: border-box;
+                @media only screen and (max-width: $tablet) {
+                    width: 65%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    position: initial;
+                    width: 100%;
+                    padding-bottom: 40px;
+                    padding-top: 40px;
+                    height: auto;
+                }
+            }
+            .field--name-field-pre-title {
+                @include pretitle;
+                color: #4A4A4A;
+                padding-bottom: 10px;
+            }
+            .field-title {
+                max-width: 75%;
+                margin: 0 auto;
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+                h2 {
+                    @include acherus_black(33px);
+                    letter-spacing: 1px;
+                    color: #2B3427;
+                    padding-bottom: 15px;
+                    @media only screen and (max-width: $tablet) {
+                        font-size: 24px;
+                        line-height: 28px;
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+            .field--name-field-texto-secundario {
+                @include pt_serifitalic(12px);
+                @include arrow_before('&', 0px);
+                color: #4A4A4A;
+                padding-bottom: 10px;
+                @media only screen and (max-width: $mobile) {
+                    font-size: 11px;
+                }
+            }
+            .field--name-field-link {
+                a {
+                    @include buton-l-green;
+                    @media only screen and (max-width: $tablet) {
+                        @include buton-s-green;
+                    }
+                    @media only screen and (max-width: $mobile) {
+                        @include buton-l-green;
+                    }
+                }
+            }
+        }
+        .image-content {
+            width: 100%;
+            text-align: right;
+            position: relative;
+            z-index: 1;
+            @media only screen and (max-width: $mobile) {
+                display: none;
+            }
+            img {
+                vertical-align: top;
+            }
+        }
+        .field--name-field-text-image {
+            @include acherus_grotesqueultralight(39px);
+            line-height: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: white;
+            padding: 140px;
+            width: 30%;
+            text-align: left;
+            @media only screen and (max-width: $tablet) {
+                padding: 70px;
+                font-size: 20px;
+                line-height: 24px;
+                width: 28%;
+            }
+        }
+        &.imagen-completa {
+            .text-content {
+                width: 420px;
+                z-index: 2;
+                @media only screen and (max-width: $tablet) {
+                    width: 50%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            .image-content {
+                .field--name-field-image {
+                    margin-right: -10px;
+                    @media only screen and (max-width: $tablet) {
+                        width: 52%;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    &.estilo-0008 {
+        @include inline-block(top);
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        @media only screen and (max-width: $mobile) {
+            padding: 0px;
+            width: 100%;
+        }
+
+		br {
+			display: none;
+		}
+
+        .block-inner {
+            position: relative;
+        }
+        .field--name-field-link {
+            a {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                text-align: left;
+                text-indent: -4444px;
+            }
+        }
+        img {
+            display: block;
+			margin: 0 auto;
+
+			@media only screen and (max-width: $mobile) {
+				min-width: 100%;
+			}
+        }
+        &.imagen-con-boton {
+            .field--name-body {
+                position: relative;
+                a {
+                    position: absolute;
+                    text-indent: -10320px;
+                    width: 100%;
+                    height: 100%;
+                    top: 0px;
+                }
+            }
+        }
+        &.experiencia {
+            clear: left;
+        }
+    }
+    &.estilo-0009 {
+        @include intro-title('.field--name-field-pre-title', '.field--name-field-title', '.field--name-field-title');
+
+		.field--name-field-title {
+			@media only screen and (max-width: $tablet) {
+				margin-bottom: 20px;
+
+				h2 {
+					font-size: 28px;
+					line-height: 30px;
+					letter-spacing: -0.42px;
+				}
+			}
+		}
+    }
+
+    &.estilo-0010 {
+        @include inline-block(top);
+        width: 50%;
+        float: left;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        @media only screen and (max-width: $mobile) {
+            padding: 0px;
+            width: 100%;
+        }
+        &.single-video {
+            clear: left;
+        }
+        &.video-two {
+            clear: initial;
+        }
+    }
+    // URL: /bienestar-universitario/deportes
+    &.estilo-0013 {
+        position: relative;
+        .block-inner {
+            padding: 0 55px;
+            @media only screen and (max-width: $tablet) {
+                padding: 0 20px;
+            }
+        }
+        .field--name-field-image {
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        .field--name-field-title2 {
+            font-family: $font-bl;
+            font-size: 28px;
+            line-height: 30px;
+            margin-bottom: 15px;
+            //white-space: nowrap;
+        }
+        .field--name-field-body {}
+        &+.estilo-0013 {
+            &::before {
+                content: "";
+                width: 1px;
+                height: 100%;
+                background: #EDEDED;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    // URL: /investigaciones/sitiio
+    &.estilo-0013b {
+        text-align: center;
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 40px;
+        border-right: 1px solid $color_gray_15;
+        &+.estilo-0013b {
+            border: 0;
+        }
+        .text-content {
+            padding: 0 57px;
+        }
+        .field--name-field-title2 {
+            font-family: $font-brandb;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: auto;
+            margin-bottom: 15px;
+        }
+        .field--name-field-body {
+            p {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            p+p {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                a {
+                    @include buton-s-green;
+                    padding: 5px 25px;
+                }
+            }
+        }
+    }
+
+	// URL: /docentes
+	&.estilo-0013c {
+		.block-inner {
+			border: 1px solid $color_gray_20;
+			padding: 50px 20px 55px;
+			text-align: center;
+			background: white;
+		}
+
+		.field--name-field-pre-title {
+			@include pretitle;
+			color: $color_gray_80;
+			margin-bottom: 10px;
+			padding: 20px 0 5px;
+		}
+
+		.field--name-field-title2 {
+			font-family: $font-brandb;
+			font-size: 23px;
+			line-height: 23px;
+			letter-spacing: -0.9px;
+			margin-bottom: 27px;
+		}
+
+		.field--name-field-body {
+			padding: 0 20px;
+
+			p {
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+		
+		@media only screen and (max-width: $tablet) {
+			.block-inner {
+				padding: 25px 0;
+			}
+
+			img {
+				max-width: 25px;
+			}
+
+			.field--name-field-pre-title {
+				font-size: 7px;
+				line-height: 8px;
+				letter-spacing: 1.4px;
+				margin-bottom: 0;
+			}
+
+			.field--name-field-title2 {
+				font-size: 14px;
+				line-height: 13.74px;
+				letter-spacing: -0.1px;
+				margin-bottom: 15px;
+			}
+
+			.field--name-field-body {
+				p {
+					font-size: 9px;
+					line-height: 11px;
+				}
+			}
+		}
+
+		@media only screen and (max-width: $mobile) {
+			
+		}
+	}
+
+	// URL: /investigaciones
+	&.estilo-0013d {
+		&.gray {
+			.block-inner {
+				background: $color_gray_5;
+			}
+
+			.field--name-field-pre-title {
+				color: $color_gray_60;
+			}
+		}
+
+		&.green {
+			.block-inner {
+				background: $color_brand;
+			}
+
+			.field--name-field-pre-title,
+			.field--name-field-title2,
+			.field--name-field-body a {
+				color: white;
+			}
+
+			.field--name-field-body a {
+				color: white;
+				border-color: white;
+				
+			}
+		}
+
+		.block-inner {
+			padding: 50px 20px 25px;
+			text-align: center;
+			
+			@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+				padding: 16px 20px 25px;
+			}
+		}
+
+		.field--name-field-pre-title {
+			@include pretitle;
+			color: $color_gray_80;
+			margin-bottom: 0;
+			padding: 15px 0 0;
+		}
+
+		.field--name-field-title2 {
+			font-family: $font-brandb;
+			font-size: 33px;
+			line-height: 36px;
+			letter-spacing: -0.5px;
+			margin-bottom: 11px;
+		}
+
+		.field--name-field-body {
+			padding: 0 20px;
+
+			p {
+				font-size: 14px;
+				line-height: 17px;
+				margin-bottom: 20px;
+			}
+
+			a {
+				@include buton-s-border-green;
+				padding: 4px 25px;
+			}
+		}
+	}
+
+    &.estilo-0014 {
+        @include default-tabs();
+        h2 {
+            @media only screen and (max-width: $mobile) {
+                text-align: center;
+            }
+        }
+        .tabMakerContents {
+            @media only screen and (max-width: $mobile) {
+                margin-left: -30px;
+                margin-right: -30px;
+            }
+        }
+        .tabMakerTabMobile {
+            @media only screen and (max-width: $mobile) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+        .tabMakerContent {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .tabMakerContentInner {
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 10px;
+            @media only screen and (max-width: $mobile) {
+                padding: 30px;
+            }
+        }
+        .tabMakerTabs {
+            @media only screen and (max-width: $tablet) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+        }
+        .field--name-field-body {
+            @media only screen and (min-width: $mobile) {
+                float: left;
+                width: 65%;
+                padding-right: 20px;
+            }
+        }
+        .text-horarios {
+            background: white;
+            border-radius: 4px;
+            border: 1px solid #BABCBF;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 15px 0 15px 10px;
+            margin-right: 10px;
+            max-width: 230px;
+            div:first-child {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 12px;
+                font-family: $font-baseb;
+            }
+        }
+        .jornada {
+            overflow: hidden;
+            min-height: 35px;
+            margin-top: 20px;
+            b {
+                color: $color_text;
+                float: left;
+                font-size: 12px;
+                font-family: $font-baseb;
+                margin-right: 12px;
+                width: 80px;
+                padding-right: 2px;
+                box-sizing: border-box;
+            }
+            .field {
+                position: relative;
+                float: left;
+                margin-right: 10px;
+            }
+            .field__label {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                color: $color_gray_50;
+                font-family: $font-baser !important;
+            }
+            .field__item {
+                font-family: $font-brandextra;
+                font-size: 18px;
+            }
+            .field--name-field-jornada-pm,
+            .field--name-field-jornada-tarde-pm {
+                .field__item {
+                    display: inline-block;
+                }
+                .field__label {
+                    margin-left: 20px;
+                }
+                &:before {
+                    content: "a";
+                    display: inline-block;
+                    color: $color_gray_50;
+                    font-family: $font-baser;
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    &.estilo-0015 {}
+    // URL: /investigaciones/transferencia-investigacion, /investigaciones/editorial
+    &.estilo-0019 {
+        $tablet: 900px;
+        margin-bottom: 50px;
+        float: left;
+        width: 100%;
+
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+
+        .text-content {
+            box-sizing: border-box;
+			position: relative;
+			// padding-top: 20px; // estorbaba en: /investigaciones/editorial
+
+            &::after {
+                background: #babcbf none repeat scroll 0 0;
+                content: "";
+                height: 100px;
+                right: 20px;
+                position: absolute;
+                top: 0;
+                width: 1px;
+
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+
+            @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+                float: left;
+                width: 66%;
+                padding-right: 40px; //20px;
+            }
+
+            @media only screen and (min-width: $tablet) {
+                float: left;
+                width: 56%;
+                padding-right: 40px;
+            }
+        }
+
+        .field--name-field-image1 {
+            img {
+                display: block;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding: 35px 0 20px;
+                margin: 0 -30px;
+            }
+			
+			@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+                float: left;
+                width: 34%;
+			}
+
+            @media only screen and (min-width: $tablet) {
+                float: left;
+                width: 44%;
+            }
+        }
+        .field--name-field-link1 {
+            padding-top: 24px;
+            a {
+                @include buton-s-green;
+                padding: 5px 35px;
+            }
+        }
+    }
+
+	// URL: /docentes
+	&.estilo-0020 {
+		.block-inner {
+			position: relative;
+		}
+
+		img {
+			display: block;
+		}
+
+		.text-content {
+			padding: 15px 15px 0;
+
+			@media only screen and (min-width: $tablet) {
+				min-height: 115px;
+			}
+
+			@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+				padding: 9px 15px 0;
+			}
+		}
+
+		.field--name-field-title {
+			h3 {
+				font-size: 20px;
+				line-height: 20px;
+
+				@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+					font-size: 12px;
+					line-height: 12px;
+					letter-spacing: -0.1px;
+					margin-bottom: 3px;
+				}
+			}
+		}
+
+        .field--name-body {
+			margin-top: -3px;
+
+            p {
+                text-align: left;
+                font-size: 16px;
+                line-height: 22px;
+            }
+			
+			@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+				margin-top: 0;
+
+				p {
+					font-size: 11px;
+					line-height: 13.14px;
+				}
+			}
+        }
+
+		.field--name-field-link1 {
+			padding: 10px 15px 0;
+
+            a {
+                @include buton-s-border-green;
+                @include button-hover-after($color_brand);
+                border-color: $color_brand;
+                color: $color_brand;
+                min-width: 96px;
+
+				@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+					font-size: 8px;
+					line-height: 10px;
+					letter-spacing: 1.6px;
+					min-width: inherit;
+					padding: 4px 10px;
+				}
+			}
+		}
+	}
+
+    .block-content--type-_016-slider-exito-estudiantil {
+		@include owl-nav-1;
+
+        .owl-nav {
+            position: static;
+            top: 0;
+            bottom: auto;
+            margin: auto;
+            width: 100%;
+			min-height: 0;
+			text-align: center;
+			padding: 0;
+			height: 60px;
+
+			.owl-prev,
+			.owl-next {
+				@include inline-block;
+				margin: 20px 10px 0;
+
+				@media only screen and (min-width: $mobile) {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					z-index: 20;
+				}
+			}
+
+			.owl-prev {
+				left: -28px;
+			}
+
+			.owl-next {
+				right: -28px;
+			}
+        }
+
+		.field--name-field-link {
+			margin-top: 15px;
+		}
+
+        .paragraph {
+			text-align: center;
+			padding-bottom: 50px !important;
+			border-left: 1px solid rgba(255, 255, 255, .3);
+        }
+
+		.owl-item {
+			position: relative;
+
+			&:first-child {
+				.paragraph {
+					border-left: 0;
+				}
+			}
+		}
+
+        .slider-exito-estudiantil .field__item {}
+        .field--name-field-title {
+            height: 45px;
+            padding: 0 20px;
+            display: table;
+            width: 100%;
+            vertical-align: middle;
+            box-sizing: border-box;
+            h3 {
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: -0.5px;
+                margin: 0;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .field--name-field-body {
+            padding: 0 20px;
+            p {
+                color: white;
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        .field--name-field-link {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+			text-align: center;
+
+            a {
+                @include buton-s-transparent;
+                padding: 10px 30px;
+                white-space: nowrap;
+            }
+        }
+    }
+    &.somos-bosque,
+    &.bosque-creece {
+        @include inline-block(top);
+        width: 50%;
+        float: left;
+        padding: 0 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+            padding: 0px;
+        }
+        .block-content {
+            margin-top: -30px;
+            position: relative;
+        }
+        .field--name-field-title {
+            margin-bottom: 0;
+        }
+    }
+    // URL: /investigaciones/vicerrectoria-investigaciones
+    &.restrict-body {
+        margin-bottom: 15px;
+        .field--name-body {
+            max-width: 600px;
+        }
+    }
+    &.block-views-blockfiltro-estudiantes-audiencia-block-1 {
+        @include form-input-select ('.view-content', 'select');
+        @include form-select('.view-content', 'select');
+        background-color: $color_brand;
+        padding: 30px 50px;
+        margin-bottom: 20px;
+        @media only screen and (max-width: $tablet) {
+            padding: 30px 20px;
+        }
+        @media only screen and (max-width: $mobile) {
+            margin: 0 -30px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            padding: 30px 30px;
+        }
+        .view-id-filtro_estudiantes_audiencia {
+            @include ib-grid;
+        }
+        .title-filtro-facultad {
+            h2 {
+                @include acherus_black(33px);
+                letter-spacing: -0.5px;
+                color: white;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 22px;
+                    line-height: 27px;
+                }
+            }
+        }
+        .bocadillo-filtro-facultad {
+            p {
+                @include paragraphs_large;
+                line-height: 100%;
+                color: white;
+                font-family: $font-basel;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 13px;
+                    line-height: 15px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .view-header {
+            @include inline-block(middle);
+            width: 45%;
+            @media only screen and (max-width: $tablet) {
+                width: 50%;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+        }
+        .view-content {
+            @include inline-block(middle);
+            width: 55%;
+            box-sizing: border-box;
+            padding-left: 20px;
+            @media only screen and (max-width: $tablet) {
+                width: 50%;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+                padding-left: 0px;
+            }
+            .item-list {
+                display: none;
+            }
+            select {
+                @include latoitalic(19px);
+                height: 60px !important;
+                padding-left: 15px;
+                background-position: calc(100% - 40%) 50%;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 14px;
+                    padding-left: 8px;
+                    background-position: calc(100% - 20%) 50%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    background-position: calc(100% - 14px) 50%;
+                }
+            }
+        }
+    }
+    &.block-views-blocknoticias-1-block-5-noticias-aspirantes {
+        clear: left;
+        padding-bottom: 0px;
+        .view-content {
+            .text-content {
+                background-color: white;
+            }
+        }
+    }
+    // URL: /electivas-institucionales
+    &.acordeon-electiva {
+        .field--name-field-electiva-parrafo {
+            // Cada tab desplegable es un field
+            >.field__item {
+                &:nth-of-type(1) {
+                    .bar-desplegable-button {
+                        .field__label {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .arrow-toggle {
+            @media only screen and (max-width: $mobile) {
+                right: 0;
+            }
+        }
+        .bar-desplegable-button {
+            overflow: hidden;
+            &:hover {
+                .field__label {
+                    color: $color-gray-80;
+                }
+            }
+            .field__label,
+            .field+.field {
+                color: $color-gray-80 !important;
+            }
+            .field {
+                float: left;
+            }
+            .field__label {
+                display: none;
+                height: 40px;
+                text-transform: none;
+                color: $color-gray-60;
+                font-family: $font-baser;
+            }
+            .field--name-field-acerca-de {
+                width: 48%;
+                @media only screen and (max-width: $mobile) {
+                    width: 82%;
+                    padding-right: 20px;
+                    box-sizing: border-box;
+                }
+            }
+            .field--name-field-asignatura {
+                width: 8%;
+                margin-right: 3%;
+                @media only screen and (max-width: $mobile) {
+                    width: 18%;
+                    margin-right: 0;
+                }
+            }
+            .field--name-field-creditos-programa {
+                width: 10%;
+            }
+            .field--name-field-modalidad {
+                width: 17%;
+                margin-right: 3%;
+                @media only screen and (min-width: $mobile) {
+                    white-space: nowrap;
+                }
+            }
+            .field--name-field-duraci {
+                width: 10%;
+            }
+            .field--name-field-asignatura,
+            .field--name-field-creditos-programa,
+            .field--name-field-duraci {
+                .field__item {
+                    font-size: 13px;
+                }
+            }
+            .field--name-field-creditos-programa,
+            .field--name-field-duraci,
+            .field--name-field-modalidad {
+                @media only screen and (max-width: $mobile) {
+                    display: none;
+                }
+            }
+        }
+        .bar-desplegable-content {
+            margin-right: 0;
+            padding-top: 21px;
+            padding-bottom: 38px;
+            padding-left: 0;
+            @media only screen and (min-width: $mobile) {
+                margin-right: 60px;
+                padding-right: 10px;
+            }
+            @media only screen and (min-width: $tablet) {
+                padding-left: 100px;
+                margin-right: 75px;
+            }
+            .field--name-field-informes {
+                margin-top: 22px;
+                .field__label {
+                    font-family: $font-serif-italic;
+                    &::after {
+                        content: " :";
+                    }
+                }
+                .field__item {
+                    font-family: $font-baseb;
+                }
+            }
+            h2 {
+                font-size: 20px;
+                font-family: 'acherus_grotesqueextrabold';
+                margin-bottom: 5px;
+            }
+            p,
+            .field__label,
+            .field__item {
+                font-size: 14px;
+                line-height: 130%;
+            }
+            p+h2 {
+                margin-top: 32px;
+                @media only screen and (max-width: $mobile) {
+                    margin-top: 22px;
+                }
+            }
+        }
+        // JS
+        .js-append-mobile {
+            overflow: hidden;
+            display: none;
+            color: $color-gray-60;
+            font-family: $font-baseb;
+            @media only screen and (max-width: $mobile) {
+                display: block;
+                margin-bottom: 12px;
+            }
+            .field--name-field-creditos-programa {
+                float: left;
+                width: 33.33%;
+            }
+            .field--name-field-modalidad {
+                float: right;
+                max-width: 100px;
+                width: 37.33%;
+            }
+            .field--name-field-duraci {
+                float: right;
+                padding-left: 15px;
+                width: 29.33%;
+                box-sizing: border-box;
+            }
+        }
+    }
+	
+	// URL: /internacionalizacion/becas-internacionales
+    &.acordeon-becas-inter {
+        .view-content {
+            padding-bottom: 40px;
+        }
+		
+		.field--name-field-body {
+			.field__item {
+				margin-bottom: 30px;
+			}
+			
+			h2 {
+				@include font(28px, 31px, -0.5px);
+				font-family: $font-bsb;
+			}
+		}
+		
+        .pager__item {
+            text-align: center;
+            a {
+                @include buton-l-green;
+            }
+        }
+    }
+    // url: http://uat_ubosque.d8.seedoven.co/inscripciones/ser-pilo-paga
+    &.programas-ser-pilo,
+    &.beneficiarios-ser-pilo {
+        $mobile: 480px;
+        $leftDesktop: 248px;
+        $leftTablet: 230px;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        &::before {
+            content: "";
+            background: $color_gray_15;
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: $leftDesktop;
+            @media only screen and (max-width: $tablet) {
+                left: $leftTablet;
+            }
+            @media only screen and (max-width: $mobile) {
+                display: none;
+            }
+        }
+        .field--name-field-title {
+            @include title_light_acherus_lm;
+            @media only screen and (max-width: $mobile) {
+                font-size: 22px;
+                line-height: 30px;
+                padding-bottom: 15px;
+                letter-spacing: -0.8px;
+            }
+        }
+        .block-content {}
+        .intro {
+            text-align: left;
+            margin-bottom: 14px;
+            &::before {
+                content: "";
+                background: url('../images/facultad/arrow-down-green.svg') no-repeat;
+                display: block;
+                width: 15px;
+                height: 22px;
+                margin-bottom: 15px;
+            }
+        }
+        .title-content {
+            @include inline-block(top);
+            width: $leftDesktop; //30%;
+            box-sizing: border-box;
+            padding-right: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            @media only screen and (max-width: $tablet) {
+                width: $leftTablet; //33%;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+                padding-right: 0px;
+                position: relative;
+            }
+        }
+        .text-content {
+            @include inline-block(top);
+            margin-left: $leftDesktop;
+            padding-left: 20px;
+            box-sizing: border-box;
+            @media only screen and (max-width: $tablet) {
+                padding-left: 10px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-left: 0px;
+                margin-left: 0;
+            }
+        }
+        img {
+            display: block;
+            margin: 0 auto 5px;
+        }
+        .field--name-body {
+            margin-bottom: 30px;
+        }
+        .field--name-field-enlace {
+            text-align: center;
+            a {
+                @include buton-xl-green;
+            }
+        }
+    }
+    &.datos-interes-ser-pilo {
+        @media only screen and (max-width: $tablet) {
+            padding-bottom: 10px;
+        }
+    }
+    &.beneficiarios-ser-pilo {
+        @media only screen and (max-width: $mobile) {
+            padding-bottom: 0px;
+            .field--name-body {
+                margin-bottom: 0px;
+            }
+        }
+        .intro {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    // URL: /bienestar-universitario/salud
+    &.salud-servicios {
+        .tabMakerTabs {
+            margin: 0 0px 0 -30px;
+        }
+        .tabMakerTab {
+            width: 20%;
+            @media only screen and (max-width: $tablet) {
+                width: 18%;
+            }
+        }
+        .field--name-field-dato-paragraphs {
+            display: none;
+        }
+    }
+    &.salud-programas {
+        .tabMakerTabs {
+            @media only screen and (min-width: $tablet) {
+                margin: 0 0px 0 -80px;
+            }
+        }
+        .tabMakerTab {
+            max-width: 280px;
+            @media only screen and (max-width: $tablet) {
+                max-width: 160px;
+                width: 18% !important;
+            }
+            &:nth-of-type(3) {
+                width: 200px;
+            }
+        }
+        .field--name-field-dato-paragraphs {
+            display: none;
+        }
+    }
+    // URL: /bienestar-universitario/salud
+    &.beneficios-salud {
+        .field--name-body {
+            @include block-indented(h3);
+            max-width: 580px;
+            .field__item {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    // URL: /carreras-universitarias
+    &.contact-prefooter,
+    &.block-content--type-bloque-informacion-decanatura,
+    &.block-block-content3467224f-68a9-4fe2-b0e6-ee933239a5d6 {
+        @include contact-prefooter (3,
+        '.field--name-field-datos-de-informacion-decan',
+        '.field__item',
+        '.field--name-field-acerca-de',
+        '.field--name-field-requisitos',
+        0);
+        margin: 0 0 30px;
+        font-size: 16px;
+        @media only screen and (min-width: $mobile) {
+            width: 66.5%;
+            padding-bottom: 30px;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 0;
+        }
+        @media only screen and (min-width: $tablet) {
+            padding-bottom: 60px;
+        }
+        .field__item {
+            word-wrap: break-word;
+        }
+        .field--name-field-datos-de-informacion-decan {
+            @include ib-grid;
+            margin: 0 -20px;
+            .field--name-field-acerca-de {
+                display: block;
+                @media only screen and (max-width: $mobile) {
+                    max-width: 80%;
+                    padding-bottom: 5px;
+                }
+            }
+            .field--name-field-requisitos {
+                @media only screen and (max-width: $mobile) {
+                    max-width: 100%;
+                }
+            }
+            >.field__item {
+                @include inline-block(top);
+                width: 50%;
+                box-sizing: border-box;
+                padding: 0 20px;
+            }
+        }
+        &.block-block-content77999850-e6cb-4093-a6c1-1431546e1a34 {
+            margin-top: -20px;
+        }
+        &+.block {
+            @include contact-social-networks();
+            font-size: 16px;
+            display: block;
+            @media only screen and (min-width: $mobile) {
+                width: 33.5%;
+                display: inline-block;
+                vertical-align: top;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-bottom: 40px;
+            }
+            .title {
+                height: 15px;
+                line-height: 100%;
+                @media only screen and (min-width: $mobile) {
+                    margin-left: 9%;
+                }
+            }
+            .addtoany_list {
+                @include ib-grid;
+                display: block;
+            }
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+    &.block-block-content77999850-e6cb-4093-a6c1-1431546e1a34 {
+        margin-top: -40px;
+    }
+    &.el-bosque-responde-heading {
+        >.block-inner {
+            >h2 {
+                @media only screen and (max-width: $mobile) {
+                    padding: 55px 50px 0;
+                }
+            }
+        }
+    }
+    &#block-bloqueestudiantesorientacionespecializada-3,
+    &#block-bloquepadredefamiliaorientacionespecializada-2,
+    &#block-bloqueparaelcolegioorientacionespecializada-2 {
+        .field--name-body {
+            @media only screen and (max-width: $tablet-2) {
+                text-align: center;
+                ul {
+                    @include inline-block(top);
+                    text-align: left;
+                    max-width: 280px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &.programas-ser-pilo {
+        margin-bottom: 75px;
+        @media only screen and (max-width: $tablet) {
+            margin-bottom: 40px;
+        }
+    }
+    &.deseo-mayor-informacion {
+        border-top: 1px solid #ededed;
+        padding-top: 35px;
+        max-width: 65%;
+        @media only screen and (max-width: $tablet) {
+            max-width: 75%;
+        }
+        @media only screen and (max-width: $mobile) {
+            max-width: 100%;
+        }
+        .paragraph--type-h2 {
+            h2 {
+                @include acherus_black(20px);
+                letter-spacing: -0.5px;
+                padding-bottom: 13px;
+                margin: 0;
+                line-height: 20px;
+            }
+        }
+        .paragraph--type-body {
+            @include paragraphs_large;
+            padding-bottom: 40px;
+        }
+        &+.block-webform-block {
+            @include form-input-select ('.form-item, .js-form-type-textarea',
+            'input, textarea');
+            @include form-input('.form-item',
+            'input');
+            @include form-checkbox ('.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion');
+            margin-bottom: 60px;
+            max-width: 65%;
+            form {
+                overflow: hidden;
+            }
+            @media only screen and (max-width: $tablet) {
+                max-width: 80%;
+            }
+            @media only screen and (max-width: $mobile) {
+                max-width: 100%;
+            }
+            label,
+            .form-text,
+            .form-email,
+            .form-textarea {
+                font-family: $font-baser;
+                color: $color_gray_60;
+                line-height: 17px;
+                font-size: 14px;
+            }
+            .js-form-type-checkbox {
+                label {
+                    @include pt_serifitalic (12px);
+                }
+            }
+            .form-textarea {
+                padding: 10px;
+            }
+            .form-item {
+                margin-bottom: 15px;
+            }
+            .form-composite {
+                .form-item {
+                    @media only screen and (min-width: $mobile) {
+                        @include inline-block(top);
+                        padding-right: 20px;
+                    }
+                }
+            }
+            .form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion {
+                float: left;
+            }
+            .form-actions {
+                float: right;
+                @media only screen and (max-width: $mobile) {
+                    float: none;
+                }
+                input {
+                    @include buton-xl-green;
+                }
+            }
+            &:after {
+                background: #ededed;
+                content: "";
+                width: 100%;
+                height: 1px;
+                display: block;
+                margin-top: 80px;
+                @media only screen and (max-width: $mobile) {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    &.bosque-form-1 {
+        @include form-input-select ('.form-item, .js-form-type-textarea',
+        'input, textarea');
+        @include form-input('.form-item',
+        'input');
+        @include form-checkbox ('.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion');
+        padding-top: 30px;
+        margin-bottom: 60px;
+        border-top: 1px solid $color_gray_15;
+        clear: both;
+        h2 {
+            font-family: $font-brandb;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+        }
+        .block-inner {
+			@media only screen and (min-width: $mobile) {
+				max-width: 65%;
+			}
+        }
+        form {
+            overflow: hidden;
+        }
+        @media only screen and (max-width: $tablet) {
+            max-width: 80%;
+        }
+        @media only screen and (max-width: $mobile) {
+            max-width: 100%;
+        }
+        label,
+        .form-text,
+        .form-email,
+        .form-textarea {
+            font-family: $font-baser;
+            color: $color_gray_60;
+            line-height: 17px;
+            font-size: 14px;
+        }
+        .js-form-type-checkbox {
+            label {
+                @include pt_serifitalic (12px);
+            }
+        }
+        .form-textarea {
+            padding: 10px;
+        }
+        .form-item {
+            margin-bottom: 15px;
+        }
+        .form-composite {
+            .form-item {
+                @media only screen and (min-width: $mobile) {
+                    @include inline-block(top);
+                    padding-right: 20px;
+                }
+            }
+        }
+        .form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion {
+            float: left;
+        }
+        .form-actions {
+            float: right;
+            @media only screen and (max-width: $mobile) {
+                float: none;
+            }
+            input {
+                @include buton-xl-green;
+            }
+        }
+        p::after {
+            background: #ededed;
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 35px;
+        }
+    }
+    // URL: /facultad/creacion-comunicacion/proceso-matricula
+    &.students-block {
+        margin-top: 32px;
+        @media only screen and (max-width: $tablet) {
+            margin-top: 25px;
+        }
+        @media only screen and (max-width: $mobile) {
+            margin-top: 37px;
+        }
+        .field--name-body {
+            position: relative;
+            &::before {
+                @include rayita-before;
+                background: #D7D9D0;
+                height: 100%;
+                left: 33px;
+            }
+        }
+        h2 {
+            margin-bottom: 45px;
+            @media only screen and (max-width: $tablet) {
+                margin-bottom: 30px;
+            }
+        }
+        p {
+            padding-left: 104px;
+            margin-bottom: 80px;
+            position: relative;
+            @media only screen and (max-width: $tablet) {
+                margin-bottom: 70px;
+            }
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 40px;
+                padding-top: 15px;
+                padding-left: 98px;
+            }
+            &::before {
+                @include numero-circular;
+                right: auto;
+                left: 0;
+                //top: -25px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 65px;
+                height: 65px;
+                @media only screen and (max-width: $mobile) {
+                    bottom: auto;
+                }
+            }
+            @for $i from 1 through 10 {
+                &:nth-of-type(#{$i})::before {
+                    content: "#{$i}";
+                }
+            }
+            a {
+                color: $color_gray_60;
+                position: relative;
+                text-decoration: none;
+                letter-spacing: 2px;
+                margin-left: 8px;
+                br {
+                    display: none;
+                }
+                @media only screen and (max-width: $mobile) {
+                    display: block;
+                    margin-top: 30px;
+                    margin-left: 0;
+                    word-wrap: break-word;
+                    br {
+                        display: block;
+                    }
+                }
+                &::after {
+                    content: "";
+                    background: $color-brand;
+                    width: 100%;
+                    height: 1px;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                }
+            }
+        }
+    }
+    // URL: /internacionalizacion
+    // URL: /el-bosque-te-acoge
+    &.title-bosque-acoge {
+        text-align: center;
+        padding: 100px 0 15px;
+        @media only screen and (max-width: $tablet) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        h2 {
+            color: white;
+            line-height: 37px;
+            font-size: 39px;
+            font-family: $font-bli;
+        }
+        h2+h2 {
+            color: white;
+            font-size: 39px;
+            line-height: 24px;
+            letter-spacing: -1px;
+            font-family: $font-bsb;
+        }
+        .field--name-field-bocadillo {
+            font-family: $font-bsb;
+            font-size: 11px;
+            letter-spacing: 1px;
+            line-height: 13px;
+            color: white;
+            &::before {
+                // content: ""; solo visible en /internacionalizacion
+                background: url(../images/svg/arrow-down-green.svg) no-repeat 50% 0;
+                display: block;
+                height: 22px;
+                margin: 35px 0 6px;
+                @media only screen and (max-width: $mobile) {
+                    margin-top: 18px;
+                }
+            }
+        }
+    }
+    // URL: /internacionalizacion
+    &.main-bosque-acoge-forms {
+        @include grilla-3-columns-bs('form',
+        '.form-item',
+        12px);
+        padding: 0 70px 50px;
+        label {
+            display: none;
+        }
+        @media only screen and (max-width: $tablet) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .form-actions {
+            clear: both;
+            text-align: center;
+			position: relative;
+
+            .form-submit {
+                @include buton-m-green;
+            }
+        }
+    }
+    // URL: /internacionalizacion
+    &.select-ubosque {
+        .form-actions {
+            @media only screen and (min-width: $mobile) {
+                padding-top: 10px;
+            }
+        }
+        .SumoSelect {
+            width: 100%;
+            >.CaptionCont {
+                >label {
+                    display: block;
+                    >i {
+                        background-image: url(../images/svg/arrow-down-green-2.svg);
+                        left: -15px;
+                    }
+                }
+            }
+            &:focus,
+            &:hover,
+            &.open {
+                >.optWrapper {
+                    top: 70px;
+                    border-radius: 5px;
+                }
+            }
+            .CaptionCont {
+                padding: 18px 15px 18px 0;
+                border-radius: 5px;
+                @media only screen and (max-width: $tablet) {
+                    //  padding: 8px;
+                }
+                span {
+                    text-align: left;
+                    padding-left: 10px;
+                }
+            }
+            .optWrapper {
+                >.options {
+                    li.opt {
+                        text-align: left;
+                        position: relative;
+                        padding: 13px 8px;
+                        @media only screen and (max-width: $tablet) {
+                            padding: 8px 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Home Título: Actualidad - ¿Qué está pasando en El Bosque?
+    // Home Título: Esto es lo que nos hace El Bosque
+    &.block-block-contentcc3a8836-7c4d-4bb3-b36a-a563be14ec98,
+    &.block-block-contentfdb8c802-c9bd-426e-bad5-65481cc5a6f5 {
+        @media only screen and (max-width: $mobile) {
+            max-width: 68%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &.acordeon-fechas {
+        .field--name-field-block-title-h2 {
+            @include title-grotesco-big-bold;
+            margin-bottom: 15px;
+        }
+        .field--name-field-bocadillo-150 {
+            @include title-delgado-mediano;
+            margin-bottom: 20px;
+        }
+    }
+    &.fechas-posgrado {
+        .field--name-field-pregrados {
+            @include tab-title;
+            text-transform: none;
+            border-bottom: 1px solid $color_gray_15;
+        }
+        .field--name-field-maestrias-mayor-posgrado {
+            .field--name-field-posgrado-paragraph {
+                text-transform: uppercase;
+            }
+            .field--name-field-posgrados {
+                padding: 0;
+            }
+        }
+        .formato-labels-children {
+            padding: 23px 20px 28px 0;
+        }
+    }
+    &.acordeon-fechas,
+    &.fechas-posgrado {
+        margin-bottom: 50px;
+    }
+    .field--name-field-pregrados-paragraphs {
+        .field__item:last-child .field--name-field-pregrados {
+            border-bottom: 0;
+        }
+    }
+    .field--name-field-maestrias-mayor-posgrado {
+        .field__item:last-child .field--name-field-posgrado-paragraph {
+            border-bottom: 0;
+        }
+    }
+    // Títulos encima de tabs
+    // Texto: Fechas y Requisitos de Inscripción
+    // URL: /admisiones/pregrado
+    // URL: /admisiones/posgrado
+    // URL: /apoyo-financiero
+    &.block-block-contentcc2e02ee-d8a2-496f-a6ba-bb4c26c7a9aa,
+    &.apoyo-icetex {
+        margin-bottom: 25px;
+        .field--name-field-bocadillo-150 {
+            @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+                font-size: 28px;
+                margin-top: 0;
+            }
+        }
+    }
+    &.icetex-tabs {
+        @include default-tabs();
+        .tabMakerTabs {
+            text-align: left;
+            margin: 0 -15px;
+        }
+        .tabMakerTab {
+            @media only screen and (max-width: $tablet-2) {
+                max-width: 40%;
+            }
+        }
+        .tabMakerContents {
+            &::before,
+            &::after {
+                display: none;
+            }
+            @media only screen and (max-width: $mobile) {
+                margin-left: -30px;
+                margin-right: -30px;
+                .tabMakerContentInner {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+        }
+        .tabMakerContent {
+            padding: 10px 0;
+            @media only screen and (max-width: $mobile) {
+                padding: 0 !important;
+            }
+        }
+        .field--name-field-titulo-tag-apoyo-financier {
+            display: none;
+        }
+        .field--name-field-tags-detalle-info-icetex {
+            font-size: 0;
+            @media only screen and (max-width: $mobile) {
+                margin-left: -18px;
+                margin-right: -18px;
+            }
+            >.field__item {
+                @include inline-block(top);
+                font-size: 16px;
+                width: 16.5%;
+                position: relative;
+                padding: 0 1%;
+                box-sizing: border-box;
+                @media only screen and (max-width: $tablet-2) {
+                    width: 33.33%;
+                    padding: 0 18px;
+                }
+                @media only screen and (max-width: 480px) {
+                    width: 50%;
+                }
+                .field--name-field-porcentaje {
+                    font-family: $font-brandb;
+                    font-size: 52px;
+                    letter-spacing: -0.5px;
+                    line-height: 50px;
+                    margin: 20px 0 28px;
+                    display: block;
+                    text-align: center;
+                    @media only screen and (max-width: $tablet) {
+                        font-size: 41px;
+                        margin: 10px 0 18px;
+                    }
+                }
+                &::after {
+                    @include rayita-before;
+                    left: 100%;
+                    @media only screen and (max-width: $mobile) {
+                        height: 64px;
+                        top: 6px;
+                    }
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+                &:nth-of-type(1) .field--name-field-porcentaje {
+                    content: "0%";
+                    color: #7ED321;
+                }
+                &:nth-of-type(2) .field--name-field-porcentaje {
+                    content: "10%";
+                    color: #F6A623;
+                }
+                &:nth-of-type(3) .field--name-field-porcentaje {
+                    content: "25%";
+                    color: #4990E2;
+                }
+                &:nth-of-type(4) .field--name-field-porcentaje {
+                    content: "40%";
+                    color: #D0011B;
+                }
+                &:nth-of-type(5) .field--name-field-porcentaje {
+                    content: "60%";
+                    color: #9012FE;
+                }
+                &:nth-of-type(6) .field--name-field-porcentaje {
+                    content: "100%";
+                    color: #50E3C2;
+                }
+            }
+        }
+        .paragraph--type--tags-apoyo-financiero-icetex {
+            .field {
+                margin-bottom: 25px;
+            }
+            .field__label,
+            .field__item {
+                font-family: $font-baser;
+                font-size: 11px;
+                color: $color_gray_80;
+                text-transform: uppercase;
+                line-height: 13px;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+            .field__item {
+                text-transform: none;
+            }
+            .field--name-field-14-ci,
+            .field--name-field-otras-cabeceras,
+            .field--name-field-pruebas-saber-11 {
+                margin-bottom: 0;
+                .field__label {
+                    font-family: $font-baseb;
+                }
+                .field__label,
+                .field__item {
+                    @include inline-block(top);
+                    letter-spacing: 0;
+                    margin: 0;
+                    text-transform: none;
+                }
+            }
+            .field--name-field-requisitos-minimos {
+                .field__item {
+                    @include inline-block(top);
+                    letter-spacing: 0;
+                    margin: 0;
+                    text-transform: none;
+                }
+            }
+            .field--name-field-plazo {
+                .field__item {
+                    @include inline-block(top);
+                    letter-spacing: 0;
+                    margin: 0;
+                    text-transform: none;
+                }
+            }
+            .field--name-field-tasa-de-interes {
+                .field__item {
+                    @include inline-block(top);
+                    letter-spacing: 0;
+                    margin: 0;
+                    text-transform: none;
+                }
+                .field__label {
+                    letter-spacing: medida;
+                }
+            }
+            .field--name-field-pruebas-saber-11 {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &.title-apoyo-financiero {
+        margin-bottom: 25px;
+    }
+    &.tasa-interes {
+        margin-bottom: 60px;
+        .field--name-body {
+            max-width: 540px;
+        }
+    }
+    .paragraph--type-h2 {
+        &+.paragraph--type-bocadillo-150 {
+            margin-top: -11px; // http://ubosque.d8.seedlabs.co/apoyo-financiero
+            @media only screen and (max-width: $tablet) {
+                margin-top: -2px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-bottom: 45px;
+            }
+        }
+    }
+    &>.block-inner {
+        &>h3 {
+            color: #979797;
+            font-size: 28px !important;
+            line-height: 38px;
+        }
+    }
+    // Homepage
+    &.block-title-conectate {
+        .block-inner {
+            >h2 {
+                display: none;
+            }
+        }
+        h2 {
+            margin-bottom: 23px;
+        }
+    }
+    // URL: /programas-academicos
+    &.block-block-contentf1334d11-dbbd-41ce-a0ca-847ce83f75d9 {
+        .field--name-field-links {
+            @include ib-grid;
+            text-align: center;
+            .field__item {
+                @include inline-block(top);
+                margin: 0 17px;
+                @media only screen and (max-width: $tablet) {
+                    padding-bottom: 15px;
+                    margin-right: 10px;
+                    margin-left: 10px;
+                }
+            }
+            a {
+                @include bt-line-green-l;
+            }
+        }
+    }
+    &.complement-menu {
+        .field--name-field-links {
+            @include ib-grid;
+            text-align: center;
+            a {
+                @include bt-line-green-l;
+            }
+        }
+        .paragraph--type-links {
+            @include inline-block(top);
+            margin: 0 17px;
+            @media only screen and (max-width: $mobile) {
+                display: block;
+                margin-bottom: 20px;
+                margin-top: -10px;
+                &+.paragraph--type-links {
+                    margin: 0;
+                }
+            }
+        }
+        .block-content--type-bloque-titulo-image {
+            text-align: center;
+        }
+    }
+    &.menu-carreras {
+        .field--name-field-links {
+            @include ib-grid;
+            text-align: center;
+            .field__item {
+                @include inline-block(top);
+                margin: 0 17px;
+            }
+            a {
+                @include bt-line-green-l;
+            }
+        }
+        .text-content {
+            display: inline-flex;
+            padding-left: 20%;
+            @media only screen and (max-width: $tablet) {
+                padding-left: 0px;
+            }
+            @media only screen and (max-width: $mobile) {
+                display: block;
+                >.paragraph--type-links {
+                    margin-bottom: 10px;
+                    &:nth-last-child(1) {
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+    .main-image-form &.section-main-image {
+        .text-content {
+            @media only screen and (min-width: $tablet-1) and (max-width: $tablet) {
+                width: 60%;
+            }
+        }
+    }
+    &.section-main-image {
+        $local-max-width: 100%; //450px;
+        margin-bottom: 105px;
+        margin-left: -10px;
+        margin-right: -10px;
+        @media only screen and (max-width: $tablet) {
+            margin-bottom: 53px;
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+        @media only screen and (max-width: $mobile) {
+            margin-bottom: 20px;
+        }
+        &+.block-webform {
+            @media only screen and (max-width: $mobile) {
+                margin-top: 40px;
+                margin-bottom: 30px;
+            }
+        }
+        img {
+            display: block;
+            height: auto;
+            max-width: none;
+        }
+        .field--name-field-title {
+            margin-bottom: 1px;
+            max-width: $local-max-width;
+            @media only screen and (max-width: $tablet) {
+                max-width: none;
+                h1 {
+                    line-height: 37px;
+                }
+            }
+            @media only screen and (max-width: $mobile) {
+                h1 {
+                    line-height: 100%;
+                }
+            }
+            h1 {
+                @include main-image-title;
+                max-width: $local-max-width;
+                @media only screen and (max-width: $tablet) {
+                    max-width: none;
+                }
+            }
+        }
+        .field--name-field-bocadillo-150 {
+            @include main-image-text;
+            //max-width: $local-max-width;
+            max-width: 100%;
+            padding-bottom: 3%;
+            @media only screen and (max-width: $tablet) {
+                max-width: none;
+                line-height: 37px;
+            }
+        }
+        .field--name-field-texto-secundario {
+            @include very-small-text;
+            position: relative;
+            max-width: 275px;
+            text-align: center;
+            padding-top: 30px;
+            color: white;
+            margin-top: 28px;
+            margin-bottom: 23px;
+            &::before {
+                @include arrow-white-bottom-before;
+                @media only screen and (max-width: $tablet) {
+                    margin-top: 0px;
+                    margin-bottom: 5px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    margin-top: 40px;
+                    margin-bottom: 18px;
+                }
+            }
+        }
+        .field--name-field-enlace-principal {
+            a {
+                @include buton-l-green;
+            }
+        }
+        .block-content {
+            position: relative;
+        }
+        img {
+            @media only screen and (max-width: $mobile) {
+                max-width: none;
+            }
+        }
+        .text-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 49px 30px;
+            @media only screen and (max-width: $tablet) {
+                padding: 55px 30px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding: 49px 30px;
+            }
+            @media only screen and (min-width: $tablet) {
+                max-width: 60%;
+                padding-left: 40px;
+            }
+        }
+        .group-action {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+    }
+    &.tabs-home {
+        margin-top: -15px;
+    }
+    &#block-imagenbloquefondo {
+        max-height: 355px;
+        overflow: hidden;
+		
+		.field--name-field-imagen-slider {
+			img {
+				display: block;
+			}
+		}
+		
+    }
+    &.agreement {
+        @include board-text-image($color_gray_5,
+        $color_gray_80,
+        20px,
+        10px);
+        @include grid (4.5,
+        80,
+        20);
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            margin-left: pixel-to-percentage(31px, 425px);
+            width: pixel-to-percentage(425px - 31px*2, 425px);
+        }
+        .field--name-field-block-title-h2 {
+            padding-bottom: 20px;
+            @include Tablet // Menor a: $tablet-width: 768px;
+            {
+                font-size: 26px;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            @include Mobile // Menor a: $mobile-l-width: 425px + 1px;
+            {
+                $padding-rightleft: 17%;
+                padding-right: $padding-rightleft;
+                padding-left: $padding-rightleft;
+            }
+            @media only screen and (max-width: $mobile) {
+                line-height: 24px;
+            }
+            @include media_font_size_varible_depending_resolution(26px,
+            $tablet-width,
+            18px,
+            $mobile-l-width+1px,
+            20);
+        }
+        .field--type-image {
+            @include Tablet // Menor a: $tablet-width: 768px;
+            {
+                margin-top: 14px;
+            }
+        }
+        a {
+            @include buton-s-border-green;
+            @include Tablet-NoMobile // Menor a: $tablet-width: 768px;
+            {
+                margin-right: pixel-to-percentage(30px, 227px);
+                margin-left: pixel-to-percentage(30px, 227px);
+                padding-top: 7px;
+                padding-bottom: 7px;
+                display: block;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            @include Mobile // Menor a: $mobile-l-width: 425px + 1px;
+            {
+                margin-right: pixel-to-percentage(72px, 313px);
+                margin-left: pixel-to-percentage(72px, 313px);
+                padding-right: 4%;
+                padding-left: 4%;
+                font-size: 10px;
+            }
+            //	Desde $tablet-width: 768px; Hasta $mobile-l-width: 425px;
+            @include media_font_size_varible_depending_resolution(10px,
+            $tablet-width,
+            7px,
+            $mobile-l-width+1px,
+            20);
+        }
+        .field--name-field-imagen-slider {
+            display: table;
+            text-align: center;
+            height: 65px;
+            width: 100%;
+            @media only screen and (max-width: $mobile) {
+                height: auto;
+            }
+            .field__item {
+                display: table-cell;
+                vertical-align: bottom;
+            }
+            img {
+                max-width: 58px;
+                height: auto;
+                @media only screen and (max-width: $mobile) {
+                    max-height: 40px;
+                    max-width: 40px;
+                }
+            }
+        }
+    }
+    &.practices {
+        @include board-text-image($color_brand,
+        white,
+        20px,
+        10px);
+        @include grid (4.5,
+        80,
+        20);
+        margin-right: 0;
+        @include Tablet // Menor a: $tablet-width: 768px;
+        {
+            padding-top: 5px;
+        }
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            margin-left: pixel-to-percentage(31px, 425px);
+            width: pixel-to-percentage(425px - 31px*2, 425px);
+            margin-bottom: 38px;
+        }
+        .field--name-field-block-title-h2 {
+            padding-bottom: 20px;
+            @include Laptop // Menor a: $laptop-width: 1024px;
+            {
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            @include Tablet // Menor a: $tablet-width: 768px;
+            {
+                font-size: 26px;
+            }
+            @include Mobile // Menor a: $mobile-l-width: 425px + 1px;
+            {
+                $padding-rightleft: 17%;
+                padding-right: $padding-rightleft;
+                padding-left: $padding-rightleft;
+            }
+            @media only screen and (max-width: $mobile) {
+                line-height: 24px;
+            }
+            //	Desde $tablet-width: 768px; Hasta $mobile-l-width: 425px;
+            @include media_font_size_varible_depending_resolution(26px,
+            $tablet-width,
+            18px,
+            $mobile-l-width+1px,
+            20);
+        }
+        .field--type-image {
+            @include Tablet // Menor a: $tablet-width: 768px;
+            {
+                margin-top: 10px;
+            }
+        }
+        .field--name-field-imagen-slider {
+            display: table;
+            text-align: center;
+            height: 65px;
+            width: 100%;
+            @media only screen and (max-width: $mobile) {
+                height: auto;
+            }
+            .field__item {
+                display: table-cell;
+                vertical-align: bottom;
+            }
+            img {
+                max-width: 58px;
+                height: auto;
+                @media only screen and (max-width: $mobile) {
+                    max-height: 40px;
+                    max-width: 40px;
+                }
+            }
+        }
+        a {
+            @include buton-s-transparent;
+            @include Tablet-NoMobile // Menor a: $tablet-width: 768px;
+            {
+                margin-right: pixel-to-percentage(30px, 227px);
+                margin-left: pixel-to-percentage(30px, 227px);
+                padding-top: 7px;
+                padding-bottom: 7px;
+                display: block;
+                padding-right: 10px;
+                padding-left: 10px;
+            }
+            @include Mobile // Menor a: $mobile-l-width: 425px + 1px;
+            {
+                margin-right: pixel-to-percentage(72px, 313px);
+                margin-left: pixel-to-percentage(72px, 313px);
+                padding-right: 4%;
+                padding-left: 4%;
+                font-size: 10px;
+            }
+            //	Desde $tablet-width: 768px; Hasta $mobile-l-width: 425px;
+            @include media_font_size_varible_depending_resolution(10px,
+            $tablet-width,
+            7px,
+            $mobile-l-width+1px,
+            20);
+        }
+    }
+    // url: facultad/creacion-comunicacion
+    &.caja-sencilla {
+        @include views-row-caja-sencilla('.test');
+        @include grid (4.5,
+        80,
+        20);
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 20px;
+        @include Mobile // Menor a: $mobile-l-width: 425px + 1;
+        {
+            margin-left: pixel-to-percentage(31px, 425px);
+            width: pixel-to-percentage(425px - 31px*2, 425px);
+            padding-left: 0px;
+            margin-bottom: 25px;
+        }
+        .field--name-field-boca {
+            padding-bottom: 20px;
+        }
+        .field.field--name-field-pre-title {
+            @include Mobile // Menor a: $mobile-l-width: 425px + 1;
+            {
+                padding-right: 15%;
+                padding-bottom: 14px;
+            }
+        }
+        .field.field--name-field-boca {
+            @include Mobile // Menor a: $mobile-l-width: 425px + 1;
+            {
+                font-size: 14.2px;
+            }
+        }
+        /*@include content-title-light('.field--name-field-etiqueta',
+        '.field--name-field-pre-title',
+        '.field__item > a') &.grado {
+            margin-right: 0;
+        }*/
+    }
+    // url: facultad/creacion-comunicacion
+    &.search-professor {
+        background-color: $color_brand;
+        padding: 0 10px 18px;
+        text-align: center;
+        h2 {
+            margin-bottom: 17px;
+        }
+        a {
+            @include buton-s-transparent;
+        }
+    }
+    // url: facultad/creacion-comunicacion
+    &.listado-lineal {
+        .field--name-field-archivos-facultad {
+            position: relative;
+        }
+        .field__items {
+            .field__item {
+                border-top: 1px solid $color_gray_20;
+                margin: 0 -18px;
+                padding: 12px 18px 12px 18px;
+            }
+        }
+        a {
+            @include underline-hover;
+            text-decoration: none;
+            font-size: 11px;
+            color: $color_gray_80;
+        }
+    }
+    &.icon-pdf {
+        @include icon('IconPDF.svg',
+        '.field--name-field-archivos-facultad .field__item');
+    }
+    &.icon-star {
+        @include icon('Star.svg',
+        '.field--name-field-archivos-facultad .field__item');
+    }
+    // Es hijo de .block
+    .block-content--type-bloque-basico-con-bocadillo {
+        padding-bottom: 20px;
+        .field--name-field-bocadillo-150 {
+            margin-bottom: 25px;
+        }
+    }
+    .bloque-modificado-twig {
+        padding-bottom: 0;
+    }
+    &.bloque-simplisimo {
+        .block-inner {
+            border: 1px solid #BABCBF;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding: 21px 22px;
+        }
+        h2 {
+            @include latoblack(11px);
+            letter-spacing: 2px;
+            line-height: 100%;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 11px;
+            letter-spacing: 2px;
+            line-height: 13px;
+        }
+    }
+    &.pasos-para-transferencia {
+        $mobile: 480px;
+        @media only screen and (min-width: $mobile) {
+            float: left;
+            width: 60%;
+        }
+    }
+    &.la-homologacion {
+        $mobile: 480px;
+        .field--name-body {
+            @media only screen and (min-width: $mobile) {
+                max-width: 75%;
+            }
+            @media only screen and (min-width: $tablet) {
+                max-width: 60%;
+            }
+        }
+    }
+    &.block-sidebar-right {
+        $mobile: 480px;
+        @media only screen and (min-width: $mobile) {
+            width: 30%;
+            min-width: 170px;
+            float: right;
+            margin-left: -100%;
+        }
+    }
+    // url: facultad/creacion-comunicacion
+    &.conectate-ueb {
+        @include sidebar-block-content('.field--name-field-pre-title, .field--name-body');
+        background-color: $color_brand;
+        padding: 0 10px 18px;
+        margin-top: 20px;
+        .field--name-field-etiqueta {
+            color: $color_gray_2;
+            padding-bottom: 10px !important;
+            text-transform: none !important;
+        }
+        .field--name-field-pre-title,
+        .field--name-body {
+            color: $color_gray_2;
+            background: none;
+        }
+        .field--name-field-pre-title {
+            @include acherus_grotesqueultralight(11px);
+            color: $color_gray_2;
+            letter-spacing: 0.5px;
+            padding-bottom: 10px;
+        }
+        .field--name-body {
+            @include latoregular (11px);
+            color: $color_gray_15;
+            font-size: 11px;
+            line-height: 13px;
+        }
+    }
+    &.product-basic-feature-content-large {
+        @include font-block-text('.field--type-entity-reference > a',
+        '.field--name-field-texto-superior');
+        @include structure-pretitle-button ('&',
+        '.field--type-entity-reference > a',
+        '.field--name-field-enlace');
+        width: 27%;
+        display: inline-block;
+        vertical-align: top;
+        color: $color_gray_2;
+        box-sizing: border-box;
+        @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px + 1px;
+        {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            display: block;
+            width: 100%;
+            margin-bottom: 0px;
+            height: auto !important;
+        }
+        .field--type-entity-reference {
+            padding-bottom: 10px;
+            @include Mobile // Menor a: $mobile-l-width: 425px;
+            {
+                padding-top: 8px;
+                padding-bottom: 25px;
+            }
+            a {
+                color: $color_gray_2;
+                text-transform: uppercase;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 11px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    font-size: 10px;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+        .field--name-field-texto-superior {
+            @include Mobile // Menor a: $mobile-l-width: 425px;
+            {
+                padding-right: 7%;
+                padding-bottom: 32px;
+            }
+        }
+        .field--name-field-enlace {
+            @include Mobile // Menor a: $mobile-l-width: 425px;
+            {
+                position: static;
+                margin-bottom: 10px;
+            }
+            a {
+                @include buton-s-transparent;
+            }
+        }
+    }
+    &.decano-text {
+        // @mixin product-full-feature-content($wrapper, $image, $category, $title, $body, $link)
+        @include product-full-feature-content('.block-content',
+        '.field--name-field-imagen',
+        '.field--name-field-texto-inferior',
+        '.field--name-field-texto-superior',
+        '.field--name-field-correo-decano',
+        '.field--name-body',
+        '.null');
+        margin-top: 50px;
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            margin-right: pixel-to-percentage(31px, 375px);
+            margin-left: pixel-to-percentage(31px, 375px);
+        }
+        .block-content {
+            background: none;
+            .field--name-field-texto-superior {
+                margin-bottom: 5px;
+            }
+            .field--name-field-texto-inferior {
+                margin-bottom: 6px;
+                @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px + 1px;
+                {
+                    margin-top: -15px;
+                }
+            }
+            .text-content {
+                column-count: 3;
+                column-gap: 30px;
+                column-width: 170px;
+                padding-top: 15px;
+                padding-left: 42px;
+                @include Laptop // Menor a: $laptop-width: 1024px;
+                {
+                    display: inline;
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                }
+            }
+            .field--name-field-imagen {
+                @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px + 1px;
+                {
+                    display: inline;
+                    margin-right: 16px;
+                    margin-bottom: 16px;
+                }
+                @include Mobile // Menor a: $mobile-l-width: 425px;
+                {
+                    width: 100%;
+                }
+                img {
+                    @include Mobile // Menor a: $mobile-l-width: 425px;
+                    {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .field--name-field-enlace {
+            margin-top: 10px;
+            @include Laptop // Menor a: $laptop-width: 1024px;
+            {
+                text-align: center;
+            }
+            a {
+                @include buton-s-border-green;
+                display: block;
+                @include Laptop // Menor a: $laptop-width: 1024px;
+                {
+                    display: inline-block;
+                    padding: 7px 35px 6px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+    .cita {
+        @include cita;
+        color: $color_text;
+    }
+    .container-banner {
+        &.faculty {
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+            height: 202px;
+            picture {
+                display: block;
+                width: 900px;
+                height: 202px;
+            }
+            img {
+                display: block;
+                width: auto;
+                height: 100%;
+            }
+            .container-text {
+                position: absolute;
+                top: 10px;
+                left: 30px;
+            }
+            .field--name-field-pre-title {
+                @include title;
+                color: $color_brand_dark;
+                padding-bottom: 5px;
+                width: 265px;
+                @include Tablet // Menor a: $tablet-width: 768px;
+                {
+                    font-size: 27px;
+                    line-height: 30px;
+                }
+                @include Tablet-NoMobile // Menor a: $tablet-width: 768px;
+                {
+                    width: 255px;
+                    letter-spacing: 0.09px;
+                    margin-top: 13px;
+                    margin-bottom: 10px;
+                }
+                @include Mobile // Menor a: $mobile-l-width: 425px +1;
+                {
+                    width: pixel-to-percentage(255px, 425px);
+                }
+            }
+            .field--name-field-etiqueta {
+                @include latoregular(17px);
+                color: $color_gray_80;
+                line-height: 23px;
+                padding-bottom: 18px;
+                width: 305px;
+                @include Tablet // Menor a: $tablet-width: 768px;
+                {
+                    font-size: 16.5px;
+                    line-height: 21px;
+                }
+                @include Tablet-NoMobile // Menor a: $tablet-width: 768px;
+                {
+                    width: 255px;
+                    padding-right: 0;
+                }
+                @include Mobile // Menor a: $mobile-l-width: 425px +1;
+                {
+                    width: pixel-to-percentage(255px, 425px);
+                }
+            }
+            .field--name-field-enlace {
+                a {
+                    @include buton-s-transparent;
+                }
+            }
+        }
+    }
+    &.facultad-list {}
+    //bloques redes sociales
+    &.instagram {
+        .instagram-title {
+            display: none;
+        }
+        @include grid(2.4,
+        80,
+        20);
+        padding-bottom: 20px;
+        display: inline-block;
+        position: relative;
+        vertical-align: top;
+        &:before {
+            content: "Instagram";
+            color: $color_gray_60;
+            clear: right;
+            display: block;
+            @include pt_serifitalic(12px);
+            padding-bottom: 10px;
+        }
+        &:after {
+            content: "";
+            height: 50px;
+            width: 1px;
+            position: absolute;
+            right: -10px;
+            top: 0px;
+            background: $color_gray_50;
+        }
+    }
+    &.facebook {
+        .facebook-title {
+            display: none;
+        }
+        @include grid(4.8,
+        80,
+        20);
+        @include ib-grid;
+        padding-bottom: 20px;
+        display:inline-block;
+        vertical-align: top;
+        >* {
+            @include grid(2.4,
+            80,
+            20);
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            &:before {
+                content: "Facebook";
+                color: $color_gray_60;
+                clear: right;
+                display: block;
+                @include pt_serifitalic(12px);
+                padding-bottom: 10px;
+            }
+            &:after {
+                content: "";
+                height: 50px;
+                width: 1px;
+                position: absolute;
+                right: -10px;
+                top: 0;
+                background: $color_gray_50;
+            }
+            &:nth-last-child(1) {
+                margin-right: 0px;
+            }
+        }
+    }
+    &.twitter {
+        .twitter-title {
+            display: none;
+        }
+        @include grid(4.8,
+        80,
+        20);
+        @include ib-grid;
+        padding-bottom: 20px;
+        margin-right: 0px;
+        display: inline-block;
+        vertical-align: top;
+        >* {
+            @include grid(2.4,
+            80,
+            20);
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            &:before {
+                content: "Twitter";
+                color: $color_gray_60;
+                clear: right;
+                display: block;
+                @include pt_serifitalic(12px);
+                padding-bottom: 10px;
+            }
+            &:after {
+                content: "";
+                height: 50px;
+                width: 1px;
+                position: absolute;
+                right: -10px;
+                top: 0px;
+                background: $color_gray_50;
+            }
+            &:nth-last-child(1) {
+                margin-right: 0px;
+            }
+        }
+    }
+    .instagram-post,
+    .facebook-post-1,
+    .facebook-post-2,
+    .twitter-post-1,
+    .twitter-post-2 {
+        font-size: 13px;
+    }
+    //menu de redes sociales
+    &.redes-sociales {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 17px;
+        text-align: center;
+        .block-inner {
+            >h2 {
+                display: none;
+            }
+        }
+        .menu {
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            .menu-item {
+                display: inline-block;
+            }
+            @each $name,
+            $image in $images_social_networks {
+                .menu-#{$name} {
+                    background: url(../images/home/#{$image}.svg) center no-repeat;
+                    display: inline-block;
+                    height: 35px;
+                    text-indent: -9999px;
+                    width: 50px;
+                }
+            }
+            &::before,
+            &::after {
+                content: "";
+                width: 1111px;
+                height: 1px;
+                display: block;
+                position: absolute;
+                top: 50%;
+                background: $color_brand;
+            }
+            &::before {
+                left: 100%;
+            }
+            &::after {
+                right: 100%;
+            }
+        }
+    }
+    &.social-networks {
+        font-size: 0px;
+        //max-width: 950px;
+        margin: 0 auto;
+        padding-bottom: 35px;
+        text-align: center;
+        h2 {}
+        @mixin local-social-width {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 14px;
+            width: 100%;
+            max-width: 200px;
+            text-align: left;
+            position: relative;
+            padding: 0 19px;
+            box-sizing: border-box;
+            a {
+                color: $color_brand;
+                text-decoration: none;
+            }
+            &::after {
+                content: "";
+                height: 52px;
+                width: 1px;
+                position: absolute;
+                right: 0;
+                top: 5px;
+                background: $color_gray_50;
+            }
+        }
+        .block-ubosque-instagram-block {
+            @include local-social-width;
+            .column-post {
+                padding: 0;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        .column-post {
+            @include local-social-width;
+            word-wrap: break-word;
+        }
+        .block-ubosque-facebook-block,
+        .block-ubosque-twitter-block {
+            @include inline-block(top);
+            width: 100%;
+            max-width: 400px;
+            font-size: 0;
+        }
+        .redes-title {
+            @include small-pretitle-italic;
+            padding-bottom: 10px;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        .redes-post,
+        .redes-user,
+        .redes-time {
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+        .redes-time {
+            font-size: 11px;
+            letter-spacing: 1px;
+            padding-bottom: 10px;
+        }
+        .redes-user {
+            @include latoblack(11px);
+        }
+    }
+    //URL: /nuestro-bosque/documentos-de-consulta
+    &.links-documentos-pdf {
+        .block-content--type-_011-file-upload-multiple {
+            padding-bottom: 20px;
+            .file--mime-application-pdf {
+                position: relative;
+                a {
+                    @include link-text;
+                    font-size: 10px;
+                    margin-left: 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                &:before {
+                    content: url('../images/iconPDF-green.png');
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+            .field--name-field-files {
+                .field__item {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    //URL: /nuestro-bosque/estimulos-excelencia
+    &.block-views-blockcatalogo-memorias-block-1 {
+        .view-content {
+            @include ib-grid;
+            margin: 0 -10px;
+            padding-bottom: 50px;
+            .views-row {
+                @include inline-block(top);
+                width: 33%;
+                padding: 0 10px;
+                box-sizing: border-box;
+                padding-bottom: 20px;
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                    padding-bottom: 40px;
+                }
+                .field--name-field-imagenes-multiples {
+                    max-width: 140px;
+                    padding-bottom: 5px;
+                    @media only screen and (max-width: $mobile) {
+                        max-width: 65%;
+                        margin: 0 auto;
+                    }
+                }
+                .field--name-field-fecha-inicio-inscripcion {
+                    @include acherus_grotesqueultralight(33px);
+                    line-height: 40px;
+                    letter-spacing: -0.5px;
+                    padding-bottom: 10px;
+                }
+                .field--name-node-title {
+                    h2 {
+                        @include acherus_black(20px);
+                        line-height: 100%;
+                        letter-spacing: -0.5px;
+                    }
+                }
+                .field--name-field-titulo-tab-pregrado {
+                    display: none;
+                }
+                .field--name-field-contenido-tab-pregrado {
+                    padding-bottom: 15px;
+                    p {
+                        @include paragraphs_extralarge;
+                    }
+                }
+                .field--name-node-link {
+					padding-top: 10px;
+
+                    a {
+                        @include link-text;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+		
+		.field--name-node-title {
+			h2 {
+				@include font(20px, 20px, -0.5px);
+			}
+		}
+
+		.field--name-field-bocadillo {
+			@include font(17px, 23px);
+			font-family: $font-baser;
+			margin-top: -3px;
+
+			@media only screen and (min-width: $tablet) {
+				max-width: 93%;
+			}
+		}
+    }
+	
+    &.tabs-acordeon-views {
+        @media only screen and (max-width: $mobile) {
+            margin-left: -30px;
+            margin-right: -30px;
+            .tabMakerContent::after {
+                display: none;
+            }
+            .bar-desplegable-button {
+                padding-left: 30px;
+            }
+        }
+        .bar-desplegable-button {
+            &::after {
+                z-index: 1;
+            }
+        }
+        .bar-desplegable-content {
+            padding: 20px 0;
+            @media only screen and (max-width: $mobile) {
+                padding-left: 30px !important;
+                padding-right: 30px !important;
+                margin-right: 0;
+            }
+        }
+        .tabMakerContent {
+            padding: 30px 50px 30px 50px !important;
+            &::after {
+                content: "";
+                background-color: #f7f7f7;
+                position: absolute;
+                left: 0;
+                width: 50px;
+                z-index: 3;
+                top: 0;
+                height: 100%;
+            }
+            h2 {
+                display: none;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding: 0 !important;
+            }
+        }
+        .view-content {
+            @media only screen and (max-width: $mobile) {
+                padding: 20px 0 0;
+            }
+        }
+        .bar-desplegable-content {
+            .field--type-text-with-summary {
+                max-width: 100%;
+            }
+        }
+        .view-footer {
+            padding: 55px 0 15px;
+            @media only screen and (max-width: $tablet) {
+                padding: 35px 0 0px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding: 20px 0 25px;
+            }
+            text-align: center;
+            a {
+                @include buton-xl-green;
+            }
+        }
+    }
+    // URL: /investigaciones/grupos-investigacion
+    &.acordeon-grupos-investigacion,
+    &.acordeon-investogaciones-laboratorios {
+        @include desplegableMaker-outer('.view-content',
+        '.views-row',
+        '.text-content',
+        '.field--name-field-title');
+        @include desplegableMaker-inner('.text-content',
+        '.null',
+        '.null',
+        '.null');
+        h3 {
+            letter-spacing: inherit;
+        }
+        .text-content {
+            padding: 20px 0;
+        }
+        .field--name-field-body {
+            padding: 10px 0;
+            li {
+                margin-bottom: 20px;
+                padding-left: 22px;
+                &::before {
+                    width: 6px;
+                    height: 6px;
+                }
+            }
+        }
+		
+		.field--name-field-file {
+			.field__item {
+				margin-top: 8px;
+			}
+
+			.file {
+				display: block;
+				min-height: 25px;
+			}
+
+			a {
+				@include inline-block;
+				position: relative;
+				padding-top: 3px;
+				margin-left: 25px;
+				font-size: 11px;
+				line-height: 15px;
+				letter-spacing: 1px;
+				color: $color_gray_60;
+				text-decoration: none;
+
+				&:hover {
+					@include underline-hover;
+				}
+
+				&::before {
+					content: "";
+					background: url(../images/icon-pdf-green.svg) no-repeat 0 0;
+					height: 25px;
+					width: 25px;
+					position: absolute;
+					top: 0;
+					left: -25px;
+				}
+			}
+		}
+		
+		.field-label-inline {
+			@include inline-block;
+			margin-bottom: 5px;
+		}
+		
+        .field--label-inline {
+            margin-bottom: 5px;
+            .field__label,
+            .field__item {
+                @include inline-block;
+                font-family: $font-bsb;
+                margin-right: 3px;
+            }
+            &.field--name-field-code {
+                .field__item {
+                    font-family: $font-baseb;
+                    font-size: 12px;
+                    color: $color_gray_60;
+                    line-height: 15px;
+                    letter-spacing: 2px;
+                    border-bottom: 1px solid $color_brand;
+                    padding-bottom: 1px;
+                    top: 3px;
+                    position: relative;
+                }
+            }
+        }
+        .buttons-line {
+            //padding-bottom: 15px;
+            .field--type-link {
+                @include inline-block;
+                margin-right: 35px;
+				margin-bottom: 15px;
+            }
+            a {
+                @include buton-s-green;
+                padding: 6px 27px;
+                text-transform: none;
+            }
+        }
+    }
+    &.pre-form {
+        clear: both;
+    }
+}

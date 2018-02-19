@@ -1,0 +1,284 @@
+.cursos-preuniversitarios {
+	$local-tablet: 690px;
+	$local-desktop: 1070px;
+
+	#block-cursocentrotop {
+		.paragraph--type-h2 {
+			@media only screen and (min-width: 600px) and (max-width: $local-desktop) {
+				padding-right: 92px;
+			}
+		}
+	}
+
+	.revisa-admisiones {
+		padding-bottom: 53px;
+
+		@media only screen and (max-width: $tablet) {
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-bottom: 23px;
+		}
+
+		.block-inner .block-inner {
+			min-height: auto;
+		}
+
+		.paragraph--type-h2 {
+			h2 {
+				color: white;
+				font-size: 31px;
+
+				@media only screen and (min-width: $local-tablet) and (max-width: $local-desktop) {
+					font-size: 20px;
+					line-height: 20px;
+					margin-bottom: 5px;
+				}
+
+				@media only screen and (max-width: $local-tablet) {
+					font-size: 27px; // este lo puse al ojo, para qjue no desborde
+				}
+			}
+
+			@media only screen and (max-width: $local-tablet) {
+				max-width: 65%;
+			}
+		}
+
+		.paragraph--type-body {
+			@media only screen and (max-width: 900px) {
+				height: 40px !important;
+				overflow: hidden;
+			}
+
+			@media only screen and (max-width: $local-tablet) {
+				max-width: 65%;
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 17px;
+
+				@media only screen and (max-width: 900px) {
+					font-size: 12px;
+					line-height: 14px;
+				}
+			}
+		}
+
+		.paragraph--type-h2 {
+			@media only screen and (min-width: $local-tablet) and (max-width: $local-desktop) {
+				max-width: auto !important;
+				//height: 43px;
+				//overflow: hidden;
+			}
+
+			@media only screen and (min-width: $local-tablet) {
+				max-width: none;
+				width: auto;
+			}
+		}
+
+		.field--name-field-links {
+			padding-bottom: 30px;
+
+			@media only screen and (max-width: $tablet) {
+				padding-bottom: 15px;
+				a {
+					padding: 4px 10px !important;
+				}
+			}
+		}
+
+		> .block-inner {
+			@media only screen and (max-width: $tablet) {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+
+			.block {
+				margin-bottom: 0;
+
+				.text-content {
+					max-width: none;
+				}
+
+				.block-inner,
+				img {
+					height: auto;
+					max-height: none;
+				}
+
+				&:nth-child(2) .paragraph--type-h2 {
+					@media only screen and (min-width: $local-tablet) and (max-width: $tablet) {
+						width: auto;
+					}
+				}
+
+				&:nth-of-type(2),
+				&:nth-of-type(3) {
+					img {
+						@media only screen and (max-width: $local-tablet) {
+							height: auto;
+						}
+					}
+
+					.field--name-field-images {
+						.field__item {
+							& + .field__item {
+								display: none;
+							}
+
+							@media only screen and (max-width: $local-tablet) {
+								display: none;
+
+								& + .field__item {
+									display: block;
+								}
+							}
+						}
+					}
+
+					img {
+						@media only screen and (min-width: $local-tablet) and (max-width: $tablet) {
+							min-height: 357px;
+						}
+					}
+
+					.text-content {
+						padding-left: 20px;
+						padding-right: 20px;
+					}
+
+					.field--name-field-links {
+						padding-left: 20px;
+					}
+
+					.field--name-field-links {
+						a {
+							@include buton-l-transparent;
+						}
+					}
+				}
+
+				// left
+				&:nth-of-type(2) {
+					float: left;
+					width: 25%;
+
+					.paragraph--type-h2 {
+						@media only screen and (min-width: $local-tablet) {
+							word-wrap: break-word;
+							width: auto;
+						}
+					}
+				}
+
+				// right
+				&:nth-of-type(3) {
+					float: right;
+					width: 25%;
+
+					.paragraph--type-h2 {
+						@media only screen and (min-width: $local-tablet) {
+							width: auto;
+						}
+						
+						h2 {
+							color: $color_text;
+						}
+					}
+				}
+
+				// middle top
+				&:nth-of-type(4) {
+					margin-bottom: 18px;
+
+					@media only screen and (max-width: $tablet) {
+						width: 50%;
+					}
+
+					.paragraph--type-h2,
+					.paragraph--type-body {
+						@media only screen and (min-width: $local-desktop) {
+							max-width: 65%;
+						}
+					}
+
+					@media only screen and (max-width: $tablet) {
+						.field--name-field-links {
+							margin-top: 10px;
+						}
+					}
+				}
+
+				// middle bottom
+				&:nth-of-type(5) {
+					margin-bottom: 0;
+
+					.paragraph--type-h2 {
+						@media only screen and (max-width: $local-tablet) {
+							max-width: 120%;
+							width: 120%;
+						}
+					}
+
+					.paragraph--type-body {
+						@media only screen and (min-width: $local-desktop) {
+							max-width: 70%;
+						}
+					}
+				}
+
+				// middle 4 & 5
+				&:nth-of-type(4),
+				&:nth-of-type(5) {
+					@media only screen and (max-width: $tablet) {
+						width: 50%;
+
+						.paragraph--type-body {
+							height: 36px;
+							overflow: hidden;
+						}
+					}
+				}
+
+				@media only screen and (max-width: $local-tablet) {
+					width: 100% !important;
+					max-width: 360px;
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 30px;
+					float: none !important;
+
+					.block-inner {
+						height: 245px;
+						overflow: hidden;
+						position: relative;	
+					}
+
+					img {
+						height: 245px;
+						width: auto;
+						min-width: 360px;
+						max-width: none;
+						position: absolute;
+						top: 0;
+						right: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.layout-content {
+		padding-bottom: 30px;
+	}
+
+	.block-block-content3467224f-68a9-4fe2-b0e6-ee933239a5d6 {
+		box-sizing: border-box;
+
+		@media only screen and (min-width: $tablet) {
+			padding-left: 50px;
+		}
+	}
+}

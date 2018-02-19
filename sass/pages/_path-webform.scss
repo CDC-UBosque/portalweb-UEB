@@ -1,0 +1,49 @@
+// confirmacion webform
+.path-webform {
+	.webform-confirmation__message {
+		display: none;
+	}
+
+    .webform-confirmation__back {
+
+    	text-align: center;
+        a {
+            @include buton-l-green;
+
+        }
+    }
+
+    // interna mensaje enviado
+    .block-block-content688256c8-2245-4d85-914f-4939125a397b {
+    	.block-inner {
+    		.contextual-region {
+    			.field--name-body {
+    				padding-bottom: 40px;
+    				p {
+    					font-family: "acherus_grotesqueultralight";
+   						font-weight: normal;
+    					font-size: 28px;
+    					color: #4A4A4A;
+    					line-height: 30px;
+    					letter-spacing: -0.5px;
+    					text-align: center;
+    				}
+    			}
+    		}
+    	}
+    }
+    &.mensaje-enviado {
+		#main {
+			>.content {
+				width: 65%;
+				margin: 0 auto;
+				.field--type-text-with-summary {
+					p {
+						text-align: initial;
+					}
+				}
+			}
+		}
+	}
+    
+}

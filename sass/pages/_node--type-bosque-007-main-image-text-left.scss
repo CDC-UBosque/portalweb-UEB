@@ -1,0 +1,81 @@
+.node--type-bosque-007-main-image-text-left {
+	&.node--view-mode-full {
+		position: relative;
+
+		.text-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 370px;
+			height: 100%;
+			z-index: 10;
+			background-color: $color_brand;
+			box-sizing: border-box;
+			padding: 60px 35px 30px;
+
+			.field--name-field-pretitle {
+				@include pretitle;
+				color: $color_gray_80;
+				margin-bottom: 10px;
+			}
+
+			.field--name-field-titulo-2 {
+				font-family: $font-brandb;
+				font-size: 28px;
+				line-height: 31px;
+				color: white;
+				max-width: 300px;
+				padding-bottom: 20px;
+			}
+
+			.field--name-field-link {
+				position: absolute;
+				bottom: 30px;
+				left: 30px;
+			}
+
+			a {
+				@include buton-m-green;
+				background-color: white;
+				color: $color_brand;
+			}
+		}
+
+		.image-content {
+			text-align: right;
+
+			img {
+				vertical-align: top;
+			}
+		}
+
+		.button-arrow {
+			position: absolute;
+			bottom: 30px;
+			right: 30px;
+			z-index: 10;
+			
+			.field--name-field-titulo-3 {
+				color: white;
+				text-align: center;
+				font-family: $font-serif-italic;
+				font-size: 12px;
+				line-height: 15px;
+				margin-bottom: 10px;
+
+				&::before {
+					content: "";
+					background: url('../images/svg/arrow-down-white.svg') no-repeat 50% 0;
+					height: 22px;
+					margin: 0 auto 10px;
+					display: block;
+				}
+			}
+
+			a {
+				@include buton-m-green;
+				padding: 15px 45px 16px;
+			}
+		}
+	}
+}

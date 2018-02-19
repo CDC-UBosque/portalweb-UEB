@@ -1,0 +1,224 @@
+@include grilla-2-columns-bs('.revisa-admisiones-tipo2 > .block-inner', '.block');
+.revisa-admisiones-tipo2 {
+	@include tablet-laterals;
+	max-width: 85%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	@media only screen and (max-width: $tablet) {
+		max-width: 100%
+	}
+	> .block-inner {
+		position: relative;
+		overflow: hidden;
+		.block {
+			@media only screen and (max-width: $tablet) {
+				padding-left: 0 5px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding: 0;
+			}
+		}
+	}
+	.field--name-field-title-block {
+		@include title-delgado-grande;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 27px 41px 0;
+		box-sizing: border-box;
+	}
+
+	.field--name-field-enlace {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 0 41px 17px;
+		box-sizing: border-box;
+
+		a {
+			@include button-md-white;
+		}
+	}
+	
+	.block {
+		.field--name-field-title-block {
+			max-width: 350px;
+		}
+
+		& + .block {
+			.field--name-field-title-block {
+				max-width: 450px;
+				color: white;
+			}
+		}
+	}
+	.field--type-text-with-summary {
+		@media only screen and (min-width: $mobile) {
+			max-width: 70%;
+		}
+
+		p {
+			@include paragraphs_medium;
+		}
+	}
+
+
+	#block-programasacademicosapoyofinanciero-2 {
+		.field--name-field-links {
+			a {
+				color: $color_brand;
+				background: transparent;
+				border-color: $color_brand;
+			}
+		}
+	}
+
+	#block-programasacademicosreconocimientoespfuerzo {
+		.field--name-field-links {
+			a {
+				color: white;
+				background-color: $color_brand;
+			}
+		}
+	}
+
+	.block {
+		margin-bottom: 23px;
+
+		.block-inner {
+			//background-color: $color_gray_10;
+		}
+
+		&:nth-of-type(2n+1) {
+			.block-inner {
+				background-color: $color_gray_2;
+			}
+		}
+		&:nth-child(3) {
+			.field--type-text-with-summary {
+				max-width: 85%;
+				@media only screen and (max-width: $mobile) {
+					max-width: none;
+				}
+			}
+		}
+	}
+
+	.block-inner .block-inner {
+		
+		height: 100%;
+		position: relative;
+	}
+
+
+	.field--name-field-images {
+		& + .text-content {
+			max-width: 90%;
+		}
+		img {
+			@media only screen and (max-width: $tablet) {
+				min-height: 240px;
+			}
+			
+		}
+	}
+
+	.text-content,
+	.field--name-field-title-block {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 27px 41px 0;
+		box-sizing: border-box;
+		@media only screen and (max-width: $tablet) {
+			padding: 27px 30px 15px;
+		}
+		@media only screen and (max-width: $mobile) {
+			text-align: center;
+			position: initial;
+			background-color: #ededed;
+			position: initial;
+		}
+	}
+	.pilobosque-first {
+		@media only screen and (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	.paragraph--type-h2 {
+		h2 {
+			@include title_acherusblack_m;
+			letter-spacing: -0.5px;
+			line-height: 20px;
+			padding: 0;
+			@media only screen and (max-width: $tablet) {
+				margin-bottom: 5px;
+			}
+			@media only screen and (max-width: $mobile) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.paragraph--type-body {
+		@media only screen and (max-width: $mobile) {
+			padding-bottom: 10px;
+		}
+	}
+
+	.field--name-field-bocadillo-150 {
+		@include lato-regular-normal;
+
+		& + .paragraph--type-links {
+			a {
+				padding-top: 6px;
+				padding-bottom: 6px;
+			}
+		}
+	}
+
+	.field--name-field-links {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+		width: 100%;
+		padding: 0 41px 17px;
+		box-sizing: border-box;
+		@media only screen and (max-width: $tablet) {
+			bottom: 11px;
+			left: 30px;
+			padding: 0;
+		}
+		@media only screen and (max-width: $mobile) {
+			position: initial;
+			/*width: inherit;
+			max-width: 100%;*/
+		}
+		a {
+			@include buton-s-border-green;
+			@media only screen and (max-width: $mobile) {
+				margin-left: -25px;
+    			margin-right: -25px;				
+			}
+		}
+	}
+	
+	.block {
+		.field--name-field-title-block {
+			max-width: 350px;
+		}
+
+		& + .block {
+			.field--name-field-title-block {
+				max-width: 450px;
+				color: white;
+			}
+		}
+	}
+}

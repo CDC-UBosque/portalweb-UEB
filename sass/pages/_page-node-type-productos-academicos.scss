@@ -1,0 +1,211 @@
+.page-node-type-productos-academicos {
+	.field-region {
+		position: relative;
+	}
+	
+	.field--name-field-bocadillo {
+		@include cita;
+		padding-bottom: 30px;
+
+	}
+	.field--name-field-contenido-noticias {
+		@include paragraphs_large;
+		padding-bottom: 45px;
+	}
+	.field--name-field-bocadillo-tab-pregrado {
+		@include paragraphs_large;
+	}
+	// .field--name-field-informacion-de-la-facultad {
+	// 	@include grid(6, 80, 20);
+	// 	@include contact-prefooter (3, '.field--name-field-datos-de-informacion-decan', '.field__item', 
+	// 		'.field--name-field-acerca-de', '.field--name-field-bloque-legal-snies- ', 0px);
+	// 	display: inline-block;
+	// }
+	.purpose {
+		margin-bottom: 65px;
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 30px;
+		}
+		.carousel {	
+			
+			.field--name-field-imagen-programa
+			{
+				position: relative;
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					margin-bottom: 10px;
+				}
+			}
+			.buttons-wrapper {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 100%;
+				height: 40px;
+			}
+			
+			.buttons-wrapper {
+				a.left {
+					background-image: url("../images/slider-buttons/left.svg");
+					background-repeat: no-repeat;
+					width: 20px;
+					margin-left: -25px;
+				}
+
+				a.right {
+					background-image: url("../images/slider-buttons/right.svg");
+					background-repeat: no-repeat;
+					width: 20px;
+					margin-right: 20px;
+
+				}
+			}
+		}
+	}
+
+	.impact {
+		font-size: 0px;
+		margin-bottom: 65px;
+		.field--name-field-contenido-1 {
+			max-width: 45.5%;
+			box-sizing: border-box;
+			padding-right: 15px;
+			display: inline-block;
+			vertical-align: top;
+			p {
+				@include paragraphs_large;
+			}
+			@media only screen and (max-width: $tablet) {
+				padding-right: 20px;
+			}
+			@media only screen and (max-width: $mobile) {
+				max-width: 100%;
+				padding-right: 0px;
+			}
+
+		}
+		.field--name-field-recomendaciones-prueba {
+			@include cita;
+			max-width: 53%;
+			box-sizing: border-box;
+			padding-left: 40px;
+			border-left: 1px solid #dddddd;
+			display: inline-block; 
+			vertical-align: top; 
+			@media only screen and (max-width: $tablet) {
+				max-width: 49%;
+				padding-left: 10px;
+			}
+			@media only screen and (max-width: $mobile) {
+				max-width: 100%;
+				padding-right: 0px;
+				border-left: none;
+				border-top: 1px solid #dddddd;
+				padding-left: 0px;
+				margin-top: 15px;
+				padding-top: 20px;
+			}
+		}
+	}
+	.process {
+		font-size: 0px;
+		padding-bottom: 40px;
+		@media only screen and (max-width: $tablet) {
+			padding-bottom: 40px;
+		}
+		.carousel-inner {
+			@include generate-numbers('>.item', '.paragraph');
+			@media only screen and (max-width: $mobile) {
+				.item {
+					display: block !important;
+				}
+			}
+		}
+		.field--name-field-duraci {
+			@include title_acherusblack_m;
+			padding-bottom: 10px;
+		}
+		.field--name-field-contenido-tab-pregrado {
+			@include paragraphs_large;
+			li {
+				&:before {
+					content: "";
+					width: 4px;
+					height: 4px;
+					-webkit-border-radius: 20px;
+					-moz-border-radius: 20px;
+					border-radius: 20px;
+					background: #4A4A4A;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.paragraph--type-slider-productos-aca-inf {
+			
+			
+			@include inline-block(top);
+			width: 33.33%;
+			box-sizing: border-box;
+			padding-right: 25px;		
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding-right: 0px;
+			}
+		}
+		.buttons-wrapper {
+			position: absolute;
+			height: 30px;
+			width: 100%;
+			top: 85px;
+			.left {
+				background-image: url("../images/slider-buttons/left.svg");
+				background-repeat: no-repeat;
+				width: 20px;
+				margin-left: -25px;
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+			.right {
+				background-image: url("../images/slider-buttons/right.svg");
+				background-repeat: no-repeat;
+				width: 20px;
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+		}
+		.field--name-field-imagen-programa {
+			img {
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+				}
+			}
+		}
+
+	}	
+	// .addtoany_list {
+	// 	@include contact-social-networks (2.95);
+	// 	margin-right: 0;
+	// }
+	.paragraph--type--slider-productos-aca-sup {
+		display: inline-block;
+		.field--name-field-imagen-programa {
+			float: left;
+			padding-right: 20px;
+		}
+	}
+	.wow-section {
+		>h2 {
+			text-align: left;
+		}
+	}
+	.academic-program-custom-search {
+		
+	}
+	
+}

@@ -1,0 +1,51 @@
+.formato-labels-children {
+	.text-wrap {
+		margin-bottom: 18px;
+	}
+
+	b {
+		@include desp-heading;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.field__label {
+		@include desp-label;
+		@include inline-block(top);
+
+		&::after {
+			content: " :";
+			position: relative;
+			left: -3px;
+		}
+	}
+
+	.field__item {
+		@include desp-text;
+		@include inline-block(top);		
+	}
+	.field--name-field-contenido-de-requisitos {
+		.field__item {
+			display: list-item;
+			list-style-type: disc;
+			margin-left: 20px;
+		}
+	}
+
+	.field--type-string-long {
+		margin-top: -5px;
+	}
+
+	.valor-inscripcion,
+	.fecha-inscripcion {
+		.field {
+			@include inline-block(top);
+			margin-right: 72px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+

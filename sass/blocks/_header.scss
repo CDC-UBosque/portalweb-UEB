@@ -1,0 +1,104 @@
+#header {
+	display: block;
+	max-width: none;
+	position: absolute;	
+	background: white;
+	z-index: 29;
+	left: 0;
+	right: 0;
+
+	.header-inner {
+		padding: 0 10px;
+	}
+
+	@media only screen and (min-width: $tablet) {
+		height: 101px;
+
+		.header-inner {
+			box-sizing: border-box;
+			//height: 102px;
+			max-width: 1180px;
+			margin: auto;
+			position: relative;
+			max-height: 101px; //110px;
+			padding: 0;
+			border-bottom: 1px solid $color_gray_15;
+		}
+	}
+
+	@media only screen and (max-width: $tablet) {
+		.header_first {
+			display: none;
+		}
+	}
+
+	.header_first {
+		float: left;
+		padding: 17px 0;
+		margin-right: 0px;
+		width: 20%;
+
+		a {
+			@include inline-block(top);
+		}
+
+		img {
+			@include inline-block(top);
+		}
+	}
+
+	.header_second {
+		float: right;
+		margin: 0; // 0 0 15px;
+		width: 70px; //75px;
+		//position: relative;
+		z-index: 401;
+		@media only screen and (min-width: $tablet) {
+			margin-right: 5px;
+		}
+	}
+
+	.header_third {
+		/*
+		@media only screen and (min-width: 980px) {
+			width: 70%;
+		}
+
+		@media only screen and (min-width: 1100px) {
+			width: 69%;
+		}
+		
+		@media only screen and (min-width: 1200px) {
+			width: 73%;
+		}*/
+
+		@media only screen and (min-width: $tablet) {
+			float: right;
+			margin: 0;	
+			width: 70%;		
+		}
+
+		@media only screen and (min-width: 830px) {
+			//width: 71%;		
+		}
+
+		@media only screen and (min-width: 1060px) {
+			width: 72%;
+		}
+ 	}
+
+	.wrapper-submenus {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.content-sub-menu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}

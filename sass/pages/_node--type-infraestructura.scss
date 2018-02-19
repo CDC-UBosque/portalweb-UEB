@@ -1,0 +1,96 @@
+.node--type-infraestructura {
+	&.node--view-mode-teaser {
+		overflow: hidden;
+		max-width: 480px;
+		min-width: 400px;
+		padding: 5px 10px 20px 0;
+		margin-bottom: 10px;
+		border-bottom: 1px solid $color_brand_dark_15;
+
+		.field--name-field-infraestructura-bloque {
+			display: none;
+		}
+
+		.text-content {
+			overflow: hidden;
+		}
+
+		.field--name-field-image {
+			float: left;
+			margin-right: 15px;
+			max-width: 150px;
+
+			img {
+				display: block;
+				max-width: 100%;
+			}
+		}
+
+		.field--name-field-edificio {
+			h2 {
+				font-family: $font-brandb;
+				color: $color_gray_80;
+				text-align: left;
+				letter-spacing: -0.03em;
+				font-size: 18px;
+				margin: 0 0 1px;
+				line-height: 120%;
+			}
+		}
+
+		.field--name-field-nombre-del-bloque-o-facult {
+			@include raya-verde-gris;
+			position: relative;
+			padding-bottom: 15px;
+			margin-bottom: 10px;
+
+			&::after {
+				max-width: 300px;
+			}
+
+			h3 {
+				font-family: $font-baser;
+				font-size: 16px;
+				margin: 0;
+				line-height: 120%;
+			}
+		}
+
+		.field--name-body {
+			margin-bottom: 15px;
+
+			p {
+				font-family: $font-baser;
+				margin: 0;
+			}
+		}
+
+		.field--name-field-telefono,
+		.field--name-field-horario {
+			font-family: $font-serif-italic;
+
+			.field__label,
+			.field__item {
+				display: inline;
+			}
+
+			.field__label {
+				margin-right: 2px;
+			}
+		}
+
+		.field--name-field-link {
+			margin-top: 15px;
+
+			a {
+				@include link-green;
+			}
+		}
+	}
+}
+
+.views-row:last-child {
+	.node--type-infraestructura.node--view-mode-teaser {
+		border-bottom: 0;
+	}
+}

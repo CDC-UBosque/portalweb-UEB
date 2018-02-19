@@ -1,0 +1,252 @@
+.node--type-pagina-basica-bosque {
+    @include arrow_before ('.field--name-field-texto-encima-del-enlace',
+    15px 0px 0px 0px);
+    .wrapper-enlace {
+        bottom: 30px;
+        right: 0px;
+    }
+    .field--name-field-enlace {
+        a {
+            @include buton-l-green;
+        }
+    }
+    .field--name-field-titulo-2 {
+        width: 240px;
+    }
+
+	.node-content {
+	 	@include intro-title('.field--name-field-pretitle', '.field--name-field-pretitle + .field--name-field-titulo-del-bocadillo h2', '.field--name-field-pretitle + .field--name-field-titulo-del-bocadillo h2');
+	 	//@include tablet-laterals;
+	 	position: relative;
+	 	.field--name-field-pretitle + .field--name-field-titulo-del-bocadillo h2 {
+	 		@media only screen and (max-width: $tablet) {
+	 			margin-bottom: 20px;
+	 		}
+	 	}
+	 }
+	
+	.field--name-node-title {
+		display: none;
+
+ 		h1 {
+ 			font-size: 33px;				
+ 		}
+ 	}
+	
+	/*
+	.field--name-field-enlace {
+		a {
+			cursor: pointer;
+		}
+	}*/
+
+ 	.field--name-field-image {
+ 		@media only screen and (max-width: $tablet) {
+ 			margin-left: -30px;
+ 			margin-right: -30px;
+ 			overflow: hidden;
+
+ 			img {
+ 				width: 100%;
+ 				height: auto;
+ 			}
+ 		}
+ 	}
+ 
+	.field--name-field-bocadillo-150 {
+ 		margin-bottom: 33px;
+
+ 		@media only screen and (max-width: $tablet) {
+ 			margin-bottom: 60px;
+ 			font-size: 22px;
+ 			line-height: 30px;
+ 		}
+
+ 		@media only screen and (max-width: $mobile) {
+ 			margin-bottom: 20px;
+ 		}
+ 	}
+
+	.main-image {
+		position: relative;
+
+		@media only screen and (min-width: $tablet) {
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 100%;
+				width: 40px;
+				height: 100%;
+				background-color: white;
+			}
+		}
+
+		.field--name-field-titulo-largo,
+		.field--name-field-titulo-2 {
+	 		color: white;
+	 		position: absolute;
+	 		top: 0;
+	 		left: 0;
+	 		padding: 37px 0 0 55px;
+	 		box-sizing: border-box;
+	 		font-family: $font-bl;
+	 		font-size: 39px;
+			line-height: 100%; //20px; //37px;
+			width: 100%;
+
+			@media only screen and (max-width: $tablet) {
+				padding: 37px 0 0 0px;
+			}
+			@media only screen and (max-width: $mobile) {
+				padding-left: 20px;
+			}
+
+			&:first-line {
+				font-family: $font-bsb;
+				letter-spacing: -0.5px;
+				line-height: 48px;
+			}
+		}
+
+		.field--name-field-titulo-largo {
+			// min-width: 320px;
+		}
+
+		.field--name-field-image {
+			img {
+				display: block;
+			}
+		}
+	}
+
+	.wrapper-enlace {
+		position: absolute;
+		bottom: 30px; //17px; 30px en /investigaciones/valor-investigacion
+		right: 95px;
+		z-index: 20;
+		text-align: center;
+		max-width: 270px;
+		width: 100%;
+		transition: .3s ease-out all;
+
+		// Al momento que la pantalla haciendo resize toca el botón
+		@media only screen and (max-width: 1136px) {
+			right: 30px;
+		}
+
+		@media only screen and (max-width: $tablet) {
+			right: 0;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			max-width: 100%;
+		}
+	}
+	
+	.field--name-field-texto-encima-del-enlace {
+		font-family: $font-serif-italic;
+		font-size: 12px;
+		color: white;
+		margin-bottom: 9px;
+		
+		// no va acá investigaciones/valor-investigacion
+		&::before {
+		//	content: url('../images/svg/arrow-down-white.svg');
+			display: block;
+			margin: 0 auto 10px;
+		}
+	}
+
+	/*
+	.field--name-field-enlace {
+		a {
+			@include buton-xl-white;
+			display: block;
+			//min-width: 216px;
+		}
+	}*/
+
+	.block-block-contente9f51530-1dc5-44c0-bdaa-d6f0dbf5aff0 {
+		margin-bottom: 50px;
+
+		.paragraph--type-body {
+			max-width: 35%;
+			float: left;
+			padding-right: 50px;
+			margin-top: 40px;
+		}
+
+		.paragraph--type-bocadillo-150 {
+			height: 50px;
+		}
+
+		.field--name-field-bocadillo-150 {
+			@include acherus_grotesqueultralight(17px);
+			
+			.field__item {
+				margin-top: -40px;	
+			}
+		}
+
+		.field--name-field-body {
+			position: relative;
+
+			p {
+				@include paragraphs_large;
+
+				&:before {
+					content: "";
+					width: 1px;
+					height: 100px;
+					background-color: #dddddd;
+					position: absolute;
+					top: -35px;
+					right: -25px;
+				}
+			}
+		}
+	}
+
+	&.requisitos-grado {
+		.main-image .field--name-field-titulo-2 {
+			font-family: $font-bsb;
+		}
+	}
+
+	&.orientacion-especializada {
+		@include body-max-width;
+
+		.main-image {
+			.field--name-field-titulo-2 {
+				width: 50%;
+				font-family: "acherus_grotesquebold";
+				letter-spacing: -0.5px;
+				line-height: 48px;
+				padding-top: 40px !important;
+			}
+		}
+
+		.block-webform-block {
+			.webform-options-display-one-column {
+				@include form-radiobutton ('.js-form-type-radio');
+
+				.js-form-type-radio {
+					@include inline-block(top);
+					float: left;
+					padding-right: 20px;
+					padding-bottom: 0px;
+					width: 29%;
+
+					.form-radio {
+						height: 16px;
+						width: 15%;
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+		}
+	}	
+}
+

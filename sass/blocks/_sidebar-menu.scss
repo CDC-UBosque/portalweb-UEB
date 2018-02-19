@@ -1,0 +1,88 @@
+@include sidebar-menu ('.sidebar-menu', '.menu-item');
+@include sidebar-menu ('.view-menu-facultades, .block-views-blockmenu-preguntas-frecuentes-block-1 ', '.views-row, .view-header >a, .view-footer >a');
+
+
+.sidebar-menu {
+    .visually-hidden, h2 {
+        // position: initial !important;
+        // width: auto;
+        // height: auto;
+        display: none;
+    }
+    &.menu--menu-centro-de-informacion {
+        .menu-item:first-child {
+            a {
+                @include sidebar-menu-title;
+                background: none;
+                padding-right: 5px;
+                padding-bottom: 5px;
+            }
+        }
+        .menu-item--active-trail {
+            @include latoblack(12px);
+            padding: 15px 0px;
+            padding-left: 15px;
+        }
+    }
+    &.menu-nuestro-bosque,
+    &.menu--nuestro-bosque-instituciona,
+    &.menu--nuestro-bosque-vida-univers {
+        h2 {
+            @include acherus_black(15px);
+            text-transform: capitalize;
+            letter-spacing: -0.5px;
+            background: none;
+            padding: 12px 0 10px;
+            border-bottom: none;
+        }
+        &.menu--nuestro-bosque-vida-univers {
+            .menu {
+                margin: 0px;
+            }
+        }
+    }
+    &.menu--exito-estudiantil {
+        // h2 {
+        //     padding-top: 8px;
+        //     background-position: 0 68%;
+        // }
+        .menu-item--active-trail {
+            padding-right: 30px;
+        }
+    }
+
+    &.menu--centro-de-lenguas {
+        .visually-hidden {
+            display: none;
+        }
+        .menu-item {
+            &:nth-child(1) {
+                @include sidebar-menu-title;
+                padding: 0;
+                a {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    &.menu--investigaciones {
+        li:nth-child(n+6):nth-child(-n+10) {
+            text-transform: none;
+            padding-left: 20px;
+
+            // &.show {
+            //     display: block;
+            // }
+        }
+
+          li:nth-child(n+11):nth-child(-n+12) {
+            text-transform: none;
+            padding-left: 40px;
+           
+            // &.show {
+            //     display: block;
+            // }
+        }
+    }
+}

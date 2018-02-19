@@ -1,0 +1,58 @@
+.node--type-bosque-004-bocadillo-body {
+	overflow: hidden;
+
+    .field-title {
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .field--name-field-bocadillo {
+		padding-bottom: 25px;
+		
+		
+		@media only screen and (min-width: $mobile) {
+			line-height: 33px;
+			/*
+	        font-family: "acherus_grotesqueultralight";
+	        font-weight: normal;
+	        font-size: 28px;
+	        color: #4A4A4A;
+	        line-height: 30px;
+	        letter-spacing: -0.5px;
+	        padding-bottom: 25px;*/
+		}
+    }
+
+    .field--type-text-with-summary  {
+        @include paragraphs_extralarge;
+        width: 61%;
+        padding-bottom: 20px;
+
+        @media only screen and (max-width: $tablet) {
+            width: 85%;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    
+        h2 {
+            @media only screen and (max-width: $mobile) {
+                font-size: 34px;
+                line-height: 46px;
+            }
+        }
+
+        .icon-telf {
+            background: url(../images/iconTelf.png) no-repeat 0 30%;
+            padding-left: 25px;
+        }
+    }
+
+    .file--mime-application-pdf {
+        a {
+            @include link-green;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+// Class added with JS :(
+.sidebar-first-present {
+	.pre_footer {
+		@include ib-grid;
+
+		@media only screen and (min-width: $tablet) {
+			margin-left: 26%; //300px;
+		}
+	}
+}

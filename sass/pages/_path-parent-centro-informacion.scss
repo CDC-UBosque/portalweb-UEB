@@ -1,0 +1,358 @@
+.path-parent-centro-informacion {
+	// URL: /centro-informacion/eventos
+	&.centro-informacion-eventos {
+		#main {
+			@media only screen and (max-width: $tablet) {
+				padding-top: 40px;
+
+				.view-content {
+					overflow: hidden;
+				}
+			}
+
+			@media only screen and (max-width: $mobile) {
+				padding-top: 20px;
+
+				.view-content {
+					overflow: visible;
+				}
+			}
+		}
+
+		.wrap-content {
+			padding-bottom: 50px;
+		}
+
+		// .layout-content {
+		// 	padding-left: 0;
+		// 	padding-right: 0;
+		// 	margin-left: 30px;
+		// 	margin-right: 30px;
+		// }
+
+		// URL: /centro-informacion/eventos
+		.sidebar-first {
+			border: 0;
+		}
+
+		.sidebar-menu {
+			display: none;
+		}
+		.field--name-field-fecha-fin2 {
+			.item-day {
+				color: $color_gray_80;
+			}
+		}
+	}
+
+	.node--type-eventos {
+		.views-row {
+			padding: 0 0 20px;
+		}
+
+		.field--name-field-noticias-taxonomia {
+			@include pretitle;
+		}
+
+		.field--name-field-bocadillo-150---- {
+			font-size: 14px;
+			line-height: 19px;
+			margin-bottom: 15px;
+		}
+
+
+		.field--name-field-image {
+			//float: left;
+		}
+		&:before {
+			display: none;
+		}
+		.text-content {
+			overflow: hidden;
+
+			/*
+			&:after {
+				content: "";
+				width: 590px;
+				height: 1px;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				background-color: #d7d8d0;
+
+			}*/
+		}
+	}
+
+	.title-filtros,
+	.js-sidebar-button,
+	.btn-filtro {
+		@media only screen and (min-width: $tablet) {
+			display: none !important;
+		}
+	}
+
+	#main {
+		.pager__item {
+			margin-left: -298.3px;
+			margin-bottom: 50px;
+			@media only screen and (max-width: $tablet) {
+				margin-left: initial;
+				margin-bottom: 40px;
+			}
+			& + .js-append-filtro {
+				display: none;
+			}
+
+			.filtros {
+				@media only screen and (min-width: $tablet) {
+					display: none;
+				}
+			}
+		}
+
+		.pager__item {
+			text-align: center;
+			padding: 22px 0 0;
+
+			a {
+				@include buton-l-green;
+				margin-left: 13px;
+				margin-right: 13px;
+			}
+		}
+	}
+
+	&.path-centro-informacion {
+		.views-infinite-scroll-content-wrapper {
+			
+		}
+	}
+
+	&.bosque-responde {
+		.view-id-videos {
+			.views-row {
+				min-height: 320px;
+				@media only screen and (max-width: $tablet) {
+					min-height: 315px;
+					margin-bottom: 40px;
+				}
+			}
+		}
+	}
+	&.page-comunicados {
+		.block-block-contentb40e5a41-ed33-47d7-b546-00bfe8fad8c1 {
+			>.block-inner {
+				h2 {
+					font-size: 39px;
+					line-height: 42px;
+				}
+			}
+		}
+		.node--type-comuicados {
+			@include ib-grid;			
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				right: 20%;
+				background-color: #f4f4f2;
+				width: 1px;
+				height: 80%;
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 18px;
+				left: 0px;
+				background-color: $color_brand;
+				width: 85px;
+				height: 5px;
+				visibility: initial;
+			}
+			.field--type-text-with-summary {
+				width: 80%;
+				box-sizing: border-box;
+				vertical-align: top;
+				display: inline-block;
+				padding-right: 20px;
+				border-bottom: 1px solid #d7d8d0;
+    			padding-bottom: 45px;
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+				}
+				
+			}
+			>.field--name-field-fecha-publicacion-comunica {
+				float: right;
+				margin-top: 50px;
+				width: 20%;
+				box-sizing: border-box;
+				vertical-align: top;
+				display: inline-block;	
+				padding-left: 20px;	
+				.field__label {
+					@include pt_serifitalic(12px);
+				}			
+				@media only screen and (max-width: $mobile) {
+					float: none;
+					margin-top: initial;
+					padding-left: initial;
+					width: auto;
+					padding-bottom: 10px;
+				}
+			}
+		}
+		.views-infinite-scroll-content-wrapper {
+			>.views-row {
+				&:nth-last-child(1) {
+					.field--type-text-with-summary {
+						border-bottom: none;
+						padding-bottom: 0px;
+					}
+					.node--type-comuicados {
+						border-bottom: none;
+						&:after {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.sala-prensa {
+		.btn-green-line {
+			padding-bottom: 40px;
+			a {
+				@include buton-s-border-green;
+				padding: 9px 45px;
+			}
+		}
+		.block-block-content1d96dfe4-eb4e-488c-a4f4-5cd3e5940e3b {
+			>.block-inner {
+				h2 {
+					font-size: 39px;
+					line-height: 42px;
+				}
+			}
+		}
+		.block-content--type-bloque-basico-con-bocadillo {
+			padding-bottom: 0px;
+		}
+		.field--name-field-bocadillo-150 {
+			font-size: 33px;
+			line-height: 40px;
+		}
+		.node--type-comuicados {
+			@include ib-grid;
+			padding-bottom: 30px;
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				right: 20%;
+				background-color: #f4f4f2;
+				width: 1px;
+				height: 90%;
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+			.field--name-node-title {
+				h2 {
+					font-size: 20px;
+					line-height: 100%;
+				}
+			}
+			.field--type-text-with-summary {
+				width: 80%;
+				box-sizing: border-box;
+				vertical-align: top;
+				display: inline-block;
+				padding-right: 20px;
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+				}
+				
+			}
+			>.field--name-field-fecha-publicacion-comunica {
+				float: right;
+				width: 20%;
+				box-sizing: border-box;
+				vertical-align: top;
+				display: inline-block;	
+				padding-left: 20px;	
+				.field__label {
+					@include pt_serifitalic(12px);
+				}			
+				@media only screen and (max-width: $mobile) {
+					float: none;
+					margin-top: initial;
+					padding-left: initial;
+					width: auto;
+					padding-bottom: 0px;
+					margin-bottom: 10px;
+					padding-left: 10px;
+					border-left: 1px solid #f4f4f2;
+				}
+			}
+		}
+		.views-infinite-scroll-content-wrapper {
+			
+			.node--type-bosque-en-los-medios {
+				@media only screen and (max-width: $mobile) {
+					margin-right: -20px;
+				}
+				
+			}
+			.view-footer {
+				clear: left;
+				text-align: center;
+				.gnt-green {
+					a {
+						@include buton-l-green;
+					}
+				}
+			}
+		}
+	}
+	&.page-convocatoria {
+		.node--type-eventos.node--view-mode-resumen-3 .text-content::after {
+			height: 5px;
+		}
+		.node--type-eventos.node--view-mode-resumen-3 .item-month-day .item-day {
+			color: $color_gray_80;
+		}
+		.layout-content--post-content {
+			
+			background-color: #F9F9F9;
+			@include bg-laterales(#F9F9F9, 100%);
+			.field--name-node-title {
+				h3 {
+					@include latoregular(16px);
+					line-height: 100%;
+					a {
+						text-decoration: none;
+						color: $color_gray_80;
+					}
+				}
+			}
+		}
+	}
+	&.centro-informacion-relatos,
+	&.page-node-type-bosque-en-los-medios {
+		#main {
+			.js-pager__items {
+				margin-left: 0px;
+			}
+		}
+		
+	}
+}

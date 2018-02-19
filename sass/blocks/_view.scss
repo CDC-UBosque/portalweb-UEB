@@ -1,0 +1,864 @@
+.view {
+	@include grilla-3-columns-bs('&.view-videos.view-display-id-block_1 .view-content', '.views-row', 10px, 65px);
+	@include grilla-3-columns-bs('&.view-convocatorias.view-display-id-block_5 .view-content', '.views-row', 10px, 65px);
+
+	// URL: /audiencia/aspirantes
+	@include grilla-3-columns-bs('&.view-noticias-1.view-display-id-block_5_noticias_aspirantes .view-content', '.views-row', 10px, 65px);
+
+	// URL: /bienestar-universitario/semana-induccion
+	&.view-filtro-facultades-semana-induccion-bienestar-u {
+		@include form-select('.view-header', '.view-filtro-selected');
+	    max-width: 350px;
+	    margin: 0 auto;
+		
+		.view-filtro-selected {
+	        background-size: 25px !important;
+	        height: 65px !important;
+			padding: 24px 15px !important;
+			text-align: left;
+			cursor: pointer;
+			margin-top: 10px;
+			letter-spacing: 0 !important;
+			font-size: 14px !important;
+		}
+		
+        .view-content {
+        	position: absolute;
+			top: 105%;
+			left: 0;
+			width: 100%;
+			background-color: white;
+			border-radius: 5px;
+			display: none;
+			padding: 10px 0;
+			z-index: 20;
+        }
+
+		.views-field {
+			a {
+				@include underline-hover;
+				@include inline-block;
+				color: #9b9b9b;
+				font-size: 13px;
+				text-decoration: none;
+				padding: 5px 15px;
+				letter-spacing: 0;
+				width: 100%;
+				box-sizing: border-box;
+			}
+		}
+	}
+
+	// URL: /blog-uno
+	&.view-id-ubosque_blog_uno.view-display-id-block_1 {
+		@include teaser-noticias('.view-content', '.views-field-field-image', 'lol', '.views-field-field-bocadillo', '.s', '.s');
+	}
+
+	// URL: /investigaciones
+	// URL: /investigaciones/vicerrectoria-investigaciones
+	&.view-nuestro-equipo.view-display-id-block_2 {
+		@include owl-nav-4;
+		max-width: 1000px;
+		margin: 0 auto;
+		position: relative;
+
+		.field--name-field-image {
+			text-align: center;
+			margin-bottom: 10px;
+
+			img {
+				vertical-align: top;
+				border-radius: 50%;
+			}
+		}
+
+		.text-content {
+			padding: 0 12px;
+		}
+
+		.field--name-field-correo {
+			display: none;
+		}
+
+		.field--name-field-title {
+			display: none;
+		}
+
+		.field--name-field-boss {
+			h3 {
+				font-size: 20px;
+				line-height: 20px;
+				text-align: center;
+			}
+		}
+
+		.field--name-field-body {
+			p {
+				font-family: $font-baser;
+				font-size: 13px;
+				line-height: 16px;
+				text-align: center;
+				color: $color_gray_60;
+			}
+		}
+
+		.view-content {
+			padding: 12px 30px 0;
+		}
+
+		.owl-stage-outer {
+			@include clearfix;
+			overflow: hidden;
+		}
+
+		.owl-item {
+			float: left;
+		}
+	}
+
+	// URL: /investigaciones/nuestro-equipo
+	&.view-nuestro-equipo.view-display-id-block_1 {
+		.view-header {
+			padding-top: 30px;
+			margin-bottom: 55px;
+		}
+
+		.field--name-field-boss {
+			h3 {
+				font-size: 20px;
+				line-height: 20px;
+				letter-spacing: -0.5px;
+				margin: 0;
+			}
+		}
+
+		.field--name-field-title {
+			font-family: $font-bl;
+			font-size: 20px;
+			line-height: 24px;
+			letter-spacing: -0.5px;
+			margin-bottom: 10px;
+		}
+
+		.field--name-field-image {
+			margin-bottom: 14px;
+			
+			img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 50%;
+			}
+		}
+
+		.field--name-field-correo {
+			a {
+				padding-bottom: 4px;
+				border-bottom: 1px solid $color_brand;
+				color: $color_gray_60;
+				line-height: 19px;
+				letter-spacing: 1.78px;
+				font-family: $font-baser;
+				text-decoration: none;
+				word-wrap: break-word;
+			}
+		}
+		
+		.views-row {
+			padding: 0 0 20px;
+			margin-bottom: 22px;
+
+			&:last-child {
+				.text-content {
+					border-bottom: none;
+				}
+				.text-content:before {
+					display: none;
+				}
+			}
+		}
+		
+		.image-content {
+			padding-bottom: 30px;
+			text-align: center;
+		}
+
+		.text-content {
+			border-bottom: 1px solid #D7D9D0;
+			position: relative;
+			padding-bottom: 40px;
+
+			&::before {
+				content: "";
+				width: 42px;
+				height: 4.5px;
+				background: $color_brand;
+				position: absolute;
+				bottom: -2.8px;
+				left: 0;
+			}
+		}
+
+		@media only screen and (min-width: $mobile) {
+			.view-header {
+				padding-top: 12px;
+			}
+
+			.investigaciones {
+				@include ib-grid;
+			}
+
+			.image-content {
+				@include inline-block(middle);
+				width: 39%;
+				padding-right: 3%;
+				text-align: center;
+				box-sizing: border-box;
+				padding-bottom: 0;
+			}
+
+			.text-content {
+				@include inline-block(middle);
+				width: 61%;
+			}
+		}
+	}
+
+
+	// URL: /investigaciones/convocatorias-investigacion
+	&.view-convocatorias.view-display-id-block_9 {
+		@include desplegableMaker-outer('> .view-content', '.views-row', '.text-content', '.field--name-node-title h2');
+		@include desplegableMaker-inner('> .view-content .text-content', '.null', '.field--name-field-contenido-1', '.null');
+
+		.node-date {
+			float: right;
+			width: 100px;
+		}
+	}
+
+	// URL: /investigaciones/productos-investigacion
+	&.view-investigaciones-productos-destacados {
+		@include grilla-3-columns-bs('.view-content', '.views-row', 11px, 15px);
+		@include view-investigacion('.view-content', '.views-row', '.field--name-node-title', '.field--name-field-investigadores');
+
+		.pager {
+			text-align: center;
+			padding-top: 10px;
+
+			a {
+				@include buton-s-green;
+				padding: 10px 30px;
+			}
+		}
+
+		.field--name-node-link {
+			padding-top: 15px;
+		}
+	}
+
+	// URL: /el-bosque-te-acoge
+	@media only screen and (min-width: $mobile) {
+		@include grilla-3-columns-bs('&.columnas-3 .view-content', '.views-row');
+
+		&.columnas-3 {
+			.views-row {
+				&:nth-of-type(3n+1) {
+					clear: left;
+				}
+			}
+		}
+	}
+
+	&.view-eventos-repositorio {
+		@include teaser-convocatorias('.view-content', '.views-field-field-image', '.views-field-field-noticias-taxonomia', '.views-field-node-title');
+	}
+
+	// URL: /internacionalizacion/
+	&.view-preguntas-frecuentes-por-facultad {
+		@include grilla-3-columns-bs('.view-content', '.views-row');
+		
+		text-align: center;
+
+		.views-field-title {
+			font-family: $font-serif-italic;
+			padding: 0 12px 20px;
+
+			* {
+				font-style: normal;
+				font-family: $font-serif-italic;
+			}
+		}
+
+		.views-field-field-respuesta-de-pregunta {
+			.field-content {
+				color: $color_gray_60;
+				font-size: 13px;
+				line-height: 16px;
+			}
+		}
+
+		.view-footer {
+			text-align: center;
+
+			a {
+				@include button-m-border-green;
+				padding: 11px 40px;
+			}
+		}
+		@media only screen and (max-width: $mobile) {
+			.view-content .views-row {
+				float: none;
+			}
+		}
+	}
+
+	// URL: /bienestar-universitario/cultura-recreacion
+	&.view-cultura-recreacion {
+		@include teaser-convocatorias('.view-content .views-row', '.field--name-field-image', '.null', '.null', '.null');
+
+		.view-content {
+			overflow: hidden;
+
+			.views-row {
+				padding: 28px 0;
+
+				&:last-child {
+					.text-content {
+						&::before,
+						&::after {
+							display: none;
+						}
+					}
+				}
+
+				.field--name-field-image {
+					@media only screen and (max-width: $mobile) {
+						margin-bottom: 30px;
+					}
+				}
+			}
+
+			.text-content::after {
+				width: 90px !important;
+			}
+		}
+
+		.field--name-field-maestro {
+			.field__label,
+			.field__item {
+				@include inline-block;
+			}
+		}
+
+		.field--name-field-title {
+			h3 {
+				font-size: 20px;
+				line-height: 20px;
+				letter-spacing: -0.5px;
+				margin-bottom: 10px;
+			}
+		}
+
+		.field--name-field-horarios {
+			font-family: $font-serif-italic;
+			color: $color_gray_80;
+			font-size: 12px;
+			line-height: 15px;
+			margin-bottom: 10px;
+		}
+
+		.field--name-field-maestro {
+			margin-bottom: 8px;
+
+			.field__label {
+				font-family: $font-serif-italic;
+				color: $color_gray_80;
+				font-size: 12px;
+				line-height: 15px;
+
+				&::after {
+					content: ": ";
+				}
+			}
+
+			.field__item {
+				font-family: $font-baseb;
+				color: $color_gray_80;
+				font-size: 11px;
+				line-height: 13px;
+				position: relative;
+				top: 2px;
+			}
+		}
+
+		.field--name-field-body {
+			p {
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+
+		.pager {
+			margin: 0;
+			padding: 18px 0 20px;
+		}
+
+		.pager__item {
+			text-align: center;
+
+			a {
+				@include buton-s-green;
+				padding: 11px 25px;
+			}
+		}
+	}
+
+	// URL: /bienestar-universitario/club-de-beneficios
+	&.view-club-de-beneficios-bienestar-universitario {
+		@media only screen and (min-width: $mobile) {
+			@include grilla-4-columns-bs('.view-content', '.views-row', 12.5px, 25px);
+		}
+
+		.views-row {
+			position: relative;
+			transition: .3s ease-out all;
+			top: 0;
+			margin-bottom: 45px;
+
+			@media only screen and (max-width: $mobile) {
+				top: 0 !important;
+			}
+
+			.field-content {
+				@include ib-grid;
+			}
+
+			&:first-child {
+				width: 100%;
+				margin-bottom: 45px;
+
+				@media only screen and (max-width: $mobile) {
+					margin-left: -30px;
+					margin-right: -30px;
+					width: auto;
+				}
+
+				.views-field-field-imagen {
+					img {
+						cursor: default;
+						width: 587px;
+						height: 321px;
+					}
+				}
+
+				.close-this {
+					display: none;
+				}
+
+				.views-field-nothing {
+					background: #F9F9F9;
+				}
+
+				.views-field-field-imagen {
+					@media only screen and (min-width: $mobile) {
+						@include inline-block;
+						width: 66.5%;
+					}
+				}
+
+				.text-content {
+					display: inline-block !important;
+					vertical-align: top;
+					width: 33.5%;
+					height: auto !important;
+					padding: 22px 18px 18px !important;
+					// margin: 0 !important;
+					position: relative;
+
+					@media only screen and (max-width: $mobile) {
+						width: 100%;
+						padding: 22px 30px 27px !important;
+					}
+				}
+
+				.views-field-field-lugar {
+					display: block;
+				}
+			}
+
+			&:nth-child(2) {
+				.text-content {
+					display: block;
+				}
+			}
+
+			&:nth-child(n + 2) {
+				img {
+					height: 201px;
+					object-fit: cover;
+				}
+			}
+
+			&:nth-of-type(4n+6) {
+				clear: left;
+			}
+			
+		}
+
+		.views-field-nothing {
+			position: relative;
+		}
+
+		.close-this {
+			background: url(../images/svg/close-small.svg) no-repeat;
+			width: 13px;
+			height: 13px;
+			position: absolute;
+			top: 18px;
+			right: 18px;
+			cursor: pointer;
+		}
+
+		.text-content {
+			display: none;
+			position: relative;
+			background: #F9F9F9;
+			box-sizing: border-box;
+			padding: 18px;
+			width: 100%;
+			z-index: 10;
+			
+			@media only screen and (min-width: $mobile) {
+				position: absolute;
+				top: 100%;
+				left: 0;
+			}
+		}
+
+		.views-field-field-imagen {
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+				cursor: pointer;
+			}
+		}
+
+		.views-field-title {
+			display: none;
+		}
+
+		.views-field-field-lugar {
+			font-family: $font-brandb;
+			font-size: 33px;
+			line-height: 40px;
+			letter-spacing: -0.5px;
+			margin-bottom: 2px;
+			display: none;
+		}
+
+		.views-field-field-texto-porcentaje {
+			font-family: $font-brandb;
+			font-size: 64px;
+			line-height: 72px;
+			letter-spacing: -0.82px;
+			margin-bottom: 10px;
+		}
+
+		.views-field-field-contenido {
+			margin-bottom: 21px;
+
+			p {
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+		
+		.views-field-field-text-format {
+			.views-label {
+				font-family: $font-brandb;
+				font-size: 11px;
+				line-height: 16px;
+				letter-spacing: 1px;
+				margin-bottom: 6px;
+			}
+
+			.views-f {
+				font-size: 14px;
+				line-height: 17px;
+				word-wrap: break-word;
+			}
+		}
+	}
+
+	// URL: /bienestar-universitario/deportes
+	&.view-deportes- {
+		@media only screen and (max-width: $mobile) {
+			@include owl-nav-3;
+		}
+
+		@media only screen and (min-width: $mobile) {
+			@include owl-nav-2;
+		}
+
+		.view-content {
+			position: relative;
+			margin: 0 -10px;
+		}
+
+		.owl-stage-outer {
+			overflow: hidden;
+		}
+
+		.owl-item {
+			float: left;
+			padding: 0 10px;
+			box-sizing: border-box;
+		}
+
+		.owl-nav {
+			bottom: auto;
+		}
+
+		.views-row {
+			padding: 0 10px;
+		}
+
+		img {
+			width: 100%;
+		}
+		
+		.text-content {
+			padding: 16px 15px 0;
+		}
+
+		.field--name-field-image {
+			img {
+				display: block;
+			}
+		}
+
+		.field--name-field-title {
+			font-family: $font-brandb;
+			font-size: 20px;
+			line-height: 20px;
+			letter-spacing: -0.5px;
+			margin-bottom: 9px;
+		}
+
+		.field--name-field-contenido {
+			p {
+				font-family: $font-baser;
+			}
+		}
+	}
+
+	&.columnas-3 .view-content {
+		.views-row {
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+	}
+	
+	&.view-videos.view-display-id-block_1 {
+		.view-content {
+			.views-row {
+				@media only screen and (max-width: $tablet) {
+					margin-bottom: 40px;
+				}
+			}	
+		}
+
+	}
+	
+	// URL: /admisiones/pregrado
+	@include desplegableMaker-outer('&.view-view-ubosque-fechas-inscripcion-pre-pos.view-display-id-block_1', '.first-level-views-row', '.first-level-content', '.first-level-button');
+	@include desplegableMaker-inner('&.view-view-ubosque-fechas-inscripcion-pre-pos.view-display-id-block_2', '.second-level-views-row', '.second-level-content', '.second-level-button');
+	
+	// URL: /admisiones/posgrado
+	@include desplegableMaker-outer('&.view-view-ubosque-fechas-inscripcion-posgrado.view-display-id-block_1', '.first-level-views-row', '.first-level-content', '.first-level-button');
+	@include desplegableMaker-inner('.posgrado-view.second-level-view', '.second-level-views-row', '.second-level-content', '.second-level-button');
+	@include desplegableMaker-inter('.third-level-view', '.third-level-views-row ', '.views-field-nothing', '.third-level-button');
+
+	// URL: /carreras
+	&.view-view-ubosque-pregrados-area-conocimiento.view-display-id-block_1 {
+		@include grilla-4-columns-bs('> .view-content', '> .views-row');
+		@include section-coloreada;
+		padding-top: 30px;
+
+		@media only screen and (max-width: $tablet) {
+			@include grilla-2-columns-bs('> .view-content', '> .views-row');
+		}
+
+		@media only screen and (max-width: $mobile) {
+			@include grilla-1-column-bs('> .view-content', '> .views-row');
+		}
+
+		.view-header {
+			display: none;
+		}
+		
+		.view-content {
+			@include tab-interna-styles('> .views-row > .views-field-label', '> .views-row .views-row > .views-field-label');
+		}
+	}
+	
+	// URL: /admisiones/posgrado
+	.posgrado-view.second-level-view {
+		.second-level-views-row {
+			&:last-child {
+				.second-level-button {
+					border: 0;
+				}
+			}
+		}
+
+		.third-level-views-row {
+			&:last-child {
+				.third-level-button {
+					border: 0;
+				}
+			}
+		}
+
+		.second-level-button {
+			text-transform: uppercase;
+		}
+
+		.second-level-content {
+			padding: 0;
+		}
+
+		.third-level-content {
+			padding: 23px 0 20px;
+		}
+
+		.views-field-link {
+			text-align: center;
+			padding: 10px 0;
+
+			a {
+				@include buton-xl-green;
+			}
+		}
+	}
+
+	// URL: /admisiones/posgrado
+	.third-level-view {
+		.third-level-button {
+			@include tab-title;
+			text-transform: none;
+			border-bottom: 1px solid $color_gray_15;
+			&:hover {
+				color: $color_brand;
+			}
+		}
+	}
+	
+	&.view-convocatorias.view-display-id-block_5 {
+		//@include bg-laterales();
+	}
+
+	&.view-view-ubosque-fechas-inscripcion-posgrado {
+	//	padding-bottom: 8%;
+}
+
+&.view-view-ubosque-fechas-inscripcion-pre-pos {
+	.views-field-link {
+		text-align: center;
+		padding: 10px 0;
+
+		a {
+			@include buton-xl-green;
+		}
+	}
+}
+
+
+@include js-masonry-grid-3('&.view-vista-facultad-productos-academicos .views-infinite-scroll-content-wrapper', '.views-row');
+
+
+
+
+
+	&.view-vista-facultad-productos-academicos {
+		@include teaser-producto-academico('.views-row', '.field--name-field-imgen', '.field--name-node-title h2', '.field--name-field-bocadillo', '.field--name-node-link');	
+
+		.pager__item {
+			text-align: center;
+			padding: 17px 0 50px;
+
+			a {
+				@include buton-l-green;
+			}
+		}
+	}
+
+	&.view-id-catalogo_de_publicaciones,
+	&.view-search-catalogo {
+
+		@include grilla-4-columns-bs('>.view-content', '.views-row');
+
+		.view-header {
+			.uat-total-resultados {
+				@include acherus_grotesqueregular (23px);
+				border: 1px solid #DDDDDD;
+				background-color: #FBFBFB;
+				padding: 15px 20px;
+				margin-bottom: 30px;
+				border-radius: 5px;
+			}
+			.uat-num-total {
+				@include acherus_black(23px);
+				color: $color-brand;
+			}
+		}
+
+		.views-field-field-imagenes-multiples {
+			max-width: 50%;
+			padding-left: 20px;
+			padding-bottom: 20px;
+
+			@media only screen and (max-width: $tablet) {
+				max-width: 70%;
+				padding-bottom: 10px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				max-width: 80%;
+				padding-left: 0px;
+				margin: 0 auto;
+			}
+		}
+
+		.views-field-title {
+			@include acherus_black(16px);
+			letter-spacing: -0.5px;
+			padding-bottom: 10px;
+			line-height: 100%;
+		}
+
+		.views-field-field-bocadillo {
+			@include pt_serifitalic(14px);
+			padding-bottom: 5px;
+			line-height: 100%;
+		}
+
+		.views-field-field-titulo-valores- {
+			@include acherus_black(12px);
+			letter-spacing: -0.5px;
+			padding-bottom: 5px;
+		}
+
+		.views-field-view-node,
+		.views-field-node-grants {
+			a {
+				@include link-text;
+				font-size: 10px;
+			}
+		}
+	}
+}
+

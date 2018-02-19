@@ -1,0 +1,45 @@
+.grouptype-blog {
+	#header {
+		.header-inner {
+			border: 0;
+		}
+
+		.header_first {
+			width: 100%;
+		}
+
+		.block-menu {
+			float: right;
+			
+			.menu {
+				
+			}
+
+			.menu-item {
+				@include inline-block;
+
+				a {
+					@include font(13px, 16px, 0.2px);
+					font-family: $font-brandb;
+					text-transform: uppercase;
+					color: white;
+					text-decoration: none;
+					padding-right: 20px;
+					background: url(../images/svg/flecha-1-white-bottom.svg) no-repeat 100% 50%;
+				}
+			}
+		}
+	}
+
+	.share-text {
+		@include inline-block;
+		// width: 300px;
+		margin: 0 20px;
+	}
+
+	.field--name-field-tags {
+		@include inline-block;
+		width: 300px;
+		margin: 0 20px;
+	}
+}
