@@ -1,0 +1,67 @@
+div[class*="block-views-blockeducacion-continuada-carousel-block"]{
+	@include grid-porcentaje(8);
+	float:left;
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    @media only screen and (max-width: $mobile) {
+            width: 100%;
+            min-height: 320px;
+        }
+	.jcarousel-wrapper{
+		&.jcarousel-skin-default{
+			min-height: 300px;
+
+			&.jcarousel-horizontal{
+				padding: 0;
+			    margin: 0;
+			    max-width: 100%;
+			    border-radius: 0;
+			    border: none;
+			    box-shadow: none;
+			    width: 760px;
+			    .jcarousel{
+			    	min-height: 300px;
+			    	.jcarousel-container-horizontal{
+			    		li{
+			    			width: 760px;
+			    			min-height: 300px;
+			    			.views-field-title{
+			    				position: absolute;
+    							z-index: -1;
+                			}
+			    		}
+			    	}
+			    }
+			}
+			.jcarousel-control-next{
+				right: 30px;
+				top: 50%;
+				@media only screen and (max-width: $mobile) {
+					right: -15px;
+				}
+			}
+			.jcarousel-control-prev{
+				left: 30px;
+				top: 50%;
+				@media only screen and (max-width: $mobile) {
+					left: -15px;
+				}
+			}
+
+		}
+
+	} 	
+	+ .block-block-content{
+		@include grid-porcentaje(4);
+		float:left;
+		position: relative;
+	    min-height: 1px;
+	    @media only screen and (max-width: $mobile) {
+            width: 100% !important;
+        }
+        @media only screen and (max-width: $tablet) {
+            width: 30%;
+        }
+	}
+}

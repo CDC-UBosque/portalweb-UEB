@@ -1,0 +1,622 @@
+// ------------------ Acordiones creados desde drupal -----------------------|
+@mixin acordion-wrapper {
+  // write the css here
+  font-family: $font-baseb;
+  font-size: $font-serif-xs;
+  color: $color_gray_80;
+  letter-spacing: 2.18px;
+  line-height: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 15px 0 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #babcc0;
+  position: relative;
+  padding-right: 35px;
+  margin-bottom: 0;
+  &[aria-expanded="true"]{
+  color: $color_brand;
+  border-bottom: 1px solid $color_brand;
+	}
+  &::after {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 100%;
+    height: 1px;
+    width: 100%;
+    //background: $color_gray_50;
+    transition: 1.5s ease-out all;
+  }
+  &:hover {
+   	color: $color_brand;
+   	&::after {
+   	    left: 0;
+   	    background: $color_brand;
+   	}
+  }
+}
+
+@mixin acordion-wrapper-desplegado {
+	padding-bottom: 1rem;
+	padding-right: 1rem;
+	//padding-top: 1rem;
+}
+
+
+// ------------------ Content cursos ec -----------------------|
+.page-node-type-diplomado, .page-node-type-curso-corto, .page-node-type-evento-profesional{
+	.content.region-content{
+		@include inline-block(top);
+		@include grid-porcentaje(8);
+		float: left;
+		@media only screen and (max-width: $mobile) {
+			div[class*="node--type-"]{
+				> div{
+					width: 100%;
+					&.field--name-field-ec-dirigido-a{
+						margin-top: 30px;
+
+					}
+				}
+			}
+			
+		}
+	}
+	.region-header-educon+.wrap-content{
+		padding-top: 20px !important;
+		display: table;
+    	margin: 0 auto;
+	}
+	// ------------------ seccion banner  -----------------------|
+	.field--name-field-ec-imagen-promocional{
+		display: grid;
+		img{
+			width: 100%;
+		}
+	}
+	
+	// ------------------ Seccion informacion inicio, datos, etc -----------------------|
+	.field--name-field-ec-fecha-de-inicio, .field--name-field-ec-fecha-de-finalizacion, .field--name-field-ec-horario, .field--name-field-ec-inversion, .field--name-field-ec-descuentos-especiales, .field--name-field-ec-inversion-en-dolares, .field--name-field-ec-tema-central-evento, .field--name-field-ec-consulte-la-agenda{
+    letter-spacing: 1px;
+    line-height: 17px;
+	  border-bottom: 1px solid #D7D8D0;
+	  @include grid-porcentaje(8);
+	  padding: 1rem 1.5rem 1rem 4rem;
+	  display: inline-block;
+	  float: left;
+	  position: relative;
+	  
+		.field__label{
+			font-size: $font-baser-s;
+			font-family: $font-baseb;
+		}
+		.field__item{
+			font-size: $font-baser-s;
+			font-family: $font-basel;
+			a{
+				@include buton-s-border-green;
+				padding: 0.3rem 1rem;
+				margin-top: 0.4rem;
+			}
+		}
+		
+	}
+	
+	// ------------------ before icons -----------------------|
+	.field--name-field-ec-fecha-de-inicio:before, .field--name-field-ec-fecha-de-finalizacion:before{
+		position: absolute;
+    content: "";
+    background: url(../images/educon/calendario-icn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+        background-position: 50%;
+    width: 38px;
+    height: 38px;
+    left: 15px;
+	}
+	
+	.field--name-field-ec-horario:before{
+		position: absolute;
+    content: "";
+    background: url(../images/educon/horario-icn.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+        background-position: 50%;
+    width: 38px;
+    height: 38px;
+    left: 15px;
+	}
+	
+	.field--name-field-ec-inversion:before, .field--name-field-ec-inversion-en-dolares:before{
+		position: absolute;
+	    content: "";
+	    background: url(../images/educon/inversion-icn.svg);
+	    background-size: contain;
+	    background-repeat: no-repeat;
+        background-position: 50%;
+	    width: 38px;
+	    height: 38px;
+	    left: 15px;
+	}
+	
+	.field--name-field-ec-tema-central-evento:before{
+		position: absolute;
+	    content: "";
+	    background: url(../images/educon/evento-icn.svg);
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	    width: 38px;
+	    height: 38px;
+	    left: 15px;
+	}
+	
+	.field--name-field-ec-descuentos-especiales:before{
+		position: absolute;
+	    content: "";
+	    background: url(../images/educon/descuentos-icn.svg);
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	    width: 38px;
+	    height: 38px;
+	    left: 15px;
+	}
+	
+	.field--name-field-ec-consulte-la-agenda:before{
+		position: absolute;
+	    content: "";
+	    background: url(../images/educon/agenda-icn.svg);
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: 50%;
+	    width: 38px;
+	    height: 38px;
+	    left: 15px;
+	}
+	
+	// ------------------ seccion nuevo programa -----------------------|
+	.field--name-field-ec-nuevo-programa{
+		position: absolute;
+	    top: 25px;
+	    right: -19px;
+	    background: #7bc241;
+	    color: #ffffff;
+	    padding: 0.5rem 1rem;
+	    transform: rotate(45deg);
+	    font-size: $font-baser-xs;
+	    transform: rotate(45deg);
+	    a{
+		    color: #ffffff;
+		    text-decoration: none;
+	    }
+	}
+	
+	.field--name-field-ec-persona-equipo-de-apoyo{
+		@include grid-porcentaje(4);
+	  padding: 1rem 1.8rem;
+	  background: $color_brand_ec_blue_2;
+	  display: inline-block;
+	  min-height: 20.9rem;
+	  
+	  .field__label{
+			font-size: $font-brandb-m;
+			font-family: $font-brandb;
+			color: #ffffff;
+		}
+		
+		.field__item{
+			font-size: $font-baser-s;
+			font-family: $font-basel;
+			
+			.field--name-field-ec-imagen-equipo-apoyo img{
+			  border-radius: 100px;
+				overflow: hidden;
+				max-width: 100px;
+				margin: 1rem 0;
+			}
+			
+			h2{
+				font-family: $font-bl-s;
+				font-size: $font-bl-s;
+				color: #ffffff;
+				line-height: 22px;
+			}
+			
+			p{
+				color: #DDDDDD;
+				line-height: 17px;
+			}
+			
+			a{
+				color: $color_brand;
+        word-wrap: break-word;
+        font-size: $font-bsb-m;
+        font-family: $font-baser;
+			}
+			
+		}
+		
+	}
+	.view-preinscripcion-educon{
+		text-align: center;
+		a{
+			@include buton-l-green;
+		}
+	}
+	
+	// ------------------ seccion video -----------------------|
+	.field--name-field-ec-video-promocional{
+		@include inline-block(top);
+		@include grid-porcentaje(12);
+		max-width: 100%;
+    	margin: 3rem 0;
+    	position:relative;
+		padding-bottom:56.25%;
+		height:0;
+		overflow:hidden;
+		max-width:100%;
+		iframe{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+	// ------------------ seccion tabs e informacion restante -----------------------|
+	.field--name-field-boton-inscripcion-educon, .field--name-field-ec-dirigido-a, #edit-group-generalidades-educont, #edit-group-estructura-programa-educon, #edit-group-conferencistas-educont, .field--name-field-ec-informacion-persistente, .field--name-field-ec-importante{
+		display: inline-block;
+	}
+	
+	// ------------------ boton mas informacion -----------------------|
+	.field--name-field-boton-inscripcion-educon {
+		@include grid-porcentaje(12);
+		margin: 2rem 0;
+    text-align: center;
+			a{
+				@include buton-l-green;
+			padding: 10px 32px 11px;
+			@media only screen and (max-width: $tablet) {
+				padding: 8px 30px 8px;
+			}
+		}
+	}
+	
+	// ------------------ dirigido a -----------------------|
+	.field--name-field-ec-dirigido-a{
+		@include grid-porcentaje(12);
+		margin-bottom: 1.5rem;
+		border-radius:4px;
+		border:1px solid #bce8f1;
+		background-color: #d9edf7;
+		padding:20px;
+		.field__label{
+			font-size: $font-baseb-xs;
+			font-family: $font-baseb;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+		}
+		.field__item{
+			font-size: $font-baser-s;
+			font-family: $font-serif-italic;
+		}
+	}
+	
+	// ------------------ tabs generalidades -----------------------|
+	.form-wrapper{
+		@include grid-porcentaje(12);
+		
+		summary{
+			@include acordion-wrapper;
+			background: url(http://www.uelbosque.edu.co/themes/custom/seed_ubosque/images/svg/ArrowGreyDown.svg) no-repeat 100% 50%;
+			&[aria-expanded="true"]{
+				background: url(http://www.uelbosque.edu.co/themes/custom/seed_ubosque/images/svg/ArrowGreenDown-2.svg) no-repeat 100% 50% !important;
+  				border-bottom:1px solid #7BC142;
+			}
+		}
+		strong{
+		  font-size:14px;
+		  font-weight: 400 !important;
+		}
+		.field--label-above{
+			@include acordion-wrapper-desplegado;
+			margin-right: 44px;
+			border-right:1px solid #ededed;
+  			border-bottom:1px solid #ededed;
+  			padding-top: 2rem;
+  			@media only screen and (max-width: $mobile) {
+  				margin-right: 0;
+  				border-right:none;
+  			}
+  			&.field--name-field-ec-valor-agregado{
+  				@media only screen and (max-width: $mobile) {
+	  				blockquote{
+	  					margin: 0;
+	  				}
+	  			}
+  				+.field--type-text-with-summary{
+  					position:relative;
+					padding-left: 2em;
+					padding-bottom:20px;
+					margin-right: 44px;
+					border-right:1px solid #ededed;
+  					border-bottom:1px solid #ededed;
+					&:before{
+					    content: '»';
+					    position: absolute;
+					    height: 20px;
+					    width: 20px;
+					    top: 15px;
+					    left: 5px;
+					    font-size: 1.3em;
+					    font-weight: 700;
+					    color: #2c3e50;
+						
+					}
+					p{
+						&:first-child{
+							padding-top:20px;
+						}
+					}
+  				}
+			}
+			&.field--name-field-ec-modulo-o-semestre{
+				margin-bottom: 0 !important;
+				border-bottom:none;
+			}
+			&.field--name-field-ec-temario{
+				padding-top:0;
+				.field__label{
+					font-family: $font-bsb !important;
+				}
+				.field__item{
+					strong{
+						font-family:$font-baser !important;
+						font-weight: 400;
+					}
+				}
+				p{
+					font-family: $font-bli;
+					line-height: 1;
+					font-size: 14px;
+    				display: inline-block;
+				}
+			}
+			.field__label{
+				//font-size: $font-bl-m;
+				font-family: $font-brandb;
+				//font-family:$font-bsb !important;
+				margin-top: 1rem 0;
+				font-size: 25px;
+				padding-bottom:5px;
+			}
+			.field__item{
+				font-size: $font-baser-s;
+				font-family: $font-basel;
+				line-height: 18px;
+				p{
+					font-family: $font-basel;
+				}
+				ul {
+	        //list-style-type: disc;
+	        li {
+	          @include interna-parrafo;
+	          //padding-left: 25px;
+	          @include bullet;
+	          font-family: $font-basel;
+	        }
+				}
+			}
+		}
+
+		
+		.field--name-field-ec-estructura-del-programa{
+			@include acordion-wrapper-desplegado;
+			.field__label{
+				//font-size: $font-bl-m;
+				font-family: $font-bsb !important;
+				font-size: 23px;
+			}
+			.field__item{
+				font-size: $font-baser-s;
+				font-family: $font-basel;
+				line-height: 18px !important;
+				
+				.paragraph--type--estructura-del-programa{
+					border-bottom: 1px solid $color_gray_10;
+					padding-top:1rem;
+					margin-right: 44px;
+					border-right:1px solid #ededed;
+  					border-bottom:1px solid #ededed;
+				}
+				
+				ul {
+			        //list-style-type: disc;
+			        li {
+			          @include interna-parrafo;
+			          //padding-left: 25px;
+			          @include bullet;
+			          font-family: $font-basel;
+			        }
+				}
+				// estructura del programa
+				// nombre materia
+				.field--name-field-ec-modulo-o-semestre{
+					font-size: 18px;
+					font-family: $font-bm;
+					margin-bottom: 0.8rem;
+					margin-top: 20px;
+					@media only screen and (max-width: $mobile) {
+						padding-top:10px;
+						font-family: $font-bsb;
+					}
+				}
+				// items materia
+				.field--name-field-ec-temario{
+					font-size: 16px;
+					font-family: $font-bli;
+					.field__label{
+						font-size: 16px;
+						font-family: $font-bli;
+					}
+					p{
+						font-family: $font-bli;
+						line-height: 1;
+						font-size: 14px;
+	    				display: inline-block;
+					}
+
+				}
+			}
+		}
+		
+		.field--name-field-ec-conferencistas{
+			//@include grid-porcentaje(9);
+			@include acordion-wrapper-desplegado;
+			margin-right: 44px;
+			border-right:1px solid #ededed;
+  			border-bottom:1px solid #ededed;
+  			padding-top: 2rem;
+  			@media only screen and (max-width: $mobile) {
+  				margin-right: 0;
+  				border-right:none;
+  			}
+			p{
+				font-size: $font-baser-s;
+				font-family: $font-basel;
+				line-height: 18px;
+				strong{
+					color: $color_brand_ec;
+				}
+			}
+
+		}
+	}
+	
+	// -----------------------|
+	.field--name-field-ec-informacion-persistente{
+		font-family: $font-serif-italic;
+		margin: 2rem 0;
+	}
+	
+	.field--name-field-ec-importante{
+		font-size: $font-baser-s;
+		border-radius: 4px;
+	    border: 1px solid #faebcc;
+	    padding: 6px 20px 23px;
+	    background-color: #fcf8e3;
+		.field__label{
+			font-family: $font-baseb;
+			padding-top:1rem;
+		}
+		.field__item{
+			font-family: $font-basel;
+
+		}
+	}
+
+}
+.page-node-type-evento-profesional{
+	.field--name-field-ec-estructura-del-programa{
+
+		>.field__item{
+			display: block;
+			padding: 10px 0;
+			border-bottom:1px solid $color_gray_15;
+			clear: left;
+			overflow: hidden;
+			.field--name-field-ec-dia{
+				@include grid-porcentaje(4);
+				float:left;
+				color:$color_gray_60;
+				font-family: $font-bli;
+				//font-size: $font-brandb-m;
+				//padding-top:25px;
+			}
+			.field--name-field-ec-hora{
+				@include grid-porcentaje(4);
+				float:left;
+				font-family: $font-bli;
+
+			}
+			.field--name-field-ec-temario{
+				@include grid-porcentaje(4);
+				float:left;
+				p{
+					font-family: $font-bli;
+					line-height: 1;
+					font-size: 14px;
+    				display: inline-block;
+				}
+
+			}
+
+		}
+	}
+}
+.page-node-type-curso-corto{
+	.field--name-field-ec-estructura-del-programa{
+		>.field__item{
+			.field--name-field-ec-dia{
+				font-family: $font-bsb;
+				font-size: $font-bl-s;
+				padding-bottom:15px;
+			}
+			.field--name-field-ec-temario{
+				padding-bottom: 15px;
+			}
+		}
+	}
+}
+body.page-node-type-curso-corto .form-wrapper .field--label-above.field--name-field-ec-valor-agregado+.field--type-text-with-summary{
+	position:inherit !important;
+	padding-left: 0 !important;
+}
+@media only screen and (max-width: $mobile) {
+	.paragraph--type--estructura-del-programa{
+		border-bottom: 1px solid #eaeaea;
+		padding-bottom: 15px;
+	}
+}
+
+// ------------------ Certificado y memorias -----------------------
+.page-node-type-pagina-de-repeticiones-educacion{
+		.region-header-educon+.wrap-content{
+			padding-top: 20px !important;
+			.field--type-text-with-summary{
+				p{
+					margin-top: 15px;
+					font-family: $font-bl;
+					font-size: $font-brandb-l;
+					border-bottom:1px solid $color_gray_20;
+					padding-bottom: 10px;
+				}
+			}
+		}
+		.field--name-field-repeticion-de-enlace{
+			margin-top: 30px;
+			.field__item{
+				padding: 0.5rem 1.5rem 0.5rem 0;
+				margin-bottom: 5px;
+				border-bottom: 1px solid $color_gray_10;
+				position:relative;
+				&::after{
+					content: '';
+				    background: url(/themes/custom/seed_ubosque/images/icon-download.svg) no-repeat;
+				    background-size: 100%;
+				    width: 25px;
+				    height: 35px;
+				    position: absolute;
+				    right: 0;
+				    top: 5px;
+				}
+			}
+			a{
+				@include link-text;
+
+			}
+		}
+}
