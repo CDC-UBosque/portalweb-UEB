@@ -1,0 +1,118 @@
+.region-right-column{
+	@include inline-block(top);
+	@include grid-porcentaje(4);
+	float: left;
+	@media only screen and (max-width: $mobile) {
+		margin-top: 1.5rem;
+	}
+	.educon_promocionales_arriba{
+		.field__item{
+			a{
+				display: inline-block;
+				margin-bottom: 0.6rem;
+			}
+		}
+	}
+	
+	div[class*="block-views-blockeducacion-continuada-bloques-laterales-paginas-block-"]{
+		background: $color_gray_10;
+		
+		.block-inner{
+			margin-top: 1.5rem;
+		}
+		
+		// ----------------------  titulo
+		.view-header{
+			font-family: $font-bli;
+			font-size: $font-bl-m ;
+			margin-bottom: 0.5rem;
+			padding: 1rem 2rem;
+			border-bottom: 1px solid $color_gray_20;
+			text-transform: uppercase;
+			line-height: 20px;
+			p{
+				font-family: $font-bli;
+				font-size: $font-bl-m ;
+			}
+		}
+		
+		.views-row{
+			padding-bottom: 1.5rem;
+			padding-top: 1rem;
+			border-bottom: 1px solid $color_gray_20;
+		}
+		
+		// ---------------------- listado contenido 
+		.view-content{
+			padding: 0rem 2rem 1rem;
+			.field-content{
+				
+			}
+			.views-field-field-ec-fecha-de-inicio{
+
+				@include inline-block(top);
+				@include grid-porcentaje(6);
+				padding: 0;
+				@media only screen and (max-width: $mobile) {
+					@include grid-porcentaje(12);
+				}
+				time{
+					position:relative;
+					&::before{
+					    content: '- ';
+					    display: inline-block;
+					    position: absolute;
+					    right: -10px;
+					    top: 0;
+				}
+				}
+				
+			}
+			.views-field-field-ec-fecha-de-finalizacion{
+				@include inline-block(top);
+				@include grid-porcentaje(6);
+				padding: 0;
+				@media only screen and (max-width: $mobile) {
+					@include grid-porcentaje(12);
+				}
+
+			}
+			time{
+				font-family: $font-baser;
+				font-size: $font-serif-xs;
+				color: #9B9B9B;
+			}
+			.views-field-title a{
+				font-family: $font-brandb;
+				font-size: $font-bl-m;
+				color: $color_gray_80;
+				margin-top: 0.5rem;
+				margin-bottom: 0.5rem;
+				text-decoration: none;
+				display: block;
+				line-height: 1;
+			}
+			.views-field-field-ec-bocadillo{
+				margin-bottom: 0.5rem;
+				font-size: $font-baser-s;
+				font-family: $font-basel;
+			}
+			.views-field-view-node a{
+				@include buton-s-border-green;
+			}
+		}
+		
+		// ----------------------  boton mas cursos
+		.view-footer{
+			text-align: center;
+			padding: 1.5rem 0;
+			a{
+				@include buton-s-green;
+				//padding: 0.9rem 2rem;
+				margin-bottom: 1rem;
+			}
+		}
+		
+	}
+	
+}

@@ -1,0 +1,69 @@
+/* Redes sociales */
+#prefooter{
+
+	.prefooter-container{
+	
+		.pre_footer {
+			overflow: hidden;
+			font-size: 0px;
+			position: relative;
+			padding-top: 40px;
+			text-align: center;
+	
+			&::before {
+				content: "";
+				width: 4px;
+				height: 4px;
+				background: #9a9a9a;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				border-radius: 20px;
+			}
+		}
+	    
+	}
+	.field__item{
+		p{
+
+			a{
+				display: inline-block;
+    			width: 46px;
+				transition: all .2s ease-in-out;
+				img{
+					width: 100%;
+					transition: all .2s ease-in-out;
+				}
+				&:hover img{
+					transform: scale(1.2);
+				}
+
+			}
+		}
+	}
+
+}
+
+/* footer */
+.region-footer-educon {
+	$local-mobile: $mobile;
+	$local-tablet: 1040px;
+
+	max-width: none;
+	display: block;
+	overflow: hidden;
+	background-color: $color_brand_ec;
+	height: auto;
+	width: 100%;
+	padding: 2rem 0;
+
+	p {
+		word-wrap: break-word;
+		color: #ffffff;
+		font-size: $font-baser-m;
+		font-family: $font-basel;
+	}
+	
+}

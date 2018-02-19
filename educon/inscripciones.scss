@@ -1,0 +1,61 @@
+.accordion{
+	margin:0 !important;
+	.wrap-accordion{
+		padding:0 !important;
+		@include acordion-wrapper;
+		a{
+			color:$color_brand;
+			text-decoration: none;
+			padding: 15px 0 12px;
+    		display: block;
+		}
+		
+	}
+	.field--label-above{
+		@include acordion-wrapper-desplegado;
+		margin-left: 0;
+
+		
+		.field__label{
+			font-size: $font-bl-m;
+			font-family: $font-bsb !important;
+			margin-top: 1rem 0;
+		}
+		h3{
+			font-size: $font-bl-m;
+			font-family: $font-bli !important;
+			margin-top: 1rem 0;
+		}
+		.field__item{
+			font-size: $font-baser-s;
+			font-family: $font-basel;
+			line-height: 18px;
+			p{
+				font-family: $font-basel;
+			}
+			ul {
+	    //list-style-type: disc;
+			    li {
+			      @include interna-parrafo;
+			      //padding-left: 25px;
+			      @include bullet;
+			      font-family: $font-basel;
+			    }
+			}
+		}
+	}
+	table{
+		td{
+			border-bottom: 1px solid #eae3e3;
+		    min-height: 19px;
+		    overflow: hidden;
+		    padding: 10px;
+		    font-size: $font-baser-s;
+		}
+	}
+	.nota{
+		font-family: $font-serif-italic;
+		font-size: $font-baser-s;
+	}
+}
+		

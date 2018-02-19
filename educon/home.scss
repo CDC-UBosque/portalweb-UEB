@@ -1,0 +1,282 @@
+/** Theme Educacion Continudada ***********************************************************************************/
+
+@mixin punto-title {
+    font-size: 23px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    top: 35px;
+    width: 5px;
+    height: 5px;
+    border-radius: 20px;
+    background: $color_gray_60;
+}
+@mixin field-noticias-title {
+    font-family: $font-brandb;
+    color: $color_gray_80;
+    font-size: 20px;
+    letter-spacing: -0.1px;
+    line-height: 20px;
+}
+
+.region-content-educon{
+    div[ class*="block-views-blockeducacion-continuada-bloque-para-home-block-"]{
+        padding-bottom:50px;
+        &:nth-child(4) .views-row{
+            min-height: 460px;
+            background:$color_gray_5;
+            .views-field-title{
+                padding: 0px 20px;
+            }
+            .views-field-field-ec-fecha-de-inicio{
+                padding-left:20px;
+            }
+            .views-field-field-ec-bocadillo{
+                padding: 0px 20px;
+            }
+            .views-field-view-node{
+                padding-left:20px;
+            }
+        }
+        &:nth-child(6){
+            background: $color_gray_15;
+            position: relative;
+            &::before,
+            &::after {
+                content: "";
+                background: $color_gray_15;
+                display: block;
+                //width: $bg-demasia-width;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 100%;
+            }
+            &::after {
+                left: auto;
+                right: 100%;
+            }
+
+            .views-row{
+                background:white;
+                min-height: 330px;
+                .views-field-title{
+                    padding: 0px 20px;
+                }
+                .views-field-field-ec-fecha-de-inicio{
+                    padding-left:20px;
+                }
+                .views-field-field-ec-bocadillo{
+                    padding: 0px 20px;
+                }
+                .views-field-view-node{
+                    padding-left:20px;
+                }
+            }
+            &:before{
+                content: '';
+                background:$color_gray_15;
+                width: 100%;
+                position: absolute;
+                height: 100%;
+            }
+
+        }
+        h2{
+            text-align: center;
+            padding-top: 55px;
+            margin-bottom: 30px; // Default padding-bottom
+            position: relative;
+            &::before {
+                @include punto-title;
+                content: "";
+            } 
+        }
+        .view-header{
+            position:relative;
+            .mas-programas{
+                    position: absolute;
+                    margin-top: 300px;
+                    z-index: 100;
+                    right: -30px;
+                    &:hover{
+                        opacity: .9;
+                    }
+                    @media only screen and (max-width: $mobile) {
+                        margin-top: 42px;
+                        right: 30px;
+                    }
+            }
+        }
+
+    }
+
+    .views-row{
+        width: 30.33333333%;
+        margin-right: 15px;
+        margin-left: 15px;
+        display: inline-block;
+        vertical-align: top;
+        @media only screen and (max-width: $mobile) {
+            width: 100% !important;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            margin-left: 0;
+        }
+        @media only screen and (max-width: $tablet) {
+            width: 28%;
+        }
+
+        div[class*="views-field-field-ec-fecha-de-"]{
+            display: inline-block;
+            font-family: $font-baser;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+            margin-right: 15px;
+            position: relative;           
+        }
+        .views-field-field-ec-imagen-promocional{
+            margin-bottom: 10px;
+        }
+        .views-field-field-ec-fecha-de-inicio{
+            &:after{
+                content: '- ';
+                display: inline-block;
+                position: absolute;
+                right: -10px;
+                top: 0;
+            }
+        }
+        .views-field-title{
+            margin-top: 8px;
+            margin-bottom: 20px;  
+            position: relative;
+            a{
+                @include field-noticias-title;
+                text-decoration: none;
+            }
+        }
+        .views-field-field-ec-bocadillo{
+            font-family: $font-baser;
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 15px;
+
+        }
+        .views-field-view-node{
+            a{
+                @include buton-s-border-green;
+            }
+        }
+
+        }
+    div[class*="block-views-blockeducacion-continuada-busqueda-block-"]{
+        width: 100%;
+        clear: left;
+        position:relative;
+        padding-top: 90px;
+        form{
+            .form-item {
+                input{
+                    border: 1px solid $color_gray_50;
+                    margin: 0 auto;
+                    background: white;
+                    padding: 14px 12px 14px 55px;
+                    -webkit-border-radius: 5px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    position: absolute;
+                    top: 50%;
+                    bottom: auto;
+                    left: auto;
+                    transform: translateY(-50%);
+                    height: 60px;
+                    color: $color_gray_80;
+                }
+                [placeholder] {
+                    @include placeholder(#DDDDDD, 'latoitalic', 0px, 19px);
+                    @media only screen and (max-width: $mobile) {
+                        @include placeholder(#DDDDDD, 'latoitalic', 0px, 14px);
+                    }
+                }  
+            }
+            .form-actions{
+                input{
+                    border: none;
+                    background-image: url('../images/SearchGreen.svg');
+                    background-color:transparent;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    position: absolute;
+                    height: 45px;
+                    width: 40px;
+                    top: 20px;
+                    left: 7px;
+                    text-indent: -9999px;
+                }
+            }
+            
+        }
+        .view-header {
+            position: relative;
+            font-family: $font-bli;
+            font-size: $font-brandb-m;
+            &:after{
+                position:absolute;
+                content: '';
+                background: $color_brand;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                top: 30px;
+                @media only screen and (max-width: $mobile) {
+                    background:none;
+                }
+            }
+
+            + .view-filters{
+                .form-item {
+                    input{
+                        top: 40px;
+                    }
+                } 
+            }
+            
+        }
+       .view-empty{
+            font-family: $font-bli;
+            font-size: $font-brandb-m;
+        }        
+        .view-content{
+            @media only screen and (max-width: $mobile) {
+                overflow: hidden;
+            }
+            .views-row{
+                    width: 97%;
+                    padding: 20px;
+                    margin: 10px 0 0 0;
+                &:nth-child(odd){
+                    background: $color_gray_5;
+                }
+            }
+        }
+    }
+            
+}
+@media only screen and (max-width: $tablet){
+    .layout-content--post-content{
+        a{
+            width: 50%;
+            float: left;
+        }
+    }
+}
+@media only screen and (max-width: $mobile){
+    .layout-content--post-content{
+        a{
+            width: 100% !important;
+        }
+    }
+}
