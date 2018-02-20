@@ -1,0 +1,216 @@
+.tabs-home {
+	@include default-tabs();	
+    
+	.tabMakerTab
+	{
+		@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+		{
+			box-sizing: border-box;
+			width: pixel-to-percentage(144px,768px);
+			margin: 0;
+			padding-right: 20px;
+			position: relative;
+		}
+		font-size: 13px;
+		&:after {
+			@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+			{
+				position: absolute;
+				display: block;
+				right: 10px !important;
+				top: 35px !important;
+				left: inherit !important;
+			}
+		}
+	}
+
+	.block-inner {
+		h3 {
+			display:none;
+		}
+	}
+
+	.tabMakerContent {
+		@include ib-grid;
+		padding: 0;
+	}
+
+	.block-content--type-bloque-tab {
+		height: 300px;
+		@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+		{
+			height: inherit;
+			padding-top: 10px;
+		}
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			height: auto;
+		}
+	}
+
+
+	.group-left {
+		@include ib-grid;
+		//@include inline-block(middle);
+		display: table;
+		max-width: 795px;
+		width: 100%;
+		height: 100%;
+		@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+		{
+			float: left;
+			margin-left: pixel-to-percentage(23px,768px);
+			width: pixel-to-percentage(476px,768px);
+			display: block;
+		}
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			clear: both;
+			float: inherit;
+			float: none;
+			display: block;
+			margin: 0 auto;
+			padding-top: 25px;
+			width: pixel-to-percentage(320px,375px);
+		}
+
+		.group-text, .field--name-field-imagen-slider{
+			width: 50%;
+			@include inline-block(middle);
+		}
+
+		> .group-text {
+			width: 275px;
+			display: table-cell;
+			vertical-align: middle;
+			@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+			{
+				width: auto;
+				display: block;
+			}
+		}
+		
+		.field--name-field-texto-inferior {
+			font-family: $font-serif-italic;
+			font-weight: normal;
+			font-size: 14px;
+			color: $color_gray_80;
+		}
+
+		.field--name-field-imagen-slider {
+			width: auto;
+			float: right;
+			position: relative;
+			left: -20px;
+			@include PageWithMax // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+			{
+				float: left;
+				overflow: hidden;
+			}
+			.field__item
+			{
+				@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+				{
+					margin-top: -24%;
+					padding-left: 10%;
+				}
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					margin-top: -19%;
+					padding-left: 10%;
+				}
+			}
+				img {
+					max-width: 460px;
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+		}
+	}
+
+	.group-right {
+		display: table;
+		width: 32%;
+		height: 100%;
+		@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+		{
+			float: right;
+			margin-right: pixel-to-percentage(23px,768px);
+			width: pixel-to-percentage(231px,768px);
+			display: block;
+		}
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			clear: both;
+			float: inherit;
+			float: none;
+			display: block;
+			margin: 0 auto;
+			width: pixel-to-percentage(320px,375px);
+			padding-bottom: 25px;
+		}
+		.field--name-body {
+			display: table-cell;
+			vertical-align: middle;
+			@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+			{
+				display: block;
+			}
+			p {
+				font-size: 14px;
+				font-family: $font-baser;
+				font-weight: normal;
+				margin-bottom: 0;
+
+				& + p {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	.field--name-field-texto-superior {
+		@include title_light_green_l;
+		font-size: 42px;
+		line-height: 95%;
+		margin-bottom: 15px;
+
+		strong {
+			font-family: $font-brandb;
+			font-weight: normal;
+		}
+	}
+
+	.tabMakerTab {
+		padding-bottom: 13px;
+		color: $color_gray_60;
+		position: relative;
+		margin-right: 26px;
+
+		@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+		{
+			margin-right: 0;
+		}
+
+		&::after {
+			position: absolute;
+			right: -15px;
+			top: 18px;
+		}
+
+		&.lavalamp-active {
+			color: $color_gray_80;
+		}
+	}
+
+	.lavalamp-bar {
+		height: 4px;
+		@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px;
+		{
+			margin-left: 0 !important;
+			width: pixel-to-percentage(144px,768px);
+		}
+	}
+}
+

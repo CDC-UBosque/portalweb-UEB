@@ -1,0 +1,108 @@
+.banner-catalogo-editoriales {
+  background: rgba(255, 162, 12, 1);
+  padding: 20px 2% 0 6%;
+
+  @media only screen and (max-width: $tablet) {
+    margin: 0 -30px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 20px 30px;
+  }
+
+  .field--name-field-title {
+    color: white;
+    font: {
+      family: $font-brandb;
+      size: 2em;
+    }
+    margin-bottom: 20px;
+  }
+
+  .field--name-field-bocadillo {
+    color: white;
+    font: {
+      family: $font-baser;
+      size: 1em;
+    }
+    line-height: 1.4;
+
+    @media only screen and (max-width: $tablet) {
+      font: {
+        size: 1.2em;
+      }
+      height: 80px;
+      overflow: hidden;
+   }
+  }
+
+  .field--name-field-imagen {
+    @include inline-block(bottom);
+    width: 35%;
+	height: 300px;
+	overflow: hidden;
+
+    @media only screen and (max-width: $tablet) {
+      margin-right: 4%;
+      width: 35%;
+	  vertical-align: middle;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      display: block;
+      margin: 0 auto;
+      padding-top: 0;
+      text-align: center;
+      width: 200px;
+	  height: 260px;
+    }
+	
+	img {
+		vertical-align: top;
+		width: 100%;
+		height: auto;
+	}
+  }
+
+  .text-content {
+    @include inline-block(middle);
+    width: 55%;
+	padding-bottom: 15px;
+
+    @media only screen and (max-width: $tablet) {
+      width: 48%;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      width: 100%;
+	  
+	  .field--name-field-link {
+	  	text-align: center;
+	  }
+    }
+  }
+
+  .field--name-field-pre-title {
+    background: url('../images/facultad/arrow-down-white.svg') no-repeat top center;
+    color: white;
+    display: inline-block;    
+    font: {
+      family: $font-baseli;
+      size: 0.8em;
+    }
+    margin-top: 26px;
+    padding-top: 40px;
+
+    @media only screen and (max-width: $tablet) {
+      margin-top: 6px;
+    }    
+  }
+
+  .field--name-field-link {
+    margin-top: 20px;
+
+    a {
+      @include button-md-white;
+    }
+  }
+}

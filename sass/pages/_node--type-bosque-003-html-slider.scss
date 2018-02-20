@@ -1,0 +1,166 @@
+.node--type-bosque-003-html-slider {
+	@include makeCarouselButtons;
+	
+    .text-content {
+		box-sizing: border-box;
+		width: 100%;
+        position: absolute;
+        padding: 75px 100px;
+        @media only screen and (max-width: $tablet) {
+            padding: 45px 70px;
+        }
+        @media only screen and (max-width: $tablet-2) {
+            padding: 30px 70px;
+        }
+        @media only screen and (max-width: $mobile) {
+            background-color: #ee2e39;
+            padding: 50px 30px;
+        }
+        h1 {
+            @include acherus_black(60px);
+            line-height: 66px;
+            letter-spacing: 6px;
+            color: white;
+            padding-bottom: 30px;
+            width: 50%;
+            @media only screen and (max-width: $tablet) {
+                font-size: 39px;
+                line-height: 46px;
+                padding-bottom: 17px;
+            }
+            @media only screen and (max-width: $tablet-3) {
+                font-size: 27px;
+                line-height: 30px;
+                padding-bottom: 38px;
+            }
+			@media only screen and (max-width: $mobile) {
+				width: auto;
+				padding-bottom: 10px;
+				font-size: 33px;
+				letter-spacing: 3.3px;
+			}
+
+			& + p {
+	            @media only screen and (max-width: $mobile) {
+	                display: none;
+	            }
+			}
+        }
+        p {
+            @include acherus_grotesqueultralight(35px);
+            color: white;
+            width: 100%;
+			max-width: 380px;
+            line-height: 100%;
+
+            @media only screen and (max-width: $tablet) {
+                font-size: 22px;
+            }
+            @media only screen and (max-width: $tablet-1) {
+                width: 80%;
+            }
+			
+			& + p {
+				margin-top: 60px;
+			}
+        }
+		
+		a {
+			@include buton-xl-green;
+			// background-color: rgba(0, 0, 0, 0.3);
+			// position: absolute;
+			bottom: 70px;
+			left: 70px;
+			padding: 5px 26px;
+
+			@media only screen and (max-width: $tablet) {
+				bottom: 50px;
+				padding: 10px 25px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				left: 33px;
+				bottom: 40px;
+			}
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+		}
+
+    }
+    .field--name-field-body-slider {
+		> .field__item {
+			& + .field__item {
+				display: none;
+			}
+		}
+
+        @media only screen and (max-width: $tablet) {
+            margin: 0 -30px;
+        }
+    }
+
+    .image-content {
+        @media only screen and (max-width: $mobile) {
+            height: 200px;
+			overflow: hidden;
+        }
+
+		img {
+			vertical-align: top;
+			display: block;
+			margin: 0 auto;
+		}
+    }
+
+	.buttons-wrapper {
+		position: static;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		min-height: inherit;
+
+		a.carousel-control {
+			margin: auto;
+			width: 28px;
+			height: 59px;
+
+			&.left {
+				background-image: url(../images/slider-buttons/prev.png);
+
+				@media only screen and (min-width: $mobile) {
+					margin-left: 20px; // adivinando
+				}
+			}
+
+			&.right {
+				background-image: url(../images/slider-buttons/prox.png);
+
+				@media only screen and (min-width: $mobile) {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	.carousel-control1 {
+		top: -740%;
+		@media only screen and (max-width: $tablet) {
+			top: -460%;
+		}
+		@media only screen and (max-width: $mobile) {
+			top: -295%;
+		}
+	}
+	.carousel-inner {
+
+		>.field__item {
+			@media only screen and (max-width: $mobile) {
+				min-height: 215px;
+			}  
+			
+		}
+	}
+	
+}

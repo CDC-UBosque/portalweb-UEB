@@ -1,0 +1,28 @@
+.centered-basic-page-no-image {
+	.field--name-node-title {
+		@include intro-title('.null', ' > h1', '.null');
+
+		h1 {
+			font-size: 33px;
+			line-height: 36px;
+		}
+	}
+	
+	&.page-node-type-pagina-basica-bosque-no-image {
+		.node--type-pagina-basica-bosque-no-image {
+			.field--name-body {
+				max-width: none;
+			}
+		}
+	}
+	
+	// URL: /electivas-institucionales
+	.block-system-main-block {
+		margin-bottom: 55px;
+	}
+
+	// URL: /electivas-institucionales
+	#footer {
+		margin-top: 50px;
+	}
+}

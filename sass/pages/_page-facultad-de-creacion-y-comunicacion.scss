@@ -1,0 +1,445 @@
+body.page-faculties
+{
+	.wrap-content
+	{
+		@include Laptop// Menor a: $laptop-width: 1024px;
+		{
+			//padding-top: 47px;
+		}
+	}
+	.layout-content
+	{
+		@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px;
+		{
+			margin-left: pixel-to-percentage(28px,$tablet-width);
+			margin-right: pixel-to-percentage(28px,$tablet-width);
+		}
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			width: auto;
+			margin-left: 0;
+			margin-right: 0;
+			display: block;
+		}
+		#main.content
+		{
+			@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px;
+			{
+				width: pixel-to-percentage(469px,$tablet-width - (28px * 2));
+				padding-right: 0;
+				padding-left: 0;
+				display: block;
+				float: left;
+			}
+			@include Mobile // Menor a: $mobile-l-width: 425px +1;
+			{
+				width: 100%;
+				padding-right: 0px;
+				padding-left: 0px;
+			}
+		}
+		.layout-content--post-content
+		{
+			@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px;
+			{
+				width: pixel-to-percentage(228px,$tablet-width - (28px * 2));
+				padding-right: 0;
+				padding-left: 0;
+				display: block;
+				float: right;
+				margin-top: 132px;
+			}
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				box-sizing: border-box;
+				padding-right: 0;
+				padding-left: 0;
+				margin-left: pixel-to-percentage(31px,375px);
+				width: pixel-to-percentage(375px - 31px*2,375px);
+			}
+		}
+		&:after
+		{
+			content: '';
+			display: block;
+			clear: both;
+			width: 100%;
+		}
+	}
+			.group.group--type-facultades .group-buttons .field--type-link.field--name-field-electivas a
+			{
+				background-color: transparent;
+				border: 1px solid #fff;
+				color: #fff;
+				&:hover {
+					background-color: transparent;
+				}
+			}
+			.group.group--type-facultades
+			{
+				
+				@include Tablet(0px,21px) // Menor a: $tablet-width: 768px + 21px;
+				{
+					//margin-top: 47px !important;
+				}
+				.main-image
+				{
+					@include media_height_varible_depending_resolution(340px,$desktop-width,297px,$tablet-width);
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						height: 492px;
+						overflow: hidden;
+					}
+					.field.field--type-image
+					{
+						@include Mobile // Menor a: $mobile-l-width: 425px;
+						{
+							height: 100%;
+							width: 1200px;
+							margin-left: -194px;
+						}
+						img
+						{
+							@include Mobile // Menor a: $mobile-l-width: 425px;
+							{
+								height: 100%;
+								width: auto;
+							}
+						}
+					}
+				}
+					.field--name-field-t
+					{
+						@include media_font_size_varible_depending_resolution($font-bl-xl,$desktop-width,$font-bl-xl,$tablet-width);
+						@include Tablet // Menor a: $tablet-width: 768px;
+						{
+							padding-left: pixel-to-percentage(25px,425px);
+							width: pixel-to-percentage(318px,425px);
+						}
+						@include Mobile // Menor a: $mobile-l-width: 425px;
+						{
+							padding-left: pixel-to-percentage(25px,425px);
+							width: pixel-to-percentage(318px,425px);
+							line-height: 30px;
+							font-size: 27px;
+						}
+						@include media_font_size_varible_depending_resolution(39px,$mobile-l-width,27px,$mobile-s-width);
+						@include media_anything_varible_depending_resolution(37px,$mobile-l-width,30px,$mobile-s-width,$anithing: 'line-height');
+						&::first-line 
+						{
+							@include Mobile // Menor a: $mobile-l-width: 425px;
+							{
+								line-height: 30px;
+								font-size: 27px;
+							}
+							@include media_font_size_varible_depending_resolution(39px,$mobile-l-width,27px,$mobile-s-width);
+							@include media_anything_varible_depending_resolution(37px,$mobile-l-width,30px,$mobile-s-width,$anithing: 'line-height');
+						}
+					}
+					.group-buttons
+					{
+						padding-right: pixel-to-percentage(42px,844px);
+						padding-left: pixel-to-percentage(42px,844px);
+						$ancho-boton-maximo: 234px;
+						$ancho-dos-botones-max-mas-col: $ancho-boton-maximo*2+20px*2;
+						@include Mobile // Menor a: $mobile-l-width: 425px;
+						{
+							text-align: center;
+							top: 257px;
+						}
+						.field--name-dynamic-token-fieldgroup-facultad-botones-pregrado-posgra
+						{
+							@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+							{
+								width: pixel-to-percentage($ancho-dos-botones-max-mas-col,745px);
+							}
+						}
+							.soy-custom-field
+							{
+								@include PageWithMax-NoTablet // Entre: $desktop-width: 1180px; ý $tablet-width: 768px;
+								{
+									width: pixel-to-percentage($ancho-boton-maximo,$ancho-dos-botones-max-mas-col);
+									margin-right: pixel-to-percentage(20px,$ancho-dos-botones-max-mas-col);
+									box-sizing: border-box;
+								}
+								@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px + 1px;
+								{
+									width: pixel-to-percentage($ancho-boton-maximo,$ancho-dos-botones-max-mas-col);
+									margin-right: pixel-to-percentage(15px,$ancho-dos-botones-max-mas-col);
+									box-sizing: border-box;
+								}
+								@include Mobile // Menor a: $mobile-l-width: 425px;
+								{
+									margin-bottom: 28px;
+									margin-right: 0;
+								}
+								&.field--name-field-pos
+								{
+									@include PageWithMax-NoTablet // Entre: $desktop-width: 1180px; ý $tablet-width: 768px;
+									{
+										margin-right: 0;
+									}
+								}
+								a
+								{
+									position: relative;
+									@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px + 1px;
+									{
+										width: 100%;
+										text-align: center;
+										box-sizing: border-box;
+										padding-right: 10px;
+										padding-left: 10px;
+										display: block;
+									}
+									&:after
+									{
+										content: url(../images/svg/ArrowWhiteDown.svg);
+										position: absolute;
+										top: 10px;
+										right: 10px;
+										@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px + 1px;
+										{
+											right: 7px;
+										}
+									}
+								}
+							}
+						.field--name-field-electivas
+						{
+							@include PageWithMax-NoMobile // Entre: $desktop-width: 1180px; ý $mobile-l-width: 425px + 1px;
+							{
+								width: pixel-to-percentage($ancho-boton-maximo,745px);
+								box-sizing: border-box;
+							}
+							a
+							{
+								@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px + 1px;
+								{
+									width: 100%;
+									text-align: center;
+									box-sizing: border-box;
+									padding-right: 10px;
+									padding-left: 10px;
+									display: block;
+								}
+							}
+						}
+					}
+
+				/*
+				position: relative;
+				width: 100%;
+				padding-top: 100% * (872px / 337px);
+				height: 0;
+				.main-image
+				{
+					position: absolute;
+					left: 0;
+					top: 0;
+				}
+				*/
+			}
+			&.content-sidebar .layout-content .post_content .listado-lineal.icon-star .field.field--name-field-archivos-facultad
+			{
+				@include Desktop-NoLaptop // Mayor a: $laptop-width: 1024px + 1px;
+				{
+					background-color: transparent;
+
+				}
+			}
+			.container-banner.faculty
+			{
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					margin-bottom: 0px;
+				}
+			}
+	#main
+	{
+		margin-right: 0;
+		margin-left: 0;
+	}
+		.block.agreement
+		{
+			@include Desktop-NoMobile // Mayor a: $mobile-l-width: 425px;
+			{
+				width: pixel-to-percentage(430px,880px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+				float: left;
+				margin-right: 0;
+			}
+		}
+		.block.practices
+		{
+			@include Desktop-NoMobile // Mayor a: $mobile-l-width: 425px + 1px;
+			{
+				width: pixel-to-percentage(430px,880px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+				float: right;
+			}
+		}
+		.block.caja-sencilla:not(.grado)
+		{
+			@include Desktop-NoMobile // Mayor a: $mobile-l-width: 425px + 1px;
+			{
+				width: pixel-to-percentage(430px,880px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+				float: left;
+				clear: both;
+				margin-right: 0;
+			}
+		}
+		.block.caja-sencilla.grado
+		{
+			@include Desktop-NoMobile // Mayor a: $mobile-l-width: 425px + 1px;
+			{
+				width: pixel-to-percentage(430px,880px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+				float: right;
+			}
+		}
+		.block.caja-sencilla.grado ~ div
+		{
+			clear: both;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				height: auto !important;
+			}
+		}
+		.region-content > .block:nth-child(2)
+		{
+			.intro
+			{
+				@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px + 1px;
+				{
+					width: 152%;
+				}
+			}
+			.intro + h2
+			{
+				@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px + 1px;
+				{
+					width: 152%;
+				}
+			}
+		}
+		.block-content--type-block-title
+		{
+			.intro + h2
+			{
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					$padding-rightleft: 16%;
+					padding-right: $padding-rightleft;
+					padding-left: $padding-rightleft;
+				}
+			}
+		}
+			.block .cita
+			{
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					margin-left: pixel-to-percentage(31px,425px);
+					width: pixel-to-percentage(425px - 31px*2,425px);
+				}
+				> *
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						font-size: 21.5px;
+					}
+				}
+			}
+		.block.conectate-ueb
+		{
+			.field.field__item
+			{
+				.field--name-field-pre-title
+				{
+					font-size: 5px;
+				}
+				p,a
+				{
+					color: #ebcddc;
+					font-size: 12px;
+					line-height: 13px;
+				}
+			}
+		}
+	.block.decano-text
+	{
+		.titulo-para-mobile-facultad
+		{
+			.field--name-field-texto-inferior
+			{
+				margin-top: 2px;
+			}
+		}
+	}
+	.block-views.block-views-blockpreguntas-frecuentes-por-facultad-block-2 .view-content .views-row
+	{
+		@include Tablet // Menor a: $tablet-width: 768px;
+		{
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+	}
+	.block.social-networks
+	{
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			margin-left: pixel-to-percentage(24px + 31px,375px);
+			width: pixel-to-percentage(375px - 2 * (24px + 31px) ,375px);
+		}
+		.block
+		{
+			@include Desktop-NoTablet // Mayor a: $tablet-width: 768px + 1px;
+			{
+
+			}
+			@include Laptop-NoMobile(0px, 100px) // Entre: $laptop-width: 1024px + 100px; ý $mobile-l-width: 425px + 1px + 0px;
+			{
+				width: 32.5%;
+			}
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				width: 100%;
+				max-width: none;
+				margin-right: 0;
+				margin-left: 0;
+				padding-right: 0;
+				padding-left: 0;
+				display: block;
+			}
+			.block-inner
+			{
+				> div
+				{
+					//display: table;
+				}
+			}
+				.column-post
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						width: 100%;
+						max-width: none;
+						padding-left: 0;
+						padding-right: 0;
+						padding-bottom: 21px;
+					}
+				}
+		}
+	}
+		.block.block-facebook-block .block-inner .column-post:last-child
+		{
+			@include Laptop-NoMobile(0px, 100px) // Entre: $laptop-width: 1024px + 100px; ý $mobile-l-width: 425px + 1px + 0px;
+			{
+				display: none;
+			}
+		}
+	.layout-content--post-content
+	{
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.container-prefooter-content {
+	
+	@include contact-prefooter-porcentaje ('.field--name-field-informacion-de-la-facultad', '.field--name-field-datos-de-informacion-decan>.field__item', 
+		'.field--name-field-acerca-de', '.field--name-field-requisitos', 0px);
+	font-size: 0px !important;
+	padding-bottom: 30px;
+	.field--name-field-informacion-de-la-facultad {
+		width: 70%;
+		display: inline-block;
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+			padding-bottom: 30px;
+			.field--name-field-datos-de-informacion-decan>.field__item {
+				&:nth-child(1) {
+					width: 45%;
+				}
+				&:nth-child(2) {
+					padding-left: 5%;
+				}
+			}
+		}
+		.block-content--type-bloque-informacion-decanatura {
+			width: 100%;
+		}
+	}
+	.field--name-field-informacion-facultad-bloqu {
+		width: 70%;
+		display: inline-block;
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+	.field--name-dynamic-block-fieldnode-redes-sociales {
+		@include contact-social-networks (2.99);
+		padding-bottom: 40px;
+		width: 30%;
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+	.field--name-dynamic-block-fieldgroup-redes-sociales {
+		@include contact-social-networks (2.99);
+		padding-bottom: 40px;
+		width: 30%;
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+}
+.page-node-type-productos-academicos,
+.page-node-type-practicas-profesionales,
+.page-node-type-convenios {
+	.container-prefooter-content {
+		&:before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            margin: 0 auto;
+            background-color: #9b9b9b;
+            margin-bottom: 30px;
+        }
+	}
+}

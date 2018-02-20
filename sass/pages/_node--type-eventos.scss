@@ -1,0 +1,62 @@
+@include views-row-list-date('.node--type-eventos.node--view-mode-teaser', '.field--name-field-fecha-fin2', '.field--name-field-noticias-taxonomia', '.field--name-node-title');
+@include views-row-list-date('.node--type-eventos.node--view-mode-resumen-4-dirigido-a', '.field--name-field-fecha-fin2', '.field--name-field-noticias-taxonomia', '.field--name-node-title');
+
+@include teaser-convocatorias('.node--type-eventos.node--view-mode-resumen-3', '.field--name-field-image', '.field--name-field-noticias-taxonomia', '.field--name-node-title');
+//@include teaser-convocatorias('.node--type-eventos.node--view-mode-resumen-4-dirigido-a', '.field--name-field-image', '.field--name-field-noticias-taxonomia', '.field--name-node-title');
+
+.views-row {
+	.node--type-eventos.node--view-mode-teaser {
+		margin-top: -5px;
+	}
+
+	&:first-child {
+		.node--type-eventos.node--view-mode-teaser {
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+
+	&:last-child {
+		.node--type-eventos.node--view-mode-resumen-3 {
+			.text-content {
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+
+.field--name-field-image + .field--name-field-image {
+	display: none;
+}
+
+//@include views-row-list-date-hover ('.node--type-eventos.node--view-mode-teaser', '.field--name-field-fecha-fin2');
+.block-views-blockconvocatorias-block-2, .block-views-blockconvocatorias-block-1 {
+	.view-footer {
+		margin-top: -7px;
+		padding-top: 7px;
+		background-color: white;
+		position: relative;
+		z-index: 21;
+	}
+}
+
+.node--type-eventos {
+	&.node--view-mode-teaser::before {
+		
+	}
+
+	&.node--view-mode-resumen-3 {
+		position: relative;
+		&:before {
+			display: none;
+		}
+		.node--view-mode-teaser {
+			border-bottom: 0;
+		}
+		
+	}
+}

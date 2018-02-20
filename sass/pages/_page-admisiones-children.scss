@@ -1,0 +1,152 @@
+.page-admisiones-children {
+	// hereda de URL: /programas-academicos
+	// se sobrescribe en URL: /inscripciones/apoyo-financiero
+	.revisa-admisiones {
+		margin-bottom: 50px;
+
+		@media only screen and (max-width: $tablet) {
+			margin-left: -20px;
+			margin-right: -20px;
+			// Ahí necesita -20 en vez de -30px, http://ubosque.d8.seedlabs.co/apoyo-financiero
+		}
+
+		.paragraph--type-h2 {
+			h2 {
+				font-family: $font-brandb;	
+			}
+		}
+
+		.block-content--type-bloque-titulo-image {
+			position: relative;
+		}
+
+		.field--name-field-body {
+			max-width: 70%;
+			margin-bottom: 15px;
+
+			@media only screen and (max-width: $mobile) {
+				height: 65px;
+				overflow: hidden;
+			}
+		}
+
+		.block-content--type-bloque-titulo-image {
+			position: relative;
+		}
+
+		.text-content,
+		.field--name-field-title-block {
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 27px 41px 0;
+			box-sizing: border-box;
+			@media only screen and (max-width: $tablet) {
+				padding: 20px 30px 0;
+				position: relative;
+				z-index: 20;
+			}
+		}
+
+		img {
+			min-height: 180px;
+			max-height: 240px;
+			max-width: none;
+			height: auto;
+			width: auto;
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			@media only screen and (max-width: $tablet) {
+				height: 240px;
+				position: absolute;
+				top: 0;
+				right: -90px;
+				max-width: none;
+				width: auto;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				right: -180px;
+			}
+		}
+		
+		.field--name-field-links {
+			position: relative;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 0 0 17px;
+
+			a {
+				@include button-md-white;
+				@media only screen and (max-width: $tablet) {
+					padding: 8px 30px 8px;
+				}
+			}
+		}
+	}
+
+	.block-system {
+		> .block-inner {
+			> h2 {
+				display: none;
+			}
+		}
+	}
+	.field--name-field-bocadillo-150 {
+	//	padding-bottom: 50px;
+	}
+	&.page-admisiones-posgrado,
+	&.page-admisiones-pregrado {
+		.field--name-field-titulo-2 {
+			max-width: 200px;
+		}
+	}
+
+	.node--type-pagina-basica-bosque-no-image {
+		padding-bottom: 20px;
+
+		@media only screen and (max-width: $tablet) {
+			padding-bottom: 25px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			padding-bottom: 13px;
+		}
+	}
+
+	&.inscripciones-estado-admision {
+
+		.node--type-pagina-basica-bosque-no-image {
+		//	padding-bottom: 45px;
+		}
+		.field--name-field-bocadillo-150 {
+		//	padding-bottom: 40px;
+		}
+	}
+
+	&.virtual-run {
+		.block-block-content71926682-4d25-440e-9f4d-815fd66b0640 {
+			.field--name-body {
+				overflow: scroll;
+				border: 1px solid #bbb;
+			}
+		}
+
+		iframe {
+			border: 0;
+		}
+	}
+	.paragraph--type-h2 {
+		padding-bottom: 10px;
+	}
+	.paragraph--type-bocadillo-150 {
+		padding-bottom: 10px;
+	}
+}
+

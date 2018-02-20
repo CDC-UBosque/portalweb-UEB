@@ -1,0 +1,15 @@
+.pretitle-makeustheforest{
+	text-align: center;
+	p {
+		font-family: $font-bl;	
+		font-size: $font-bl-m;
+		color: $color_gray_60;
+		font-size: 13px;
+		&:before {
+			
+			content: '·';
+			clear: right;
+			display: block
+		}
+	}
+}

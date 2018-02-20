@@ -1,0 +1,164 @@
+.sidebar-first {
+	$width: 23.5%;
+	max-width: $width; //280px;
+	width: 100%;
+	float: left;
+	padding-top: 10px;
+	margin-bottom: 80px;
+	margin-top: -10px;
+
+	.region-content {
+		border-right: 1px solid $color_gray_15;
+	}
+
+	@media only screen and (max-width: $tablet) {
+		display: none;
+	}
+
+	& + #main {
+		@media only screen and (min-width: $tablet) {
+			//overflow: hidden;
+			width: 76.5%; //74.5%;
+			float: left;
+			padding-top: 10px;
+			padding-left: 20px;
+			box-sizing: border-box;
+		}
+
+		.form-inscription-process {
+			position: relative;
+			margin-top: 0;
+			margin-left: -20px;
+			top: -30px;
+			width: calc(100% + 20px) !important;
+			
+			@media only screen and (max-width: $tablet) {
+				margin-left: -30px;
+				margin-right: -30px;
+				width: auto !important;
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+	}
+
+	.close-cerrar {
+		position: absolute;
+		top: 25px;
+		right: 30px;
+		display: none;
+	}
+
+	.js-sidebar-button {
+		display: none;
+		padding: 100px 0 60px;
+		text-align: center;
+
+		/* restaurarlo si lo piden, parece que no está en los requerimientos
+		@media only screen and (max-width: $tablet) {
+			display: block;
+		}*/
+
+		a {
+			@include buton-l-green;
+		}
+	}
+
+	.view-menu-facultades {
+		.view-content {
+			display: block !important;
+		}
+	}
+	.menu--unidades-y-usuarios {
+		h2 {
+			@include latoblack(11px);
+			letter-spacing: 2.2px;
+		}
+		.menu {
+			.menu-item {
+				position: relative;
+
+				a {
+					font-size: 12px;
+					letter-spacing: 2.2px;
+					margin-left: 39px;
+					
+					&:before {
+						content: "";
+						position: absolute;
+						top: 10px;
+						left: -1px;
+						height: 10px;
+						width: 10px;
+						border: 2px solid $color_brand;
+						background-color: transparent;
+						border-radius: 12px;
+						vertical-align: middle;
+						margin-left: 10px;
+					}
+					
+					&.is-active::before {
+						background-color: $color_brand;	
+					}
+				}
+				&.menu-item--active-trail {
+					&:before {
+						content: "";
+						background-color: $color_brand;
+					}
+				}
+			}
+		}
+	}
+	
+	.block-views-blockmenu-preguntas-frecuentes-block-1 {
+
+		.view-footer {
+			.views-row {
+				padding: 10px 0;
+
+				&.menu-item--active-trail {
+					padding-top: 15px;
+					padding-bottom: 15px;
+					position: relative;
+					padding-left: 15px;
+
+					a{
+						color: #4A4A4A;
+						font-family: "latobold";
+					}
+				}
+			}
+			a {
+				background: none;
+				color: $color_gray_60;
+				font-family: $font-baser;
+				padding: 0;
+			}
+		}
+		.view-content {
+			margin-left: 30px;
+
+			.views-row {
+				a {
+					font-size: 11px;
+					line-height: 100%;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+	.field--name-field-subtitle-block,
+	.block-content--type-_002-texto-links {
+
+		a {
+			@include sidebar-menu-title;
+			@include inline-block;
+		}
+	}
+	.block-content--type-_002-texto-links {
+		padding: 15px 0 15px 15px;
+    	background: url(../images/menu/menu-lateral-arrow-left.svg) no-repeat 0 50%;
+	}
+
+}

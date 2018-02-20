@@ -1,0 +1,507 @@
+.page-node-type-pagina-basica-bosque {
+    @include page-with-banner-stick-to-header;
+    &.programa-inmersion {
+        .node--type-pagina-basica-bosque {
+            @include body-max-width;
+        }
+    }
+    &.programa-inmersion,
+    &.orientacion-especializada {
+        .main-image {
+            .field--name-field-titulo-2 {
+                max-width: 50%;
+                @media only screen and (max-width: $mobile) {
+                    max-width: none;
+                }
+            }
+        }
+    }
+    // URL: /bienestar-universitario/deportes
+    &.page-bienestar-universitario {
+        .node--type-pagina-basica-bosque {
+            padding-bottom: 0 !important;
+        }
+        .block-webform-block {
+            width: 100%;
+        }
+        .field--name-field-texto-encima-del-enlace::before {
+            content: url("../images/svg/arrow-down-green.svg");
+        }
+        .wrapper-enlace {
+            max-width: 180px;
+			
+            @media only screen and (min-width: $tablet) {
+                right: 54px;
+                bottom: 26px;
+            }
+			
+			@media only screen and (max-width: $mobile) {
+				left: 0;
+				margin: auto; 
+			}
+        }
+        .field--name-field-enlace {
+            a {
+                background-color: $color-brand;
+                color: white;
+                padding: 11px 0 10px;
+            }
+        }
+        .main-image {
+            .field--name-field-titulo-2 {
+                max-width: 45%;
+                @media only screen and (max-width: $mobile) {
+                    max-width: none;
+                }
+            }
+        }
+    }
+    &.orientacion-especializada {
+        .main-image {
+            .field--name-field-titulo-2 {
+                font-family: "acherus_grotesquebold";
+            }
+        }
+    }
+    &.page-internacionalizacion,
+    &.movilidad-estudiantil {
+        .layout-content {
+            @media only screen and (max-width: $mobile) {
+             //   padding: 0 15px;
+            }
+        }
+        .bar-desplegable-content {
+            position: relative;
+            padding-top: 30px;
+            .node-date {
+                right: 32px;
+                position: absolute;
+                top: 30px;
+                .field--name-field-fecha-inicio {
+                    border-bottom: 1px solid #e4e4e4;
+                    margin-bottom: 13px;
+                    padding-bottom: 13px;
+                    position: relative;
+                    &:after {
+                        background: $color_brand;
+                        bottom: -2px;
+                        content: '';
+                        display: inline-block;
+                        height: 3px;
+                        left: 0;
+                        position: absolute;
+                        width: 30px;
+                    }
+                }
+                time {
+                    display: none;
+                }
+                .field__label {
+                    color: #6d6d6d;
+                    font: {
+                        family: $font-serif-italic;
+                        size: 10px;
+                    }
+                    margin-bottom: 4px;
+                }
+                .date-month {
+                    color: #505050;
+                    display: block;
+                    font: {
+                        //family: $font-serif-italic;
+                        size: 10px;
+                    }
+                    letter-spacing: 1.2px;
+                    text-transform: uppercase;
+                }
+                .date-day {
+                    color: #3F3F4B;
+                    display: block;
+                    font: {
+                        family: $font-brandb;
+                        size: 30px;
+                    }
+                }
+                @media only screen and (max-width: $tablet) {
+                    display: none;
+                }
+            }
+        }
+        .sidebar-first {
+            +#main {
+                .main-image {
+                    .field--name-field-titulo-2 {
+                        @media only screen and (max-width: $tablet) {
+                            line-height: 1.3;
+                            font: {
+                                size: 33px;
+                            }
+                            &::first-line {
+                                font: {
+                                    family: "acherus_grotesqueultralight";
+                                    size: 33px;
+                                }
+                                line-height: 1.3;
+                            }
+                        }
+                        @media only screen and (max-width: $mobile) {
+                            font: {
+                                size: 27px;
+                                weight: 800;
+                            }
+                            line-height: 1.4;
+                            width: 143px;
+                            &::first-line {
+                                font: {
+                                    family: "acherus_grotesqueultralight";
+                                }
+                                line-height: 1.4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .field--name-field-bocadillo-150 {
+            @media only screen and (max-width: $tablet) {
+                font-weight: 600;
+            }
+        }
+        .sidebar-first {
+            &+#main {
+                .node--type-pagina-basica-bosque {
+                    padding-bottom: 0px;
+                }
+            }
+        }
+        .form-inscription-process {
+            margin-left: -20px;
+            margin-top: -30px;
+        }
+        .field--type-text-with-summary {
+            max-width: 70%;
+            @media only screen and (max-width: $mobile) {
+                max-width: 90%;
+            }
+            p {
+                @include paragraphs_large;
+            }
+        }
+        .block.acordeon-becas-inter .bar-desplegable-content {
+            @media only screen and (max-width: $mobile) {
+                margin-right: 0;
+            }
+            .field--type-text-with-summary {
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+        }
+        .node--type-pagina-basica-bosque {
+            @include arrow_before ('.field--name-field-texto-encima-del-enlace',
+            15px 0px 0px 0px);
+            .wrapper-enlace {
+                bottom: 30px;
+                right: 0px;
+            }
+            .field--name-field-enlace {
+                a {
+                    @include buton-l-green;
+                }
+            }
+            .field--name-field-titulo-2 {
+                width: 240px;
+            }
+        }
+    }
+    .block-webform-block {
+        @include form-input-select ('.form-item, .js-form-type-textarea',
+        'input, textarea');
+        @include form-input('.form-item',
+        'input');
+        @include form-checkbox ('.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion');
+        margin-bottom: 0px;
+        width: 66%;
+		padding-top: 30px;
+		border-top: 1px solid $color_gray_15;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $color_gray_15;
+		
+		.block-inner {
+			> h2 {
+				font-size: 20px;
+				margin-bottom: 5px;
+			}
+		}
+
+		form {
+			overflow: hidden;
+
+			p {
+				margin-bottom: 30px;
+			}
+		}
+
+        @media only screen and (max-width: $tablet) {
+            width: 80%;
+        }
+
+        @media only screen and (max-width: $tablet-2) {
+            width: 100%;
+        }
+        label,
+        .form-text,
+        .form-email,
+        .form-textarea {
+            font-family: $font-baser;
+            color: $color_gray_60;
+            line-height: 17px;
+            font-size: 14px;
+        }
+        .form-textarea {
+            padding: 10px;
+        }
+        .form-item {
+            margin-bottom: 15px;
+        }
+        .js-form-type-checkbox {
+            // text-align: center;
+            width: 100%;
+        }
+        .form-actions {
+            float: right;
+            input {
+                @include buton-xl-green;
+            }
+        }
+        &::after {
+            background: #ededed;
+            //content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            margin-top: 80px;
+			position: absolute;
+			top: 0;
+			right: 100%;
+        }
+        &.webform-element--title-inline {
+            #formulario-checkbox-error {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .js-form-type-textarea {
+            padding-right: 0 !important;
+            width: 100%;
+        }
+
+		
+		.form-composite {
+			.form-item {
+				margin-bottom: 5px;
+			}
+
+			.fieldset-legend {
+				margin-bottom: 5px;
+				display: block;
+				color: #9b9b9b;
+				font-size: 14px;
+				line-height: 17px;
+			}
+		}
+
+    }
+    // URL: /admisiones/posgrado
+    .sidebar-first+#main {
+        @media only screen and (min-width: $tablet) {
+            padding-top: 15px;
+        }
+        .main-image {
+			.field--name-field-titulo-largo,
+            .field--name-field-titulo-2 {
+                padding-left: 19px;
+                padding-top: 27px;
+                transition: .3s ease-out all;
+                @media only screen and (max-width: $tablet) {
+                    padding-left: 0;
+                }
+            }
+        }
+        .node--type-pagina-basica-bosque {
+            @include interna-bocadillo('.field--name-field-bocadillo');
+            padding-bottom: 45px;
+            @media only screen and (max-width: $tablet) {
+                padding-bottom: 25px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-bottom: 13px;
+            }
+			
+			.field--name-field-imagen-secundaria {
+				position: absolute;
+				top: 110px;
+				left: 80px;
+				z-index: 10;
+				transition: .3s ease-out all;
+
+				@media only screen and (max-width: $tablet) {
+					left: 5%;
+				}
+			}
+			
+            .field--name-field-image {
+                // margin: -25px 0 40px -20px;
+                margin: -15px -21px 30px -20px; // URL: /inscripciones/orientacion-especializada
+                @media only screen and (max-width: $tablet) {
+                    margin: 0 -30px 31px;
+                    picture {
+                        width: 100%;
+                    }
+                    img {
+                        max-width: none;
+                        height: inherit;
+                        width: 100%;
+                    }
+                }
+                img {
+                    // max-width: none; // agregado 13 jun, removido el 27 jul (investigaciones/valor-investigacion)
+                    // height: inherit; // agregado 13 jun
+                    // width: auto; // agregado 13 jun
+					width: 100%;
+                    display: block;
+                }
+            }
+            .field--name-node-title,
+            .field--name-field-bocadillo {
+                // padding: 0 22px;
+            }
+            .field--name-field-bocadillo {
+                margin-top: -2px;
+                margin-bottom: 44px;
+            }
+        }
+    }
+    .deseo-mayor-informacion {
+        border-top: 1px solid #ededed;
+        padding-top: 35px;
+        max-width: 100% !important;
+        @media only screen and (min-width: $tablet) {
+            max-width: 66% !important;
+        }
+        .field--name-field-block-title-h2,
+        h2 {
+            @include acherus_black(20px);
+            letter-spacing: -0.5px;
+            padding-bottom: 13px;
+            margin: 0;
+            line-height: 20px;
+        }
+        .paragraph--type-body {
+            margin-bottom: 36px;
+        }
+        .field--name-field-texto {
+            @include paragraphs_large;
+            padding-bottom: 30px;
+        }
+    }
+    .columns {
+        position: relative;
+        >.block-inner {
+            @include ib-grid;
+            &:after {
+                position: absolute;
+                content: "";
+                left: 33.33%;
+                top: 0;
+                height: 95%;
+                width: 1px;
+                background-color: #ededed;
+                @media only screen and (max-width: $tablet-2) {
+                    display: none;
+                }
+            }
+            &:before {
+                position: absolute;
+                content: "";
+                left: 66.66%;
+                top: 0;
+                height: 95%;
+                width: 1px;
+                background-color: #ededed;
+                @media only screen and (max-width: $tablet-2) {
+                    display: none;
+                }
+            }
+            >.block-block-content {
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                @media only screen and (min-width: $tablet-2) {
+                    @include inline-block(top);
+                    width: 33.33%;
+                    margin-bottom: 0;
+                }
+                .field--name-field-imagen {
+                    text-align: center;
+                    margin-bottom: 10px;
+                    img {
+                        vertical-align: top;
+                    }
+                }
+                .field--name-field-title {
+                    @include title_light_acherus_l;
+                    line-height: 30px;
+                    padding-bottom: 20px;
+                    text-align: center;
+                }
+                .field--name-body {
+                    @include paragraphs_large;
+                    padding: 0 30px;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .columns,
+    .visita-guiada,
+    .charla-institucional,
+    .charla-especializada,
+    .taller-orientacion-profesional,
+    .ferias-universitarias,
+    .recorridos,
+    .pre-saber-11,
+    .preuniversitario-curso-basico,
+    .deseo-mayor-informacion,
+    .prueba-intereses-prueba-competencias {
+        margin-bottom: 45px;
+        .field--name-body {
+            @media only screen and (min-width: $mobile) {
+                max-width: 580px;
+            }
+            ol {
+                padding-top: 10px;
+            }
+        }
+    }
+    .deseo-mayor-informacion {
+        margin-bottom: 10px;
+    }
+    // URL: /internacionalizacion/becas-internacionales	
+    &.becas-internacionales {
+        .field--name-field-titulo-2 {
+            max-width: 300px;
+        }
+    }
+	
+	// URL: /exito-estudiantil/programa-apoyo-estudiante
+    &.page-exito-estudiantil {
+        #main .node--type-pagina-basica-bosque .field--name-field-bocadillo,
+        .field--name-field-bocadillo-150 {
+            margin-bottom: 25px;
+        }
+		
+		
+    }
+}

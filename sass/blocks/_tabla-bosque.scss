@@ -1,0 +1,280 @@
+// URL: /internacionalizacion/convenios
+.tabla-bosque {
+	$mobile: 580px;
+
+	.filtros-convenios {
+
+		@media only screen and (max-width: $mobile) {
+			@include ib-grid;
+		}
+		.fake-select {
+			@include inline-block (middle);
+			margin-right: 10px;
+			max-width: 183px;
+			width: 23%;
+
+			@media only screen and (max-width: $mobile) {
+				@include inline-block(middle);
+				width: 50%;
+				box-sizing: border-box;
+				padding: 0 10px;
+				margin-right: 0px;
+				.fake-label {
+					font-size: 10px !important;
+					
+				}
+			}
+		}
+		
+		.filter-action {
+			@include inline-block (middle);
+			padding: 0 10px;
+			box-sizing: border-box;
+
+			a {
+				@include buton-l-green;
+			}
+		}
+	}
+
+	#contador-convenios {
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		padding: 15px 20px;
+		background-color: #FBFBFB;
+		box-sizing: border-box;
+		margin: 15px 0px;
+		
+		@media only screen and (max-width: $tablet) {
+			margin-bottom: 40px;
+		}
+	}
+
+	.label-resultados {
+		@include pretitle;
+	}
+
+	.result-length {
+		@include acherus_black(28px);	
+		color: $color-brand;		
+		display: inline;
+	}
+
+	.result-string {
+		@include acherus_grotesqueultralight(28px);		
+		display: inline;
+		padding-left: 5px;
+	}
+
+	.div-th {
+		display: none;
+	}
+
+	.views-row {
+		// padding-left: 15px;
+		// padding-right: 15px;
+		position: relative;
+
+		&:nth-of-type(2n+1) {
+			background: #F9F9F9;
+
+			&::before,
+			&::after {
+				content: "";
+				background: #F9F9F9;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 100%;
+			}
+
+			&::after {
+				left: auto;
+				right: 100%;
+			}
+		}
+	}
+
+	.pager__item {
+		text-align: center;
+		a {
+			@include buton-xl-green;
+		}
+	}
+
+	.field {
+		@include ib-grid;
+		border-bottom: 1px solid $color_gray_20;
+		padding: 13px 0;
+
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	.field__label,
+	.field__item {
+		@include inline-block(middle);
+	}
+
+	.field__label,
+	.div-th {
+		font-family: $font-bsb;
+		letter-spacing: 2px;
+		font-weight: 600;
+		font-size: 13px;
+		line-height: 14px;
+	}
+
+	.field__label {
+		max-width: 100px;
+		width: 40%;
+		margin-right: 10%;
+	}
+
+	.field__item {
+		width: 50%;
+		font-family: $font-baser;
+		font-size: 15px;
+	}
+
+	.field--name-field-universidad {
+		.field__item {
+			color: $color_brand;
+			font-family: $font-baseb;
+		}
+	}
+
+	.field--name-field-url-web {
+		a {
+			color: $color_gray_80;
+			text-decoration: none;
+		}
+	}
+
+	.field--name-field-file {
+		a {
+			@include button-m-border-green;
+			text-align: center;
+			padding: 0 14px;
+			height: 25px;
+			max-width: 23px;
+			overflow: hidden;
+			line-height: 25px;
+			font-family: $font-baser;
+			font-weight: 600;
+		}
+	}
+
+	// Filtros
+	.field--name-field-area-de-conocimiento,
+	.field--name-field-grupos-pregrado {
+		display: none !important;
+	}
+
+	@media only screen and (max-width: $mobile) {
+		.view-header {
+			margin-top: 30px;
+		}
+	}
+
+	@media only screen and (min-width: $mobile) {
+		.node {
+			@include ib-grid;
+			border-bottom: 1px solid $color_gray_20;
+		}
+		
+		.view-content {
+			border-top: 1px solid $color-brand;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+
+		.div-th {
+			text-align: center;
+			padding: 8px;
+			box-sizing: border-box;
+		}
+
+		.div-th,
+		.field {
+			@include inline-block(middle);
+		}
+
+		.field {
+			padding: 0;
+			padding: 8px 0;
+			border: 0;
+			position: relative;
+
+			.field__label {
+				display: none;
+			}
+
+			.field__item {
+				display: block;
+				width: auto;
+				padding: 0 10px;
+
+				&::after {
+					content: "";
+					background: $color_gray_20;
+					width: 1px;
+					height: 500%;
+					position: absolute;
+					top: -20%;
+					right: 0;
+				}
+			}
+		}
+
+		.views-row {
+			&::before,
+			&::after {
+				display: none !important;
+			}
+		}
+
+		.f-tipo,
+		.field--name-field-tipo-convenio {
+			width: 13.3%;
+		}
+
+		.f-univ,
+		.field--name-field-universidad {
+			width: 30%;
+		}
+
+		.f-pais,
+		.field--name-field-pais {
+			width: 13.3%;
+		}
+
+		.f-web,
+		.field--name-field-url-web {
+			width: 30%;
+		}
+
+		.f-info,
+		.field--name-field-file {
+			width: 13.3%;
+		}
+
+		.field--name-field-universidad {
+			.field__item {
+				color: $color_gray_80;
+			}
+		}
+
+		.field--name-field-file {
+			text-align: center;
+
+			.field__item {
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}

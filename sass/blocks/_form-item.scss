@@ -1,0 +1,68 @@
+.form-item11 {
+	position: relative;
+	overflow: hidden;
+	//padding-top: 10px;
+	
+	.form-text,
+	.form-email,
+	.form-textarea {
+		& + label {
+			position: absolute;
+			//bottom: 8px; //0;
+			top: 11px;
+			left: 0;
+			width: 100%;
+			pointer-events: none;
+			height: 20px;
+			color: $color_gray_60;
+			font-size: 13px;
+			padding: 0 15px;
+			box-sizing: border-box;
+			box-shadow: none;
+
+			span {
+				position: absolute;
+				//color: $color_gray_60;
+				display: block;
+				transition: .15s ease-out all;
+			}
+		}
+
+		& + label::after {
+			//content: "";
+			display: none;
+			width: 100%;
+			height: 1px;
+			position: absolute;
+			bottom: 0;
+			left: -100%;
+			transition: .6s ease-out all;
+			background: $color_brand;
+		}
+		
+		&::placeholder {
+		//	opacity: 0;
+		}
+
+		&.filled,
+		&:focus {
+			color: $color_gray_80;
+			font-family: $font-baseb;
+
+			&::placeholder {
+				opacity: 1;
+			}
+			
+			& + label {
+				&::after {
+					left: 0;
+				}
+
+				span {
+					transform: translate3d(0, -70%, 0);
+					font-size: 10px;
+				}
+			}
+		}
+	}
+}

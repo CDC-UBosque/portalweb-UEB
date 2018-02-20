@@ -1,0 +1,37 @@
+.node--type-pagina-basica-image-video {
+	&.node--view-mode-full {
+		text-align: center;
+		color: white;
+
+		.field--name-field-title-format-html {
+			font-family: $font-brandb;
+			font-size: 39px;
+			line-height: 37px;
+			margin: 0 auto;
+			padding: 140px 0 100px;
+			max-width: 830px;
+			letter-spacing: auto;
+
+			&::first-line {
+				font-family: $font-bli;
+				letter-spacing: -1px;
+			}
+		}
+
+		.field--name-field-image {
+			position: relative;
+			// height: 400px;
+
+			img {
+				display: block;
+				width: auto;
+				position: absolute;
+			}
+		}
+
+		.content-text {
+			position: relative;
+			z-index: 20;
+		}
+	}
+}

@@ -1,0 +1,541 @@
+.page-form-bosque-te-acoge {
+    @include form-input-select ('.js-form-type-textfield, .js-form-type-textarea, .js-form-type-tel', '.form-text, .form-textarea, .form-tel');
+    @include form-input ('.js-form-type-textfield, .js-form-type-textarea, .js-form-type-tel', '.form-text, .form-textarea, .form-tel');
+    @include form-input-select ('.js-form-type-email', '.form-email'); 
+	@include form-input ('.js-form-type-email', '.form-email');  
+
+    @media only screen and (max-width: $mobile) {
+        label {
+            font-size: 15px;
+        }
+    }
+
+	#edit-field-imagenes-multiples-wrapper {
+		summary,
+		#edit-field-imagenes-multiples-ajax-wrapper {
+			@include inline-block;
+			margin-right: 8px;
+		}
+	}
+
+	th {
+		text-align: left;
+		background: #ededed;
+	}
+
+	tr {
+		&:nth-of-type(even) {
+			background: #ededed;
+		}
+	}
+
+	.draggable a.tabledrag-handle {
+		margin-left: 0;
+	}
+
+	a.tabledrag-handle .handle {
+		background-image: url(../images/draggable.png);
+		background-position: 0 -11px;
+	}
+
+    .SumoSelect {
+        >.CaptionCont {
+            > label {
+                > i {
+                    background-image: url(../images/flechas-select-1.svg);
+                }
+            }
+        }
+    }
+
+    .sidebar-first {
+		& + #main {
+			padding-top: 20px;
+		}
+
+		@media only screen and (max-width: $tablet) {
+			display: block;
+			max-width: 100%;
+			margin-bottom: 15px;
+            border-right: none;
+		}
+
+        .block-content--type-_002-texto-links {
+            border-right: 1px solid #EDEDED;
+
+			@media only screen and (max-width: $tablet) {
+				border-right: none;
+			}
+        }
+    }
+
+    .fieldset-legend {
+        @include acherus_black(19px);
+        color: $color-brand;        
+    }
+    legend {
+        padding-bottom: 20px;
+    }
+
+    .select-ubosque {
+        &.field-group-html-element {
+            @media only screen and (max-width: $mobile) {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    .form-datos-personales {
+        .fieldset-wrapper {
+            @include ib-grid;
+            margin: 0 -10px;
+            
+            >.form-wrapper {
+                @include inline-block(top);
+                width: 50%;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: 25px;
+                box-sizing: border-box;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+        }
+        label {
+            display: none;
+        }
+        .select-ubosque {
+            padding-left: 10px;
+        }
+    }
+    .field-group-fieldset {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        @media only screen and (max-width: $mobile) {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .node-inmuebles-el-bosque-te-acoje-form {
+        >.field-group-fieldset {
+            position: relative;
+            &::after {
+                content: "";
+                width: 60%;
+                height: 1px;
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                background-color: #ededed;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+                
+            }
+        }
+    }
+
+    .field--name-field-bocadillo-150 {
+        @include latoregular(16px);
+        line-height: 100%;
+    }
+
+    label {
+        vertical-align: middle;
+        ~ .SumoSelect,
+        ~ .form-text {
+            vertical-align: middle;
+        }
+        ~ div>textarea {
+            margin-top: 5px;
+        }
+
+    }
+
+    .form-descripcion-inmueble {
+        
+        
+        .fieldset-wrapper {
+            @include ib-grid;
+            margin: 0 -10px;
+
+            label {
+                @media only screen and (max-width: $tablet) {
+                    font-size: 13px !important;
+                }
+            }
+            >.select-ubosque {
+                &:nth-child(1) {
+                    display: block;
+                }
+            }
+
+            .SumoSelect {
+                @media only screen and (max-width: $tablet) {
+                    width: 75%;
+                }
+                
+            }
+        }
+        .field--widget-string-textfield {
+            @include inline-block(top);            
+            width: 37%;;
+            padding: 0 10px;
+            box-sizing: border-box;
+            padding-bottom: 15px;
+
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+
+            .js-form-type-textfield {
+                @include ib-grid;
+            }
+            label {
+                @include inline-block(middle);
+                width: 25%;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 13px !important;
+                }
+                
+            }
+            input {
+                @include inline-block(middle);
+                width: 75%;
+            }
+
+            
+
+            &.field--name-field-cierre-de-inscripciones-pr {
+                width: 30%;
+                vertical-align: middle;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+                label {
+                    width: 62%;
+                }
+                input {
+                    width: 36%;
+                }
+            }
+
+            &.field--name-field-en-linea {
+                width: 29%;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+                label {
+                    width: 42%;
+                }
+                input {
+                    width: 36%;
+
+                    @media only screen and (max-width: $mobile) {
+                        width: 56%;
+                    }
+                }
+            }
+            
+        }
+        .select-ubosque {
+            padding-left: 10px;
+        }
+        .field--name-field-bocadillo-2 {
+            width: 26%;
+
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+
+        .select-ubosque {
+            width: 33.33%;
+            display: inline-block;
+            vertical-align: middle;
+            padding-bottom: 20px;
+            box-sizing: border-box;
+
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+        .valores-descripcion {
+            @include ib-grid;
+            padding-bottom: 25px;
+
+            label {
+                margin-bottom: 5px;
+            }
+            .inmue-group-valores {
+                @include inline-block(top);
+                width: 30%;
+                box-sizing: border-box;
+                padding: 10px;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+                
+                label,
+                input {
+                    display: block;
+                    width: 100%;
+                }
+                .field--widget-string-textfield {
+                    width: 100%;
+                    padding: 0px;
+                }
+                .field-prefix  {
+                    display: none;
+                }
+                .field--name-field-numeric-entero {
+                    padding-bottom: 15px;
+                }
+            }
+            .field--name-field-recomendaciones-prueba {
+                @include inline-block(top);
+                box-sizing: border-box;
+                width: 70%;
+                padding: 10px;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+        }
+
+        textarea {
+            min-height: 115px;
+            padding-top: 10px;
+        }
+
+    }
+    .webform-options-display-one-column {
+        >.js-form-item {
+            display: inline;
+            &:nth-child(1) {
+                display: none;
+            }
+            &:nth-child(2) {
+                padding-right: 20px;
+            }
+        }
+    }
+    .field--widget-options-buttons {
+        .fieldset-legend {
+            @include latoregular(16px);
+            color: #4A4A4A;
+
+            @media only screen and (max-width: $mobile) {
+                font-size: 15px; 
+            }
+        }
+        fieldset {
+            padding-bottom: 25px;
+        }
+    }
+    .field--name-field-checkbox-amoblado {
+        @include inline-block(middle);
+        width: 33.33%;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
+
+        legend {
+            float: left;
+            padding-right: 15px;
+        }
+        .webform-options-display-one-column {
+            >.js-form-item {
+                float: left;
+                padding-right: 15px;
+            }
+        }
+        fieldset {
+            padding-bottom: 0px;
+        }
+    }
+
+    .js-form-type-managed-file {
+        label {
+            @include latoregular(14px);
+            border: 1px solid #bcbcbc;
+            color: #a1a1a1;
+            padding: 1px 20px;
+            border-radius: 5px;
+            transition: .5s ease-out all;
+            cursor: pointer;
+            &:hover {
+                color: $color-brand;
+                border-color: $color-brand;
+            }
+        }
+        .description {
+            display: none;
+        }
+    }
+
+    .js-form-managed-file {
+        position: relative;
+        overflow: hidden;      
+
+        input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+    .container-file-multiple {
+        padding-left: 10px;
+        summary {
+            display: inline;
+
+            @media only screen and (max-width: $mobile) {
+                display: block;
+                padding-bottom: 5px;
+            }
+        }
+        #edit-field-imagenes-multiples-ajax-wrapper {
+            display: inline;
+            .js-form-type-managed-file {
+                display: inline;
+                padding-left: 15px;
+
+                @media only screen and (max-width: $mobile) {
+                    padding-left: 0px;
+                }
+            }
+        }
+    }
+
+    .field--name-field-imagenes-multiples {
+        position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+
+        &::after {
+            content: "";
+            width: 60%;
+            height: 1px;
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            background-color: #ededed;
+
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+    }
+
+    .js-form-type-vertical-tabs {
+        display: none;
+    }
+
+    .field--name-field-frase,
+    .field--name-field-invitados {
+        width: 70%;
+        padding-bottom: 25px;
+
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
+        textarea {
+            min-height: 110px;
+            padding-top: 10px;
+        }
+
+    }
+    .field--name-field-frase {
+        .description {
+            display: none;
+        }
+    }
+    #edit-preview {
+        display: none;
+    }
+
+    .field--name-field-boolean-autorizo-alau,
+    .form-item-field-boolean-acepto-terminos-value {
+        padding-bottom: 15px;
+        label {
+            @include pt_serifitalic(12px);
+            color: #a8a8a8;
+            vertical-align: top;
+            
+            &::before {
+                margin: 0 20px 1px 1px !important;
+            }
+        }
+    }
+
+    .form-informacion-adicional {
+        margin-bottom: 0px;
+        padding-bottom: 10px;
+
+        &::after {
+            display: none;
+        }
+    }
+    .button--primary {
+        @include buton-xl-green;
+    }
+    .form-actions {
+        padding-bottom: 50px;
+    }
+
+    .block-content--type-_004-texto-documentos {
+        padding-bottom: 115px;
+
+        @media only screen and (max-width: $tablet) {
+            padding-bottom: 50px;
+        }
+        .field--name-field-body {
+            p {
+                @include acherus_grotesqueultralight(28px);
+                font-weight: normal;
+                line-height: 30px;
+                letter-spacing: -0.5px;
+                padding-bottom: 20px;
+            }
+        }
+        .field--name-field-body2 {
+            width: 67%;
+
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+    }
+	
+	#terminos-open {
+		@include link-green;
+        @include underline-hover;
+        font-size: 10px;
+		margin-left: 10px;
+		position: relative;
+		top: 3px;
+		cursor: pointer;
+	}
+
+	.modal-terminos-condiciones {
+		display: none;
+	}
+}

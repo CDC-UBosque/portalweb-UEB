@@ -1,0 +1,273 @@
+.path-nuestro-bosque {
+    &.catalogo-busqueda {
+        @include default-tabs;
+        .field--name-field-tabs {
+            max-width: 75%;
+            margin: 0 auto;
+            margin-bottom: 70px;
+            @media only screen and (max-width: $mobile) {
+                max-width: 100%;
+            }
+            .tabMakerContents {
+                &::after,
+                &::before {
+                    display: none;
+                    @media only screen and (max-width: $mobile) {
+                        display: block;
+                    }
+                }
+            }
+            .tabMakerContent {
+                padding: 25px 20px 25px 20px;
+            }
+            .field--name-field-titulo-tab-pregrado {
+                display: none;
+            }
+        }
+        .sidebar-first {
+            border-right: initial;
+            @media only screen and (max-width: $tablet) {
+                display: block;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            .field--name-field-links {
+                padding: 10px;
+                //border-bottom: 1px solid #D8D8D8;
+                //background: url(../images/menu/menu-lateral-arrow-left.svg) no-repeat 0 50%;
+                @media only screen and (max-width: $tablet) {
+                    display: none;
+                }
+                a {
+                    @include latoblack(12px);
+                    @include underline-hover;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    color: #4A4A4A;
+                    text-transform: uppercase;
+                    padding-left: 5px;
+                }
+            }
+            .region-content {
+                border-right: none;
+            }
+        }
+        .sidebar_first {
+            font-size: 0px;
+            .block-content--type-_002-texto-links {
+                padding: 8px 0;
+            }
+        }
+        .block-views-exposed-filter-blockcatalogo-de-publicaciones-page-1 {
+            margin-left: initial;
+            width: initial;
+            @media only screen and (max-width: $tablet) {
+                width: 80%;
+                display: inline-block;
+            }
+            @media only screen and (max-width: $mobile) {
+                margin: 0 -10px;
+                width: 100%;
+            }
+            .js-form-type-select {
+                width: 100%;
+                padding-bottom: 10px;
+                @media only screen and (max-width: $tablet) {
+                    width: 25%;
+                    vertical-align: bottom;
+                    padding-bottom: 0px;
+                    margin-right: 0px;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 50%;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    margin-right: 0px;
+                }
+                label {
+                    font-size: 0.7em;
+                }
+            }
+            .form-item-filtro-facultad {
+                padding-bottom: 30px;
+                @media only screen and (max-width: $tablet) {
+                    padding-bottom: 0px;
+                }
+            }
+            .form-actions {
+                border-right: none;
+                border-bottom: 1px solid #d7d8d0;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                padding-right: 0px;
+                @media only screen and (max-width: $tablet) {
+                    vertical-align: bottom;
+                    width: 21%;
+                    border-right: 1px solid #d7d8d0;
+                    padding-right: 0px;
+                    margin-bottom: 0px;
+                    padding-bottom: 0px;
+                    border-bottom: none;
+                }
+                @media only screen and (max-width: $mobile) {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    box-sizing: border-box;
+                    border-right: none;
+                }
+                .button {
+                    @media only screen and (max-width: $tablet) {
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+        .block-views-exposed-filter-blocksearch-catalogo-page-1 {
+            width: 100%;
+            @media only screen and (max-width: $tablet) {
+                width: 20%;
+                display: inline-block;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+        .more-link {
+            text-align: center;
+            padding-bottom: 40px;
+            a {
+                @include buton-l-green;
+            }
+        }
+        .banner-catalogo-editoriales {
+            margin-bottom: 20px;
+        }
+        .view-catalogo-de-publicaciones {
+            .view-empty {
+                padding: 15px 0;
+                border-top: 1px solid;
+                border-bottom: 1px solid;
+                border-color: $color_gray_50;
+                font-size: 26px;
+            }
+        }
+    }
+    &.page-node-type-catalogo-de-publicaciones {
+        .node--type-catalogo-de-publicaciones {
+            @include ib-grid;
+        }
+        .field--name-dynamic-block-fieldnode-enlace-regresar {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            a {
+                @include buton-s-border-green;
+                @media only screen and (max-width: $mobile) {
+                    margin-top: 30px;
+                }
+            }
+        }
+        .field--name-field-imagenes-multiples {
+            @include inline-block(top);
+            width: 40%; //30%;
+            box-sizing: border-box;
+            // padding-left: 30px;
+            @media only screen and (max-width: $mobile) {
+                width: initial;
+                padding-left: initial;
+                .field__item {
+                    max-width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .group-detalle-catalogo-2 {
+            padding-bottom: 20px;
+            display: none;
+            @media only screen and (max-width: $mobile) {
+                display: block;
+            }
+        }
+        .group-detalle-catalogo {
+            @include inline-block(top);
+            @include latoregular(14px);
+            width: 60%; //70%;
+            box-sizing: border-box;
+            padding-left: 50px;
+            @media only screen and (max-width: $mobile) {
+                text-align: center;
+                width: 100%;
+                padding-left: 0;
+            }
+            .field--name-node-title {
+                h2 {
+                    @include acherus_black(33px);
+                    line-height: 100%;
+                    display: block;
+
+					@media only screen and (max-width: $tablet) {
+						font-size: 28px;
+					}
+
+                    @media only screen and (max-width: $mobile) {
+                        display: none;
+                    }
+                }
+            }
+            .field__label,
+            .field__item {
+                display: inline;
+            }
+            .field--name-field-bocadillo {
+                @include acherus_grotesqueultralight(20px);
+                line-height: 26px;
+                margin-bottom: 30px;
+                display: block;
+                @media only screen and (max-width: $mobile) {
+                    display: none;
+                }
+            }
+            .field--name-field-url-web {
+                display: block;
+                background: url(../images/icon-journal.png) no-repeat 0 50%;
+                margin-bottom: 20px;
+                padding-left: 25px;
+                padding-top: 10px;
+                a {
+                    @include link-green;
+                    @include underline-hover;
+                    font-size: 10px;
+                }
+            }
+            .field--name-field-bocadillo-3,
+            .field--name-field-titulo-valores- {
+                padding-bottom: 20px;
+            }
+            .file--application-pdf {
+                background: url(../images/iconPDF-green.png) no-repeat 0 50%;
+                padding-left: 25px;
+                padding-top: 10px;
+                display: block;
+                margin: 11px 0;
+                a {
+                    @include link-green;
+                    @include underline-hover;
+                    font-size: 10px;
+                }
+            }
+            .field--name-dynamic-block-fieldnode-redes-sociales {
+                display: block;
+                width: 60%;
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+                >.field__label {
+                    display: block;
+                }
+            }
+        }
+    }
+}

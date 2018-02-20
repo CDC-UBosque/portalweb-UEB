@@ -1,0 +1,186 @@
+
+.header-search-opened .block-views-exposed-filter-blockprueba-page-1 {
+	&.search-block-form {
+		top: $mobile-header-height;
+	}
+}
+
+.block-views-exposed-filter-blockprueba-page-1 {
+	&.search-block-form {
+		$local-mobile-height: 65px;
+
+		width: 70px;
+		height: 110px;
+		transition: .3s ease-out all;
+
+		@media only screen and (max-width: $tablet) {
+			position: fixed;
+			top: -$mobile-header-height;
+			right: 0;
+			width: 100%;
+			height: $local-mobile-height;
+			overflow: hidden;
+			z-index: 401;
+		}
+
+		label {
+			display: none;
+		}
+
+		.form-item {
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $color_brand;
+			height: $local-mobile-height;
+			transition: width 0.5s;
+			overflow: hidden;
+			width: 85%;
+			z-index: 1;
+			padding: 0 30px;
+			box-sizing: border-box;
+
+			@media only screen and (max-width: $mobile) {
+				width: 80%;
+			}
+
+			@media only screen and (min-width: $tablet) {
+				width: 0;
+				right: 5px;
+				left: auto;
+				height: 120px;
+				padding: 0;
+				max-width: 1170px;
+			}
+
+			[placeholder] {
+				@include placeholder(white, 'acherus_grotesqueultralight', -0.3%);
+			}
+
+			.form-text {
+				background: none;
+				border: none;
+				border-bottom: 1px solid #fff;
+				font-size: 30px;
+				color: white;
+				margin: 22px 0 41px 30px;
+				width: 990px;
+				display: block;
+
+				@media only screen and (max-width: $tablet) {
+					font-size: 14px;
+					width: 100%;
+					margin: 21px 0 0;
+					padding-bottom: 5px;
+				}
+				
+				@media only screen and (min-width: $tablet) {
+					position: absolute;
+					bottom: 33px;
+					left: 34px;
+					margin: 0;
+					line-height: 1.6;
+					letter-spacing: -1px;
+					font-size: 33px;
+				}
+				@media only screen and (max-width: $mobile) {
+					font-size: 10px;
+				}
+				&:focus {
+					color:#ffffff;
+					font-family: sans-serif;
+				}
+			}
+		}
+
+	.form-actions {
+		background: $color_brand;
+		z-index: 100;
+		position: relative;
+		border-left: 0.5px solid rgba(255, 255, 255, 0.5);
+		
+		@media only screen and (max-width: $tablet) {
+			width: 15%;
+			border-left: 1px solid white;
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: $local-mobile-height;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			width: 20%;
+		}
+
+		.button {
+			cursor: pointer;
+			border: none;
+			background-color: $color_brand;
+			color: white;
+			padding-top: 13px;
+			font: {
+				family: $font-baser;
+				size: $font-baser-xs;
+			}
+			height: 49px;
+			width: 100%;
+			
+			@media only screen and (min-width: $tablet) {
+				height: 120px;
+			}
+		}
+	}
+	
+	.form-submit {
+		height: $local-mobile-height;
+
+		@media only screen and (min-width: $tablet) {
+			background-image: url('../images/home/searchIcon.svg');
+			background-repeat: no-repeat;
+			background-position: 24px 29px;
+			height: auto;
+		}
+	}
+}
+
+}
+.block-search {
+	&.expanded {
+		#views-exposed-form-prueba-page-1 {
+			.form-item {
+				width: 100%;
+
+				/*@media only screen and (min-width: $tablet) {
+					width: 1160px;
+				}*/
+			}
+		}
+	}
+}
+
+#header {
+	.close-search {
+		display: none;
+		height: 40px;
+		width: 100%;
+		top: -39px;
+		position: absolute;
+		background-image: url('../images/home/CloseBurgerMenu.svg');
+		background-size: 24px 23px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		background-position: 96%;
+		&:after {
+			@include latoregular(10px);
+			content: "cerrar";
+			color: white;
+			position: absolute;
+			right: 15px;
+			top: 14px;
+		}
+	}
+	.display-close-search {
+		display: block;
+	}
+}

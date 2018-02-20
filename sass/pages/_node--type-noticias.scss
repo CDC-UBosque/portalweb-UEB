@@ -1,0 +1,26 @@
+@include teaser-noticias('.node--type-noticias.node--view-mode-teaser', '.field--name-field-image', '.field--name-field-noticias-taxonomia', '.field--name-node-title', '.field--name-field-bocadillo-150', '.field--name-node-link');
+@include teaser-noticias('.node--type-noticias.node--view-mode-resumen-2', '.field--name-field-image', '.field--name-field-noticias-taxonomia', '.field--name-node-title', '.field--name-field-bocadillo-150', '.field--name-node-link');
+
+.node--type-noticias {
+
+}
+
+.page-node-type-noticias {
+	.view-noticias-1 {
+		.field--name-field-bocadillo-150 {
+			@include paragraphs_large;
+		}
+	}
+	.text-content {
+		.share-text {
+			padding-top: 5%;
+			text-align: center;
+			.field--name-dynamic-block-fieldnode-redes-sociales {
+				.field__label {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+

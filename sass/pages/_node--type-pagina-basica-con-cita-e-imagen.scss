@@ -1,0 +1,289 @@
+.node--type-pagina-basica-con-cita-e-imagen {
+	$mobile: 480px;
+	padding-bottom: 48px;
+
+	.field--name-node-title {
+		@media only screen and (min-width: $tablet) {
+			margin-top: -8px;
+		}
+
+		h1 {
+			line-height: 49px;
+			@media only screen and (max-width: $mobile) {
+				letter-spacing: -2.3px;
+			}
+		}
+	}
+	.field--name-body {
+		$mobile: 480px;
+
+		box-sizing: border-box;
+		padding-bottom: 25px;
+
+		@media only screen and (min-width: $mobile) {
+			float: left;
+			width: 42%;
+			padding-right: 20px;
+			padding-top: 11px;
+			padding-bottom: 0;
+		}
+
+		@media only screen and (min-width: $tablet) {
+			width: 33%;
+		}
+	}
+
+	.text-content {
+		$mobile: 480px;
+
+		text-align: left;
+		position: relative;
+		box-sizing: border-box;
+		padding-bottom: 5px;
+
+		@media only screen and (min-width: $mobile) {
+			width: 55%;
+			float: left;
+			padding-bottom: 20px;
+
+			&::before {
+				@include rayita-before;
+				height: 107px;
+				left: -1px;
+			}
+		}
+		@media only screen and (max-width: $mobile) {
+			
+			&::before {
+				@include rayita-before;
+				height: 107px;
+				left: -29px;
+			}
+		}
+		@media only screen and (min-width: $tablet) {
+			// margin-top: -20px;
+			width: 67%;
+			padding-right: 10px;
+
+			&::before {
+				@include rayita-before;
+				height: 107px;
+				left: -1px;
+			}
+		}
+
+		.field--name-field-video {
+			@media only screen and (max-width: $mobile) {
+				margin: 0 -30px;
+			}
+		}
+	}
+
+	.field--name-field-bocadillo-150 {
+		$mobile: 480px;
+		font-family: $font-bl;
+		font-size: 17px;
+		color: $color_gray_80;
+		line-height: 21px;
+		padding-bottom: 23px;
+		padding-top: 5px;
+
+		@media only screen and (min-width: $mobile) {
+			padding-bottom: 27px;
+			padding-left: 20px;
+		}
+
+		@media only screen and (min-width: $tablet) {
+			padding-left: 25px;
+			padding-right: 25px;
+			margin-top: -6px;
+			padding-top: 0;
+		}
+	}
+
+	.field--name-field-image {
+		text-align: right;
+
+		img {
+			vertical-align: top;
+		}
+	}
+}
+
+
+.page-node-type-pagina-basica-con-cita-e-imagen {
+	$mobile: 480px;
+
+	#main {
+		padding-top: 15px;
+	}
+
+	&.page-pilo-bosque {
+		.datos-interes-pilo {
+			p + ul {
+				margin-top: -15px;
+			}
+		}
+	}
+
+	.block-content--type-bloque-basico-con-bocadillo {
+		.field--name-field-bocadillo-150 {
+			@media only screen and (max-width: $tablet) {
+				max-width: 90.2%;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.block-block-contenta7010d70-05ae-4f54-adb4-5527db4092de {
+		
+		.field--name-field-subtitle-block {
+			display: none;
+		}
+		h2 {
+			display: none;
+		}
+		.field--type-text-with-summary {
+			p, li {
+				@include paragraphs_large;
+			}
+			
+		}
+	}
+	
+	
+	.block-block-content56e8216e-bcfc-4269-b506-97f6e7b80304 {
+		box-sizing: border-box;
+		margin-bottom: 35px;
+		position: relative;
+		margin-top: 23px;
+		
+		@media only screen and (min-width: $mobile) {
+			margin-left: 15px;
+			margin-top: 0;
+			margin-bottom: 40px;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: -11px;
+			top: -2px;
+			height: 100%;
+			width: 1px;
+			background-color: #BABCBF;
+			display: none;
+
+			@media only screen and (min-width: $mobile) {
+				display: block;
+			}
+		}
+		.block-content--view-mode-full {
+			> h2 {
+				@include title_acherusblack_s;
+				color: $color_brand;
+				line-height: 100%;
+			}
+		}
+		.field--type-text-with-summary {
+			@include paragraphs_large;
+			padding-bottom: 20px;
+			
+			@media only screen and (max-width: $mobile) {
+				padding-bottom: 10px;
+				max-width: 200px;
+			}
+		}
+		.field--name-field-enlace {
+			a {
+				@include buton-s-border-green;
+			}
+
+			@media only screen and (min-width: $mobile) {
+				padding-bottom: 10px;
+			}
+		}
+	}
+	
+	.block-block-contenta49aa688-70e8-44c1-a131-9c20f2227b36 {
+		.field--type-text-with-summary {
+			margin-bottom: 40px;
+			> h3 {
+				display: none;
+			}
+			.cita {
+				@include cita;
+				
+			}
+			.paragraph-large {
+				@include paragraphs_large;
+				width: 60%;
+			}
+			li {
+				@include paragraphs_large;
+				width: 60%;
+				&:before {
+					content: "";
+					width: 6px;
+					height: 6px;
+					-webkit-border-radius: 20px;
+					-moz-border-radius: 20px;
+					border-radius: 20px;
+					background: #4A4A4A;
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	// Estilo específico
+	.datos-interes-ser-pilo {
+		.field--name-body {
+			p + ul {
+				margin-top: -15px;
+			}
+		}
+	}
+
+	// Estilo general
+	.datos-interes-ser-pilo {
+		.field--name-body {
+			@media only screen and (min-width: $mobile) {
+				max-width: 580px;
+			}
+
+			ol {
+				padding-top: 10px;
+			}
+		}
+	}
+
+	&.page-node-type-pilo-bosque {
+		.node--type-pagina-basica-con-cita-e-imagen {
+			.field--name-body {
+				$mobile: 480px;
+
+				@media only screen and (min-width: $tablet) {
+					width: 33%;
+				}
+			}
+		}
+	}
+
+	&.transferencias-estudiantes {
+		.field--name-field-image {
+			$mobile: 480px;
+			text-align: left;
+
+			@media only screen and (min-width: $mobile) {
+				padding-left: 25px;
+			}
+		}
+	}
+}
+

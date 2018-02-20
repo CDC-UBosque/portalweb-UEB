@@ -1,0 +1,14 @@
+.calendario-academico {
+	.block-title {
+		margin-top: -15px;
+		margin-bottom: 20px;
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			margin-top: 48px;
+		}
+	}
+
+	.wrap-content {
+		padding-bottom: 50px;
+	}
+}

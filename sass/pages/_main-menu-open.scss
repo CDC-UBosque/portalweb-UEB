@@ -1,0 +1,70 @@
+.main-menu-open {
+	@media only screen and (max-width: $tablet) {
+		&.page-node-type-evento-especial,
+		&.page-node-type-evento-especial-dos {
+			#header {
+				z-index: 300 !important;
+			}
+
+			.block-menu {
+				background: rgba(0, 0, 0, 0.5);
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.menu {
+				left: 0;
+			}
+		}
+
+		// 	URL: /blog-uno/catedra, /blog-dos/capacitacion-docentes
+		&.blog-uno,
+		&.grouptype-blog_dos {
+			overflow-x: hidden;
+
+			#header {
+				z-index: 300 !important;
+			}
+
+			#header,
+			.wrap-content,
+			#footer {
+				left: 300px;
+			}
+
+			.block-menu {
+				left: 0;
+				background: rgba(0, 0, 0, 0.5);
+				opacity: 1;
+				visibility: visible;
+
+				> h2,
+				.menu {
+					left: 0;
+				}
+			}
+		}
+
+		&.blog-uno {
+			overflow-x: hidden;
+
+			#header,
+			.wrap-content,
+			#footer {
+				left: auto;
+				right: 300px;
+			}
+
+			.block-menu {
+				left: auto;
+				right: 0;
+
+				> h2,
+				.menu {
+					left: auto;
+					right: 0;
+				}
+			}
+		}
+	}
+}

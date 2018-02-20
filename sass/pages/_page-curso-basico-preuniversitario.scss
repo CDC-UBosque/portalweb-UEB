@@ -1,0 +1,45 @@
+.page-curso-basico-preuniversitario {
+	.acerca-de {
+		.field--type-text-long {
+			max-width: 725px;
+			margin: 0 auto;
+			text-align: left;
+
+			@media only screen and (min-width: $mobile) {
+				column-count: 2;
+				column-gap: 90px;
+			}
+
+			p {
+				max-width: none;
+
+				&:first-child {
+					padding-right: 0;
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	.decidete {
+		margin-bottom: 60px;
+
+		.field--name-field-fortalezas-del-programa {
+			font-family: $font-baser;
+			font-size: 16px;
+			
+			.fortaleza-group {
+				border: 0;
+			}
+
+			.field__item {
+				width: 100%;
+				border-bottom: 1px solid $color_gray_15;
+			}
+			
+			.field__item__2 {
+				border: 0;
+			}
+		}
+	}
+}

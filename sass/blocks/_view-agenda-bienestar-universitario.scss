@@ -1,0 +1,189 @@
+.view-agenda-bienestar-universitario {
+	padding-top: 11px;
+	
+  .view-content {
+    position: relative;
+  }
+  
+  .view-footer {
+	  text-align: center;
+	  padding: 12px 0 30px;
+
+	  a {
+		  @include buton-m-green;
+		  padding-left: 30px;
+		  padding-right: 30px;
+	  }
+  }
+  
+  .swiper-container {
+    position: initial;
+	
+	@media only screen and (min-width: $mobile) {
+		margin-left: 125px;
+	}
+
+    h3 {
+      background: $color_brand;
+      height: 114px;
+	  padding: 18px 0;
+	  text-align: center;
+	  box-sizing: border-box;
+	  
+	  @media only screen and (min-width: $mobile) {
+	      left: 0;
+	      top: 0;
+		  position: absolute;
+		  width: 112px;
+	  }
+
+	  span {
+		  display: block;
+		  color: white;
+		  text-align: center;
+	  }
+
+	  .fecha-agenda {
+		  font-family: $font-baseblack;
+		  letter-spacing: 2.2px;
+		  line-height: 13px;
+		  font-size: 11px;
+		  margin-bottom: 12px;
+	  }
+
+	  .views-field-field-fecha-2 {
+		  font-family: $font-baseb;
+		  letter-spacing: 1.8px;
+		  line-height: 11px;
+		  font-size: 9px;
+		  text-transform: uppercase;
+	  }
+
+	  .views-field-field-fecha-1 {
+	  	  font-family: $font-brandb;
+		  line-height: 50px;
+		  font-size: 52px;
+		  letter-spacing: auto;
+		  color: $color_gray_80;
+		  margin-top: -7px;
+	  }
+    }
+    
+    ~ .swiper-container {
+      display: none;
+    }
+  }
+
+  .swiper-slide {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 12px;
+	padding-top: 59px;
+	position: relative;
+	overflow: hidden;
+
+	@media only screen and (min-width: $tablet) {
+		float: left;
+		width: 20%;
+		margin-right: 3%;
+	}
+
+	&::before {
+		// content: "";
+		background: #d8d8d8;
+		width: 218px;
+		height: 1px;
+		position: absolute;
+		bottom: 1px;
+		left: 0;
+	}
+
+    &:after {
+      background: $color_brand;
+      bottom: -2px;
+      content: '';
+      display: block;
+      height: 4px;
+      left: 0;
+      position: absolute;
+      width: 40px;
+    }
+
+    .views-field-title {
+		position: absolute;
+		bottom: 55px;
+		left: 0;
+
+		h4 {
+	        color: $color_brand_dark;
+	        font: {
+	          family: $font-serif-italic;
+	          size: 12px; 
+	        }
+	        // height: 28px;
+			margin: 0;
+			line-height: 15px;
+			letter-spacing: auto;
+		}
+    }
+
+    .views-field-field-fecha {
+      @include inline-block(top);
+      width: 48%;
+	  position: relative;
+	  
+	  &::after {
+		  content: "";
+		  width: 1px;
+		  height: 40px;
+		  background: $color_gray_20;
+	      right: 5px;
+		  top: 0;
+	      position: absolute;
+	  }
+      
+      .views-label {
+        color: #a0a0a0;        
+        font: {
+          family: $font-serif-italic;
+          size: 11px; 
+        }
+      }
+
+	  .field-content {
+		  font-family: $font-brandb;
+		  color: $color_gray_80;
+		  font-size: 20px;
+		  line-height: 20px;
+		  letter-spacing: -0.5px;
+		  margin-top: -2px;
+
+		  span {
+			  font-family: $font-serif-italic;
+			  font-size: 14px;
+			  line-height: 19px;
+			  letter-spacing: auto;
+		  }
+	  }
+    }
+
+    .views-field-field-lugar {
+      @include inline-block(top);
+      width: 52%;
+
+      .views-label {
+        color: #a0a0a0;
+        font: {
+          family: $font-serif-italic;
+          size: 11px; 
+        }
+      }
+
+	  .field-content {
+		  font-family: $font-baseb;
+		  color: $color_gray_80;
+		  font-size: 11px;
+		  line-height: 13px;
+	  }
+    }
+  }
+}

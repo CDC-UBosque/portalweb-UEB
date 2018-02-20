@@ -1,0 +1,508 @@
+.page-admisiones {
+	@include page-with-banner-stick-to-header;
+	.section-main-image .field--name-field-bocadillo-150 {
+		max-width: 65%;
+	}
+}
+
+.page-admisiones-- {
+	@include grilla-3-columns-bs('.agrupacion-inscripciones > .block-inner', '.block');
+	@include grilla-2-columns-bs('.revisa-admisiones > .block-inner', '.block');
+	@include grilla-3-columns-bs('.beneficios-admisiones > .block-inner', '.block');
+	@include grilla-4-columns-bs('.continua-admisiones > .block-inner', '.block');
+	@include artifact-text-1('.beneficios-admisiones', '.field--name-field-boca', '.field--name-field-block-title-h2', '.field--name-field-bocadillo-beneficio-bosque', '.field--name-field-enlace');
+	@include artifact-text-2('.continua-admisiones', '.field--name-field-subtitle-block', '.field--name-field-title-block', '.field--name-body', '.field--name-field-enlace');
+	@include grilla-3-columns-bs('.view-preguntas-frecuentes-por-facultad .view-content', '.views-row');
+	
+	
+	@include form-input-line('.block-webform .form-item', '.form-text');
+	.block-webform {
+		position: relative;
+
+		.form-item-autorizo-a-universidad-el-bosque-para-el-envio-de-informacion {
+			padding: 30px 0 15px;
+
+			input {
+				float: left;
+				margin-right: 15px;
+				margin-left: 15px;
+			}
+
+			label {
+				font-family: $font-serif-italic;
+				color: $color_gray_60;
+				font-size: 12px;
+				overflow: hidden;
+				width: 80%;
+				float: left;
+			}
+		}
+
+		.form-item-interested {
+			display: none;
+		}
+
+		.block-inner {
+			position: absolute;
+			bottom: 35px;
+			right: 210px;
+			max-width: 280px;
+		}
+
+		h2 {
+			background-color: $color_brand;
+			font-family: $font-bsb;
+			margin: 0;
+			font-weight: normal;
+			font-size: 14px;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+			padding: 15px 0;
+			line-height: 100%;
+			letter-spacing: 1px;
+		}
+
+		form {
+			padding: 15px 20px;
+			background-color: $color_gray_5;
+		}
+
+		.form-actions {
+			text-align: center;
+		}
+
+		.form-submit {
+			@include buton-xl-green;
+		}
+	}
+
+	.admisiones-visitanos {
+		position: relative;
+		margin-bottom: 50px;
+
+		.field--name-field-images {
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.text-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		
+		.ds-fields-group-intro-title {
+			margin-top: -10px;
+
+			h2 {
+				font-family: $font-bl;
+				color: white;
+				font-size: 39px;
+				font-weight: normal;
+
+				&::before {
+					background-color: $color_brand;
+				}
+			}
+		}
+
+		.field--name-field-links {
+			margin-top: 45px;
+			text-align: center;
+			position: relative;
+			padding-top: 50px;
+
+			&::before {
+				@include arrow-bottom-before;
+			}
+
+			.field__item {
+				@include inline-block(top);
+				margin: 0 10px;
+			}
+
+			a {
+				@include buton-xl-white;
+				min-width: 200px;
+			}
+		}
+	}
+
+	.block-views-blockpreguntas-frecuentes-por-facultad-block-3 {
+		@include section-coloreada;
+		@include intro-title('> span', '.view-header h2', '> span + h2');
+		@include bg-laterales($color_gray_5, 100%);
+		@include faq ('.view-header', '.view-content', '.views-row', '.views-field-title', 
+			'.views-field-field-respuesta-de-pregunta', '.views-field-view-preguntas-frecuentes', '.view-footer');
+		background-color: $color_gray_5;
+		padding-bottom: 45px;
+		margin-bottom: 35px;
+		text-align: center;
+		.view-content {
+			.views-row {
+				&:nth-of-type(1) {
+					padding-left: 170px;
+					padding-right: 0px;
+					&:after {
+						content: "";
+						position: absolute;
+						right: -35px;
+						top: 0px;
+						width: 1px;
+						height: 50px;
+						background: $color_gray_20;
+					}
+
+				}
+				&:nth-of-type(2) {
+					padding-left: 90px;
+					padding-right: 90px;
+					&:after {
+						content: "";
+						position: absolute;
+						right: 25px;
+						top: 0px;
+						width: 1px;
+						height: 50px;
+						background: $color_gray_20;
+					}
+				}
+				&:nth-of-type(3) {
+					padding-left: 0px;
+					padding-right: 170px;
+				}
+			}
+		}
+		// .views-row {
+		// 	text-align: center;
+		// 	position: relative;
+		// 	padding-left: 40px !important;
+		// 	padding-right: 40px !important;
+
+		// 	&:nth-of-type(2) {
+		// 		&::before,
+		// 		&::after {
+		// 			content: "";
+		// 			background: #ddd;
+		// 			height: 49px;
+		// 			width: 1px;
+		// 			position: absolute;
+		// 			top: 15px;
+		// 			left: 100%;
+		// 		}
+
+		// 		&::after {
+		// 			left: auto;
+		// 			right: 100%;
+		// 		}
+		// 	}
+		// }
+		
+		// .views-field-title {
+		// 	font-family: $font-serif-italic;
+		// 	font-size: 14px;
+		// 	color: $color_gray_80;
+		// 	height: 52px;
+		// 	padding-top: 10px;
+		// }
+		
+		// .views-field-field-respuesta-de-pregunta {
+		// 	font-family: $font-baser;
+		// 	font-size: 13px;
+		// 	color: $color_gray_60;
+		// }
+		
+		// .view-footer {
+		// 	padding-top: 40px;
+		// 	text-align: center;
+
+		// 	a {
+		// 		@include button-m-border-green;
+		// 	}
+		// }
+	}
+	// .block-block-content3467224f-68a9-4fe2-b0e6-ee933239a5d6 {
+	// 	@include grid(8, 80, 20);
+	// 	@include contact-prefooter (4, '.field--name-field-datos-de-informacion-decan', '.field__item', 
+	// 		'.field--name-field-acerca-de', '.field--name-field-bloque-legal-snies- ', 50px);
+	// 	display: inline-block;
+	// 	padding-bottom: 40px;
+		
+	// }
+	
+	.block-addtoany-block {
+		@include grid(4, 80, 20);
+		margin-right: 0;
+		display: inline-block;
+		.addtoany_list {
+			@include contact-social-networks (4);
+			margin-right: 0;
+			display: inline-block;
+		}
+	}
+
+	.continua-admisiones {
+		position: relative;
+		margin-bottom: 42px;
+
+		.block .block-inner {
+			padding-right: 20px;
+		}
+
+		.field--name-field-subtitle-block {
+			margin-bottom: 8px;
+		}
+		
+		.field--name-field-title-block {
+			margin-bottom: 9px;
+		}
+
+		.field--name-field-enlace {
+			position: absolute;
+			top: 100%;
+		}
+	}
+
+	// Beneficios El Bosque (antes de .beneficios-admisiones)
+	.block-block-content44927fd0-e2cd-43d2-adc8-055da70700e1 {
+		margin-bottom: 63px;
+	}
+
+	.beneficios-admisiones {
+		position: relative;
+		margin-bottom: 78px;
+		padding-bottom: 20px;
+
+		.field--name-field-boca {
+			margin-bottom: 9px;
+		}
+
+		.field--name-field-block-title-h2 {
+			max-width: 320px;
+			margin-bottom: 16px;
+		}
+
+		.field--name-field-bocadillo-beneficio-bosque {
+			max-width: 320px;
+		}
+
+		.field--name-field-enlace {
+			position: absolute;
+			top: 100%;
+
+			a {
+				max-width: 96px;
+				width: 100%;
+			}
+		}
+
+		#block-serpilopaga2seccionadmisiones-2 {
+			text-align: center;
+
+			.field--name-field-block-title-h2,
+			.field--name-field-bocadillo-beneficio-bosque {
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.field--name-field-bocadillo-beneficio-bosque {
+				color: $color_gray_60 !important;
+			}
+
+			.field--name-field-enlace {
+				left: 0;
+				right: 0;
+				margin: auto;
+				max-width: 33.33%;
+
+				a {
+					background-color: $color_brand;
+					color: white;
+				}
+			}
+		}
+	}
+
+	.agrupacion-inscripciones {
+		margin-bottom: 50px;
+
+		.block .block-inner {
+			box-sizing: border-box;
+			padding: 26px 26px 20px;
+			text-align: center;
+		}
+
+		.field--name-field-title-block {
+			@include title-grotesco-big-bold;
+			padding: 0 30px;
+			margin-bottom: 15px;
+		}
+
+		.field--name-body {
+			margin-bottom: 14px;
+
+			p {
+				@include lato-regular-normal;
+				margin: 0;
+			}
+		}
+
+		.field--name-field-enlace {
+			text-align: center;
+
+			a {
+				@include buton-s-border-green;
+			}
+		}
+
+		#block-serpilopagaseccionadmisiones {
+			.block-inner {
+				background-color: $color_gray_2;
+			}
+			
+			.field--name-field-title-block {
+				color: $color_brand;
+			}
+		}
+
+		#block-inscripcionespregradoseccionadmisiones {
+			.block-inner {
+				background-color: $color_brand;
+			}
+
+			.field--name-field-title-block {
+				color: white;
+			}
+
+			.field--name-field-enlace {
+				a {
+					color: white;
+					border-color: white;
+				}
+			}
+		}
+
+		#block-inscripcionesposgradoseccionadmisiones {
+			.block-inner {
+				background-color: #F0F0F0;
+			}
+
+			.field--name-field-title-block {
+				color: $color_brand_dark;
+			}
+
+			.field--name-field-enlace {
+				a {
+					background-color: white;
+					border-color: white;
+					color: $color-brand;
+				}
+			}
+		}
+	}
+
+	// Banner principal
+	.block-block-contentbcbc6ead-1341-4a5b-ba2f-25daee822f5c {
+		img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+	}
+
+	.block-block-groupd558f438-0308-4e4f-ba4c-22a9df6674f7 {
+		@include content-title-light('.field--name-field-subtitle-block', '.field--name-field-title-block', '.field--name-field-enlace');
+
+		> .block-inner {
+			@include ib-grid;
+		}
+
+		#block-porqueestudiarenelbosquebodyseccionadmisiones-2 {
+			position: relative;
+			
+			&::before,
+			&::after {
+				content: "";
+				background: $color_gray_15;
+				width: 1px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			
+			&::after {
+				left: auto;
+				right: 0;
+			}
+
+			.block-inner {
+				
+			}
+		}
+		
+		.block {
+			@include inline-block(top);
+			padding: 35px 30px 0 23px;
+			width: 24%;
+			box-sizing: border-box;
+
+			& + .block {
+				position: relative;
+				width: 34%;
+			}
+
+			& + .block + .block {
+				padding: 65px 38px 55px;
+				width: 42%;
+			}
+		}
+
+		#block-porqueestudiarenelbosquemediaseccionadmisiones-2 {
+			p {
+				@include acherus_grotesqueultralight(20px);
+			}
+		}
+	}
+
+	.section-oferta-academica {
+		@include default-tabs();
+		@include grilla-4-columns-bs('.tabMakerContent', '> .field__item');
+		margin-top: -10px;
+
+		.field--name-field-tab-carrera {
+			display: none;
+		}
+
+		.tabMakerTab {
+			padding-bottom: 12px;
+		}
+
+		.tabMakerContent {
+			padding: 20px 0 34px;
+		}
+
+		.field--name-field-tab-nombre-carrera {
+			@include tab-interna-heading;
+			border-bottom: 1px solid #babcbf;
+			padding: 5px 0 14px;
+		}
+
+		.field--name-field-programa {
+			padding-top: 8px;
+
+			.field__item {
+				@include tab-interna-link;
+				border-bottom: 1px solid #babcbf;
+				padding: 7px 0 10px;
+			}
+		}
+	}
+}

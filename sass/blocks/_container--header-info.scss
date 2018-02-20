@@ -1,0 +1,447 @@
+.container--header-info {
+	background: $color_gray_10;
+	position: relative;
+	z-index: 40;
+	height: 40px;
+	//overflow: hidden;
+
+	@media only screen and (max-width: $tablet) {
+		position: fixed;
+		width: 100%;
+		height: $mobile-header-height;
+		overflow: visible !important;
+	}
+
+	&::before {
+		content: "";
+		background-color: $color-brand;
+		height: $mobile-header-height;
+		width: 100%;
+		position: absolute;
+		top: -$mobile-header-height;
+		transition: .3s ease-out all;
+
+		@media only screen and (max-width: $tablet) {
+			top: 0;
+		}
+	}
+
+	.header-info-inner {
+		padding: 0 20px;
+		
+		@media only screen and (min-width: $tablet) {
+			padding: 0 30px;
+		}
+	}
+
+	.header_info {
+		//max-width: 1180px; //100%;
+		margin: 0 auto;
+		font-size: 0px;
+		position: relative;
+		min-height: $mobile-header-height;
+
+		.menu {
+			margin: 0;
+
+		}
+		.menu--menu-superior-home-derecho{
+			.menu-item:last-child{
+		    	@media only screen and (max-width: $tablet) {
+					display: none;
+				}				
+				a{
+				    font-family: 'latoregular';
+				    font-size: 12px;
+				    color: #9B9B9B;
+				    &:after{
+				    	content: '';
+				    	background:url(http://www.uelbosque.edu.co/sites/default/files/comunica/logos-pago-ueb.png) no-repeat;
+				    	position:absolute;
+				    	width: 134px;
+				    	height: 33px;
+				    	left: 40px;
+				    	@media only screen and (max-width: $tablet) {
+							background: none;
+						}
+				    }
+				}
+			}
+			
+		}
+	}
+	.logo-tablet-mobile {
+		display: none;
+		width: 100px;
+		height: 31px;
+		left: 80px;
+		position: absolute;
+		top: 7px;
+	}
+
+	.block-blockgroup {
+		background: #F7F7F7;
+		border-top: 1px solid #c5c5c5;
+		display: none;
+		left: 0;
+		right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		top: 40px;
+		width: 100%; //1180px;
+		max-width: 1180px;
+		z-index: 100;
+	}
+
+	.block-gtranslate {
+		
+	}
+
+	.menu--menu-superior-home {
+		@include inline-block(top);
+		width: 45%;
+		min-height: 41px;
+		transition: .3s ease-out all;
+		position: relative;
+		left: 0;
+
+		@media only screen and (min-width: 1322px) {
+			//left: -70px;
+		}
+
+		.menu {
+			@include inline-block(top);
+		}
+
+		.menu-item {
+			margin-right: 8px;
+			overflow: hidden;
+
+			a {
+				position: relative;
+				//@include underline-hover;
+
+				&::before {
+					content: "";
+					background: $color-brand;
+					height: 4px;
+					width: 100%;
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					transition: .1s ease-out all;
+				}
+
+				&:hover {
+					&::before {
+						bottom: 0;
+					}
+				}
+			}
+		}
+		
+		// Texto: "Información para:"
+		.js-append-text {
+			@include small-pretitle-italic;
+			@include inline-block(top);
+			letter-spacing: 0px;
+			position: relative;
+			top: 12px;
+			margin-right: 5px;
+			width: 100px;
+		}
+	}
+
+	.menu--menu-superior-home-derecho {
+		@include inline-block(top);
+		width: 55%;
+		position: relative;
+		top: 0;
+
+		> .menu {
+			@media only screen and (min-width: $tablet) {
+				width: 110%;
+			}
+		}
+	}
+	.phone-home {
+		@include inline-block(top);
+		width: 10%;
+		position: relative;
+		@media only screen and (min-width: 1322px) {
+			right: -100px;
+		}
+		@media only screen and (max-width: 1321px) {
+			display: none;
+		}
+		.field--name-body {
+			padding: 6px 0;
+			a {
+				@include acherus_black(12px);
+				letter-spacing: 1px;
+				text-decoration: none;
+				color: #2b3427;
+				position: relative;
+				&::before {
+					content: url("../images/Shape.png");
+					position: absolute;
+					width: 11px;
+					height: 11px;
+					left: -15px;
+					top: 2px;
+					display: block;
+				}
+			}
+		}
+	}
+	.menu {
+		@include ib-grid;
+
+		.menu-item {
+			@include inline-block(top);
+			font-size: 14px;
+
+			a {
+				@include latoregular(10px);
+				height: 40px;
+				box-sizing: border-box;
+				color: #4A4A4A;
+				margin-top: 0;
+				display: inline-block;				
+				letter-spacing: 1.82px;
+				line-height:12px;
+				text-decoration: none;
+				padding-top: 13px;
+				padding-bottom: 15px;
+				vertical-align: middle;
+				position: relative;
+				transition: 1s ease-out all;
+				height: 40px;
+
+				@media only screen and (max-width: $tablet) {
+					height: 20px;
+					padding-top: 3px;
+				}
+			}
+		}
+	}
+
+	/*
+	.menu--menu-facultades-home {
+		position: relative;
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+
+		.menu {
+			column-count: 2;
+			column-gap: 15px;
+
+			.menu-item {
+				width: 100%;
+				margin-bottom: 15px;
+
+				a {
+					font-family: $font-bm;
+					letter-spacing: 7.14%;
+					font-size: 14px;
+					line-height: 100%;
+					padding: 0;
+					height: auto;
+				}
+			}
+		}
+
+		&:after {
+			content: "";
+			height: 100%;
+			right: 50%;
+			width: 1px;
+			background: $color_gray_10;
+		}
+	}
+	*/
+	
+	
+	
+	@mixin preheader-tablet() {
+		overflow: hidden;
+		height: auto;
+
+		.logo-tablet-mobile {
+			font-size: 16px;
+			display: block;
+
+			a,
+			img {
+				display: block;
+			}
+			p {
+				img {
+					display: none;
+				}
+			}
+		}
+
+		.menu--menu-superior-home {
+			left: -100%;
+			width: 0;
+			height: 0;
+			overflow: hidden;
+		}
+
+		.menu--menu-superior-home-derecho {
+			width: 78%;
+			float: right;
+			background: none;
+			text-align: right;
+			top: 13px;
+
+			@media only screen and (min-width: $tablet) {
+				padding-top: 2px;
+			}
+
+			.menu-item {
+				padding-left: 0;
+				padding-right: 0;
+				background-color: $color-brand;
+				transition: .5s ease-out all;
+				position: relative;
+
+				@media only screen and (max-width: 680px) {
+					&:nth-of-type(1) {
+						border-right: 0;
+					}
+				}
+
+				@media only screen and (max-width: 580px) {
+					&:nth-of-type(2) {
+						border-right: 0;
+					}
+				}
+
+				@media only screen and (max-width: 485px) {
+					&:nth-of-type(3) {
+						border-right: 0;
+					}
+				}
+
+				@media only screen and (max-width: 440px) {
+					&:nth-of-type(4) {
+						border-right: 0 !important;
+					}
+				}
+
+				a {
+					letter-spacing: 0;
+					margin: 0 !important;
+					padding: 3px 10px 0;
+
+					// Estos botones deben de ocultarse progresivamente para que se evite tocar el logo
+					// Al mismo tiempo, deben aparecer en el menú principal, con los mismos media queries
+					// Revisar blocks/menu--menu-principal
+					&.btn-facu {
+						padding-right: 21px !important;
+
+						&::after {
+							right: 2px;
+						}
+
+						@media only screen and (max-width: 680px) {
+							display: none;
+						}
+					}
+
+					&.btn-digi {
+						&::after {
+							right: 2px;
+						}
+
+						@media only screen and (max-width: 580px) {
+							display: none;
+						}
+					}
+
+					&.btn-dire {
+						@media only screen and (max-width: 485px) {
+							display: none;
+						}
+					}
+
+					&.btn-idi {
+						@media only screen and (max-width: 440px) {
+							display: none;
+						}
+					}
+
+					&.buscar-mobile {
+						font-size: 12px;
+
+						@media only screen and (max-width: 400px) {
+							width: 0;
+							height: 19px;
+							overflow: hidden;
+							padding: 0 0 0 19px !important;
+							display: block;
+
+							&::after {
+								left: 0 !important;
+							}
+						}
+					}
+				}
+
+				&:nth-child(1) {
+					a {
+						
+					}
+				}
+
+				&:nth-child(2) {
+					a {
+						
+					}
+				}
+
+				&:nth-child(1),
+				&:nth-child(2) {
+					a {
+						color: $color_brand_dark;
+						padding-right: 20px;
+					}
+				}
+
+				&:nth-child(3),
+				&:nth-child(4) {
+					a {
+						color: white;
+					}
+				}
+
+				&:nth-child(4) {
+					border-right: 1px solid white;
+
+					a {
+						padding-right: 26px;
+						
+						&::after {
+							right: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: $tablet) {
+		@include preheader-tablet();
+
+		.content-sub-menu {
+			//display: none !important;
+		}
+	}
+}
+
+.region-header-educon{
+	    min-height: 100px;
+}

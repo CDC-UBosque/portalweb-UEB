@@ -1,0 +1,176 @@
+// URL: /exito-estudiantil
+.estilo-0018 {
+    @include intro-title('.field--name-field-pre-title', '.field--name-field-title2', '.field--name-field-pre-title + .field--name-field-title2');
+	$mobile-1: 500px;
+	$activeImageWidth: 440px;
+	$activeImageWidthLeft: $activeImageWidth + 145px;
+
+	.field--name-field-images {
+		@include inline-block;
+		width: $activeImageWidthLeft;
+		background: white;
+		overflow: hidden;
+		height: 465px;
+		position: relative;
+
+		@media only screen and (max-width: $tablet) {
+			height: 153px;
+			width: 50%;
+		}
+
+		@media only screen and (max-width: $mobile-1) {
+			height: 250px;
+			padding-bottom: 35px;
+			display: block;
+			width: auto;
+		}
+
+		.field__item {
+			width: 130px;
+			height: 75px;
+			overflow: hidden;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: .3s ease-out all;
+			cursor: pointer;
+
+			img {
+				display: block;
+				height: 100%;
+				width: 100%;
+			}
+
+			&.active {
+				position: absolute;
+				transition: .3s ease-out all;
+				width: $activeImageWidth;
+				height: auto;
+				left: 145px;
+				top: 0 !important;
+				cursor: default;
+
+				img {
+					display: block;
+					height: auto;
+					width: $activeImageWidth;
+				}
+			}
+		}
+
+		@for $i from 0 through 5 {
+			[data-num="#{$i+1}"] {
+			 	top: 90px * $i;
+			}
+		}
+
+		@media only screen and (max-width: $tablet) {
+			.field__item {
+				width: 57px;
+				height: 30px;
+
+				&.active {
+					width: 275px;
+					left: 73px;
+				}
+			}
+
+			@for $i from 0 through 5 {
+				[data-num="#{$i+1}"] {
+				 	top: 38px * $i;
+				}
+			}
+		}
+
+		@media only screen and (max-width: $mobile-1) {
+			.field__item {
+				width: 57px;
+				height: 30px;
+				top: 220px;
+
+				&.active {
+					width: 100%; //275px;
+					height: 200px;
+					top: 0;
+					left: 0;
+
+					img {
+						width: 100%;
+					}
+				}
+			}
+			
+			@for $i from 1 through 4 {
+				[data-num="#{$i}"] {
+				 	left: (70px * $i) - 35px;
+				}
+			}
+		}
+	}
+
+	.wrapper-images {
+		@include ib-grid;
+		background: #F9F9F9;
+
+		@media only screen and (max-width: $mobile-1) {
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+	}
+
+	.text-content {
+		// width: 50%;
+		// width: calc(100% - ($activeImageWidthLeft));
+		box-sizing: border-box;
+		padding: 30px;
+
+		@media only screen and (min-width: $tablet) {
+			width: calc(100% - 585px);
+			@include inline-block;
+			padding-top: 30px;
+		}
+
+		@media only screen and (min-width: $mobile-1) and (max-width: $tablet) {
+			@include inline-block;
+			width: 50%;
+		}
+	}
+
+	.field--name-field-body {
+		margin-bottom: 20px;
+
+		blockquote {
+			margin: 0 0 20px;
+
+			@media only screen and (min-width: $tablet) {
+				width: 84%;
+
+				p {
+					font-family: $font-bli;
+					font-size: 20px;
+					line-height: 24px;
+				}
+			}
+		}
+	}
+
+	.field--name-field-address {
+		font-family: $font-baser;
+		font-size: 11px;
+		line-height: 19px;
+		
+		&::first-line {
+			font-family: $font-baseb;
+		}
+	}
+
+	.field--name-field-link1 {
+		padding-top: 33px;
+
+		a {
+			@include bt-line-green-l;
+			padding: 7px 35px 6px;
+		}
+	}
+}
+

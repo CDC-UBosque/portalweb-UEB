@@ -1,0 +1,776 @@
+.page-talento-humano {
+    .block {
+        box-sizing: border-box;
+    }
+    
+    .texto-link {
+        border-left: 1px solid $color_gray_50;
+        padding: 0 20px;
+        max-width: 280px;
+        .field--name-field-title .field__item {
+            font-family: $font-baseb;
+            font-size: 18px;
+            color: $color-brand;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        .field--name-field-bocadillo {
+            font-family: $font-baser;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .field--name-field-link a {
+            @include buton-s-green;
+        }
+    }
+    .texto-documento {
+        border-left: 1px solid $color_gray_50;
+        padding-left: 12px;
+        max-width: 260px;
+        .field__item {
+            margin: 0;
+        }
+        .field--name-field-texto-inferior {
+            font-family: $font-baseb;
+            font-size: 18px;
+            color: $color-brand;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        .file--application-pdf {
+            background: url(../images/icon-pdf-green.svg) no-repeat 0 50%;
+            padding-left: 25px;
+            margin-top: 10px;
+            min-height: 25px;
+            display: block;
+            a {
+                color: $color_gray_80;
+                text-decoration: none;
+            }
+            @media only screen and (max-width: $tablet) {
+                background-position: 0 0;
+            }
+        }
+    }
+    //URL:/talento-humano/acerca-del-departamento
+    &.acerca-del-departamento {
+        .content {
+            margin-right: -15px;
+            position: relative;
+            @media only screen and (max-width: $mobile) {
+                margin-top: 30px;
+                margin-right: 0;
+            }
+        }
+        .content1 {
+            @include ib-grid;
+            margin-right: -30px;
+            @media only screen and (max-width: $mobile) {
+                margin-right: 0;
+            }
+        }
+        .region-section-1 {
+            clear: both;
+            margin-top: 30px;
+        }
+        .block-page-title-block {
+            margin-bottom: 30px;
+
+            @media only screen and (max-width: $tablet) {
+                margin-top: 30px;
+            }
+        }
+        .acerca-departamento {
+            //@include inline-block(top);
+            float: left;
+            width: 40%;
+            .field.field--name-node-title {
+                display: block;
+                font-size: 36px;
+            }
+            .field--type-text-with-summary {
+                padding-right: 20px;
+            }
+            strong {
+                font-family: $font-bsb;
+                font-size: 30px;
+            }
+            @media only screen and (max-width: $mobile) {
+                float: none;
+                width: 100%;
+            }
+        }
+        .texto-imagen {
+            float: right;
+            padding-left: 15px;
+            position: relative;
+            width: 60%;
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 1px;
+                height: 100px;
+                background-color: $color_gray_20;
+                position: absolute;
+                top: 0;
+                left: -6px;
+            }
+            .field--name-field-bocadillo {
+                font-size: 18px;
+                line-height: 20px;
+                color: $color_gray_60;
+                margin-bottom: 25px;
+            }
+            @media only screen and (max-width: $tablet) {
+                padding-right: 30px;
+            }
+            @media only screen and (max-width: $mobile) {
+                float: none;
+                padding-right: 0;
+                width: 100%;
+                .field--name-field-image {
+                    margin-left: -15px;
+                }
+                &:before {
+                    left: 0;
+                    height: 85px;
+                }
+            }
+        }
+        .organigrama {
+            float: right;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 20px;
+
+            @media only screen and (max-width: $tablet) {
+                margin-right: 30px;
+            }
+            @media only screen and (max-width: $mobile) {
+                float: none;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+        }
+        .reglamentos {
+            @include inline-block(top);
+            padding-right: 20px;
+            width: 67%;
+            @media only screen and (max-width: $tablet) {
+                width: 65%;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+        .documentos {
+            @include inline-block(top);
+            margin-top: 50px;
+            width: 30%;
+            @media only screen and (max-width: $mobile) {
+                top: 0;
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+    //URL:/talento-humano/servicios
+    &.servicios {
+        .content {
+            position: relative;
+        }
+        .field--name-field-texto-acerca-de {
+            font-family: $font-bl;
+            font-weight: normal;
+            font-size: 28px;
+            color: $color_gray_80;
+            line-height: 30px;
+            letter-spacing: -0.5px;
+            margin-bottom: 30px !important;
+            @media only screen and (max-width: $tablet) {
+                font-size: 20px;
+            }
+        }
+        .field__item {
+            margin-bottom: 33px;
+            .field__item {
+                margin: 0;
+            }
+        }
+        .field.field--name-field-title {
+            font-family: $font-brandb;
+            font-size: 33px;
+            margin-bottom: 15px;
+        }
+        .documentos {
+            position: absolute;
+            top: 200px;
+            right: 0;
+            .field__item {
+                margin: 0;
+            }
+            @media only screen and (max-width: $tablet) {
+                right: -30px;
+                top: 170px;
+            }
+            @media only screen and (max-width: $mobile) {
+                display: none;
+            }
+        }
+        .servicios-block .field--type-text-with-summary,
+        .contenido-extra .field--name-field-contenido-bloque {
+            width: 65%;
+            @media only screen and (max-width: $mobile) {
+                width: 100% !important;
+            }
+        }
+        .contenido-extra .field--name-field-contenido-bloque {
+            @media only screen and (max-width: $tablet) {
+                width: 80%;
+            }
+        }
+    }
+    //URL:/talento-humano/gestion
+    &.gestion-talento {
+        .content2 {
+            position: relative;
+        }
+        .content4 .content-table-gestion-talento:last-child {
+            border-bottom: none;
+        }
+        .gestion-block .field--type-text-with-summary {
+            max-width: none;
+        }
+        .field--name-field-title2 h3 {
+            font-family: $font-bsb;
+        }
+        .content-table-gestion-talento {
+            padding: 30px 0 55px;
+            border-bottom: 1px solid $color_gray_20;
+            strong {
+                font-family: $font-bsb;
+                font-size: 20px;
+            }
+
+            .shortcontent, 
+            .shortcontent p {
+                display: inline;
+            }
+            a.morelink {
+                color: $color_brand;
+                font-family: $font-bsb;
+                font-size: 12px;
+                margin-left: 10px;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:after {
+                    content: "";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    background: url('../images/svg/arrow-down-green-2.svg') no-repeat;
+                    background-size: 10px;
+                    margin-left: 2px;
+                    vertical-align: bottom;
+                }
+
+                &.less:after {
+                    display: none;
+                }
+            }
+
+            .field__item {
+                margin-bottom: 20px;
+            }
+
+            @media only screen and (max-width: $tablet) {
+                padding-bottom: 25px;
+                padding-top: 20px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-bottom: 20px;
+            }
+        }
+        .block-content--type-bloque-basico-acordeon {
+            @include ib-grid;
+        }
+        .field--name-field-title2 {
+            @include inline-block(top);
+            width: 30%;
+            @media only screen and (max-width: $tablet) {
+                display: initial;
+            }
+        }
+        .text-content {
+            @include inline-block(top);
+            width: 70%;
+            @media only screen and (max-width: $tablet) {
+                width: 80%;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+        .induccion {
+            .text-content {
+                width: 35%;
+                @media only screen and (max-width: $tablet) {
+                    width: 65%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    border-bottom: none;
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width: $mobile) {
+                border-bottom: none;
+            }
+        }
+        .video-induccion {
+            padding-left: 20px;
+            position: absolute;
+            top: 30px;
+            right: 0;
+            padding-bottom: 30px;
+            .text-content {
+                width: 100%;
+            }
+            @media only screen and (max-width: $tablet) {
+                top: 75px;
+                right: -34px;
+                padding-bottom: 0;
+            }
+            @media only screen and (max-width: $mobile) {
+                position: initial;
+            }
+        }
+        .desarrollo .field__item {
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @media only screen and (max-width: $tablet) {
+                padding-left: 20px;
+            }
+        }
+    }
+    //URL:/talento-humano/gestion-trabajadores-independientes
+    &.gestion-trabajadores {
+        .gestion-block .field--type-text-with-summary {
+            max-width: none;
+        }
+        .contenido-extra {
+            .field__item {
+                margin-bottom: 33px;
+                .field.field__item {
+                    margin: 0;
+                    padding: 0;
+                }
+                &:first-child .field--name-field-title {
+                    font-size: 33px;
+                }
+                &:nth-child(n+2) {
+                    padding: 0 20px;
+                    @media only screen and (max-width: $mobile) {
+                        padding: 0;
+                    }
+                }
+                &:nth-child(n+3) .field--name-field-contenido-bloque,
+                &:nth-child(n+3) .field--name-field-texto-acerca-de {
+                    width: 70%;
+                    @media only screen and (max-width: $tablet) {
+                        width: 80%;
+                    }
+                    @media only screen and (max-width: $mobile) {
+                        width: 100%;
+                    }
+                }
+            }
+            .field--name-field-title {
+                font-family: $font-bsb;
+                font-size: 28px;
+                margin-bottom: 15px !important;
+            }
+        }
+        .texto-documentos {
+            padding-left: 20px;
+            .field--name-field-title h2 {
+                font-family: $font-bsb;
+                font-size: 28px;
+            }
+            .bug-div-can-not-delete {
+                @include inline-block(top);
+                box-sizing: border-box;
+                padding-right: 10px;
+                width: 30%;
+                @media only screen and (max-width: $tablet) {
+                    width: 100%;
+                }
+            }
+            .field--name-field-title {
+                width: 100%;
+                padding: 0;
+            }
+            .text-content {
+                padding-right: 25px;
+                width: 40%;
+                margin-top: 10px;
+                @media only screen and (max-width: $tablet) {
+                    width: 60%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            .aside {
+                width: 30%;
+                @media only screen and (max-width: $tablet) {
+                    width: 40%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    display: none;
+                }
+            }
+            .file--application-pdf {
+                padding-top: 0;
+            }
+            .file--application-pdf a {
+                color: $color_gray_80;
+                font-size: 16px;
+                font-family: $font-baser;
+                letter-spacing: 1px;
+                text-transform: none;
+                min-height: 25px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-left: 0;
+            }
+        }
+    }
+    //URL:/talento-humano/comite-de-convivencia
+    &.comite-de-convivencia {
+        .region-section {
+            margin-top: 30px;
+        }
+        #main {
+            padding-top: 0;
+            padding-left: 0;
+        }
+        #main .node--type-pagina-basica-bosque {
+            padding-bottom: 0;
+        }
+        #main .field.field--name-field-image {
+            margin-bottom: 0;
+            img {
+                width: 100%;
+            }
+        }
+        #main .main-image .field--name-field-titulo-2 {
+            @media only screen and (max-width: $tablet) {
+                padding-left: 19px;
+            }
+        }
+        .node--type-pagina-basica-bosque .wrapper-enlace {
+            @media only screen and (max-width: $tablet) {
+                right: 30px;
+            }
+            @media only screen and (max-width: $mobile) {
+                max-width: 270px;
+                right: 14%;
+            }
+            .field--name-field-enlace a {
+                @include buton-l-green;
+            }
+        }
+        #main .form-inscription-process {
+            top: 0;
+            margin-left: 0;
+            margin-bottom: 0;
+            width: 100% !important;
+            @media only screen and (max-width: $tablet) {
+                top: -20px;
+                margin-left: -30px;
+                margin-right: -30px;
+                width: calc(100% + 60px) !important;
+            }
+        }
+        .banner {
+            margin-right: -20px;
+            .field--name-field-texto-encima-del-enlace::before {
+                content: url(../images/facultad/arrow-down-green.svg);
+            }
+            @media only screen and (max-width: $tablet) {
+                margin-right: 0;
+            }
+        }
+        .field--name-field-title h4 {
+            font-size: 33px;
+            @media only screen and (max-width: $mobile) {
+                line-height: 40px;
+            }
+        }
+        .form-item-correo-electronico {
+            @include inline-block(top);
+            box-sizing: border-box;
+            padding-left: 10px;
+            width: 50%;
+        }
+        .layout-content {
+            @media only screen and (max-width: $tablet) {
+                margin-top: 0;
+            }
+        }
+
+        @media only screen and (max-width: $tablet) {
+            #main .main-image .field--name-field-titulo-largo {
+                padding-left: 30px;
+            }
+        }
+    }
+    //URL:/talento-humano/sistema-seguridad-salud
+    &.seguridad-salud {
+        .content {
+            position: relative;
+        }
+        .contenido-extra .field__item {
+            margin-bottom: 60px;
+            .field__item {
+                margin-bottom: 0;
+            }
+        }
+        .contenido-extra .field--name-field-title {
+            font-family: $font-brandb;
+            font-size: 33px;
+            margin-bottom: 15px !important;
+        }
+        .contenido-extra .field--name-field-contenido-bloque {
+            width: 65%;
+
+            @media only screen and (max-width: $tablet) {
+                width: 56%;
+            }
+
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+        .plan-emergencia {
+            position: absolute;
+            top: 110px;
+            right: 0;
+            z-index: 2;
+
+            @media only screen and (max-width: $mobile) {
+                position: initial;
+                margin-bottom: 30px;
+            }
+        }
+        .block {
+            @include desplegableMaker-outer('&.block-accordion', '.paragraph', '.field--name-field-contenido-bloque', '.field--name-field-title');
+            &.block-accordion {
+                margin-bottom: 50px;
+            }
+            &.block-accordion .field--name-field-contenido-bloque {
+                padding: 20px 0;
+                overflow: hidden;
+                margin-right: 44px;
+                border-right: 1px solid $color_gray_15;
+                border-bottom: 1px solid $color_gray_15;
+                p {
+                    width: 65%;
+                    @media only screen and (max-width: $tablet) {
+                        width: 85%;
+                    }
+                    @media only screen and (max-width: $mobile) {
+                        width: 100%;
+                    }
+                }
+                h3 {
+                    font-family: $font-bsb;
+                }
+                ul {
+                    list-style-type: disc;
+                    padding-left: 20px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    border: none;
+                }
+            }
+        }
+    }
+    .field--name-field-bocadillo-150 {
+        @media only screen and (max-width: $tablet) {
+            font-size: 20px;
+            line-height: 20px;
+            line-height: 25px;
+        }
+    }
+    &.caja-compensacion {
+        .grupos-caja-compensacion {
+            position: relative;
+            .paragraph {
+                @include ib-grid;
+            }
+            .text-content {
+                @include inline-block(top);
+                background-color: $color_gray_5;
+                padding: 45px 40px;
+                box-sizing: border-box;
+                min-height: 508px;
+                width: 50%;
+                @media only screen and (max-width: $tablet) {
+                    min-height: 508px;
+                    width: 54%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                    padding-left: 30px;
+                    padding-right: 30px;
+                }
+            }
+            .image-content {
+                @include inline-block(top);
+                box-sizing: border-box;
+                width: 45%;
+                @media only screen and (max-width: $tablet) {
+                    > * {
+                        min-height: 508px;
+                    }
+                    img {
+                        height: 508px;
+                        ;
+                    }
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            .field--name-field-title {
+                font-size: 10px;
+                font-family: $font-baser;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 12px;
+            }
+            .field--name-field-texto-acerca-de {
+                font-size: 39px;
+                font-family: $font-baser;
+                margin-bottom: 20px;
+                width: 10ch;
+            }
+            .field--name-field-contenido-bloque {
+                ul {
+                    list-style-type: disc;
+                    padding-left: 20px;
+                }
+                p,
+                li {
+                    font-size: 14px;
+                    font-family: $font-bm;
+                    line-height: 19px;
+                }
+            }
+            .buttons-wrapper {
+                position: absolute;
+                top: 35%;
+                right: 18px;
+                .carousel-control {
+                    position: initial;
+                    opacity: 1;
+                    @media only screen and (max-width: $mobile) {
+                        display: inline-block;
+                        &.flecha-delgada-izquierda {
+                            margin-right: 10px;
+                        }
+                        &.flecha-delgada-derecha {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                @media only screen and (max-width: $tablet) {
+                    right: -25px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    position: initial;
+                    text-align: center;
+                    margin-top: 30px;
+                }
+            }
+            @media only screen and (max-width: $tablet) {
+                margin-left: -30px;
+            }
+            @media only screen and (max-width: $mobile) {
+                margin-right: -30px;
+            }
+        }
+    }
+    &.trabaje-con-nosotros {
+        .field--name-title {
+            font-family: "latoregular";
+            font-size: 28px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        .field__label {
+            font-family: $font-bsb;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        .views-row {
+            position: relative;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $color_gray_15;
+            &:last-child {
+                border-bottom: none;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding-top: 186px;
+            }
+        }
+        .item-month-day {
+            float: none;
+        }
+        .trabaje-con-nosotros {
+            @include ib-grid;
+        }
+        .bar-desplegable-content {
+            @include inline-block(top);
+            box-sizing: border-box;
+            width: 85%;
+            .field--name-field-body-descripcion {
+                margin-bottom: 20px;
+                width: 80%;
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+            }
+        }
+        .node-date {
+            @include inline-block(top);
+            box-sizing: border-box;
+            border-left: 1px solid $color_gray_15;
+            padding-left: 20px;
+            width: 15%;
+            .field__label {
+                font-family: $font-serif-italic;
+                font-size: 12px;
+            }
+            @media only screen and (max-width: $mobile) {
+                position: absolute;
+                top: 15px;
+                left: 0;
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: $tablet) {
+            .tab-content-level-1 {
+                margin: 0;
+            }
+        }
+    }
+}

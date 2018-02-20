@@ -1,0 +1,299 @@
+.page-node-type-acerca-de-la-facultad {
+
+}
+.node--type-acerca-de-la-facultad {
+	
+	//padding-left: 25px;
+	font-size: 0px !important;
+	@media only screen and (max-width: $tablet) {
+		//margin-top: 35px;
+		
+	}
+	.field--name-field-departamentos-de-la-facult {
+		@include default-tabs();
+
+		.tabMakerContent {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.field__items {
+			display: none;
+		}
+	}
+
+	.field--name-dynamic-block-fieldnode-menu-facultades {
+		@include sidebar-menu('.menu', '.menu-item');
+		@include grid (3, 80, 20);
+		display: inline-block;
+		.menu {
+			position: relative;			
+		}
+	}	
+	.field--name-node-title {
+		.field__label {
+			@include title;
+		}
+		.field__item {
+			display: none;
+		}
+	}
+	.field--type-string-long {
+		@include paragraphs_large;		
+		@include grid (2.8, 80, 20);
+		//@include inline-block(top);
+		//width: 30%;
+		margin-right: 0px;
+		padding-right: 20px;
+		width: auto;
+		padding-bottom: 30px;
+
+		@media only screen and (max-width: $tablet) {
+			width: 35%;
+			margin-right: 0;
+			padding-right: 10px;
+			padding-bottom: 40px;
+		}
+		@media only screen and (max-width: $mobile) {
+			float: left;
+			width: 100%;
+			padding-right: 20px;
+			padding-top: 11px;
+			padding-bottom: 20px;
+		}
+		
+
+
+	}
+	.field--name-field-contenido-1 {
+		@include paragraphs_large;
+		padding-bottom: 35px;
+		//width: 564px;
+		width: 79%;
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+	.field--name-field-bocadillo {
+		@include grid (9, 80, 20);
+		@include cita;
+		padding-bottom: 20px;
+		width: 100%;
+		@media only screen and (max-width: $tablet) {
+			font-size: 22px;
+			line-height: 30px;
+		}
+	}
+	.field--name-dynamic-token-fieldnode-titulo-historia-acerca-de-facult {
+		@include title;
+		padding-bottom: 0px;
+	}
+	.field--name-field-image, .field--name-field-video-web  {
+		@include grid (6, 80, 20);
+		//@include inline-block(top);
+		float: right;
+		margin-right: 0px;
+		width: 70%;
+
+		@media only screen and (max-width: $tablet) {
+			padding-left: 10px;
+			width: 65%;
+		}
+		@media only screen and (max-width: $mobile) {
+			width: 100%;
+			padding-bottom: 20px;
+			padding-left: 0px;
+		}
+	}
+	.field--name-field-recomendaciones-prueba {
+		@include inline-block(top);
+		@include grid (4.4, 80, 20);
+		margin-right: 0;
+		padding-right: 60px;
+		position: relative;
+		padding-bottom: 20px;
+		width: 48%;
+		&:before {
+			content: "";
+			height: 90%;
+			width: 1px;
+			background: $color_gray_10;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		@media only screen and (max-width: $tablet) {
+			padding-right: 10px;			
+			&:before {
+				height: 100%;
+			}
+		}
+		@media only screen and (max-width: $mobile) {
+			padding-left: 0;
+			width: 100%;
+			&:before {
+				display: none;
+			}
+		}
+		.field__label {
+			@include cita;
+			padding-bottom: 15px;
+		}
+		
+	}
+	.field--name-field-fecha-prueba-pregrado {
+		@include inline-block(top);
+		@include grid (4.4, 80, 20);
+		margin-right: 0px;
+		padding-left: 60px;
+		padding-bottom: 20px;
+		width: 52%;
+		margin-right: 0px;
+		padding-left: 60px;
+		padding-right: 35px;
+		@media only screen and (max-width: $tablet) {
+			padding-left: 5px;
+		}
+		@media only screen and (max-width: $mobile) {
+			padding-left: 0;
+			width: 100%;
+		}
+		.field__label {
+			@include cita;
+			padding-bottom: 15px;
+		}
+	}
+
+	.group-content-image {
+		position: relative;
+		margin-bottom: 30px;
+		color: white;
+		@media only screen and (max-width: $mobile) {
+			.field--name-field-imagen-slider {
+				margin: 0 -30px;
+			}
+		}
+		
+		.container-text {
+			position: absolute;
+			top: 20px;
+			left: 30px;
+			@media only screen and (max-width: $mobile) {
+				bottom: 80px;
+				left: 0px;
+				width: 70%;
+				top: initial;
+			}
+			.field--name-field-pre-title {
+				@include title;
+				padding-bottom: 5px;
+				@media only screen and (max-width: $mobile) {
+					font-size: 28px;
+					line-height: 28px;
+				}
+			}
+			.field--name-field-etiqueta {
+				@include paragraphs_large;
+				color: white;
+				width: 270px;
+				@media only screen and (max-width: $mobile) {
+					font-size: 12px;
+					line-height: 13px;
+					width: 85%;
+				}
+			}
+
+		}
+		.field--name-field-programa-del-evento {
+			position: absolute;
+			left: 30px;
+			bottom: 20px;
+			@media only screen and (max-width: $mobile) {
+				left: 0px;
+			}
+			a {
+				@include  buton-s-transparent ;
+				@include button-hover-after(white);
+			}
+			
+
+		}
+	}
+	.field--name-field-departamentos-de-la-facult {
+		padding-bottom: 60px;
+		.field--label-hidden {
+			display: none;
+		}
+	}
+
+	.block-content--type-bloque-decano {
+		@include ib-grid;
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			margin-top: -12px;
+		}
+		.field--name-field-imagen {
+			
+			float: left;
+			margin-bottom: 2px;
+			margin-right: 15px;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+			img
+			{
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.text-content {
+			@include paragraphs_large;
+			padding-bottom: 80px;
+			@media only screen and (max-width: $tablet) {
+				padding-bottom: 50px;
+			}
+			.field--name-body {
+				padding-bottom: 20px;
+			}
+		}
+		.field--name-field-texto-superior {
+			@include title_acherusblack_m;
+			width: 50%;
+			padding-bottom: 5px;
+			@media only screen and (max-width: $tablet) {
+				width: 60%;
+			}
+
+		}
+		.field--name-field-correo-decano {
+			@include pt_serifitalic (14px);
+			color: $color_gray_60;
+			padding-bottom: 10px;
+		}
+		.field--name-field-funciones-decano {
+			.field__label {
+				@include title_acherusblack_m;
+				padding-bottom: 5px;
+			}
+		}
+	}
+
+	// .field--name-field-informacion-de-la-facultad {
+	// 	@include grid(6, 80, 20);
+	// 	@include contact-prefooter (3, '.field--name-field-datos-de-informacion-decan', '.field__item', 
+	// 		'.field--name-field-acerca-de', '.field--name-field-bloque-legal-snies- ', 0px);
+	// 	display: inline-block;
+	// }
+	
+	
+	// .addtoany_list {
+	// 	@include contact-social-networks (2.95);
+	// 	margin-right: 0;
+	// }
+}

@@ -1,0 +1,628 @@
+.home-bienestar-universitario {
+	@include desplegableMaker-outer('.tabMakerContentInner', '.wrapper-level-2', '.tab-content-level-2', '.tab-button-level-2');
+	@include desplegableMaker-inner('.tab-content-level-2', '.wrapper-level-3', '.tab-content-level-3', '.tab-button-level-3');
+
+	@include teaser-convocatorias('.region-section-5 .views-row', '.views-field-field-imagen', '.null', '.views-field-title');
+
+	.region-section-5 {
+	//	@include default-tabs();
+	}
+
+	.content5 {
+		// Clase agregada con JS
+		// Esta clase se usa en /maestria/ciencias-basicas-biomedicas
+		> .block-views {
+			display: none;
+		}
+	}
+
+	.tabtext {
+		background: url(../images/svg/icono-raro-1.svg) no-repeat 0 3px;
+		padding-left: 45px;
+		padding-right: 10px;
+	}
+
+	@media only screen and (max-width: $mobile) {
+		.tabMakerContents {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		
+		.tab-content-level-2 {
+			margin-right: 26px;
+		}
+
+		.block-views-blockmes-actual-bienestar-universitario-block-1 {
+			padding-bottom: 20px;
+
+			.views-row {
+				padding: 0 50px;
+				text-align: center;
+			}
+
+			.field__label {
+				padding: 0;
+			}
+		}
+	}
+
+	.estilo-0009 {
+		text-align: center;
+		padding: 0 20px;
+		margin-bottom: 30px;
+	}
+
+    &.page-node-type-pagina-basica-image-video .content.region-content {
+        height: auto;
+    }
+    .node--type-pagina-basica-image-video {
+		$local-height: 438px;
+		position: relative;
+
+		@media only screen and (min-width: $tablet) {
+			background: #128ae0;
+		}
+
+        .field--name-field-image {
+			@media only screen and (max-width: $tablet) {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+
+			img {
+				height: $local-height;
+				width: auto;
+				max-width: none;
+				position: relative;
+
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+			}
+        }
+
+        .content-text {
+            background: #128ae0;
+            height: $local-height;
+			width: 400px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			box-sizing: border-box;
+			padding: 40px 30px 25px;
+            
+			@media only screen and (max-width: $tablet) {
+				position: relative;
+				top: auto;
+				right: auto;
+				margin-top: -63px;
+				width: auto;
+				background: #F9F9F9;
+				height: auto;
+				margin-bottom: 30px;
+				padding: 17px 26px 25px;
+
+				* {
+					color: $color_gray_80 !important;
+				}
+			}
+
+			@media only screen and (max-width: $mobile) {
+				padding: 12px 15px 25px;
+			}
+			
+            .field--name-field-title-format-html {
+                color: white;
+				max-width: 300px;
+                font: {
+                    family: $font-bli;
+                    size: 40px;
+                }
+				line-height: 38px;
+                padding: 0;
+                text-align: left;
+                margin: 0 0 10px;
+				letter-spacing: normal;
+
+                &::first-line {
+                    font: {
+                        family: $font-brandb;
+                    }
+					font-size: 39px;
+					letter-spacing: -0.5px;
+                }
+
+				@media only screen and (max-width: $mobile) {
+					font-size: 33px;
+
+					&::first-line {
+						font-size: 33px;
+					}
+				}
+            }
+            .field--name-field-bocadillo-2 {
+                font: {
+                    family: $font-bl;
+                    size: 28px;
+                }
+                color: white;
+                text-align: left;
+				margin-bottom: 20px;
+
+				@media only screen and (max-width: $mobile) {
+					margin-bottom: 10px;
+					font-size: 22px;
+				}
+            }
+            .field--name-field-bocadillo {
+                color: white;
+                font: {
+                    size: 14px;
+                }
+                line-height: 1.5;
+                text-align: left;
+            }
+        }
+    }
+    .block-content--type-bloque-contenido-basico {
+        .field--name-field-title {
+            // @include title-grotesco-big-bold;
+            text-align: center;
+        }
+        .field--type-text-with-summary {
+            margin: 25px 0;
+        }
+        .text-content {
+            p {
+                font: {
+                    family: $font-bl;
+                    size: 26px;
+                }
+                line-height: 1.2;
+                margin: 0 auto;
+                max-width: 1100px;
+                text-align: center;
+            }
+        }
+    }
+    .servicio-texto-medio {
+        margin: 40px auto;
+        max-width: 1100px;
+        text-align: center;
+    }
+    .items-nuestros-servicios-top {
+        .block-inner {
+            @include ib-grid;
+        }
+        .block-block-content {
+            @include inline-block(top);
+            position: relative;
+            margin-right: 2%;
+            width: 23.5%;
+            &:nth-child(5n) {
+                margin-right: 0;
+            }
+        }
+        .text-content {
+            bottom: 30px;
+            left: 0;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+        }
+        .group-action {
+            a {
+                @include button-md-white;
+            }
+        }
+    }
+    .items-nuestros-servicios-bottom {
+        .block-inner {
+            @include ib-grid;
+        }
+        .block-block-content {
+            @include inline-block(top);
+            background: #ffa20c;
+            height: 280px;
+            margin-right: 2%;
+            width: 32%;
+            &:nth-child(2n) {
+                background: #ffa20c;
+            }
+            &:nth-child(3n) {
+                background: #ed323b;
+            }
+            &:nth-child(4n) {
+                background: #9004df;
+                margin-right: 0;
+            }
+            .field--name-field-subtitle-block {
+                color: white;
+                font: {
+                    family: $font-basel;
+                    size: 29px;
+                }
+                max-width: 240px;
+                min-height: 185px;
+                padding: 30px 0 0 30px;
+                strong {
+                    font-family: $font-baseb;
+                }
+
+                @media only screen and (max-width: $tablet) {
+                    padding-top: 20px;
+                    padding-left: 20px;
+                }
+            }
+            .field--name-field-enlace {
+                padding-left: 30px;
+                position: absolute;
+                a {
+                    background: rgba(0, 0, 0, 0.4);
+                    border-radius: 30px;
+                    color: white;
+                    display: inline-block;
+                    font: {
+                        family: $font-baser;
+                        size: 11px;
+                    }
+                    letter-spacing: 2px;
+                    padding: 12px 14px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
+            .field--name-field-imagen {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                bottom: -22px;
+
+                @media only screen and (max-width: $tablet) {
+                    bottom: -14px;
+                }
+
+                @media only screen and (max-width: $mobile) {
+                    bottom: -22px;
+                }
+
+            }
+
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 30px;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (max-width: $mobile) {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+    }
+    .crecer-main-block {
+        float: left;
+        width: 74%;
+
+		.item-month {
+			color: white !important;
+		}
+
+        .node--view-mode-resumen-2 {
+            .text-content {
+                background: none;
+            }
+        }
+
+        @media only screen and (max-width: $tablet) {
+            width: 60%;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            float: none;
+            margin-top: 30px;
+            width: 100%;
+
+            .image-content {
+                margin-left: -30px;
+                margin-right: -30px;
+            }
+
+            .text-content {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    .crecer-facebook {
+        float: right;
+        text-align: right;
+        width: 24%;
+
+        @media only screen and (max-width: $tablet) {
+            width: 39%;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            float: none;
+            width: 100%;
+        }
+    }
+    .crecer-second-block {
+        float: right;
+        width: 24%;
+		img {
+			vertical-align: top;
+		}
+        .views-row {
+            position: relative;
+            .text-content {
+                background: rgba(0, 0, 0, 0.4);
+                bottom: 0;
+                box-sizing: border-box;
+                padding: 30px;
+                position: absolute;
+                .field--name-field-noticias-taxonomia {
+                    color: white;
+                    font: {
+                        family: $font-baser;
+                        size: 10px;
+                    }
+                    letter-spacing: 2px;
+                    margin-bottom: 20px;
+                    text-transform: uppercase;
+
+                    @media only screen and (max-width: $tablet) {
+                        margin-bottom: 0;
+                    }
+                }
+                .field--name-node-title {
+                    h3 {
+                        font-size: 18px;
+                        line-height: 1.3;
+                        margin: 0;
+                    }
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+                .field--name-node-link {
+                    display: none;
+                }
+
+                @media only screen and (max-width: $tablet) {
+                    padding: 10px;
+                }
+            }
+        }
+
+        @media only screen and (max-width: $tablet) {
+            clear: right;
+            width: 38%;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            float: none;
+            width: 100%;
+        }
+    }
+    .palmares-block {
+        background: #e1eef6;
+        clear: right;
+        display: inline-block;
+        height: 243px;
+        margin: 40px 0;
+        position: relative;
+        width: 100%;
+        
+        .field--name-field-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            @media only screen and (max-width: $mobile) {
+                display: none;
+            }
+        }
+
+        .text-content {
+            max-width: 800px;
+            padding-left: 35px;
+            padding-top: 35px;
+            position: absolute;
+            top: 0;
+            h3 {
+                font-size: 40px;
+            }
+
+            @media only screen and (max-width: $mobile) {
+                padding-left: 20px;
+            }
+        }
+        .field--name-field-body p {
+            font-family: $font-bli;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        .field--name-field-link a {
+            @include buton-l-transparent;
+            background-color: #124364;
+            border: 1px solid #124364;
+            margin-top: 20px;
+            &:hover {
+                background-color: transparent;
+                color: black;
+            }
+        }
+        .field--name-field-text-image {
+            font: {
+                family: $font-basel;
+                size: 22px;
+            }
+            max-width: 800px;
+            padding-left: 35px;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            height: 380px;
+            position: relative;
+
+            &:before {
+                content: "";
+                display: inline-block;
+                height: 100%;
+                width: 30px;
+                background: #e1eef6;
+                position: absolute;
+                left: -30px;
+            }
+            &:after {
+                content: "";
+                display: inline-block;
+                height: 100%;
+                width: 30px;
+                background: #e1eef6;
+                position: absolute;
+                right: -30px;
+            }
+        }
+    }
+    .facilitamos-title-block {
+        @include bg-laterales(#f9f9f9);
+        background: #f9f9f9;
+        h2 {
+            margin-bottom: 0;
+            padding-bottom: 40px;
+        }
+    }
+    .facilitamos-block {
+        @include bg-laterales(#f9f9f9);
+        background: #f9f9f9;
+        padding-bottom: 60px;
+        .block-inner {
+            @include ib-grid;
+        }
+        .block-block-content {
+            @include inline-block(top);
+            margin-right: 2%;
+            width: 32%;
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+            .field--name-field-pre-title {
+                text-align: left;
+                margin-bottom: 15px;
+            }
+            .field--name-field-title {
+                color: #676767;
+                font: {
+                    family: $font-basel;
+                }
+                text-align: left;
+                min-height: 74px;
+
+                @media only screen and (max-width: $tablet) {
+                    font-size: 30px;
+                    min-height: 0;
+                }
+            }
+            .field--type-text-with-summary {
+                margin-bottom: 22px;
+                margin-top: 10px;
+                min-height: 64px;
+                p {
+                    font-size: 14px;
+                    font-family: $font-baser;
+                    text-align: left;
+                }
+            }
+            .field--name-field-enlace {
+                a {
+                    @include button-m-border-green;
+                    padding: 8px 25px;
+                }
+
+                @media only screen and (max-width: $mobile) {
+                    text-align: center;
+                }
+            }
+
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 40px;
+                width: 100%;
+            }
+        }
+    }
+    #block-ebienestarnuestrosserviciosbienestaruniversitario,
+    #block-disfrutaconveniosnuestrosserviciosbienestaruniversitario,
+    #block-yotambiennuestrosserviciosbienestaruniversitario {
+        position: relative;
+    }
+    &.page-node-type-pagina-basica-image-video .agenda-bienestar-title {
+        width: 100% !important;
+    }
+    .plan-estudios {
+		.tab-content-level-3 {
+	        .views-row {
+	            @include ib-grid;
+			}
+		}
+        .views-row {
+            overflow: auto;
+            .lft-info {
+                @include inline-block(top);
+                padding: 0 10px;
+                width: 54%;
+            }
+            .rgt-info {
+                @include inline-block(top);
+                padding-left: 20px;
+                position: relative;
+                width: 12%;
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    width: 1px;
+                    height: 100px;
+                    background: $color_gray_20;
+                    position: absolute;
+                    left: 4px;
+                    top: 0;
+                }
+                .field-content {
+                    display: inline-block;
+                }
+            }
+            .views-field-title {
+                h4 {
+	                font-family: $font-brandb;
+	                font-size: 20px;
+	                margin-bottom: 0;
+                }
+            }
+            .views-field-field-contenido p {
+                font-family: $font-basel;
+                font-size: 14px;
+            }
+            .views-field-field-fecha {
+                font-family: $font-bsb;
+                font-size: 18px;
+                margin-bottom: 20px;
+                .label-fecha {
+                    font-size: 14px;
+                    font-family: $font-serif-italic;
+                }
+            }
+            .views-field-field-lugar {
+                font-size: 12px;
+                font-family: $font-baseb;
+                .label-lugar {
+                    font-size: 14px;
+                    font-family: $font-serif-italic;
+                }
+            }
+        }
+    }
+	
+}
+

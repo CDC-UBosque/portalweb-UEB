@@ -1,0 +1,88 @@
+// Ahora es los mixins
+// @mixin desplegableMaker-outer
+// @mixin desplegableMaker-inner
+// Se ve en pages/page-admisiones-children
+.acerca-de {
+	padding-bottom: 50px;
+	padding-bottom: 63px; // Sirve acá: cursos-preuniversitarios/curso-basico-preuniversitario, https://projects.invisionapp.com/d/main#/console/9919123/211859002/preview
+
+	@media only screen and (max-width: $mobile) {
+		padding-bottom: 22px;
+	}
+
+	.field--name-field-titulo-acerca-de {
+		@include title;
+		text-align: center;
+		padding-bottom: 25px;
+	}
+	
+	h3 {
+		margin: -5px 0 10px;
+		color: $color_text;
+		font-size: 20px !important;
+	}
+
+	li {
+		position: relative;
+		padding-left: 25px;
+		font-family: $font-baser;
+		font-size: 14px;
+		color: $color_gray_80;
+		line-height: 17px;
+
+		&::before {
+			content: "";
+			width: 5px;
+			height: 5px;
+			border-radius: 20px;
+			position: absolute;
+			top: 7px;
+			left: 0;
+			background: $color_gray_80;
+		}
+	}
+
+	.field--type-text-long {
+		@include ib-grid;
+		//column-count: 2;
+		text-align: center;
+		
+		p {
+			@include paragraphs_medium;
+			@include inline-block(top); // habilitado porque era necesario en: /ciencias/carrera/biologia
+			max-width: 340px;
+			width: 100%;
+
+			&:first-child {
+				text-align: right;
+				padding-right: 25px;
+				@media only screen and (max-width: $mobile) {
+					text-align: left;
+				}
+			}
+			
+			&:last-child {
+				text-align: left;
+				padding-left: 25px;
+			}
+			@media only screen and (max-width: $tablet) {
+				max-width: 45%;
+				&:first-child {
+					padding-right: 10px;
+				}
+				&:last-child {
+					padding-left: 10px;
+				}
+			}
+			@media only screen and (max-width: $mobile) {
+				max-width: 100%;
+				&:first-child {
+					padding-right: 0px;
+				}
+				&:last-child {
+					padding-left: 0px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+.page-preguntas-frecuentes {
+	#main {
+		padding-bottom: 84px;
+
+		@media only screen and (max-width: $tablet) {
+			padding-bottom: 53px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			padding-bottom: 60px;
+		}
+	}
+
+	.node--type-pagina-basica-bosque-no-image {
+		margin-bottom: 45px;
+
+		@media only screen and (max-width: $tablet) {
+			margin-bottom: 35px;
+		}
+	}
+
+	.view-repo-preguntas-frecuentes {
+		.view-header {
+			margin-bottom: 20px;
+		}
+
+		.views-field-title {
+			padding-right: 30px;
+		}
+
+		.views-field-field-respuesta-de-pregunta {
+			.field-content {
+				max-width: 90%;
+			}
+		}
+	}
+}
+

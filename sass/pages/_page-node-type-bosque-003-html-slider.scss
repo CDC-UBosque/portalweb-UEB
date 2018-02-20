@@ -1,0 +1,39 @@
+.page-node-type-bosque-003-html-slider {
+    .estilo-0007 {
+        padding-bottom: 40px;
+    }
+
+	&.page-faculties-grupos-1 .layout-content {
+		margin-top: 0;
+	}
+
+    &.estudiante {
+        .estilo-0009.hacemos-grande-el-bosque {
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            .field--name-field-bocadillo {
+                text-align: center;
+                line-height: 35px;
+                letter-spacing: 1px;
+            }
+        }
+        .group-event-convocatory {
+            h2 {
+                font-family: $font-bsb;
+            }
+            .field--name-node-title {
+                min-height: auto;
+                margin-bottom: 10px;
+                >* {
+                    font-family: $font-baseb;
+                    letter-spacing: 0.3px;
+                }
+            }
+            .field--name-field-fecha-inicio-inscripcion {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

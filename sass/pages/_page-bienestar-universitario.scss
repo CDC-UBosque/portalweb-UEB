@@ -1,0 +1,394 @@
+.page-bienestar-universitario {
+	.block-webform-block {
+		margin-bottom: 0;
+	}
+
+	.region-section-2,
+	.region-section-3,
+	.region-section-4,
+	.region-section-5 {
+		//@include clearfix;
+		width: 100%;
+		float: left;
+		clear: both;
+	}
+
+	// URL: /bienestar-universitario/deportes
+	&.deportes {
+		@include grilla-2-columns-bs('.content5', '.block');
+		@include grilla-3-columns-bs('.content3, .content4', '.estilo-0013', 10px, 0);
+
+		.field--name-field-titulo-2 {
+			max-width: 400px;
+			width: 100%;
+		}
+
+		.region-section-1 {
+			padding-bottom: 30px;
+		}
+
+		.region-section-2,
+		.region-section-3,
+		.region-section-4 {
+			//@include clearfix;
+			padding-bottom: 42px;
+		}
+
+		.deportes-taller,
+		.deportes-actividad-fisica {
+			.field--name-body {
+				max-width: 600px;
+			}
+		}
+
+		.deportes-actividad-fisica {
+			margin-bottom: 20px;
+
+			.field--name-body {
+				padding-bottom: 10px;
+			}
+		}
+
+		.deportes-dformativo,
+		.deportes-drepresentativo {
+			padding: 0 10px;
+		}
+
+		.deportes-dformativo {
+	        .field--name-body {
+	        	@media only screen and (max-width: $tablet) {
+					margin-bottom: 20px;
+				}
+	        }
+		}
+
+		.slider-deportes {
+			.views-row {
+				padding: 0;
+			}
+		}
+		
+		.carousel-semestres .field--name-body .owl-item, .carousel-semestres .view-content .owl-item {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+		.block-block-content235412f3-61bb-4dfc-be04-17533069386a {
+			&::before {
+				background-color: #BABCBF !important;
+				height: 100px !important;
+			}
+
+			.block-inner {
+				padding: 0;
+			}
+
+			.field--name-field-title2 {
+				color: $color_brand;
+				font-family: $font-brandb;
+				font-size: 18px;
+				line-height: 24px;
+				letter-spacing: -0.5px;
+			}
+		}
+
+		.carousel-semestres {
+			.view-content {
+				p {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	// URL: /bienestar-universitario/grupos-universitarios
+	&.grupos-universitarios {
+		$max-width: 600px;
+		.node--type-bosque-001-main-image {
+			margin: -10px 0 30px -20px;
+			
+			.text-content {
+				top: 30px;
+				bottom: auto;
+			}
+
+			img {
+				display: block;
+			}
+		}
+
+		.proyecto-awala,
+		.grupo-apoyo {
+			padding-bottom: 30px;
+		}
+
+		.grupos-voluntariado {
+			max-width: $max-width;
+
+			.field--name-body {
+				margin-bottom: 40px;
+			}
+
+			.field--name-field-body-2 {
+				margin-bottom: 40px;
+			}
+		}
+		
+		.proyecto-awala-content {
+			.field--name-field-body2 {
+				padding-left: 5px;
+
+				img {
+					margin-left: 10px;
+				}
+
+				h3 {
+					@include font(18px, 24px, -0.5px);
+					color: $color_brand;
+					margin-bottom: 5px;
+					margin-top: 40px;
+				}
+
+				p {
+					margin-bottom: 20px;
+				}
+
+				a {
+					@include buton-m-green;
+					padding: 15px 28px 16px;
+				}
+			}
+		}
+
+		.nuestros-programas {
+			@include block-indented(h2);
+
+			.field--name-body {
+				max-width: 555px;
+			}
+		}
+
+		.carousel-semestres {
+			padding: 0 0 0 25px;
+			float: left;
+			box-sizing: border-box;
+			width: 100%;
+		}
+
+		.block.estilo-0004 .field--name-field-body2 p {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
+		.grupo-apoyo {
+			overflow: hidden;
+			padding-bottom: 50px;
+
+			.field--name-field-imagen {
+				float: right;
+				padding-left: 20px;
+			}
+
+			.field--name-body {
+				margin-bottom: 20px;
+			}
+
+			.field--name-field-enlace {
+				a {
+					@include buton-m-green;
+					padding: 10px 35px;
+				}
+			}
+		}
+
+		.club-padres,
+		.formacion-capacitacion {
+			padding-bottom: 30px;
+
+			.field--name-body {
+				width: 66%;
+			}
+		}
+
+		.estilo-0004 {
+			img {
+				margin: 0;
+			}
+		}
+	}
+
+	// URL: /bienestar-universitario/club-de-beneficios
+	&.club-beneficios {
+		.block-system-main-block {
+			padding-bottom: 12px;
+		}
+
+		#main {
+			padding-top: 21px;
+			padding-bottom: 25px;
+
+			@media only screen and (max-width: $tablet) {
+				padding-top: 30px;
+			}
+		}
+		
+		.node--type-bosque-002-bocadillo-only {
+			h1 {
+				@media only screen and (max-width: $mobile) {
+					font-size: 33px;
+					line-height: 40px;
+					letter-spacing: -0.42px;
+				}
+			}
+		}
+	}
+
+	// URL: /bienestar-universitario/cultura-recreacion
+	&.cultura-recreacion {
+		.node--type-pagina-basica-bosque .field--name-field-titulo-2 {
+			width: auto;
+			max-width: 450px;
+		}
+
+		.region-section-2 {
+			padding-bottom: 30px;
+		}
+
+		.region-section-3 {
+			margin-bottom: 30px;
+
+			@media only screen and (max-width: $mobile) {
+				margin-left: -30px;
+				margin-right: -30px;
+				width: auto;
+				float: none;
+				
+				.view-header {
+					padding-bottom: 20px;
+				}
+
+				.view-content {
+					overflow: visible;
+
+					.views-row {
+						padding-top: 0;
+					}
+				}
+			}
+		}
+
+		.region-section-5 {
+			margin-bottom: 60px;
+
+			@media only screen and (max-width: $mobile) {
+				margin-left: -30px;
+				margin-right: -30px;
+				margin-bottom: 0;
+				width: auto;
+				float: none;
+
+				.estilo-0006 {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.content3 {
+			@include default-tabs;
+
+			.block {
+				
+			}
+
+			.block-inner {
+				> h2 {
+					display: none;
+				}
+			}
+
+			.tabMakerContents {
+				&::before,
+				&::after {
+					display: none;
+				}
+			}
+
+			.tabMakerContent {
+				@media only screen and (min-width: $mobile) {
+					padding-left: 30px;
+					padding-right: 30px;
+				}
+
+				.tabMakerContentInner {
+					@media only screen and (max-width: $mobile) {
+						padding: 20px 30px;
+					}
+				}
+
+				.text-content {
+					padding: 0;
+					max-width: inherit;
+					width: auto;
+					float: none;
+
+					@media only screen and (max-width: $mobile) {
+						padding-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	// URL: /bienestar-universitario/salud
+	&.salud {
+		#main {
+			@media only screen and (min-width: $mobile) {
+				overflow: hidden;
+			}
+		}
+
+		.main-image .field--name-field-titulo-2 {
+			max-width: 35%;
+
+			@media only screen and (max-width: $mobile) {
+				max-width: none;
+			}
+		}
+
+		.region-section-2,
+		.region-section-3 {
+			margin-bottom: 50px;
+		}
+
+		.estilo-0004 {
+			.aside {
+				padding-left: 24px;
+			}
+
+			.field--name-field-file {
+				margin-top: 10px;
+
+				.field__item {
+					margin-bottom: 11px;
+				}
+			}
+
+			.file--application-pdf {
+				margin-top: 0;
+				padding-top: 6px;
+				padding-bottom: 6px;
+				background-position: 0 6px;
+				
+
+				a {
+					color: $color_gray_80;
+					text-transform: none;
+					font-family: $font-baser;
+					font-size: 16px;
+					line-height: 22px;
+					letter-spacing: normal;
+				}
+			}
+		}
+	}
+}

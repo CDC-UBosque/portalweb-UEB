@@ -1,0 +1,318 @@
+$local-width-mobile-noticia: 315px;
+
+.block-block-content {
+    .block-title-news {
+        p {
+            @include title;
+        }
+        text-align: center;
+    }
+    .pre-title {
+        @include pretitle;
+        text-align: center;
+        &:before {
+            content: '·';
+            clear: right;
+            display: block;
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.content {
+    &.region-content {
+        @include ib-grid;
+    }
+}
+
+.block-views-blocknoticias-1-block-1,
+.block-views-blocknoticias-1-block-2 {
+	
+}
+
+.block-views-blocknoticias-1-block-1 {
+    clear: both;
+	@include inline-block(top);    
+    //@include grid(6, 80, 20);
+	@include views-row-cuadrado-titular-wrapper('.view-content');
+	@include product-basic-feature-content('.views-row', '.field--name-field-noticias-taxonomia', '.field--name-node-title', '.null', '.null', '.field--name-node-link');
+
+    width: pixel-to-percentage(590px,1180px); // width: 50%;
+    @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+    {
+        width: pixel-to-percentage(475px,722px);    //  EJ SASS: width: pixel-to-percentage(600,1200); -> CSS: width: 50%;
+    }
+    @include Mobile // Menor a: $mobile-l-width: 425px;
+    {
+		float: none;
+        display: block;
+        margin: 0 auto;
+        //width: pixel-to-percentage(320px,375px);    //  EJ SASS: width: pixel-to-percentage(600,1200); -> CSS: width: 50%;
+		max-width: $local-width-mobile-noticia;
+		width: 100%;
+    }
+
+	@media only screen and (max-width: $mobile) {
+		overflow: hidden;
+	}
+
+    .view-content
+    {
+        width: 100%;
+        .views-row {
+            @include desenfoque('.field--name-field-image');
+            &:hover {
+                .field--name-node-link {
+                    a {
+                        border-bottom: 1px solid #7bc142;
+                        opacity: 1;
+                    }
+                }
+            }
+            margin: 0;
+            padding: 0;
+            width: pixel-to-percentage(280px,590px); // width: 47.4576%;
+            @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+            {
+                //width: pixel-to-percentage(230px,476px);    //  EJ SASS: width: pixel-to-percentage(600,1200); -> CSS: width: 50%;
+            }
+            @include Mobile // Menor a: $mobile-l-width: 425px;
+            {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+            &:first-child
+            {
+                float: left;
+            }
+            &:last-child
+            {
+                float: right;
+                @include Desktop-NoLaptop // Mayor a: $laptop-width: 1024px;
+                {
+                    margin-right: pixel-to-percentage(10px,590px);     //  EJ SASS: width: pixel-to-percentage(600,1200); -> CSS: width: 50%;
+				}
+                @include Mobile // Menor a: $mobile-l-width: 425px;
+                {
+                    display: none;
+                }
+            }
+            
+            img {
+                display: block;
+                @include Laptop // Menor a: $laptop-width: 1024px;
+                {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .field--name-field-noticias-taxonomia,
+            .field--name-node-title h3 {
+                color: white !important;
+
+            }
+
+            .field--name-node-title h3
+            {
+                @include acherus_bold(20px);
+                // font-size: 20px;
+                // font-family: $font-brandb;
+                //letter-spacing: -1px;
+                /*//  El cambia la fuente dependiendo de la resolución
+                @include media_font_size_varible_depending_resolution(14.5px,$tablet-width,11.5px,$mobile-width);
+                @include media_font_size_varible_depending_resolution(17.5px,$mobile-width,12.50px,0px,7);*/
+
+				@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+					font-size: 16px;
+					font-family: $font-bsb-m;
+				}
+            }
+            
+            .text-content-inner {
+                display: table-row;
+
+				@media only screen and (min-width: $tablet) {
+					height: 280px;
+				}
+
+                width: 100%;
+                //  El cambia la altura dependiendo de la resolución
+                @include media_height_varible_depending_resolution(235px,$tablet-width,145px,$mobile-width);
+                @include media_height_varible_depending_resolution(265px,$mobile-width,155px,0px,7);
+            }
+
+            .text-content-inner-2 {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .field--name-field-noticias-taxonomia {
+                margin-bottom: 18px;
+                @include media_anything_varible_depending_resolution(14px,$tablet-width,6px,$mobile-width,'margin-bottom');
+            }
+
+            .field--name-node-title {
+                margin-bottom: 15px;
+                @include media_anything_varible_depending_resolution(11.75px,$tablet-width,5.25px,$mobile-width,'margin-bottom');
+            }
+
+            .text-content {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                padding: 0 29px;
+                @include media_anything_varible_depending_resolution(23px,$tablet-width,11px,$mobile-width,'padding-right');
+                @include media_anything_varible_depending_resolution(23px,$tablet-width,11px,$mobile-width,'padding-left');
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .node {
+        position: relative;
+    }
+}
+
+.block-views-blocknoticias-1-block-2 {
+    @include inline-block(top);
+
+	img {
+		display: block;
+	}
+
+    //@include grid(4, 80, 20);
+    width: pixel-to-percentage(390px,1180px);
+    @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $tablet-width: 768px;
+    {
+        width: pixel-to-percentage(232px,722px);    //  EJ SASS: width: pixel-to-percentage(600,1200); -> CSS: width: 50%;
+        float: right;
+    }
+    @include Mobile // Menor a: $mobile-l-width: 425px;
+    {
+        display: block;
+        margin: 0 auto 15px;
+        max-width: $local-width-mobile-noticia;
+		width: 100%;
+		float: none;
+    }
+    .views-row {
+        float: right;
+        position: relative;
+        @include Desktop-NoLaptop // Mayor a: $laptop-width: 1024px;
+        {
+            width: pixel-to-percentage(380px,390px);
+        }
+		
+		@media only screen and (max-width: $mobile) {
+			float: none;
+		}
+
+        &:hover {
+            .content-news--links-read-more {
+                a {
+                    border-bottom: 1px solid #7bc142 !important;
+                    opacity: 1;
+                }
+            }
+        }
+        .views-field-field-noticias-taxonomia {
+            @include pretitle;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            padding-top: 25px;
+            position: absolute;
+            top: 0px;
+            padding-left: 30px;
+            a {
+                @include pretitle;
+                text-decoration: none;
+                color: white;
+                text-transform: uppercase;
+            }
+        }
+        .views-field-nothing {
+            background: white;
+            bottom: -70px;
+            padding: 8px 30px;
+            position: absolute;
+            width: 53%;
+
+			@media only screen and (max-width: $tablet) {
+				bottom: 0;
+                position: relative;
+                padding: 0;
+                width: 100%;
+			}
+
+            .pre-title {
+                a {
+                    text-transform: uppercase;
+                }
+            }
+            .content-news--title {
+                text-decoration: none;
+                color: $color_gray_80;
+                padding-bottom: 10px;
+                padding-top: 15px;
+                font: {
+                    family: $font-brandb;
+                    size: 19px;
+                }
+                a {
+                    text-decoration: none;
+                    color: $color_gray_80;
+                    padding-bottom: 10px;
+                    padding-top: 15px;
+                    font: {
+                        family: $font-brandb;
+                        size: 19px;
+                    }   
+                }
+                @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $tablet-width: 768px;
+                {
+                    font:
+                    {
+                        size: 14px;
+                    }
+                }
+
+				@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+					padding-top: 5px;
+				}
+            }
+            .content-news--body {
+                @include font-baser-s;
+                text-decoration: none;
+                color: $color_gray_80;
+                @media only screen and (max-width: $mobile) {
+                    padding-bottom: 20px;                    
+                }
+                p {
+                    @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $tablet-width: 768px;
+                    {
+                        margin: 4px 0;
+                    }
+                }
+            }
+            .content-news--links-read-more {
+                a {
+                    @include link-text;
+                }
+            }
+        }
+    }
+}
+
+
+.block-views-blocknoticias-1-block-1, .block-views-blocknoticias-1-block-2, .block-views-blocknoticias-1-block-2 {
+	@media only screen and (min-width: $mobile) {
+		padding-bottom: 20px;
+	}
+}
+

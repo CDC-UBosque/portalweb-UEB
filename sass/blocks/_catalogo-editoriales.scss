@@ -1,0 +1,87 @@
+.catalogo-editoriales {
+
+
+  .field--name-node-title {
+    font: {
+      family: $font-brandb;
+    }
+    line-height: 1.5;
+  }
+
+  .field--name-node-link {
+    a {
+      @include link-text;
+    }
+  }
+
+  .field--name-field-bocadillo {
+    color: rgba(74, 74, 74, 1);
+    font: {
+      family: $font-serif-italic;
+      size: 0.9em;
+    }
+    line-height: 1.3;
+    margin: 8px 0;
+  }
+
+  .buttons-wrapper {
+    height: 100%;
+    left: 0;
+    position: initial;
+    top: 0;
+    width: 100%;
+
+    @media only screen and (max-width: $mobile) {
+      margin-bottom: 20px;
+      position: relative;
+      text-align: center;
+    }    
+
+    .carousel-control {
+      background: url('../images/slider-buttons/prev.png') no-repeat;
+      background-position-y: 50%;
+      height: 100%;
+      margin-top: -30px;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      width: 30px;
+
+      @media only screen and (max-width: $mobile) {
+        display: inline-block;
+        margin-top: 0;
+        position: relative;
+        top: 0;
+      }
+    }
+
+    .left {
+      left: -40px;
+
+      @media only screen and (max-width: $mobile) {
+        left: 0;
+        margin-right: 20px;
+      }
+    }
+
+    .right {
+      background: url('../images/slider-buttons/prox.png') no-repeat;
+      background-position-y: 50%;     
+      right: -30px;
+
+      @media only screen and (max-width: $mobile) {
+        right: 0;
+      }
+    }
+  }
+
+
+
+  .view-footer {
+    a {
+      background: #fff!important;
+      border: 1px solid #7BC142!important;
+      color: #7BC142!important;
+    } 
+  }
+}

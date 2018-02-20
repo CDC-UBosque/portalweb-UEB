@@ -1,0 +1,173 @@
+
+.estilo-0015 {
+	overflow: hidden;
+	// $color: $background, $button-background
+	$cyan: #15D9B8, #268071;
+	$orange: #FFA20C, #805326;
+	$gray: #C4C2BA, #C4C2BA;
+	$blue: #128AE1, #0C5E99;
+	$pink: #E10F67, #7F265A;
+	
+	// URL: /exito-estudiantil (pienso que es estilo genérico)
+	@media only screen and (max-width: $mobile) {
+		margin-left: -40px;
+		margin-right: -40px;
+		width: auto !important;
+	}
+
+	 // URL: /exito-estudiantil
+	 &.cuadrado-uno {
+		 @include cajita-text-width('.field--name-field-title', 80%, 80%, 80%, white);
+		 @include estilo-0006-bg(nth($cyan, 1), nth($cyan, 2));
+
+		 .block-inner {
+		 	min-height: 360px;
+		 }
+		 
+		 .field--name-field-title {
+			 max-width: 70%;
+
+			 .field__item {
+			 	font-family: $font-brandb;
+				font-size: 40px;
+				line-height: 35px;
+				letter-spacing: -0.15px;
+
+   			 	&::first-line {
+   				 	font-family: $font-bl;
+					font-size: 40px;
+					line-height: 40px;
+					text-transform: uppercase;
+   			 	}
+			 }
+		 }
+	 }
+
+	 // URL: /exito-estudiantil
+	 &.cuadrado-dos {
+		 @include cajita-text-width('.field--name-field-title', 80%, 80%, 80%, white);
+		 @include estilo-0006-bg(nth($blue, 1), nth($blue, 2));
+
+		 .block-inner {
+		 	min-height: 360px;
+		 }
+
+		 .field--name-field-title {
+			 max-width: 70%;
+
+			 .field__item {
+			 	font-family: $font-brandb;
+				font-size: 40px;
+				line-height: 35px;
+				letter-spacing: -0.15px;
+
+   			 	&::first-line {
+   				 	font-family: $font-bl;
+					font-size: 40px;
+					line-height: 40px;
+					text-transform: uppercase;
+   			 	}
+			 }
+		 }
+
+		 .field--name-field-bocadillo {
+			 color: white;
+		 }
+	 }
+
+	.block-inner {
+		position: relative;
+		overflow: hidden;
+		min-height: 175px;
+	}
+
+	@media only screen and (max-width: $mobile) {
+		margin-bottom: 25px;
+
+		& + .estilo-0006 {
+			margin-bottom: 0;
+		}
+
+		.block-inner {
+			position: relative;
+			overflow: hidden;
+			min-height: 188px;
+		}
+	}
+
+	.text-content {
+		// position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 30px 30px 54px; //30px 30px 0;
+
+		@media only screen and (max-width: $tablet) {
+			// padding: initial;
+			// padding-left: 30px;
+			padding-bottom: 30px;
+			// height: 125px;
+			margin: auto;
+			bottom: 0px;
+		}
+	}
+
+	.field--name-field-title {
+		@include acherus_grotesqueultralight (40px);
+		line-height: 40px;
+		letter-spacing: -0.15px;
+		width: 80%;
+		margin-bottom: 20px; //10px;
+
+		@media only screen and (max-width: $tablet) {
+			@include acherus_grotesqueultralight (26px);
+			line-height: 40px;
+			margin-bottom: 15px;
+		}
+
+		* {
+			@include inherit;
+		}
+	}
+
+	.field--name-field-bocadillo {
+		font-family: $font-bli;
+		font-size: 22px;
+		line-height: 27px;
+		letter-spacing: auto;
+		max-width: 80%;
+	}
+
+	.field--name-field-link {
+		margin-top: 15px;
+
+		@media only screen and (min-width: $mobile) {
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+			margin: 0;
+		}
+
+		a {
+			@include buton-m-green;
+		}
+	}
+
+	.field--name-field-image {
+		transition: .3s ease-out all;
+		position: absolute;
+		top: 105px; //-57px;
+		right: 0; //-110px;
+		text-align: right;
+
+		@media only screen and (max-width: $tablet) {
+			// top: -38px;
+			// right: -67px;
+
+			img {
+				max-width: 200px;
+			}
+		}
+	}
+}

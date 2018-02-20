@@ -1,0 +1,39 @@
+// URL: /talento-humano
+.page-home-talento-humano {
+	@include grilla-3-columns-bs('.content1', '.estilo-0002c', 10px, 40px);
+	@include grilla-2-columns-bs('.content1', '.estilo-0006');
+	@include grilla-4-columns-bs('.content2', '.estilo-0008');
+	@include grilla-4-columns-bs('.content3', '.estilo-0002b');
+
+	.node--type-pagina-basica-bosque .field--name-field-enlace a {
+		@include buton-l-green;
+	}
+	.node--type-pagina-basica-bosque .field--name-field-texto-encima-del-enlace::before {
+		content:  url("../images/svg/arrow-down-green.svg")
+	}
+	.content {
+		.estilo-0003 {
+			.field--name-field-bocadillo {
+				text-align: center;
+			}
+		}
+	}
+
+	.estilo-0003 {
+		padding-bottom: 40px;
+	}
+
+	.estilo-0006 {
+		.field--name-field-title {
+			display: none;
+		}
+	}
+
+	.trabaje-con-nosotros {
+		clear: left;
+	}
+
+	.region-section-1 {
+		clear: both;
+	}
+}

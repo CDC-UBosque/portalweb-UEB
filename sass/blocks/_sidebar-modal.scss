@@ -1,0 +1,93 @@
+.sidebar-modal {
+	.sidebar-overlay {
+		@include lightbox-fondo;
+	}
+
+	.sidebar-content {
+		position: fixed;
+		transition: 1s ease-out all;
+		right: -100%;
+		top: 0;
+		max-width: 380px;
+		width: 100%;
+		height: 100%;
+		background: white;
+		margin: 0;
+		padding: 35px 30px;
+
+		@media only screen and (max-width: $tablet) {
+			max-width: 40%;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			max-width: 60%;
+		}
+	}
+
+	.menu--nuestro-bosque-vida-univers,
+	.menu--nuestro-bosque-instituciona {
+		.menu {
+			margin-top: 40px;
+		}
+		>.menu {
+			>.menu-item {
+				a {
+					&:after {
+						display: none;
+					}
+				}
+				&:nth-child(1) {
+					a {
+						@include latoregular(11px);
+						color: #9B9B9B;
+						&:before {
+							display: none;
+						}
+						&:after {
+							display: none;
+						}
+					}
+					
+				}
+			}
+		}
+		h2 {
+			@include acherus_black(15px);
+			text-transform: capitalize;
+			letter-spacing: -0.5px;
+			background: initial;
+			padding: 0;
+			border-bottom: none;
+		}
+		
+		
+		
+	}
+
+
+	.field--name-field-subtitle-block {
+		padding: 0 0 0 15px;
+		background: url(../images/menu/menu-lateral-arrow-left.svg) no-repeat 0 30%;
+		padding-bottom: 10px;
+		a {
+			@include link-text;
+			@include underline-hover;
+			@include latoblack(12px);
+			color: #4A4A4A;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+body.lateral-menu-open {
+	.sidebar-modal {
+		.sidebar-overlay {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.sidebar-content {
+			right: 0;
+		}
+	}
+}

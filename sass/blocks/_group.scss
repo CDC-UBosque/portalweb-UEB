@@ -1,0 +1,166 @@
+.group {
+	&.group--type-facultades {
+		position: relative;
+		overflow: hidden;
+
+		.facultad-main-image {
+			position: relative;
+		}
+
+		.carrera-toggle {
+			background: $color_gray_2 url(../images/facultad/arrow-down-green.svg) no-repeat 50% 20px;
+			position: relative;
+			text-align: center;
+			padding: 56px 0 26px;
+			display: none;
+
+			// field cerrar
+			.field--name-dynamic-token-fieldgroup-cerrar-x {
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				border: 0;
+			}
+			
+			.field--name-dynamic-token-fieldgroup-carrera-title {
+				padding: 0;
+				border: 0;
+				margin-bottom: 20px;
+
+				p {
+					@include font-brandb-m;
+					font-family: 'acherus_grotesquebold';
+					color: $color_gray_80;
+					text-align: center;
+					margin: 0;
+				}
+			}
+
+			.carrera-links {
+				@include ib-grid;
+				display: none;
+
+				.field__item {
+					@include inline-block(top);
+					border-right: 1px solid $color_gray_15;
+
+					&:last-child {
+						border-right: 0;
+					}
+
+					a {
+						@include inline-block(top);
+						@include underline-hover;
+						font-family: $font-bsb;
+						font-size: 13px;
+						color: $color_gray_80;
+						text-decoration: none;
+						margin: 15px 15px 17px 17px;
+						position: relative;
+						
+						&::after {
+							content: url(../images/facultad/ArrowRightGrey.svg);
+							position: absolute;
+							top: -1px; //15px;
+							right: -8px; //5px;
+							margin: auto;
+						}
+					}
+				}
+			}
+		}
+
+		.field--name-field-t {
+			@include font-bl-xl;
+			position: absolute;
+			top: 0;
+			left: 0;
+			//width: 268px + (42px * 2) ;
+			width: 50%;
+			height: 100%;
+			box-sizing: border-box;
+			padding: 36px 42px 0;
+			
+			color: white;
+			@media only screen and (max-width: $tablet) {
+				padding-left: 0px;
+				line-height: 37px;
+				width: 50%;
+			}
+			&:first-line {
+				@include acherus_black(39px);
+				letter-spacing:-2.56%;
+				@media only screen and (max-width: $tablet) {
+					line-height: 24px;
+				}
+			}
+		}
+		
+		.field--name-field-imagen-facultad {
+			@media only screen and (max-width: $tablet) {
+			//	margin: 0 -30px;
+			}
+
+			img {
+				width: auto;
+				height: auto;
+				max-width: none;
+				display: block;
+			}
+		}
+
+		.group-buttons {
+			@include ib-grid;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0 42px 39px;
+			@media only screen and (max-width: $tablet) {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+			.field--name-dynamic-token-fieldgroup-facultad-botones-pregrado-posgra {
+				display: inline-block;
+			}
+
+			.field--type-link {
+				@include inline-block(top);
+				margin-right: 20px;
+				transition: .3s ease-out all;
+				@media only screen and (max-width: $tablet) {
+					margin-right: 10px;
+				}
+				// Clase agregada en scripts.js
+				&.js-active {
+					opacity: .5;
+				}
+
+				a {
+					@include buton-l-green;
+					cursor: pointer;
+					@media only screen and (max-width: $tablet) {
+						padding-right: 30px;
+						padding-left: 30px;
+					}
+				}
+			}
+			> .field--name-field-electivas {
+				margin-right: 0px;
+			}
+		}
+
+		.field--name-field-pregrado {
+			
+		}
+
+		.field--name-field-po {
+			
+		}
+
+		.field--name-field-electivas {
+			
+		}
+	}
+}

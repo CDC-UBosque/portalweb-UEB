@@ -1,0 +1,114 @@
+/*
+<div class="fake-select">
+		<div class="fake-label">Label:</div>
+
+		<div class="fake-selected"><div class="f"><div>&nbsp;</div></div></div>
+
+		<div class="ul-wrapper" style="display: none;">
+				<div class="ul-inner"><ul><li>Option 1</li><li>Option 2</li></ul></div>
+		</div>
+</div>
+
+
+custom.js: quickFakeSelect();
+*/
+
+.fake-select {
+	position: relative;
+	margin-bottom: 10px;
+
+	.ul-wrapper {
+		display: none;
+		position: absolute;
+		top: 54px;
+		left: 0;
+		width: 100%;
+		z-index: 20;
+		border-radius: 4px;
+		background-color: white;
+	}
+
+	.ul-inner {
+		overflow-y: scroll;
+		border: 1px solid $color_brand;
+		border-radius: 5px;
+	}
+
+	ul {
+		
+		padding: 0 5px;
+		
+		li {
+			border-bottom: 1px solid #ededed;
+			color: #9B9B9B;
+			font-size: 14px;
+			padding: 9px 0;
+			line-height: 120%;
+			cursor: pointer;
+
+			&.active {
+				color: $color_brand;
+				cursor: default;
+			}
+
+			&:hover {
+				color: $color_brand;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	.fake-selected {
+		border: 1px solid #BABCBF;
+		padding: 0;
+		font-family: $font-baser;
+		color: #9B9B9B;
+		font-size: 14px;
+		position: relative;
+		cursor: pointer;
+		border-radius: 5px;
+
+		&::after {
+			content: "";
+			background: url(../map-svg/select-arrow.svg) no-repeat 0 0;
+			width: 14px;
+			height: 14px;
+			position: absolute;
+			top: 10px;
+			right: 5%;
+		}
+
+		.f {
+			border: 1px solid transparent;
+			padding: 6px 25px 6px 15px;
+			background: none;
+			white-space: nowrap;
+			height: 29px;
+			border-radius: 3px;
+			box-sizing: border-box;
+
+			div {
+				overflow: hidden;
+				width: 97%;
+			}
+		}
+
+		&.open {
+			border-color: $color_brand;
+
+			.f {
+				border-color: $color_brand;
+			}
+		}
+	}
+
+	.fake-label {
+		margin-bottom: 3px;
+		font-family: $font-serif-italic;
+		font-size: 12px;
+		color: $color_gray_80;
+	}
+}

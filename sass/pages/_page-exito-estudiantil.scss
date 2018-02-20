@@ -1,0 +1,655 @@
+.page-exito-estudiantil {
+    &.home {
+		.owl-stage-outer {
+			overflow: hidden;
+			position: relative;
+			
+			&::before {
+				content: "";
+				width: 5px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: $color_brand;
+				z-index: 10;
+			}
+		}
+
+		.owl-item {
+			float: left;
+		}
+
+        .node--type-bosque-001-main-image {
+			$mobile: 560px;
+			$mobile-img-height: 500px;
+			overflow: hidden;
+
+            .text-content {
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 100%;
+                max-width: 490px;
+				box-sizing: border-box;
+
+				@media only screen and (max-width: $mobile) {
+					right: auto;
+					left: 0;
+					padding: 0 30px;
+					height: $mobile-img-height;
+					display: table;
+				}
+            }
+            .field--name-node-title {
+                display: none;
+            }
+            .field--name-body {
+				@media only screen and (max-width: $mobile) {
+					vertical-align: middle;
+					display: table-cell;
+
+					p {
+						margin-top: -10px;
+					}
+				}
+
+                p {
+                    font-family: $font-bl;
+                    font-size: 39px;
+                    line-height: 34px;
+                    letter-spacing: -0.5px;
+                    color: white;
+                    &::first-line {
+                        font-family: $font-brandb;
+                        line-height: 48px;
+                    }
+                    span {
+                        @include inline-block(middle);
+                        background: #04cfd6;
+                        padding: 0 18px 3px;
+                        font-family: $font-bli;
+                        font-size: 52px;
+                        line-height: 64px;
+                        letter-spacing: -0.67px;
+                        height: 58px;
+                        color: #F9F9F9;
+						margin-top: 10px;
+						margin-bottom: 5px;
+
+						@media only screen and (min-width: $mobile) {
+	                        margin-top: -20px;
+	                        margin-left: -12px;
+							margin-bottom: 0;
+						}
+                    }
+                }
+            }
+            img {
+                max-width: none;
+                width: auto;
+                height: auto;
+
+				@media only screen and (max-width: $mobile) {
+					height: $mobile-img-height;
+				}
+            }
+        }
+
+        .estilo-0003 {
+            text-align: center;
+            max-width: inherit;
+            padding-bottom: 20px;
+
+            .image-wrapper {
+                max-width: inherit;
+            }
+
+            .field--type-link {
+                bottom: 45px;
+                a {
+                    padding: 11px 20px;
+                }
+            }
+
+            .field--name-field-body {
+                max-width: 70%;
+                column-count: 2;
+                text-align: left;
+                padding-top: 15px;
+
+                p {
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-bottom: 15px;
+                    padding: 0 10px;
+                }
+				
+				@media only screen and (max-width: $mobile) {
+					max-width: none;
+					column-count: inherit;
+				}
+            }
+        }
+        .estilo-0009 {
+            text-align: center;
+            padding-bottom: 40px;
+        }
+        .region-section-3 {
+            margin-bottom: 50px;
+            .region-content {
+                @include block-pintadinho-green;
+            }
+            .field--name-field-pre-title,
+            .field--name-field-title h2 {
+                color: white;
+            }
+			
+			.field--name-field-title {
+				@media only screen and (max-width: $mobile) {
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				&::before {
+					background: white;
+				}
+			}
+        }
+        .region-section-4 {
+            @include grilla-2-columns-bs('.region-content', '.block');
+            .region-content {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            .contextual-region {
+                position: initial;
+            }
+        }
+    }
+    .node--type-pagina-basica-bosque .field--type-text-with-summary {
+        width: 70%;
+        @media only screen and (max-width: $tablet) {
+            width: 80%;
+        }
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+    .block-content--type-bloque-basico-con-bocadillo .field--type-text-with-summary,
+    .gestion-exito .field--type-text-with-summary {
+        width: 70%;
+        .field__item:nth-of-type(2) {
+            margin-top: 25px;
+            padding: 0 22px;
+            @media only screen and (max-width: $mobile) {
+                padding-right: 0;
+            }
+        }
+        @media only screen and (max-width: $tablet) {
+            width: 80%;
+        }
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+    .estilo-0004 .field--name-field-body2 a {
+        background-color: transparent;
+        border: 1px solid $color-brand;
+        color: $color-brand;
+        padding: 7px 34px;
+        border-radius: 20px;
+        font-size: 10px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        &:hover {
+            color: white;
+            background-color: $color-brand;
+        }
+    }
+    .estilo-0004 .field--name-field-body2 p {
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-size: 28px;
+		font-family: $font-bsb;
+    }
+    @media only screen and (max-width:$tablet) {
+        h1,
+        h2 {
+            font-size: 30px;
+            letter-spacing: 0.6px;
+        }
+        .node--type-pagina-basica-bosque .field--name-field-titulo-2 {
+            width: 327px;
+            @media only screen and (max-width: $mobile) {
+                width: 240px;
+            }
+        }
+        .field--name-field-bocadillo,
+        .field--name-field-bocadillo-150 {
+            font-size: 22px !important;
+        }
+    }
+    @media only screen and (max-width: $mobile) {
+        .estilo-0004 {
+            .text-content,
+            .aside {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    //URL: /exito-estudiantil/inmersion-vida-universitaria
+    &.imersion-universitaria {
+		.node--type-pagina-basica-bosque.node--view-mode-full {
+			padding-bottom: 50px !important;
+		}
+		
+        .node--type-pagina-basica-bosque .field--name-field-bocadillo {
+            margin-bottom: 25px;
+        }
+        .region-section-3 {
+            padding: 0 22px;
+            @media only screen and (max-width: $mobile) {
+                padding-right: 0;
+            }
+        }
+        .region-section-6 {
+            padding: 0 22px;
+            margin-bottom: 50px;
+            @media only screen and (max-width: $mobile) {
+                padding-right: 0;
+				margin-bottom: 0;
+
+				.sub-titulos .field__item:last-child {
+					margin-bottom: 0;
+				}
+            }
+        }
+        .sub-titulos .field__item {
+            width: 70%;
+            margin-bottom: 33px;
+            @media only screen and (max-width: $tablet) {
+                width: 80%;
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+
+				&:last-child {
+					margin-bottom: 52px;
+				}
+            }
+        }
+		
+		.fortalecimiento-contenido {
+			@media only screen and (max-width: $mobile) {
+				.field--name-field-body2 {
+					margin-bottom: 0;
+				}
+
+				aside {
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+        .fortalecimiento.estilo-0004 .text-content {
+            width: 39%;
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+        }
+        .fortalecimiento.estilo-0004 .aside {
+            width: 60%;
+            padding-left: 26px;
+            p {
+                font-size: 18px;
+                font-family: $font-basel;
+                color: $color_gray_60;
+                line-height: 20px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+            }
+            img {
+                margin: 0;
+				vertical-align: top;
+                @media only screen and (max-width: $tablet) {
+                    width: 100%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 125%;
+                    margin-left: -35px;
+                }
+            }
+            &:before {
+                height: 30%;
+            }
+            @media only screen and (max-width: $mobile) {
+				.field--name-field-body2 {
+					margin-bottom: 0;
+				}
+
+                width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+				
+				&::before {
+					display: none;
+				}
+            }
+        }
+        .fortalecimiento-contenido.estilo-0004 .aside:before {
+            background-color: $color_gray_15;
+            height: 165%;
+            @media only screen and (max-width: $tablet) {
+                height: 130%;
+            }
+            @media only screen and (max-width: $mobile) {
+                display: none;
+            }
+        }
+        .estilo-0009 {
+            margin-bottom: 20px;
+        }
+    }
+    //URL: /exito-estudiantil/otros-programas
+    &.programa-apoyo {
+        .pre-saber .field--name-field-title h4,
+        .tutorias-lea .field--name-field-title {
+            font-size: 33px;
+            line-height: 42px;
+            font-family: $font-brandb;
+            font-weight: normal;
+            letter-spacing: -0.5px;
+            color: #4A4A4A;
+            margin-bottom: 30px;
+            @media only screen and (max-width: $tablet) {
+                margin-bottom: 15px;
+            }
+        }
+        .pre-saber .field--type-text-with-summary p:nth-of-type(2) {
+            padding: 0 15px;
+        }
+        .tutorias-lea {
+            h4 {
+                font-size: 30px;
+                font-family: $font-bsb;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 24px;
+                }
+            }
+            ul {
+                list-style-type: disc;
+                padding-left: 30px;
+            }
+            .text-content {
+                @include inline-block(top);
+                box-sizing: border-box;
+                width: 48%;
+                @media only screen and (max-width: $mobile) {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .image-content {
+                @include inline-block(top);
+                position: relative;
+                top: 70px;
+                padding-left: 2%;
+                box-sizing: border-box;
+                width: 51%;
+                @media only screen and (max-width: $tablet) {
+                    top: 62px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    top: 0;
+                }
+                @media only screen and (max-width: $mobile) {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .field__item {
+                margin-bottom: 30px;
+                &:nth-of-type(2) {
+                    .text-content {
+                        width: 70%;
+                        @media only screen and (max-width: $tablet) {
+                            width: 90%;
+                        }
+                        @media only screen and (max-width: $mobile) {
+                            width: 100%;
+                        }
+                    }
+                    .field--name-field-contenido-bloque {
+                        padding: 0 20px;
+                    }
+                }
+                @media only screen and (max-width: $tablet) {
+                    margin-bottom: 15px;
+                }
+            }
+            .field--name-field-contenido-bloque {
+                box-sizing: border-box;
+                margin-right: 5%;
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            .field--name-field-image {
+                &:before {
+                    background: #dddddd none repeat scroll 0 0;
+                    content: "";
+                    height: 50%;
+                    left: 0;
+                    position: absolute;
+                    top: 4px;
+                    width: 1px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    width: 125%;
+                    margin-top: 10px;
+                    margin-left: -35px;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: $tablet) {
+            .field--name-node-title h1 {
+                font-size: 39px;
+            }
+        }
+        @media only screen and (max-width: $mobile) {
+            .aside:before {
+                display: none;
+            }
+        }
+    }
+    //URL: /exito-estudiantil/preparacion-vida-laboral
+    &.vida-laboral {
+        .region-section-1 {
+            @media only screen and (min-width: $mobile) {
+            	margin-bottom: 50px;
+            }
+        }
+
+		.content1 {
+			.field--name-body {
+				ul {
+					margin-left: 20px;
+					margin-top: -10px;
+				}
+			}
+		}
+		
+    }
+    //URL: /exito-estudiantil/desarrollo-vida-universitaria
+    &.vida-universitaria {
+        .region-section-2 {
+            padding: 0 22px;
+        }
+        .block-views-exposed-filter-blockprueba-page-1.search-block-form .form-actions .button {
+            height: 101px;
+        }
+        .vida-universitaria .text-content {
+            margin-bottom: 20px;
+        }
+        @media only screen and (max-width: $tablet) {
+            .vida-universitaria h3 {
+                width: 120%;
+            }
+            .vida-universitaria .aside {
+                margin-top: 50px;
+            }
+        }
+        @media only screen and (max-width: $mobile) {
+            .vida-universitaria .aside:before {
+                display: none;
+            }
+        }
+    }
+ 
+    // URL: /exito-estudiantil/programa-apoyo-estudiante
+    &.pae {
+		@media only screen and (max-width: $mobile) {
+			.node--type-pagina-basica-bosque {
+				.field--name-field-image {
+					margin-bottom: 41px;
+				}
+			}
+			
+			.region-section-1 {
+				padding-top: 21px;
+			}
+		}
+
+		.field--name-body {
+			p + h2 {
+				margin-top: 50px;
+			}
+		}
+
+        .block.estilo-0004 .aside::before,
+        .block.estilo-0005 .aside::before {
+            @media only screen and (max-width: $mobile) {
+                display: none;
+            }
+        }
+        .block-views-exposed-filter-blockprueba-page-1.search-block-form .form-actions .button {
+            height: 101px;
+        }
+        .sub-content {
+            width: 66%;
+            padding-left: 20px;
+			@media only screen and (max-width: $mobile) {
+				width: auto;
+			}
+            .field--name-field-title {
+                font-size: 28px;
+                font-family: $font-bsb;
+                margin-bottom: 13px;
+            }
+            .field--name-field-contenido-bloque {
+				@media only screen and (min-width: $mobile) {
+                	margin-bottom: 33px;
+				}
+            }
+        }
+    }
+    &.reservas-reglamentos-salas {
+        .content {
+            height: auto;
+            .field--name-field-image {
+                margin: 0 -15px;
+                @media only screen and (max-width: $tablet) {
+                    margin: 0 -30px;
+                }
+            }
+            .field--name-field-image img {
+                position: initial;
+            }
+            .content-text {
+                text-align: left;
+                position: absolute;
+                top: 49px;
+                left: 24px;
+                @media only screen and (max-width: $mobile) {
+                    left: 0;
+                }
+            }
+            .field--name-field-title-format-html {
+                font-family: $font-bl;
+                max-width: 450px;
+                padding: 0;
+                strong {
+                    font-family: $font-brandb;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .content1 {
+            @include ib-grid;
+        }
+        .block.block-block-content {
+            float: none;
+            padding: 0;
+            &.titulo-condiciones-uso {
+                margin-bottom: 60px;
+                width: 100%;
+            }
+            &.content-reservas-reglas {
+                @include inline-block(top);
+                width: 75%;
+                padding: 0 calc(10%/4);
+                .field__item:first-child .field--name-field-title {
+                    font-size: 33px;
+                    font-family: $font-brandb;
+                }
+                .paragraph {
+                    .field__item.field--name-field-contenido-bloque {
+                        padding: 0;
+                    }
+                    .field--name-field-title {
+                        font-family: $font-bsb;
+                        font-size: 30px;
+                        margin-bottom: 20px;
+                    }
+                }
+                .field__item {
+                    margin-bottom: 30px;
+                }
+                .field__item:nth-child(n+2) {
+                    padding: 0 22px;
+                }
+                ul {
+                    list-style-type: disc;
+                    margin-left: 20px;
+                }
+            }
+            &.content-horarios {
+                @include inline-block(top);
+                border-left: 1px solid;
+                border-color: $color_gray_20;
+                padding: 0 calc(10%/4);
+                width: 25%;
+                h2 {
+                    font-size: 20px;
+                    color: $color_brand;
+                }
+                @media only screen and (max-width: $mobile) {
+                    border: none;
+                }
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100% !important;
+            }
+        }
+    }
+}

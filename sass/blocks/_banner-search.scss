@@ -1,0 +1,307 @@
+.banner-search {
+	position: relative;
+	// padding-top: 35px;
+	z-index: 20;
+	clear: both;
+
+	@media only screen and (max-width: $tablet) {
+		padding-bottom: 35px !important;
+	}
+
+	@media only screen and (max-width: $mobile) {
+		padding-top: 0;
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+
+	#block-buscadorsemantico {
+		padding-top: 61px;
+
+		@media only screen and (max-width: $tablet) {
+			padding-top: 30px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			padding-top: 34px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.programs-list {
+		background: #f2f2f2;
+		text-align: left;
+		margin-top: -3px;
+		
+		.element-hidden {
+			padding-left: 40px;
+			&:hover {
+				.field-content {
+					border-bottom: 1px solid $color_brand;
+				}
+				a {
+					@include acherus_bold(22px);
+				}
+			}
+			
+		}
+		.field-content {
+			@include pt_serifitalic(16px);
+			line-height: 36px;
+			color: $color_gray_80;
+			@media only screen and (max-width: $mobile) {
+				font-size: 12px;
+				line-height: 22px;
+			}
+			&:after {
+				content: url("../images/facultad/ArrowRightGrey.svg");
+				display: inline-block;
+			}
+		}
+		a {
+			@include acherus_grotesqueregular(22px);			
+			text-decoration: none;
+			color: $color_gray_80;
+			@media only screen and (max-width: $mobile) {
+				font-size: 14px;
+			}
+		}
+		.no-results {
+			
+			@include pt_serifitalic(16px);
+			line-height: 36px;
+			color: $color_gray_80;
+			padding-left: 40px;
+		}
+		.all-programs {
+			text-align: center;
+			position: relative;
+			padding-top: 25px;
+			padding-bottom: 15px;
+			a {
+				@include buton-l-green;
+
+				&:before {
+					content: "";
+					height: 1px;
+					width: 92%;
+					background: #DDDDDB;
+					position:absolute;
+					top: 0;
+					left: 4%;
+				}
+			}
+
+		}
+	}
+	.block-inner {
+		position: relative;
+
+		.form-submit {
+			border: none;
+			background: url('../images/SearchGreen.svg') no-repeat center center;
+			position: absolute;
+			height: 45px;
+			width: 40px;
+			top: 0;
+			left: 0;
+			text-indent: -9999px;
+		}
+	}
+	.item-list {
+		position: relative;
+		.views-field-label {
+			z-index: 100;
+			background: white;
+			border: 1px solid gray;
+			height: 30px;
+			padding-top: 10px;
+
+			a {
+				color: $color_gray_80;
+				text-decoration: none;
+			}
+		}
+
+	}
+	.block-blockgroup {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		padding-bottom: 20px;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+
+		@media only screen and (max-width: $tablet) {
+			padding-bottom: 0;
+		}
+
+		.field--name-field-texto-inferior {
+			position: absolute;
+			bottom: -100px;
+			width: 100%;
+			color: white;
+			font: {
+				size: 13px;
+			}
+			letter-spacing: 0.93px;
+			
+			@media only screen and (max-width: $tablet) {
+				font-size: 10px;
+				bottom: -75px;
+			}
+			
+			@media only screen and (max-width: $mobile) {
+				bottom: -135px;
+			}
+		}
+
+		.field--name-field-titulo-buscador {
+			color: white;
+			font: {
+				family: $font-bl;
+				size: $font-bl-l;
+			}
+			letter-spacing: -0.1px;
+			padding-bottom: 15px;
+
+			@media only screen and (max-width: $tablet) {
+				font-size: 25px;
+				padding-bottom: 0;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				font-size: 23px;
+				max-width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			&::after {
+				content: "";
+				background: url("../images/facultad/arrow-down-green.svg") no-repeat 50% 0;
+				height: 22px;
+				display: block;		
+				margin-top: 15px;
+
+				@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+					background-size: 9px auto;
+				}
+
+				@media only screen and (max-width: $mobile) {
+					position: relative;
+					top: -5px;
+				}
+			}
+		}
+
+		.field--name-field-texto-superior {
+			@include acherus_bold(11px);
+			letter-spacing: 2px;
+			color: white;
+			position: relative;
+
+			@media only screen and (max-width: $tablet) {
+				top: -4px;
+			}
+
+			@media only screen and (max-width: $mobile) {
+				padding-top: 20px;
+			}
+		}
+		
+		.form-item .form-text + label {
+			left: 32px;
+			bottom: 22px;
+		}
+		
+		.search-block-form {
+			margin: 0 auto;
+			padding-top: 4px;
+			width: pixel-to-percentage(980px,1180px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+			
+			@include Laptop // Menor a: $laptop-width: 1024px;
+			{
+				bottom: 14%;
+			}
+			@include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px;
+			{
+				// width: pixel-to-percentage(680px,768px);    //  EJ: width: pixel-to-percentage($anchoEnPx,$anchoDelContenedorPx); -> SASS: width: pixel-to-percentage(600px,1200px); -> CSS: width: 50%;
+			}
+
+			label {
+				@include large-placeholder;
+				display: none;
+
+				&::after {
+					display: none;
+				}
+			}
+
+			.form-text {
+				border: none;
+				background-color: white;
+				padding: 21px 12px 21px 40px;
+				border-radius: 5px;
+				width: 100%;
+				box-sizing: border-box;
+				background-image: url('../images/SearchGreen.svg');
+				background-repeat: no-repeat;
+				background-position: 10px 50%;
+				
+				@media only screen and (max-width: $tablet) {
+					padding-top: 16px;
+					padding-bottom: 16px;
+				}
+
+				@media only screen and (max-width: $tablet) {
+					padding-top: 25px;
+					padding-bottom: 25px;
+				}
+
+				&::placeholder {
+					@include large-placeholder;
+				}
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					font-size: 14px;
+					color: #555;
+				}
+				&::-webkit-input-placeholder
+				{
+					@include Mobile // Menor a: $mobile-l-width: 425px;
+					{
+						font-size: 14px;
+						color: #555;
+					}
+				}
+			}
+		}
+
+		.contextual-region {
+			position: initial;
+		}
+	}
+	.block-encuentreelprograma-imagenfondo {
+		@media only screen and (min-width: $tablet) {
+			height: 455px;
+			overflow-x: hidden;
+
+			img {
+				height: 455px;
+				max-width: inherit;
+			}
+		}
+
+		@media only screen and (max-width: $mobile) {
+			height: 355px;
+			overflow-x: hidden;
+
+			img {
+				height: 355px;
+				max-width: inherit;
+			}
+		}
+	}
+}

@@ -1,0 +1,251 @@
+// URL: /becas-estimulos
+.becas-estimulos {
+	$mobile: 480px;
+	$medida2: 560px;
+
+	.field--name-field-titulo-2 {
+		max-width: 400px;
+
+		@media only screen and (max-width: $mobile) {
+			//max-width: 250px;
+		}
+	}
+
+	// Bloque superior
+	// Bloque inferior
+	.block-block-content2aabbd2c-b6c8-4dc0-9e67-08f73e1bbbaf,
+	.block-block-content4477572d-a5f5-4ad3-a0c6-6adaa24c025e {
+		.paragraph--type-bloque-becas {
+			.field {
+				margin-bottom: 31px;
+
+				@media only screen and (max-width: $tablet) {
+					margin-bottom: 10px;
+
+					&.field--name-field-requisitos-y-condiciones {
+						margin-bottom: 30px;
+					}
+				}
+			}
+
+			.field--name-field-pretitle {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+    .field--name-field-bea {
+		$mobile: $medida2;
+
+        @include ib-grid;
+        > .field__item {
+            @include inline-block(top);
+            box-sizing: border-box;
+            width: 33.33%;
+            padding-right: 20px;
+
+			@media only screen and (max-width: $mobile) {
+				width: 100%;
+				padding-right: 0;
+			}
+
+			@media only screen and (min-width: $mobile) {
+				&:nth-child(2) {
+                    padding-left: 20px;
+                }
+                &:nth-child(3) {
+                    padding-left: 20px;
+                }
+                &:nth-child(5) {
+                    padding-left: 20px;
+                }
+			}
+        }
+
+        .field--name-field-pretitle {
+            @include title_light_acherus_l;
+            letter-spacing: -0.5px;
+            padding-bottom: 20px;
+			line-height: 35px;
+
+			@media only screen and (max-width: $medida2) {
+		        font-size: 22px; // necesario en http://ubosque.d8.seedlabs.co/becas-estimulos
+		    }
+        }
+
+        .field--name-field-contenido-tab-pregrado {
+            //padding-bottom: 25px;
+            .field__label {
+                @include title-green-s;
+                line-height: 22px;
+            }
+            .field__item {
+                p {
+                    @include paragraphs_medium_l;
+                }
+            }
+        }
+        .field--name-field-requisitos-y-condiciones {
+            .field__label {
+                @include title-green-s;
+                line-height: 22px;
+
+				@media only screen and (min-width: $tablet) {
+					white-space: nowrap;
+				}
+            }
+
+            .field__items {
+                @include paragraphs_medium_l;
+            }
+            .field__item {
+				@include bullet;
+            }
+        }
+    }
+    .block-block-content2aabbd2c-b6c8-4dc0-9e67-08f73e1bbbaf,
+    .block-block-content4477572d-a5f5-4ad3-a0c6-6adaa24c025e {
+        margin-bottom: 45px;
+        position: relative;
+        .block-inner {
+			@media only screen and (min-width: $mobile) {
+				&:after {
+                    content: "";
+                    position: absolute;
+                    left: 33.33%;
+                    top: 50px;
+                    height: 95%;
+                    width: 1px;
+                    background-color: #dddddd;
+                }
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 66.66%;
+                    top: 50px;
+                    height: 95%;
+                    width: 1px;
+                    background-color: #dddddd;
+                }
+			}
+        }
+    }
+    .block-block-content4477572d-a5f5-4ad3-a0c6-6adaa24c025e {
+        @media only screen and (max-width: $mobile) {
+            margin-bottom: 0px;
+        }
+    }
+    .block-block-content65b32e82-08d8-4c45-97b6-872038e7e273,
+    .block-block-contentb32e06f6-3456-4e38-823b-add2fe2fe124,
+    .block-block-contenta3273077-c6c0-4554-9286-f7a9a890b6e2 {
+        .field--name-field-bea {
+            >.field__item {
+                box-sizing: border-box;
+                width: 100%;
+                margin: 20px 0;
+                padding-right: 0px;
+				padding-bottom: 25px;
+				border-bottom: 1px solid #dddddd;
+
+                &:nth-child(2) {
+                    padding-left: 0px;
+                }
+                &:nth-child(3) {
+                    padding-left: 0px;
+                }
+                &:nth-child(5) {
+                    padding-left: 0px;
+                }
+                &:nth-child(1) {
+                    margin-top: 0px;
+                }
+                &:nth-last-child(1) {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+            .paragraph--type-bloque-becas {
+                @include ib-grid;
+            }
+            .field--name-field-pretitle {
+                @include inline-block(top);
+                @include title_light_acherus_l;
+                box-sizing: border-box;
+                letter-spacing: -0.5px;
+                width: 33.33%;
+                padding-right: 20px;
+				line-height: 35px;
+				
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+					padding: 0 0 20px;
+				}
+				
+            }
+            .field--name-field-contenido-tab-pregrado {
+                @include inline-block(top);
+                width: 33.33%;
+                box-sizing: border-box;
+                padding-left: 20px;
+                padding-right: 20px;
+
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+					padding: 0 0 40px;
+				}
+            }
+            .field--name-field-requisitos-y-condiciones {
+                @include inline-block(top);
+                box-sizing: border-box;
+                padding-left: 20px;
+                width: 33.33%;
+
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+					padding: 0 0 20px;
+				}
+            }
+            .field--name-field-contenido-bloque {
+                @include inline-block(top);
+                box-sizing: border-box;
+                width: 33.33%;
+                padding-right: 20px;
+
+				@media only screen and (max-width: $mobile) {
+					width: 100%;
+					padding: 0 0 20px;
+				}
+
+                p {
+                    @include paragraphs_medium_l;
+                }
+            }
+        }
+    }
+    .block-block-content65b32e82-08d8-4c45-97b6-872038e7e273,
+    .block-block-contentb32e06f6-3456-4e38-823b-add2fe2fe124 {
+        .field--name-field-bea {
+            >.field__item {
+                &:nth-last-child(1) {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .block-block-contenta3273077-c6c0-4554-9286-f7a9a890b6e2 {  
+        @media only screen and (max-width: $mobile) {
+            padding-bottom: 0px;
+        }
+        .field--name-field-bea {
+            >.field__item {
+                border-bottom: none;
+                margin-bottom: 0px;
+                padding-bottom: 0px;
+            }
+        }
+    }
+    #prefooter {
+        padding-top: 0px;
+    }
+}

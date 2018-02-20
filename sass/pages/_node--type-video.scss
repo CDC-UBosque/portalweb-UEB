@@ -1,0 +1,16 @@
+// mixin teaser-videos($views-row, $image, $category, $title, $body, $link, $text-content: '.text-content')
+@include teaser-videos('.node--type-video.node--view-mode-teaser', '.field--name-field-video-web', '.field--name-node-title', '.field--name-field-bocadillo-150');
+
+.node--type-video {
+	.field--name-field-video-web {
+		@media only screen and (max-width: $mobile) {
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+	}
+}
+
+
+.field--name-dynamic-token-fieldnode-video-web {
+	display: none;
+}

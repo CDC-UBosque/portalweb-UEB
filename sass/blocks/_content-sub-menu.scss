@@ -1,0 +1,655 @@
+.content-sub-menu {
+	$local-border: 1px solid $color_gray_15;
+
+    display: none;
+    background: $color_gray_5;
+    position: absolute;
+    z-index: 100;
+    max-width: 1180px;
+	width: 100%;
+    left: 0;
+    top: 100px;
+    border-top: 1px solid #c5c5c5;
+
+    .block-inner {
+      @include ib-grid;
+  }
+
+  .menu {
+      a {
+         @include underline-hover;
+         display: inline-block !important;
+         vertical-align: top;
+     }
+
+	.menu-item--active-trail {
+		a {
+			border-bottom: 1px solid rgba(123, 193, 66, 1);
+			opacity: 1;
+		}
+	}
+ }
+
+	.block {
+		@include grid-porcentaje(3);
+		//width: 280px; //;@include grid(3);
+		min-height: 300px;
+		@include inline-block(top);
+		position: relative;
+		box-sizing: border-box;
+		background-color: white;
+
+		.block-inner a {
+            //@include acherus_medium(14px);
+            //letter-spacing: 7.14%;
+        }
+
+		// Columna Central
+		& + .block {
+			@include grid-porcentaje(6);
+			//width: 620px; //@include grid(6);
+			padding-left: 20px;
+			padding-right: 20px;
+			background-color: #f7f7f7;
+		}
+
+		// Columna Tercera
+		& + .block + .block {
+			@include grid-porcentaje(3);
+			//width: 280px; //@include grid(3);
+			border-left: 1px solid #EDEDED;
+			overflow: hidden;
+		}
+
+		> .menu {
+			@include ib-grid;
+			margin-left: -10px;
+			margin-right: -10px;
+
+			> .menu-item {
+				@include inline-block(top);
+				width: 50%;
+				padding-left: 10px;
+				padding-right: 10px;
+				box-sizing: border-box;
+			}
+
+			.menu {
+				margin-left: -20px;
+				margin-right: -20px;
+				padding-left: 20px;
+				padding-right: 20px;
+				box-sizing: border-box;
+			}
+		}
+	}
+	
+	.sub-menu-inscripciones,
+	.sub-menu-programa-academico {
+		> .menu > .menu-item--expanded {
+			a {
+				line-height: 25px;
+				display: block;
+			}
+
+			& > a {
+				margin: 26px 0 28px;
+			}
+
+			> .menu {
+				border-top: 1px solid $color_gray_15;
+				padding-top: 40px; //42px;
+
+				> .menu-item {
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+
+	.sub-menu-programa-academico {
+		> .menu > .menu-item--expanded {
+			& + .menu-item--expanded {
+				.menu {
+					border-bottom: 1px solid $color_gray_15;
+				}
+			}
+
+			> .menu {
+				padding-top: 0;
+
+				// Segundo hijo
+				> .menu-item {
+					padding: 24px 20px 0;
+					margin-left: -20px;
+					margin-right: -20px;
+
+					> a {
+						// margin-top: -50px;
+						margin-bottom: 19px;
+
+						&::after {
+							//content: "";
+							width: 100%;
+							height: 1px;
+							background: $color_gray_15;
+							position: absolute;
+							bottom: 0;
+							left: -20px;
+						}
+					}
+
+					> .menu {
+						padding-top: 26px;
+						border-top: 1px solid $color_gray_15;
+
+						> .menu-item {
+							padding-top: 0;
+							padding-bottom: 5px;
+
+							// Desborda la grilla el texto: Colegio Bilingüe Universidad El Bosque
+							&:last-child {
+								white-space: nowrap;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.field--name-field-imagen-slider {
+		padding-top: 39px;
+	}
+
+	.field--name-field-enlace {
+		text-align: center;
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 17px;
+
+		a {
+            @include buton-xl-green;
+            display: block;
+        }
+    }
+
+	// Tercer bloque
+	.block-menu {
+		& + .block {
+			.block-inner {
+				height: 100%;
+			}
+
+			.field--name-field-enlace {
+				margin-left: -25px;
+				margin-right: -25px;
+
+				a {
+					@include buton-xl-white;
+              }
+          }
+
+          .text-float-image {
+            position: absolute;
+            //bottom: 60px;
+            bottom: 35px;
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+	// Bloques con foto grande
+	#block-bloque2submenu2,
+	#block-bloque2submenu4,
+	#block-bloquehomefacultadessubmenu2 {
+		.field--name-field-imagen-slider {
+			margin: 0 -20px;
+			height: 100%;
+			padding-top: 0;
+
+			.field__item {
+				height: 100%;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
+	}
+
+	.field--name-field-block-title-h2 {
+		font-family: $font-brandb;
+		font-size: 20px;
+        color: $color_gray_80;
+        padding-bottom: 12px;
+        text-decoration: none;
+        padding-top: 5px;
+        max-width: 80%;
+        margin: 0 auto;
+        line-height: 20px;
+        letter-spacing: -0.5%;
+    }
+
+    .block-block-content {
+        text-align: center; 
+    }
+
+    .block-menu {
+        > .menu {
+            list-style: none;
+            //margin: 0;
+            .menu-item--expanded > a {
+                //@include font-baser-s;
+                color: $color_gray_80;
+                display: inline-block;
+                font: {
+                    family: $font-bsb;
+                    size: 15px;
+                }
+                letter-spacing: 1.5px;
+                // padding: 22px 0;
+                text-decoration: none;
+            }
+            > .menu-item {
+                @include inline-block(top);
+                > .menu {
+                    list-style: none;
+                    //margin-top: 20px;
+                    > .menu-item {
+                        //margin-bottom: 10px;
+                    }
+                    .menu-item {
+                        position: relative;
+                    }
+                    a {
+                        font-family: 'acherus_grotesquemedium';
+                        font-size: 14px;
+                        color: $color_gray_80;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+
+    &.menu-translation {
+        height: 120px;
+        text-align: center;
+        width: 275px;
+        left: auto; //798px;
+        right: 0;
+		top: 40px;
+        background: white;
+        border: 2px solid #cbcbcb;
+        .gtranslate {
+            padding-top: 20px;
+            &:before {
+                content: url("../images/googleIcon.png");
+                display: block;
+            }
+        }
+    }
+
+
+    &.menu-programa-academico,
+    &.menu-nuestro-bosque,
+    &.menu-faculty {
+        .block-block-content {
+            &:nth-last-child(1) {
+                //margin-left: 33px;
+                //position: relative;
+                //padding: 0px;
+                .field--name-field-imagen-slider--------- {
+                    padding: 0px;
+                }
+                .field--name-field-block-title-h2 {
+                    @include title_acherusblack_m;
+                    color: white;
+                    padding: 0 30px;
+                    padding-bottom: 20px;
+                }
+                
+            }
+        }
+    }
+    &.menu-faculty {
+        .menu--menu-fa---cultades-home {
+            .menu {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                position: relative;
+                &:after {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background: $color_gray_15;
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                }
+            }
+            a {
+                @include item-menu;
+                padding-top: 0px;
+                &:after {
+                    content: url("../images/facultad/ArrowRightGrey.svg");
+                    padding-left: 5px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .menu--menu-facultades-home {
+      position: relative;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+
+      &::after {
+         content: "";
+         height: 100%;
+         width: 1px;
+         background: $color_gray_15;
+         position: absolute;
+         top: 0px;
+         left: 50%;
+     }
+
+     .menu {
+         column-count: 2;
+         column-gap: 15px;
+         padding-top: 37px;
+         position: relative;
+         // overflow: hidden; Safari ocasiona un bug con esto
+
+         .menu-item {
+            width: 100%;
+				margin-bottom: 7px; //12px;
+				padding-top: 0;
+				padding-bottom: 0;
+
+				a {
+					font-family: $font-bm;
+					letter-spacing: 1px;
+					font-size: 14px;
+					line-height: 20px; //17px;
+					padding: 0;
+					height: auto;
+					position: relative;
+					display: inline !important;
+                    color: $color_text;
+            
+					&::after {
+						content: url("../images/facultad/ArrowRightGrey.svg");
+						padding-left: 5px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		&:after {
+			content: "";
+			height: 100%;
+			right: 50%;
+			width: 1px;
+			background: $color_gray_10;
+		}
+	}
+
+    // Inscripciones
+    .sub-menu-inscripciones {
+        > .menu {
+            &:after {
+                //content: '';
+                height: 0.5px;
+                background: $color_gray_15;
+                position: absolute;
+                top: 60px;
+                display: block;
+                width: 100%;
+                left: 0;
+            }
+            .menu {
+                //padding-top: 30px;
+            }
+            >.menu-item--expanded {
+
+                > a {
+                    position: relative;
+                    &:after {
+                        content: url("../images/menu/menu-lateral-arrow-right.svg");
+                        display: inline-block;
+                        padding-left: 5px;
+                    }
+                    &:hover {
+
+                    }
+                }
+                &:nth-child(2) {
+                    .menu {
+                        .menu-item {
+                            &:nth-child(3) {
+                                margin-top: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .block-block-content {
+            &:nth-last-child(2) {}
+        }
+    }
+    // Programa academico
+    &.menu-programa-academico {
+        > .menu {
+          
+            > .menu-item {
+                > .menu {
+                    margin-top: 0;
+                    > .menu-item {
+                        margin-top: 0;
+                        > a {
+                            margin: 22px 0;
+                            display: inline-block;
+                        }
+                        .menu-item {
+                            margin-bottom: 10px;
+                        }
+                        > .menu {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 
+    .sub-menu-nuestro-bosque {
+        > .menu {
+            position: relative;
+
+			// Columnas
+            > .menu-item {
+             
+				// Segunda columna
+				& + .menu-item {
+					border-left: $local-border;
+
+					.menu-item {
+						margin-bottom: 10px;
+					}
+
+					.menu-item:nth-of-type(4),
+					.menu-item:nth-of-type(6) {
+						margin-top: 28px; //32px;
+					}
+				}
+
+                > a {
+                    color: $color_brand;
+                    margin: 19px 10px 16px;
+                    display: block;
+                    line-height: 20px;
+                }
+
+				// Contenido de la columna
+				> .menu {
+					> .menu-item {
+						padding: 0 10px;
+
+						&.menu-item--expanded {
+							> .menu {
+								border-top: $local-border;
+								padding-top: 23px;
+								margin-top: 14px;
+								margin-left: -30px;
+								padding-left: 30px;
+
+								> .menu-item {
+									padding-bottom: 1px;
+								}
+							}
+						}
+					}
+				}
+
+                >.menu {
+                    .menu-item--expanded {
+                        a {
+                            
+                        }
+                        > .menu {
+                            .menu-item {
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(1) {
+                    > .menu {
+                        > .menu-item {
+                            &:not(.menu-item--expanded) {
+                                margin-bottom: 7px;
+
+                                > a {
+                                    @include acherus_bold(15px);
+                                    letter-spacing: 6.67%;
+                                    color: $color_brand_dark;
+                                }
+                                &:after {
+                                    content: url("../images/menu/menu-lateral-arrow-right.svg");
+                                    display: inline-block;
+                                    padding-left: 5px;
+                                }
+                            }
+                        }
+                        .menu-item--expanded {
+                            > a {
+                                @include acherus_bold(15px);
+                                letter-spacing: 6.67%;
+                                color: $color_brand_dark;
+                                position: relative;
+
+                                &:before {
+                                    content: url("../images/menu/menu-lateral-arrow-right.svg");
+                                    display: inline-block;
+                                    padding-left: 5px;
+                                    position: absolute;
+                                    right: -25px;
+                                    top: 3px;
+                                    padding-right: 10px;
+                                }
+                                &:after {
+                                    bottom: 20px;
+                                }
+                            }
+                            
+                        }
+                        a {
+                            @include acherus_medium(14px);
+                            letter-spacing: 7.14%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sub-menu-programa-academico {
+        position: relative;
+        >.menu {
+            &:after {
+                // content: '';
+                height: 0.5px;
+                background: $color_gray_15;
+                position: absolute;
+                top: 60px;
+                display: block;
+                width: 100%;
+                left: 0;
+            }
+            &:before {
+                //content: '';
+                height: 0.5px;
+                background: $color_gray_15;
+                position: absolute;
+                top: 120px;
+                display: block;
+                width: 100%;
+                left: 0;
+            }
+            >.menu-item--expanded {
+                position: relative;
+                > a {
+                    position: relative;
+                    &:after {
+                        content: url("../images/menu/menu-lateral-arrow-right.svg");
+                        display: inline-block;
+                        padding-left: 5px;
+                    }
+                    &:hover {
+                        &:before {
+                           // width: 100%;
+                           height: 1px;
+                           background-color: #7BC142;
+                           content: "";
+                           position: absolute;
+                           bottom: 20px;
+                           left: 0;
+                           display: block;
+                       }
+                   }
+               }
+           }
+       }
+   }
+   &.active {
+    display: block;
+}
+> .block-block-content {
+    &:nth-child(1) {
+        background: white;
+        .field--type-link {
+            a {
+                @include buton-xl-green;
+            }
+        }
+    }
+    &:nth-last-child(1) {
+        border-left: 0.5px solid $color_gray_15;
+        .field--type-link {
+            a {
+                @include buton-xl-white;
+            }
+        }
+    }
+}
+}

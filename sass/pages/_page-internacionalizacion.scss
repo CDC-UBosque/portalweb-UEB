@@ -1,0 +1,189 @@
+.page-internacionalizacion {
+	@include grilla-3-columns-bs('.content3', '.block', 15px, 0);
+	@include grilla-4-columns-bs('.content4', '.estilo-0002b');
+	@include grilla-2-columns-bs('.content5', '.noticia-principal');
+	@include grilla-2-columns-bs('.content5', '.sub-noticia');
+	@include grilla-2-columns-bs('.sub-noticia .view-content', '.views-row');
+	@include grilla-3-columns-bs('.content3', '.block', 15px, 0);
+
+	.title-bosque-acoge {
+		.field--name-field-bocadillo {
+			&::before {
+				content: "";
+			}
+		}
+	}
+
+    .pre_footer {
+        position: relative;
+        padding-top: 60px;
+        &::before {
+            @include punto-title;
+            content: "";
+        }
+    }
+
+	.content1 {
+		background: url(../images/internacionalizacion-main.jpg) no-repeat 50% 0;
+
+		@media only screen and (max-width: $tablet) {
+			margin: 0 -30px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			background-size: auto 706px;
+		}
+	}
+
+	.content2 {
+		
+	}
+
+	.content3 {
+		@media only screen and (max-width: $mobile) {
+			margin-left: -30px;
+			margin-right: -30px;
+
+			.block {
+				padding-left: 0;
+				padding-right: 0;
+				margin-bottom: 30px;
+
+				&.internacionalizacion-postulate {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.region-section-4 {
+		padding-bottom: 20px;
+
+		.intro {
+			max-width: 255px;
+			right: 0;
+			margin: auto;
+		}
+
+		.block-content--type-block-title .intro + h2 {
+		  padding-top: 85px;
+		}
+	}
+
+	.region-section-5 {
+		padding-bottom: 42px;
+
+		.noticia-principal {
+			.field--name-field-image {
+				margin-bottom: 10px;
+			}
+
+			.field--name-node-title {
+				overflow: hidden;
+			}
+
+			h2 {
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+
+		.node--type-noticias.node--view-mode-teaser .text-content {
+			background: none;
+		}
+	}
+
+	.view-noticias-1 {
+		.field--name-field-image {
+			@media only screen and (max-width: $mobile) {
+				margin-left: -30px;
+				margin-right: -30px;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto !important;
+			}
+		}
+	}
+
+	.content6 {
+		@include region-verde;
+		
+		.block-content--type-block-title h2::before {
+			background: white;
+		}
+	}
+
+	.layout-content--post-content {
+		@include block-pintadinho;
+
+		.post_content {
+			max-width: 850px;
+			margin: 0 auto;
+		}
+
+		.title,
+		.button {
+			clear: both;
+		}
+
+		.button {
+			padding-bottom: 1px;
+		}
+	}
+	
+	.inter-preguntas-frecuentes {
+		
+	}
+
+	.estilo-0009 {
+		text-align: center;
+		padding: 0 90px 25px;
+
+		@media only screen and (max-width: $tablet) {
+			padding: 0 0 40px;
+		}
+	}
+
+	// URL: /convenios/buscar
+	&.convenios {
+		#main {
+			@media only screen and (max-width: $tablet) {
+				padding-top: 30px;
+
+				h2 {
+					font-size: 39px;
+					line-height: 49px;
+					letter-spacing: -0.1px;
+				}
+			}
+		}
+
+		.block-views-exposed-filter-blockconvenios-internacionales-page-2 {
+			@include form-select('.form-item', '.form-select');
+			margin-bottom: 30px;
+
+			.form-item {
+				@include inline-block(top);
+				margin-right: 20px;
+				width: 180px;
+			}
+
+			.form-actions {
+				@include inline-block(top);
+
+				.form-submit {
+					@include buton-m-green;
+					padding: 11px 24px 9px;
+					margin-top: -1px;
+				}
+			}
+		}
+
+		.content2 {
+			overflow: hidden;
+		}
+	}
+}

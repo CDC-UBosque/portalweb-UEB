@@ -1,0 +1,149 @@
+// URL: /internacionalizacion/
+.carousel-semestres {
+	@include owl-nav-1;
+	
+	.owl-nav {
+		@media only screen and (max-width: $mobile) {
+			bottom: 0;
+			margin: auto;
+			position: relative;
+			right: auto;
+			top: auto;
+			text-align: center;
+			
+			.owl-prev,
+			.owl-next {
+				@include inline-block(top);
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.field--name-field-image {
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.owl-stage-outer {
+		overflow: hidden;
+		padding-bottom: 10px;
+	}
+
+	.carousel-label {
+		font-family: $font-brandb;
+		position: relative;
+		top: 0;
+		left: -10px;
+		background: $color_brand;
+
+		span {
+			font-size: 30px;
+			line-height: 36px;
+			letter-spacing: -0.3px;
+			color: white;
+		}
+
+		b {
+			font-size: 12px;
+			letter-spacing: 1.2px;
+			line-height: 17px;
+			color: #2B3427;
+		}
+	}
+
+	.field--name-body {
+		position: relative;
+
+		&::before {
+			content: "";
+			width: 8000px;
+			height: 1px;
+			position: absolute;
+			bottom: 5px;
+			left: -4000px;
+			z-index: 30;
+			background: #F0EEEE;
+			opacity: 0.21;
+		}
+	}
+
+	@mixin carousel-semestres($wrapper, $item) {
+		#{$wrapper} {
+			float: left;
+			width: 100%;
+			// overflow: hidden;
+			position: relative;
+			min-height: 150px;
+			margin-bottom: 30px;
+
+			#{$item} {
+				float: left;
+				box-sizing: border-box;
+				padding: 0 20px 0;
+				position: relative;
+
+				&::before {
+					content: "";
+					width: 1px;
+					height: 600px;
+					position: absolute;
+					top: 0;
+					background: #F0EEEE;
+					opacity: 0.21;
+				}
+				
+				&::after {
+					content: "";
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					bottom: -10px;
+					left: 15px;
+					background: #F8E81C;
+					border-radius: 50px;
+				}
+			}
+
+			p {
+				font-family: $font-bli;
+				color: white;
+				padding: 0 50px 5px 15px;
+				box-sizing: border-box;
+			}
+
+			strong {
+				font-family: $font-bsb;
+			}
+		}
+	}
+
+	@include carousel-semestres('.field--name-body, .view-content', '.owl-item');
+
+	&.slider-grupos-universitarios {
+		@include owl-nav-2;
+		margin-bottom: 40px;
+
+		.field--name-field-image {
+			margin-bottom: 15px;
+		}
+
+		.field--name-field-title {
+			h3 {
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+
+		.field--name-field-body {
+			p {
+				color: $color_gray_80;
+			}
+		}
+	}
+}
+
+
+

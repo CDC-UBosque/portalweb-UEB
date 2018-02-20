@@ -1,0 +1,353 @@
+.block-menu {
+	&.menu-blog-uno,
+	&.menu--menu-blog-dos {
+		float: right;
+		text-align: right;
+		padding: 20px 0 0;
+		
+		> h2 {
+			display: none;
+
+			@media only screen and (max-width: $tablet) {
+				display: block;
+			}
+		}
+		
+		.menu-item {
+			@include inline-block;
+			margin-left: 10px;
+
+			a {
+				@include font(13px, 16px, 0.2px);
+				font-family: $font-bsb;
+				color: white;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&.menu--unidades-y-usuarios {
+		@include box-sidebar;
+		background: #fbfbfb;
+
+		h2 {
+			font-family: $font-baseb;
+			font-size: 12px;
+			text-transform: uppercase;
+			margin: -17px -20px 10px;
+			padding: 5px 20px;
+			background: white;
+		}
+
+		.menu {
+			margin: 0;
+		}
+
+		.menu-item {
+			padding: 6px 0;
+
+			a {
+				font-family: $font-baser;
+				font-size: 12px;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $color_gray_80;
+			}
+		}
+	}
+
+	&.menu--informacion-legal {
+		.menu-item {
+			@include paragraph-very-small;
+		}
+		> .menu {
+			>.menu-item {
+				&:nth-child(5) {
+					padding-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	&.menu-modal {
+		/*
+		@include lightbox-fondo;
+
+		.menu {
+			position: fixed;
+			transition: 1s ease-out all;
+			right: -100%;
+			top: 0;
+			max-width: 380px;
+			width: 100%;
+			height: 100%;
+			background: white;
+			margin: 0;
+			padding: 35px 30px;
+			
+			@media only screen and (max-width: $tablet) {
+				max-width: 40%;
+			}
+			@media only screen and (max-width: $mobile) {
+				max-width: 60%;
+			}
+		}
+		*/
+
+		.menu-item {
+			border-bottom: 1px solid $color_gray_15;
+			max-width: 280px;
+			position: relative;
+			padding: 10px 0px;
+			
+			&.js-appended-menu-title {
+				color: $color_gray_80;
+				font-family: $font-baseblack;
+				font-weight: normal;
+				font-size: 12px;
+				text-transform: uppercase;
+				background: url(../images/menu/menu-lateral-arrow-left.svg) no-repeat 0 14px;
+				padding: 12px 50px 12px 13px;
+				letter-spacing: 2px;
+			}
+
+			a {
+				
+				line-height: 100%;
+				color: $color_gray_60;
+				text-decoration: none;
+				font-size: $font-baser-xs;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				transition: border 500ms ease;
+				border-bottom: 1px solid rgba(123, 193, 66, 0);
+				&:after {
+					content: url("../images/menu/flecha-gris-right.svg");
+					transform: rotate(-90deg);
+					display: inline-block;
+				}
+				&:hover {
+					border-bottom: 1px solid #7bc142;
+				}
+
+			}
+		}
+		>.menu {
+			>.menu-item {
+				&:nth-child(1) {
+					a {
+						@include latoblack(11px);
+						color: $color_gray_80;
+						&:before {
+							content: url("../images/menu/menu-lateral-arrow-left.svg");
+							display: inline-block;
+							padding-right: 5px;
+							vertical-align: middle;
+						}
+						&:after {
+							display: none;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+
+
+	&.menu--menu-superior-home-derecho {
+		overflow: hidden;
+
+		.menu {
+			@media only screen and (max-width: $tablet) {
+				@include inline-block(top);
+			}
+		}
+
+		.menu-item {
+			border-right: 1px solid #e1e1e1;
+			//padding-right: 16px;
+			//padding-left: 16px;
+			position: relative;
+
+			@media only screen and (max-width: $tablet) {
+				height: 22px;
+			}
+			
+			&:nth-of-type(2)::before {
+				content: url("../images/facultad/RUBY.svg");
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 8px;
+				margin: auto;
+				height: 16px;
+				@media only screen and (max-width: $tablet) {
+					left: 5px;
+				}
+				@media only screen and (max-width: $mobile) {
+					display: none;
+				}
+			}
+
+			&:last-child {
+				border-right: 0;
+			}
+
+			a {
+				//@include underline-hover;
+				vertical-align: middle;
+				letter-spacing: 0px;
+				line-height: 100%;
+				position: relative;
+				margin-left: 0;
+				margin-right: 0;
+				margin-right: 20px;
+				margin-left: 20px;
+				letter-spacing: 0 !important;
+
+				@media only screen and (max-width: $desktop-small) {
+					margin-left: 5px;
+					margin-right: 5px;
+				}
+
+				&::before {
+					content: "";
+					background: $color-brand;
+					height: 4px;
+					width: 100%;
+					position: absolute;
+					bottom: -4px;
+					left: 0;
+					transition: .1s ease-out all;
+				}
+
+				&:hover {
+					&::before {
+						bottom: 0;
+					}
+				}
+
+				&::after {
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					height: 12px;
+					width: 20px;
+					background-position: 50%;
+					background-repeat: no-repeat;
+
+					@media only screen and (max-width: $desktop-small) {
+						right: -22px;
+					}
+				}
+
+				&.buscar-mobile {
+					padding-left: 36px;
+					color: white !important;
+					font-size: 11px;
+					letter-spacing: 0.5px;
+					cursor: pointer;
+
+					&::after {
+						background-image: url('../images/home/searchIcon.svg');
+						height: 19px;
+						width: 19px;
+						right: auto;
+						left: 10px;
+					}
+				}
+				
+				&.btn-facu {
+					@include acherus_grotesquebold (13px);
+					@include inline-block(top);
+					//color: #9FD276;
+					margin-right: 40px;
+					//padding-top: 14px;
+					color: $color_brand;
+					@media only screen and (max-width: $desktop-small) {
+						margin-right: 15px;
+					}
+
+					@media only screen and (max-width: $tablet) {
+						font-size: 11px;
+					}
+
+					&::after {
+						background-image: url("../images/facultad/arrowBlackDown.svg");
+						right: -20px;
+						top: -1px;
+
+						@media only screen and (max-width: $desktop-small) {
+							right: -3px;
+							//display: none;
+						}
+					}
+				}
+
+				&.btn-digi {
+					@include latobold (13px);
+					margin-right: 33px;
+					margin-left: 34px;
+
+					@media only screen and (max-width: $desktop-small) {
+						margin-right: 15px;
+					}
+
+					@media only screen and (max-width: $tablet) {
+						font-size: 11px;
+						padding-left: 25px;
+					}
+
+					&::after {
+						background-image: url("../images/facultad/arrowBlackDown.svg");
+						right: -17px;
+						transform: rotate(-90deg);
+
+						@media only screen and (max-width: $desktop-small) {
+							right: -3px;
+							//display: none;
+						}
+					}
+				}
+
+				&.btn-dire,
+				&.btn-idi {
+					@include latoregular(12px);
+					color: $color_gray_60;
+					letter-spacing: 0;
+					//margin-left: 5px;
+
+					@media only screen and (max-width: $tablet) {
+						font-size: 10px;
+					}
+				}
+
+				&.btn-idi {
+					&::after {
+						background-image: url("../images/facultad/arrowBlackDown.svg");
+						right: -20px;
+
+						@media only screen and (max-width: $tablet) {
+							background-image: url("../images/svg/ArrowWhiteDown.svg");
+						}
+					}
+				}
+			}
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+
+		.menu-buscar-mobile {
+			@media only screen and (min-width: $tablet) {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,532 @@
+.page-node-type-pagina-basica-mutable {
+	.sidebar-first + #main {
+		padding-top: 0;
+	}
+    .block-content--type-bloque-titulo-image {
+        position: relative;
+    }
+	&.proceso-de-matricula {
+		#main {
+			.field--name-field-body {
+				max-width: 780px;
+			}
+		}
+	}
+
+	.field--name-field-bocadillo-150 {
+		margin-bottom: 33px;
+
+		@media only screen and (max-width: $tablet) {
+			margin-bottom: 30px;
+		}
+
+		@media only screen and (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+	}
+
+	/*
+    .block-webform-block {
+        @include form-input-select ('.form-item, .js-form-type-textarea', 'input, textarea');
+        @include form-input('.form-item', 'input');
+        @include form-checkbox ('.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion');
+        margin-bottom: 60px;
+        width: 66%;
+
+		label,
+		.form-text,
+		.form-email,
+		.form-textarea {
+			font-family: $font-baser;
+			color: $color_gray_60;
+			line-height: 17px;
+			font-size: 14px;
+		}
+
+		.form-textarea {
+			padding: 10px;
+		}
+
+
+        .form-item {
+            margin-bottom: 15px;
+        }
+
+        .form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion {
+            float: left;
+        }
+        .form-actions {
+            float: right;
+            input {
+                @include buton-xl-green;
+
+            }
+        }
+        &:after {
+            background: #ededed;
+            content: "";
+            width: 100%;
+            height: 1px;
+            display: block;
+            margin-top: 80px;
+
+        }
+
+
+    }
+
+	*/
+    .deseo-mayor-informacion {
+        border-top: 1px solid #ededed;
+        padding-top: 35px;
+
+		@media only screen and (min-width: $mobile) {
+			max-width: 66%;
+		}
+
+        .field--name-field-block-title-h2, h2 {
+            @include acherus_black(20px);
+            letter-spacing: -0.5px;
+            padding-bottom: 13px;
+            margin: 0;
+			line-height: 20px;
+        }
+
+		.paragraph--type-body {
+			margin-bottom: 36px;
+		}
+
+        .field--name-field-texto {
+            @include paragraphs_large;
+            padding-bottom: 40px;
+        }
+    }
+    .banner {
+        margin-left: -20px;
+        padding-bottom: 30px;
+        .field--name-field-block-title-h2 {
+            @include main-image-title;
+            top: 30px;
+            left: 40px;
+            position: absolute;
+            width: 270px;
+
+        }
+        .text-content {
+            position: absolute;
+            right: 100px;
+            bottom: 20px;
+            text-align: center;
+            .field--name-field-texto {
+                @include pt_serifitalic(12px);
+                color: white;
+                padding-bottom: 10px;
+                position: relative;
+                &:before {
+                    @include arrow-white-bottom-before;
+                    top: -35px;
+                }
+            }
+            .field--name-field-links {
+
+                a {
+                    @include buton-xl-white;
+                    padding-left: 60px;
+                    padding-right: 60px;
+                }
+            }
+        }
+        .pilobosque-first {
+            position: relative;
+        }
+    }
+    .columns {
+        margin-bottom: 45px;
+        position: relative;
+        >.block-inner {
+            @include ib-grid;
+            &:after  {
+                position: absolute;
+                content: "";
+                left: 33.33%;
+                top: 0;
+                height: 95%;
+                width: 1px;
+                background-color: #ededed;
+				
+				@media only screen and (max-width: 480px) {
+					display: none;
+				}
+            }
+            &:before {
+                position: absolute;
+                content: "";
+                left: 66.66%;
+                top: 0;
+                height: 95%;
+                width: 1px;
+                background-color: #ededed;
+
+				@media only screen and (max-width: 480px) {
+					display: none;
+				}
+            }
+            > .block-block-content{
+                box-sizing: border-box;
+				margin-bottom: 15px;
+
+				@media only screen and (min-width: 480px) {
+					@include inline-block(top);
+	                width: 33.33%;
+					margin-bottom: 0;
+				}
+
+                .field--name-field-imagen {
+                    text-align: center;
+                }
+                .field--name-field-title {
+                    @include title_light_acherus_l;
+                    line-height: 30px;
+                    padding-bottom: 20px;
+                    text-align: center;
+                }
+                .field--type-text-with-summary {
+                    @include paragraphs_large;
+                    padding-right: 30px;
+                    padding-left: 45px;
+                    ul {
+                     //   list-style-type:disc;
+                    }
+                }
+            }
+        }
+
+    }
+   
+    &.page-node-type-pilo-bosque {
+        .block-block-content61c79f84-c447-4d73-9565-50d1752c7621 {
+            .paragraph--type-body {
+                float: left;
+                width: 270px;
+                padding-right: 30px;
+                .field__item {
+                    p {
+                        @include paragraphs_large;
+                    }
+                }
+            }
+            .block-content--type-bloque-titulo-image {
+                padding-bottom: 95px;
+            }
+            .paragraph--type-bocadillo-150 {
+
+                box-sizing: border-box;
+                height: 65px;
+                position: relative;
+                max-width: 555px;
+                float: right;
+                &:before {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    position: absolute;
+                    top: 5px;
+                    left: -25px;
+                    background-color: #efeeee;
+                }
+                .field--name-field-bocadillo-150 {
+
+                    @include acherus_grotesqueultralight(17px);
+                    width: 90%;
+                    line-height: 20px;
+                }
+            }
+            img {
+                max-width: 570px;
+            }
+        }
+        .field--name-field-mutable {
+            @include ib-grid;
+            position: relative;
+            &:before {
+                content: "";
+                height: 100%; //790px;
+                width: 1px;
+                background: #ededed;
+                position: absolute;
+                left: 245px;
+                top: -20px;
+            }
+            .field__item {
+                &:nth-child(4),
+                &:nth-child(7) {
+                    @include pretitle;
+                    padding-bottom: 10px;
+                    width: 30%;
+                }
+                &:nth-child(5),
+                &:nth-child(8) {
+                    h2 {
+                        @include title_light_acherus_lm;
+                    }
+                    @include inline-block(top);
+                    float: left;
+                    width: 30%;
+                    box-sizing: border-box;
+                    padding-right: 50px;
+                    padding-bottom: 50px;
+                }
+                &:nth-child(6) {
+                    padding-bottom: 115px;
+                }
+                &:nth-child(11) {
+                    padding-bottom: 75px;
+                }
+                &:nth-child(7) {
+                    position: relative;
+                    &:before {
+                        @include arrow-bottom-before;
+                        margin: 0;
+                        top: -40px;
+                    }
+                }
+                &:nth-child(6),
+                &:nth-child(9),
+                &:nth-child(10),
+                &:nth-child(11) {
+                    @include inline-block(top);
+                    width: 70%;
+                    margin-top: -27px;
+                    p {
+                        @include paragraphs_large;
+                    }
+                    li {
+                        &:before {
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            -webkit-border-radius: 20px;
+                            -moz-border-radius: 20px;
+                            border-radius: 20px;
+                            background: #4A4A4A;
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 15px;
+                        }
+                    }
+                    ul {
+                        overflow: hidden;
+                    }
+                    .field--name-field-links {
+                        a {
+                            @include buton-xl-green;
+                            padding-left: 65px;
+                            padding-right: 65px;
+                        }
+                    }
+                }
+                &:nth-child(9),
+                &:nth-child(11) {
+                    text-align: center;
+                    .field--name-field-image {
+                        padding-bottom: 30px;
+                    }
+                }
+                &:nth-child(10) {
+                    .paragraph--type-body {
+                        padding-bottom: 43px;
+                    }
+                }
+
+				h2 {
+					padding-bottom: 15px;
+					margin-bottom: 0;
+				}
+
+				&:nth-child(12),
+				&:nth-child(13),
+				&:nth-child(14),
+				&:nth-child(15),
+				&:nth-child(16),
+				&:nth-child(17) {
+					background-color: white;
+					position: relative;
+					z-index: 20;
+				}
+
+                &:nth-child(13) {
+                    padding-bottom: 20px;
+                    p {
+                        @include cita;
+                    }
+                }
+                &:nth-child(14) {
+                    p,
+                    ul {
+                        @include paragraphs_large;
+                        margin-bottom: 0px;
+                        width: 65%;
+                    }
+                    li {
+                        &:before {
+                            content: "";
+                            width: 6px;
+                            height: 6px;
+                            -webkit-border-radius: 20px;
+                            -moz-border-radius: 20px;
+                            border-radius: 20px;
+                            background: #4A4A4A;
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: 30px;
+                        }
+                    }
+                    .field--name-field-body {
+                        padding-bottom: 75px;
+                    }
+                }
+
+				// Cita
+                &:nth-child(16) {
+					padding-bottom: 60px;
+
+                    p {
+                        @include cita;
+                    }
+                }
+            }
+        }
+        
+    }
+    &.orientacion-especializada {
+        #main {
+            padding-top: 0px;
+        }
+        
+        .cita {
+            padding-bottom: 30px;
+
+        }
+        
+        .field--name-field-mutable {
+            > .field__item {
+                &:nth-child(2),
+                &:nth-child(4),
+                &:nth-child(6),
+                &:nth-child(8),
+                &:nth-child(10),
+                &:nth-child(12),
+                &:nth-child(15),
+                &:nth-child(17),
+                &:nth-child(19) {
+                    @include paragraphs_large;
+                    padding-bottom: 35px;
+                    width: 66.66%;
+                    ol {
+                        margin-left: -25px;
+                    }
+                }
+                &:nth-child(12){
+                    float: left;
+                    width: 66.66%;
+                    padding-right: 20px;
+                    box-sizing: border-box;
+                }
+                &:nth-child(13) {
+                    @include inline-block(top);
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    padding: 10px 20px;
+                    width: 29%;
+                    float: right;
+                    .field--type-text-with-summary {
+                        .field__item {
+                            p {
+                                &:nth-child(1) {
+                                    @include latoblack(11px);
+                                    letter-spacing: 1.2px;
+                                }
+                                &:nth-child(2) {
+                                    @include latoblack(12px);
+                                    vertical-align: top;
+                                    strong {
+                                        @include acherus_black (20px);
+                                        vertical-align: top;
+                                        padding-right: 50px;
+                                    }
+                                }
+                                &:nth-child(3) {
+                                    @include latobold(11px);
+                                    color: #9B9B9B;
+                                    letter-spacing: 2.2px;
+                                    margin-top: -20px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(14){
+                    clear:left;
+                }
+            }
+        }
+        .block-webform-block {
+            .webform-options-display-one-column {
+
+                @include form-radiobutton ('.js-form-type-radio');
+                .js-form-type-radio {
+                    float: left;
+                    padding-right: 20px;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+    &.programa-inmersion {
+        .banner {
+            .field--name-field-block-title-h2 {
+                @include title_light_acherus_xl;
+                line-height: 37px;
+                &:first-line {
+                    @include main-image-title;
+                }
+            }
+            .text-content { 
+                bottom: 35px;
+                right: 45px;
+            }
+            .field--name-field-links {
+                a {
+                    padding-right: 25px;
+                    padding-left: 25px;
+                }
+            }
+        }
+        .columns {
+            .field--type-text-with-summary {
+                text-align: center;
+            }
+        }
+        .field--name-field-mutable {
+            .cita {
+                padding-bottom: 20px;
+            }
+            > .field__item {
+                &:nth-child(3) {
+                    padding-bottom: 0;
+                    width: 65%;
+                }
+            }
+        }
+        .field--name-field-body {
+            .field__item {
+                &:nth-child(2) {
+                    width: 65%;
+                    padding-bottom: 5%;
+                }
+            }
+        }
+
+    }    
+}

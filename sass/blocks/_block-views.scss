@@ -1,0 +1,1117 @@
+.block-views {
+    @include views-row-cuadrado-titular('&.block-views-blockeventos-facultad-block-1, &.block-views-blockeventos-facultad-block-2');
+
+	&.noti-1 {
+		@include noti-1('.node', '.field--name-field-noticias-taxonomia', '.field--name-node-title h3', '.field--name-node-link');
+	}
+
+	&.noti-2 {
+		@include noti-2('.node', '.field--name-field-noticias-taxonomia', '.field--name-node-title h2', '.field--name-node-link');
+	}
+
+	// URL: /nuestro-bosque/infraestructura
+	&.block-views-blockinfraestructura-block-1 {
+		display: none;
+	}
+	
+	// URL: /blog-uno/catedra
+	&.views-relacionship-news {
+		&.blog-one {
+			@include teaser-noticias('.view-content', '.views-field-field-image', '.views-field-term-node-tid, .views-field-field-fecha-publicacion', '.views-field-title, .views-field-label', '.views-field-field-bocadillo-150', '.views-field-view-group-content');
+			@include addToAny;
+			
+			.text-content {
+				background: white !important;
+			}
+		}
+	}
+
+	// tags
+	// URL: /blog-uno
+	&.views-tags {
+		@include teaser-sidebar-block-title('.block-inner', '.view-header h4', '.view-content');
+	
+		.view-content {
+			@include font(11px, 13px);
+			font-family: $font-baser;
+			padding: 20px 0;
+		}
+
+		.views-row {
+			@include inline-block;
+			margin: 0 5px 5px 0;
+		}
+	}
+
+	// URL: /blog-uno
+	&.views-popular-news {
+		@include teaser-sidebar-block-title('.block-inner', 'h2', '.view-content');
+		@include teaser-sidebar('.views-row', '.views-field-field-image', '.views-field-field-fecha-publicacion', '.views-field-title, .views-field-label');
+
+		.block-inner {
+			@media only screen and (max-width: $tablet) {
+				margin-top: 25px;
+			}
+		}
+
+		.text-content {
+			max-width: inherit;
+		}
+	}
+
+	// URL: http://uat_ubosque.d8.seedoven.co/blog-uno/el-bosque-crece
+	&.views-autor-image {
+		padding: 20px;
+		background: #ECBE13;;
+		border-radius: 4px;
+		text-align: center;
+
+		img {
+			display: block;
+			border-radius: 100px;
+			overflow: hidden;
+			margin: 0 auto 30px;
+
+			@media only screen and (max-width: $tablet) {
+				margin-bottom: 15px;
+			}
+		}
+
+		.views-field-field-titulo {
+			@include font(20px, 20px);
+			font-family: $font-brandb;
+			color: white;
+			margin-bottom: 10px;
+		}
+
+		.views-field-field-about-autor {
+			@include font(12px, 15px);
+			font-family: $font-serif-italic;
+			color: white;
+		}
+	}
+	
+	
+    // URL: /bienestar-universitario/semana-induccion
+    &.block-views-blockfiltro-facultades-semana-induccion-bienestar-u-block-1 {
+        position: relative;
+    }
+    // URL: /centro-informacion/eventos
+    .events-title-header {
+        border: 1px solid $color_gray_15;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: $color_gray_2;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        font-size: 12px;
+        @media only screen and (max-width: $tablet-2) {
+            margin-bottom: 25px;
+        }
+        .pretitle {
+            color: $color_gray_80;
+        }
+        .events-date {
+            font-size: 28px;
+            margin-bottom: 3px;
+        }
+        .events-day {
+            @include inline-block(top);
+            font-family: $font-bl;
+            text-transform: uppercase;
+            margin-right: 5px;
+        }
+        .events-dd {
+            @include inline-block(top);
+            color: $color-brand;
+            font-family: $font-brandb;
+        }
+    }
+    &.block-views-exposed-filter-blockeventos-repositorio-page-1,
+    &.block-views-blockcontenido-field-fecha-inicio-on-calendar-block-1,
+    &.block-views-blockcalendario-fecha-de-publicacion-eventos-block-2 {
+        @include box-sidebar;
+    }
+    &.block-views-exposed-filter-blockeventos-repositorio-page-1 {
+        padding-top: 10px;
+        padding-bottom: 7px;
+        background-color: white;
+        form {
+            position: relative;
+        }
+        .form-text {
+            width: 90%;
+            margin-left: 27px;
+            font-family: $font-basei;
+            font-size: 18px;
+            color: $color_gray_60;
+            margin-top: -10px;
+            border: 0;
+        }
+        .form-actions {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .form-submit {
+            background: url(../images/svg/SearchGreen.svg) no-repeat 0 0;
+            border: 0;
+            width: 19px;
+            height: 0;
+            padding-top: 19px;
+            overflow: hidden;
+            cursor: pointer;
+            margin-left: -3px;
+        }
+        .form-item-field-fecha-fin2-value-min,
+        .form-item-field-fecha-fin2-value-max {
+            display: none;
+        }
+    }
+    &.block-views-blockcontenido-field-fecha-inicio-on-calendar-block-1,
+    &.block-views-blockcalendario-fecha-de-publicacion-eventos-block-2 {
+        h3 {
+            font-family: $font-baser;
+            color: $color-brand;
+            font-size: 16px;
+            margin: -9px -20px 10px;
+            padding: 5px 20px;
+        }
+        .views-element-container {
+            position: relative;
+        }
+        .js-pager__items {
+            position: absolute;
+            top: 20px;
+            right: 3px;
+            width: 33px;
+            margin: 0;
+            overflow: hidden;
+        }
+        .pager__item {
+            float: left;
+            a {
+                background: url(../images/svg/ArrowGreenLeft.svg) no-repeat;
+                height: 0;
+                width: 7px;
+                padding-top: 11px;
+                overflow: hidden;
+                display: block;
+            }
+            &.pager__item--previous {
+                transform: rotate(-180deg);
+                margin-right: 15px;
+            }
+            &.pager__item--next {}
+        }
+        .calendar-calendar {
+            margin: 0 -13px;
+            td {
+                border: 0;
+                text-align: center;
+                padding: 3px 0;
+                text-align: center;
+                background: none;
+                font-family: $font-baser;
+                &.days {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #000;
+                }
+                &.mini {
+                    font-size: 15px;
+                    color: $color_gray_60;
+                    a {
+                        @include inherit;
+                    }
+                }
+                &.js-added-class-previous-month,
+                &.js-added-class-next-month {
+                    color: $color_gray_20;
+                }
+                .month {
+                    width: 27px;
+                    height: 27px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    line-height: 28px;
+                }
+                &.today,
+                &.has-events {
+                    .month {
+                        background: $color-brand;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    // http://ubosque.seedlabs.co/facultad/creacion-comunicacion
+    // https://projects.invisionapp.com/d/main#/console/9907846/212033388/preview
+    &.views-row-list-date-block {
+        // views-row-list-date($views-row, $date, $category, $title)
+        @include views-row-list-date-italic('.views-row', '.views-field-nothing', '.null', '.views-field-field-titulo-calendario-academic');
+        @include views-row-list-date-italic('.views-row', '.views-field-nothing', '.null', '.views-field-title');
+        margin-bottom: 5px;
+        .views-element-container {
+            background-color: $color_gray_2;
+        }
+        .views-row {
+            .views-field-title {
+                padding-top: 5px;
+				padding-bottom: 10px; // necesario en http://uat_ubosque.d8.seedoven.co/medicina
+				overflow: hidden; // neces...
+
+                @include Laptop // Menor a: $laptop-width: 1024px;
+                {
+                    padding-right: 10px;
+                }
+                @include Tablet // Menor a: $tablet-width: 768px;
+                {
+                    padding-right: 0px;
+                }
+            }
+            .views-field-nothing {
+                .item-month {
+                    margin-top: 2px;
+                }
+                .item-day {
+                    font-size: 30px;
+                    line-height: 100%;
+                    margin-top: -2px;
+                }
+            }
+        }
+        .views-field-field-image {
+            margin: 0 -18px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .view-footer {
+            text-align: center;
+            padding: 0 0 8px;
+            a {
+                @include link-text;
+                color: $color_gray_60;
+            }
+        }
+        &.block-views-blockeventos-facultad-block-4 {
+            border-bottom: 0 !important;
+            margin-bottom: 0 !important;
+            border-radius: 5px 5px 0 0 !important;
+            .views-element-container {
+                padding-bottom: 0 !important;
+            }
+            .views-row {
+                margin-bottom: 0 !important;
+                &:last-child::before {
+                    display: block;
+                }
+            }
+            &+.block {
+                border-top: 0 !important;
+                margin-top: 0 !important;
+                border-radius: 0 0 5px 5px !important;
+                .views-element-container {
+                    padding-top: 4px !important;
+                }
+            }
+        }
+    }
+    &.block-views-blockeventos-facultad-block-1 {
+        @media only screen and (max-width: $tablet) {
+            display: none;
+        }
+    }
+    &.block-views-blockeventos-facultad-block-2 {
+        @include desenfoque ('.views-field-field-image');
+        margin-left: -10px;
+        @include Tablet-NoMobile // Entre: $tablet-width: 768px; ý $mobile-l-width: 425px;
+        {
+            width: pixel-to-percentage(227px, 469px);
+            margin: 0px;
+            padding: 0px;
+        }
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            box-sizing: border-box;
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: 0px;
+            margin-left: pixel-to-percentage(31px, 425px);
+            width: pixel-to-percentage(425px - 31px*2, 425px);
+        }
+        img {
+            @include Mobile // Menor a: $mobile-l-width: 425px;
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    //REEMPLAZAR MARTES!!	
+    &.block-views-blockeventos-facultad-block-7 {
+        display: inline-block;
+        box-sizing: border-box;
+        color: white;
+        background: #d7006d;
+        text-align: center;
+        width: 33.33%;
+        margin-left: 10px;
+        max-height: 280px;
+        height: 273px;
+        @include media_height_varible_depending_resolution(273px, $desktop-width-limit, 270px, $desktop-width);
+        @include media_height_varible_depending_resolution(269px, $desktop-width, 231px, $laptop-width, 20);
+        @include media_height_varible_depending_resolution(229px, $laptop-width, 169px, $tablet-width, 20);
+        @include media_height_varible_depending_resolution(227px, $tablet-width, 125.906px, $mobile-width, 20);
+        @include media_height_varible_depending_resolution(288px, $mobile-width, 200px, 200px, 20);
+        padding: 35px;
+        padding-bottom: 50px;
+        @include Tablet // Menor a: $tablet-width: 768px;
+        {
+            width: pixel-to-percentage(227px, 469px);
+            margin: 0px;
+            padding: 0px;
+            float: right;
+            padding-top: 4%;
+        }
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            box-sizing: border-box;
+            width: auto;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: 0px;
+            margin-top: 28px;
+            margin-left: pixel-to-percentage(31px, 425px);
+            width: pixel-to-percentage(425px - 31px*2, 425px);
+            clear: both;
+            float: left;
+            padding-top: 5.8%;
+        }
+        h2 {
+            //light fuente!!
+            font-size: 12px;
+            text-transform: uppercase;
+            color: white;
+        }
+        .block-inner {
+            h2 {
+                //light fuente!!
+                @include latobold (10px);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: white;
+                padding-top: 35px;
+                @media only screen and (max-width: $mobile) {
+                    opacity: 0.7;
+                }
+                @include Laptop // Menor a: $laptop-width: 1024px;
+                {
+                    margin-bottom: 0px;
+                }
+                @include Mobile // Menor a: $mobile-l-width: 425px;
+                {
+                    padding-top: 40px;
+                }
+                &:before {
+                    content: url(../images/facultad/tab-inscripciones.png);
+                    display: block;
+                    margin-top: -45px;
+                    margin-bottom: -15px;
+                }
+            }
+            .item-day {
+                font-family: "acherus_grotesqueultralight";
+                text-transform: uppercase;
+                font-size: 12px;
+                padding-bottom: 20px;
+                @media only screen and (max-width: $mobile) {
+                    opacity: 0.7;
+                }
+            }
+            .item-month {
+                font-family: "acherus_grotesqueultralight";
+                font-size: 29px;
+                @include Mobile // Menor a: $mobile-l-width: 425px;
+                {
+                    font-size: 32px;
+                    padding-bottom: 10px;
+                }
+            }
+            .views-field-field-noticias-titulo {
+                text-align: left;
+            }
+            .views-field-field-titulo-calendario-academic {
+                text-align: center;
+                a {
+                    @include cuadrado-title;
+                    padding-bottom: 20px;
+                    color: white;
+                    text-decoration: none;
+                    @include Mobile // Menor a: $mobile-l-width: 425px;
+                    {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        ~.block {
+            @include Mobile // Menor a: $mobile-l-width: 425px;
+            {
+                clear: both;
+            }
+        }
+    }
+    // url: facultad/creacion-comunicacion	
+    &.listado-thumb-teaser {
+        .views-row {
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        .field--name-field-imagen {
+            float: left;
+            margin-right: 20px;
+        }
+        .field--name-field-boca {
+            @include pt_serifitalic (14px);
+            line-height: 20px;
+        }
+        .field--name-field-etiqueta {
+            color: $color_gray_60;
+            font: {
+                family: $font-baser !important;
+                size: 13px !important;
+            }
+            padding: 0 !important;
+            text-transform: none !important;
+        }
+    }
+    &.product-basic-feature-content {
+        // @mixin product-basic-feature-content($wrapper, $category, $title, $subtitle, $body, $link)
+        @include product-basic-feature-content('.views-element-container', '.views-field-field-grupos-pregrado', '.views-field-title', '.null', '.views-field-field-contenido-noticias, .views-field-field-bocadillo', '.views-field-view-node');
+        @include inline-block(top);
+        width: 27%;
+        border-top: 1px solid $color_gray_15;
+        border-bottom: 1px solid $color_gray_15;
+        @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px + 1px;
+        {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            display: block;
+            width: 100%;
+        }
+        .views-element-container {
+            @include Laptop // Menor a: $laptop-width: 1024px;
+            {
+                padding-left: 100% * 34px/233px;
+            }
+        }
+        .views-field-field-bocadillo {
+            @media only screen and (max-width: $mobile) {
+                padding-bottom: 20px;
+            }
+        }
+    }
+    &.product-full-feature-content {
+        // @mixin product-full-feature-content($wrapper, $image, $category, $title, $body, $link) 
+        @include product-full-feature-content('.views-row', '.views-field-field-image', '.views-field-field-grupos-pregrado', '.views-field-title', '.field--name-field-correo-decano', '.views-field-field-contenido-noticias', '.views-field-view-node');
+        width: 46%;
+        display: inline-block;
+        vertical-align: top;
+        @include Laptop // Menor a: $laptop-width: 1024px;
+        {
+            width: 100%;
+        }
+        .views-row {
+            display: table;
+            .views-field {
+                display: table-cell;
+                vertical-align: top;
+                &.views-field-field-imgen {
+                    width: 55%;
+                    overflow: hidden;
+                    position: relative;
+                    @include Laptop // Menor a: $laptop-width: 1024px;
+                    {
+                        width: 50%;
+                    }
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        @media only screen and (max-width: $mobile) {
+                            position: absolute;
+                            top: -2%;
+                            right: 0;
+                            height: 105%;
+                            width: auto;
+                        }
+                    }
+                }
+                &.views-field-nothing.text-content {
+                    width: 50%;
+                    @include Laptop // Menor a: $laptop-width: 1024px;
+                    {
+                        padding-left: 0;
+                    }
+                    .field-content {
+                        @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px + 1px;
+                        {
+                            padding-left: 100% * 34px/233px;
+                            display: block;
+                        }
+                        @include Mobile // Menor a: $mobile-l-width: 425px;
+                        {
+                            padding-left: 100% * 10px/184px;
+                            display: block;
+                        }
+                    }
+                    .views-field-field-contenido-noticias {
+                        @media only screen and (max-width: $mobile) {
+                            padding-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.block-views-blocknoticias-1-block-3 {
+        @include inline-block(top);
+        //@include grid(2, 80, 20);
+        margin-right: 0;
+        position: relative;
+        width: pixel-to-percentage(180px, 1180px);
+        float: right;
+        @include PageWithMax-NoLaptop {
+            //height: 280px;
+        }
+        @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $tablet-width: 768px;
+        {
+            width: 100%;
+            margin: 0 auto;
+        }
+        @include Mobile // Menor a: $mobile-l-width: 425px;
+        {
+            display: none;
+        }
+        .block-inner {
+            height: 100%;
+        }
+        * {
+            position: static;
+        }
+        .view-content {
+            @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+            {
+                display: table;
+            }
+            .views-row {
+                position: relative;
+                text-align: center;
+                margin-bottom: 10px;
+                padding-bottom: 15px;
+                @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+                {
+                    display: table-cell;
+                    width: pixel-to-percentage(230px, 722px);
+                    height: 20px;
+                    margin-bottom: 0px;
+                    padding: 0px 15px;
+                    box-sizing: border-box;
+                }
+                a {
+                    @include underline-hover;
+                    text-decoration: none;
+                    color: $color_gray_80;
+                    line-height: 16px;
+                    font: {
+                        family: $font-baser;
+                        size: 13px;
+                    }
+                }
+                &::before {
+                    content: "";
+                    width: 20px;
+                    height: 2px;
+                    background: $color_gray_60;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    @mixin Desktop-NoLaptop // Mayor a: $laptop-width: 1024px;
+                    {
+                        left: 0;
+                        right: 0;
+                    }
+                    @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+                    {
+                        width: 2px;
+                        height: 20px;
+                        top: -1px;
+                        right: 0;
+                        left: auto;
+                    }
+                }
+                &:nth-last-child(1) {
+                    &:before {
+                        content: none;
+                        width: 0px;
+                        height: 0px;
+                    }
+                }
+                &:last-child {
+                    @include Laptop-NoTablet // Entre: $laptop-width: 1024px; ý $tablet-width: 768px;
+                    {}
+                }
+            }
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            a {
+                color: $color_brand;
+                text-decoration: none;
+            }
+        }
+        .view-footer {
+            border-top: 1px solid $color_brand_dark_15;
+            text-align: center;
+            margin-top: 27px;
+            padding-top: 10px;
+            position: absolute;
+            padding-bottom: 3px;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            @include Laptop-NoMobile // Entre: $laptop-width: 1024px; ý $mobile-l-width: 425px;
+            {
+                position: static;
+                margin-bottom: 23px;
+            }
+            a {
+                @include link-text;
+                @include inline-block(top);
+                /*
+	            &:before {
+	                content: "";
+	                width: 178px;
+	                height: 1px;
+	                margin-top: -14px;
+	                margin-bottom: 2px;
+	                background: $color_brand_dark_15;
+	                display: block;
+	            }
+				*/
+            }
+        }
+    }
+    //preguntas frecuentes facultad
+    &.block-views-blockpreguntas-frecuentes-por-facultad-block-2 {
+        @include faq ('.view-header', '.view-content', '.views-row', '.views-field-title', '.views-field-field-respuesta-de-pregunta', '.views-field-view-preguntas-frecuentes', '.view-footer');
+        text-align: center;
+        .view-content {
+            .views-row {
+                padding-left: 40px;
+                padding-right: 40px;
+                &:nth-of-type(1) {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: -8px;
+                        top: 0px;
+                        width: 1px;
+                        height: 50px;
+                        background: $color_gray_20;
+                        @media only screen and (max-width: $mobile) {
+                            bottom: 20px;
+                            top: initial;
+                            left: 30%;
+                            right: initial;
+                            width: 40%;
+                            height: 1px;
+                        }
+                    }
+                }
+                &:nth-of-type(2) {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        right: 3px;
+                        top: 0px;
+                        width: 1px;
+                        height: 50px;
+                        background: $color_gray_20;
+                        @media only screen and (max-width: $mobile) {
+                            bottom: 20px;
+                            top: initial;
+                            left: 30%;
+                            right: initial;
+                            width: 40%;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .view-footer {
+            @media only screen and (max-width: $mobile) {
+                a {
+                    padding: 17px 25px;
+                    width: 70%;
+                }
+            }
+        }
+    }
+    //url: /centro-informacion/eventos
+    //invision: https://projects.invisionapp.com/d/main#/console/9896592/211577256/preview
+    //"regresar"
+    &.block-views-blockeventos-repositorio-block-2 {
+        .views-row {
+            >.views-field {
+                &:nth-of-type(1) {
+                    border-bottom: 1px solid #EDEDED;
+                    padding-bottom: 15px;
+                    a {
+                        font-family: 'latoblack';
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        color: #4A4A4A;
+                        text-transform: uppercase;
+                        padding: 0 0 0 15px;
+                        margin: 0;
+                        position: relative;
+                        background: url(../images/menu/menu-lateral-arrow-left.svg) no-repeat 0 50%;
+                        text-decoration: none;
+                    }
+                }
+                &:nth-of-type(2) {
+                    margin-top: 20px;
+                    padding-bottom: 15px;
+                    p {
+                        @include pt_serifitalic(12px);
+                        line-height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.block-views-exposed-filter-blockeventos-repositorio-page-1 {
+        .js-form-item-fecha-min,
+        .js-form-item-fecha-max {
+            display: none;
+        }
+    }
+    &.block-views-blockconvocatorias-block-6,
+    &.block-views-blockconvocatorias-block-7 {
+        @include inline-block(top);
+        width: 50%;
+        box-sizing: border-box;
+        padding-bottom: 40px;
+        @media only screen and (max-width: $mobile) {
+            width: 100%;
+        }
+        >.block-inner {
+            >h2 {
+                text-align: center;
+                font-size: 33px;
+            }
+        }
+        .view-content {
+            min-height: 245px;
+            padding-bottom: 25px;
+            .field--name-field-fecha-inicio-inscripcion {
+                .field__label {
+                    @include pt_serifitalic(14px);
+                }
+                .field__item {
+                    @include paragraphs_medium;
+                    line-height: 100%;
+                }
+            }
+        }
+        .view-footer {
+            text-align: center;
+            a {
+                @include bt-line-green-xl;
+            }
+        }
+    }
+    &.block-views-blockconvocatorias-block-6 {
+        padding-right: 10px;
+    }
+    &.block-views-blockconvocatorias-block-7 {
+        padding-left: 10px;
+    }
+    // Filter Catalogo
+    &.block-views-exposed-filter-blockcatalogo-de-publicaciones-page-1 {
+        @include form-select ('.form-item-tipo-publicacion', '.form-select');
+        @include form-select ('.form-item-area-conocimiento', '.form-select');
+        @include form-select ('.form-item-filtro-facultad', '.form-select');
+        @include inline-block(bottom);
+        margin-left: 10%;
+        width: 62%; //70%; //756px;
+		padding-right: 1.6%;
+		box-sizing: border-box;
+        @media only screen and (max-width: $tablet) {
+            margin-left: 0;
+            width: 80%; //570px;
+        }
+        @media only screen and (max-width: $mobile) {
+            width: auto;
+			margin-left: -10px;
+			margin-right: -10px;
+        }
+        .form-item-filtro-facultad,
+        .form-item-area-conocimiento,
+        .form-item-tipo-publicacion,
+		#edit-actions {
+            @include inline-block(bottom);
+            padding-right: 3.5%; //25px;
+            text-align: left;
+            width: 28%; //187px;
+			box-sizing: border-box;
+            @media only screen and (max-width: $tablet) {
+             //   width: 134px;
+            }
+            @media only screen and (max-width: $mobile) {
+                margin-top: 15px;
+                width: 50%;
+				padding-left: 10px;
+				padding-right: 10px;
+            }
+            label {
+                display: inline-block;
+                font: {
+                    family: $font-serif-italic;
+                    size: 0.9em;
+                }
+                margin-bottom: 8px;
+                @media only screen and (max-width: $tablet) {
+                    font-size: 0.8em;
+                }
+            }
+        }
+		
+        .form-item-area-conocimiento {
+            @media only screen and (max-width: $mobile) {
+                margin-right: 0;
+            }
+        }
+        .views-exposed-form {
+            @include ib-grid;
+            max-width: 1000px;
+            margin: 20px auto 0;
+        }
+        .form-actions {
+            @include inline-block(bottom);
+            padding-right: 0 !important;
+            vertical-align: bottom;
+			width: 16% !important;
+            input {
+                @include bt-line-green-l;
+                padding: 10px 0;
+				width: 100%;
+            }
+            @media only screen and (max-width: $tablet) {
+                padding-right: 15px;
+            }
+            @media only screen and (max-width: $mobile) {
+                border-right: 0;
+				padding-left: 10px;
+				padding-right: 10px !important;
+				width: 40% !important;
+            }
+        }
+    }
+    &.block-views-exposed-filter-blocksearch-catalogo-page-1 {
+        @include inline-block(bottom);
+        width: 20%; //205px;
+		padding: 5px 0 5px 1.8%;
+		position: relative;
+		top: 5px;
+		box-sizing: border-box;
+		border-left: 1px solid #dad4d4;
+
+        @media only screen and (max-width: $mobile) {
+            border-top: 1px solid #c5c5c5;
+			border-left: 0;
+            margin: 14px 0;
+            padding: 16px 0 0;
+            width: 100%;
+        }
+        @include form-input-select('.form-item-search-api-fulltext', '.form-text');
+        .form-item-search-api-fulltext {
+            .form-text {
+                background: url('../images/svg/SearchGreen.svg') no-repeat 6px;
+                height: 31px;
+                padding: 2px 31px;
+            }
+            [placeholder] {
+                @include placeholder(rgba(221, 221, 221, 1),
+                $font-baseli,
+                1px,
+                14px);
+            }
+        }
+        form {
+            position: relative;
+            .form-actions {
+                right: 0;
+                position: absolute;
+                top: 0;
+                .button {
+                    background: rgba(123, 193, 66, 1) url('../images/svg/SliderArrowRightwhite.svg') no-repeat 11px -9px;
+                    background-size: 23px;
+                    border: none;
+                    border-radius: 0 7px 7px 0;
+                    height: 31px;
+                    text-indent: -999px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+    //URL: /el-bosque-te-acoge
+    &.listado-casas {
+        .view-content {
+            >.views-row {
+                /*
+				.field--name-field-catergoria,
+				.field--name-field-bocadillo-150,
+				.field--name-field-numeric-entero {
+
+					line-height: 100%;
+					font-size: 16px;
+					padding-bottom: 5px;
+
+					.field__label,
+					.field__items,
+					.field__item {
+						display: inline;
+						
+					}
+
+					.field__label {
+						@include acherus_black(16px);
+						line-height: 100%;
+					}
+
+					.field__item {
+						@include latoregular(16px);
+						line-height: 100%;
+					}
+					
+				}
+				.field--name-node-link {
+					a {
+						@include link-green;
+						@include underline-hover;
+						font-size: 10px;
+					}
+				}
+				*/
+            }
+        }
+        .view-header {
+            @include intro-title('.null','h2','.null');
+        }
+        .view-footer {
+            text-align: center;
+            padding-bottom: 40px;
+            a {
+                @include buton-xl-green;
+            }
+        }
+    }
+    &.block-views-blockfiltro-inmueb-bosque-te-acoge-block-2,
+    &.block-views-blockfiltro-inmueb-bosque-te-acoge-block-4 {
+        @media only screen and (min-width: $mobile) {
+            @include bg-laterales(#f9f9f9, 100%);
+            background-color: #f9f9f9;
+            .text-content {
+                background: transparent !important;
+            }
+        }
+    }
+    // Filter Catalogo
+    &.block-views-exposed-filter-blockduplicado-de-filtro-inmuebles-el-bosque-te-acoge-page-1 {
+        @include form-select ('.form-item-vivienda-tipo',
+        '.form-select');
+        @include form-select ('.form-item-valor-arriendo-value ',
+        '.form-select');
+        @include form-select ('.form-item-estancia',
+        '.form-select');
+
+        .form-actions {
+            margin-top: 20px;
+            input {
+                @include buton-s-border-green;
+                cursor: pointer;
+            }
+        }
+    }
+    &.block-views-blockcatalogo-memorias-block-1 {
+        margin-top: 30px;
+    }
+
+	// URL: /investigaciones
+	&.block-views-blockcatalogo-home-informacion-block-5 {
+		.node {
+			@include ib-grid;
+		}
+
+		.group-detalle-catalogo-2 {
+			display: none;
+		}
+
+		.field--name-field-imagenes-multiples {
+			@include inline-block;
+			width: 40%;
+			box-sizing: border-box;
+			padding: 0 5px 0 10px;
+			margin-right: 30px;
+		}
+
+		.group-detalle-catalogo {
+			@include inline-block;
+			width: 50%;
+		}
+
+		.field__label,
+		.field__item {
+			@include inline-block;
+		}
+
+		.field--name-node-title {
+			h4 {
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+
+		.field--name-node-link {
+			padding-top: 20px;
+
+			a {
+				@include link-white;
+			}
+		}
+
+		.field--name-field-destacado,
+		.field--name-field-fecha-inicio-inscripcion,
+		.field--name-field-bocadillo-3 {
+			font-family: $font-serif-italic;
+			font-size: 14px;
+			line-height: 19px;
+		}
+	}
+}

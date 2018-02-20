@@ -1,0 +1,913 @@
+.page-faculties-grupos-1 {
+    @include page-with-banner-stick-to-header;
+    $mobile: 450px;
+    .wrap-content {
+        max-width: none;
+        overflow: hidden; // para que no se salgan los ::before, ::after de tabMakerContents
+    }
+    .lateral-button {
+        display: block;
+    }
+    .layout-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        @media only screen and (max-width: $tablet) {
+            margin-top: 3px;
+        }
+        @media only screen and (max-width: $mobile) {
+            margin-top: 2px;
+        }
+    }
+    .group--type-pregrados {
+        @include ib-grid;
+    }
+    .field--name-field-informacion-facultad-bloqu {
+        text-align: center;
+        .field--name-field-datos-de-informacion-decan {
+            >.field__item {
+                text-align: left;
+            }
+        }
+    }
+    .main-image {
+        @include ib-grid;
+        background-color: #7BC142;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        @media only screen and (max-width: $tablet) {
+            margin: 0 -30px;
+            margin-bottom: 20px; // estorba en desktop, en: /cursos-preuniversitarios/curso-basico-preuniversitario
+        }
+        .text-content {
+            @include inline-block(top);
+            height: 340px;
+            width: 350px; //325px;
+            padding: 25px;
+            padding-bottom: 60px; //54px;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 20;
+            background: $color-brand;
+            @media only screen and (max-width: $tablet) {
+                // URL: /cursos-preuniversitarios/curso-formacion-musical
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 20px;
+            }
+            @media only screen and (max-width: $mobile) {
+                height: auto;
+                width: auto;
+            }
+            // JS added
+            &.second-line-has-more-than-1-word {
+                .field--name-field-titulo-sin-bold {
+                    font-size: 26px;
+                    padding-bottom: 10px;
+                }
+            }
+            // JS added
+            &.snies-too-long {
+                .field--name-dynamic-token-fieldgroup-pregrado-boton-back {
+                    p {
+                        padding-bottom: 15px;
+                    }
+                }
+                .field--name-field-titulo-bold {
+                    font-size: 33px;
+                }
+            }
+        }
+        .content-image-text {
+            @include inline-block(top);
+            position: relative;
+            width: 68.64%;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            @media only screen and (max-width: $tablet) {
+                width: calc(100% - 320px);
+                .text-content-right {
+                    width: calc(100% - 50px);
+                }
+            }
+            @media only screen and (max-width: $mobile) {
+                width: 100%;
+                position: relative;
+            }
+        }
+        .field--name-field-pos {
+            position: absolute;
+            bottom: 20px;
+            left: 25px;
+            @media only screen and (max-width: $tablet) {
+                bottom: 20px;
+                a {
+                    padding: 10px 10px;
+                }
+            }
+            @media only screen and (max-width: $mobile) {
+                position: initial;
+                bottom: 265px;
+                left: 40px;
+            }
+        }
+        .text-content-right {
+            position: absolute;
+            bottom: 10px;
+            margin: 0 auto 30px;
+            right: 100px;
+            text-align: center;
+            @media only screen and (max-width: $tablet) {
+                right: 25px;
+            }
+            @media only screen and (max-width: $mobile) {
+                right: 0px;
+                left: 0px;
+                bottom: 40px;
+            }
+            .title-incription {
+                @include pt_serifitalic(12px);
+                color: white;
+                position: relative;
+                padding-top: 30px;
+                padding-bottom: 25px;
+                &::before {
+                    @include arrow-bottom-before;
+                }
+            }
+            .field--type-link {
+                a {
+                    @include buton-l-green;
+                    cursor: pointer;
+                    @media only screen and (min-width: $mobile) and (max-width: 515px) {
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 25px;
+                        margin-left: -9px;
+                    }
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .field--name-field-facultades-paragraphs {
+            margin-bottom: 20px;
+            font-family: $font-basel;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            &:before {
+                content: url("../images/menu/menu-lateral-arrow-left.svg");
+                display: inline-block;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+        }
+        .field--name-dynamic-token-fieldgroup-pregrado-boton-back {
+            padding-bottom: 0px;
+            a {
+                text-decoration: none;
+            }
+            p {
+                @include latoregular (10px);
+                color: $color_gray_2;
+                letter-spacing: 1px;
+                padding-bottom: 30px;
+                text-transform: uppercase;
+                &:before {
+                    content: url("../images/menu/menu-lateral-arrow-left.svg");
+                    display: inline-block;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+                @media only screen and (max-width: $tablet) {
+                    padding-bottom: 50px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    padding-bottom: 15px;
+                }
+            }
+            div {
+                @include acherus_grotesqueultralight (12px);
+                color: $color_gray_15;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+        .multi-word-wrapper .field--name-dynamic-token-fieldgroup-pregrado-boton-back {
+            p {
+                padding-bottom: 20px;
+            }
+        }
+        .field--name-field-titulo-bold {
+            @include font-bsb-xl;
+            line-height: 35px;
+            line-height: 100%; // Diseño dice 35px, pero pongo porcentaje para poder escalar el texto
+        }
+        .field--name-field-enlace-recibir-informacion {
+            a {
+                @include buton-l-transparent;
+            }
+        }
+        .field--name-field-titulo-sin-bold {
+            @include acherus_grotesqueultralight (39px);
+            padding-bottom: 20px;
+            line-height: 100%; // 36px; Se lo estoy bajando a 105% porque 36 es demasiado
+            //margin-top: -10px; // En desktop, /cursos-preuniversitarios/curso-basico-preuniversitario, https://projects.invisionapp.com/d/main#/console/9919123/211859002/preview
+            transition: .3s ease-out all;
+        }
+        .field--name-field-bloque-legal-snies- {
+            p {
+                @include latoregular (11px);
+                color: $color_gray_15;
+                line-height: 14px;
+                @media only screen and (max-width: $mobile) {
+                    padding-bottom: 15px;
+                }
+            }
+        }
+        .field--name-field-pos {
+            a {
+                @include buton-l-transparent;
+            }
+        }
+        .image-content {
+            @include inline-block(top);
+            height: 100%;
+            @media only screen and (max-width: $tablet) {
+                float: right;
+            }
+            @media only screen and (max-width: $mobile) {
+                float: left;
+                width: 100%;
+            }
+            img {
+                height: inherit;
+                display: block;
+                max-width: none; //810px;
+                //@media only scree
+            }
+            .field--name-field-image {
+                //height: 100%;
+                img {
+                    //	height: 100%;
+                    //	float: right;
+                }
+            }
+        }
+    }
+    .form-inscription-process {
+        @include form-input-select ('.js-form-type-textfield', '.form-text');
+        @include form-input('.js-form-type-textfield', '.form-text');
+        @include form-input-select ('.form-item-select-pregrados', '.form-select');
+        @include form-select('.js-form-type-select', '.form-select');
+        //@include form-select('.form-item-fecha-inicio, .form-item-visita-guiada-a-la-universidad-el-bosque', '.form-select');
+        @include form-checkbox('.js-form-item-autorizo-a-la-universidad-del-bosque');
+        background: #F2F2F2;
+        position: relative;
+        top: 0; //-20px;
+        padding: 0 100px 27px;
+		
+		.js-form-type-select {
+			.form-select {
+				height: 40px;
+			}
+		}
+
+        @media only screen and (max-width: $tablet) {
+            top: 0px;
+            margin: 0px -30px;
+            padding: 20px;
+        }
+        @media only screen and (max-width: $mobile) {
+            .webform-submission-formulario-informacion-programas-form .js-form-item,
+            .webform-submission-formulario-infomacion-audiencia__form .js-form-item {
+                width: 100% !important;
+                padding-right: 0px !important;
+                // padding-bottom: 20px !important; // estorba en http://uat_ubosque.d8.seedoven.co/aspirantes
+            }
+        }
+        label {
+            text-align: left;
+        }
+        .close-cerrar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+        }
+        .field--name-dynamic-token-fieldgroup-titulo-form-programas-academicos,
+        .field--name-dynamic-token-fieldnode-titulo-formulario-aspirantes {
+            @include arrow_before ('.title-inscription',
+            15px 0px 0px 0px);
+            text-align: center;
+            padding-bottom: 14px;
+            .title-inscription {
+                @include title_acherusblack_m;
+                letter-spacing: -0.5px;
+                margin: 0px;
+                padding-bottom: 5px;
+                color: #494c4d;
+            }
+            .text-inscription {
+                @include latoregular(14px);
+                color: $color_gray_80;
+                line-height: 16px;
+                padding-bottom: 5px;
+            }
+        }
+        //  .webform-submission-formulario-informacion-programas-form,
+        // .webform-submission-formulario-infomacion-audiencia__form
+        div[class*="webform-submission-formulario-info"] {
+            //@include ib-grid;
+            @include clearfix;
+            margin: 0 -10px; // Diego, agregué esto para utilizr hijos con padding-left, padding-right, sin usar los nth-of-tpye
+            // pongo > div para tomar los .form-item y el .form-item-condiciones sin tener que poner los dos con coma
+            // > div es muy genérico y es algo arriesgado, pero dado que es un código corto no creo que exista problema
+            .js-form-item,
+            .form-item-condiciones {
+                //@include inline-block(top);
+                width: 50%;
+                float: left;
+                box-sizing: border-box;
+                padding-right: 10px;
+                padding-left: 10px;
+                //padding-bottom: 18px;
+                label {
+                    span {
+                        @include pt_serifitalic(12px);
+                    }
+                }
+                &.form-item-autorizo-a-la-universidad-el-bosque-para-el-envio-de-informacion {
+                    width: 100%;
+                    clear: both;
+                }
+                /* Prescindimos de esto
+				&:nth-of-type(2){
+					//padding-right: 0px;
+					padding-bottom: 18px;
+				}
+				&:nth-of-type(4){
+					//padding-right: 0px;
+					padding-bottom: 18px;
+				}
+				*/
+                select {
+                    height: 40px !important;
+                }
+            }
+            // Overwrite a estilo específico
+            .form-item-condiciones {
+                $top: 16px;
+                padding-top: 5px;
+                margin-left: 0;
+                padding-bottom: 0;
+                position: relative;
+                top: $top;
+                @media only screen and (max-width: 1073px) {
+                    top: 28px;
+                }
+                @media only screen and (min-width: $tablet) {
+                    padding-left: 40px
+                }
+                // Hacemos que el checkbox junto a condiciones mueva su top en la misma concordancia
+                &+.js-form-type-checkbox {
+                    position: relative;
+                    top: -$top;
+                    padding-bottom: 0;
+                }
+            }
+            // otro overwrite al selector genñerico (> div) estizando un selector en específico
+            .form-actions {
+                width: 100%;
+                clear: both;
+                padding-top: 30px;
+                padding-bottom: 0; // después del último elemento, el espacio inferior lo da el padding del padre
+            }
+        }
+        .js-form-wrapper {
+            text-align: center;
+        }
+        .webform-button--submit {
+            text-align: center;
+            @include buton-xl-green;
+        }
+    }
+    .field--name-field-bocadillo-tab-pregrado {
+        text-align: center;
+        max-width: 785px;
+        margin: -15px auto 0;
+        @media only screen and (max-width: $tablet) {
+            max-width: 100%;
+        }
+        .field__label {
+            font-family: $font-baseb;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 13px;
+            &::after {
+                content: " :";
+            }
+        }
+        .field__item {
+            font-family: $font-serif-italic;
+            font-size: 14px;
+            color: $color_gray_80;
+            line-height: 150%;
+        }
+    }
+    .acerca-perfil-tabs {
+        @include default-tabs();
+        //margin-bottom: 60px;
+        @media only screen and (max-width: $tablet) {
+            margin-bottom: 30px; //0px;
+        }
+        @media only screen and (max-width: $mobile) {
+            margin-left: -30px;
+            margin-right: -30px;
+        }
+        .tabMakerTabs {
+            @include title_tabs;
+        }
+        .tabMakerTab {
+            text-transform: none;
+        }
+        // Single tab content
+        .tabMakerContent {
+            overflow: hidden;
+            padding: 30px 100px 30px 100px;
+            @media only screen and (max-width: $tablet) {
+                padding: 30px 0px 30px 0px;
+            }
+            @media only screen and (max-width: $mobile) {
+                padding: 0;
+            }
+            .text-content {
+                max-width: 325px;
+                width: 100%;
+                float: left;
+                padding-right: 60px;
+                box-sizing: border-box;
+                @media only screen and (max-width: $tablet) {
+                    max-width: 40%;
+                    padding-right: 25px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    max-width: none;
+                    padding-right: 0;
+                    float: none;
+                }
+            }
+            .field--name-field-titulo-tab-pregrado {
+                @include title_light_green;
+                padding-bottom: 20px;
+            }
+            .field--name-field-subtitulo-tap-pregrado {
+                @include pretitle;
+                text-transform: uppercase;
+                padding-bottom: 20px;
+            }
+            .field--name-field-bocadillo-tab-pregrado {
+                @include paragraphs_medium;
+                text-align: left;
+            }
+            .field--name-field-contenido-tab-pregrado {
+                //padding-top: 65px;
+                overflow: hidden;
+                @media only screen and (max-width: $mobile) {
+                    padding-top: 15px;
+                }
+                p {
+                    @include paragraphs_medium;
+                }
+            }
+        }
+        .tabMakerContentInner {
+            @media only screen and (max-width: $mobile) {
+                padding: 20px 30px;
+            }
+        }
+    }
+    .beneficios-bosque {
+        padding-bottom: 20px;
+        h2 {
+            padding-bottom: 20px;
+        }
+        .field--name-dynamic-block-fieldgroup-beneficios-en-el-bosque {
+            @include ib-grid;
+            .block-block-content {
+                @include ib-grid;
+                display: inline-block;
+                vertical-align: top;
+                width: 33.33%;
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+                &:nth-last-child(1),
+                &:nth-last-child(3) {
+                    .block-content--type-bloque-beneficios-pregrados {
+                        @include content-title-light('.field--name-field-boca',
+                        '.field--name-field-block-title-h2',
+                        'a');
+                        padding-left: 45px;
+                        padding-right: 45px;
+                        @media only screen and (max-width: $tablet) {
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                        .field--name-field-boca {
+                            text-transform: uppercase;
+                        }
+                        .field--name-field-block-title-h2 {
+                            padding-right: 45px;
+                            @media only screen and (max-width: $tablet) {
+                                padding-right: 0px;
+                            }
+                        }
+                        .field--name-field-bocadillo-beneficio-bosque {
+                            @include paragraphs_medium;
+                            padding-bottom: 40px;
+                            @media only screen and (max-width: $mobile) {
+                                padding-bottom: 15px;
+                            }
+                        }
+                        .field--name-field-enlace {
+                            @media only screen and (max-width: $tablet) {
+                                text-align: center;
+                            }
+                            @media only screen and (max-width: $mobile) {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+                &:nth-last-child(3) {
+                    .block-content--type-bloque-beneficios-pregrados {
+                        padding-left: 0px;
+                    }
+                }
+                &:nth-last-child(2) {
+                    .block-content--type-bloque-beneficios-pregrados {
+                        text-align: center;
+                        @media only screen and (max-width: $mobile) {
+                            margin: 25px 0;
+                        }
+                        .field--name-field-imagen {
+                            padding-bottom: 20px;
+                        }
+                        .field--name-field-bocadillo-beneficio-bosque {
+                            @include paragraphs_medium;
+                            color: $color_gray_60;
+                            padding-bottom: 20px;
+                            padding-left: 30px;
+                            padding-right: 30px;
+                            @media only screen and (max-width: $mobile) {
+                                padding-left: 15px;
+                                padding-right: 15px;
+                            }
+                        }
+                        .field--type-link {
+                            a {
+                                @include buton-s-green;
+                                @media only screen and (max-width: $mobile) {
+                                    padding: 8px 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-child {
+                    .block-content--type-bloque-beneficios-pregrados {
+                        padding-right: 0px;
+                    }
+                }
+            }
+        }
+    }
+    .field--name-dynamic-block-fieldgroup-preguntas-frecuentes-por-faculta {
+        @include bg-laterales($color_gray_5,
+        100%);
+        @include faq ('.view-header',
+        '.view-content',
+        '.views-row',
+        '.views-field-title',
+        '.views-field-field-respuesta-de-pregunta',
+        '.views-field-view-preguntas-frecuentes',
+        '.view-footer');
+        background-color: $color_gray_5;
+        padding-top: 30px;
+        padding-bottom: 45px;
+        margin-bottom: 35px;
+        text-align: center;
+        @media only screen and (max-width: $tablet) {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+        .view-footer {
+            a {
+                @media only screen and (max-width: $tablet) {
+                    padding: 13px 75px;
+                    width: 30%;
+                }
+                @media only screen and (max-width: $mobile) {
+                    padding: 13px 35px;
+                    width: 55%;
+                }
+            }
+        }
+    }
+    .director-maestria {
+        padding: 38px 0;
+        .field:first-child {
+            .field__label {
+                @include pretitle;
+                width: 100%;
+                display: block;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            .field__item {
+                font-family: $font-bsb;
+                font-size: 20px;
+                padding-bottom: 5px;
+                text-align: center;
+            }
+        }
+        .field:nth-of-type(2) {
+            font-family: $font-serif-italic;
+            font-size: 14px;
+            color: $color_gray_80;
+            text-align: center;
+            padding-bottom: 35px;
+            .field__item {
+                @include inherit;
+            }
+        }
+        .field:nth-of-type(3) {
+            max-width: 980px;
+            margin: 0 auto;
+            column-count: 2;
+            @include paragraphs_medium;
+            p {
+                @include paragraphs_medium;
+            }
+            @media only screen and (max-width: $mobile) {
+                column-count: 1;
+            }
+        }
+    }
+    //curso basico preuniversitario
+    .financiacion-container {
+        //max-width: 85%;
+        padding: 0 90px;
+        margin: 0 auto;
+        margin-top: 70px;
+        margin-bottom: 70px;
+        @media only screen and (max-width: $tablet) {
+            padding: 0;
+        }
+        #block-preuniversitariosbloqueapoyofinanciero-2 {
+            @media only screen and (max-width: $mobile) {
+                margin-bottom: 40px;
+            }
+        }
+        >.block-inner {
+            font-size: 0px;
+            @media only screen and (min-width: $mobile) {
+                > .pretitle-titlelight-button {
+                    @include inline-block(top);
+                    width: 50%;
+                    &:nth-child(2) {
+                        box-sizing: border-box;
+                        padding-right: 20px;
+                    }
+                    &:nth-child(3) {
+                        box-sizing: border-box;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+        .field--name-field-pre-title {
+            width: 200px;
+            padding-bottom: 20px;
+        }
+        .field--name-field-boca {
+            padding-bottom: 20px;
+        }
+    }
+    &.page-faculties-maestrias {
+        @media only screen and (max-width: $tablet) {
+            .datos-programa > .field--type-string:first-child .field__label {
+                width: 31%;
+            }
+            .datos-programa>.field--type-string:first-child .field__item {
+                width: 67%;
+            }
+        }
+    }
+    &.page-faculties-doctorado {
+        @media only screen and (max-width: $tablet) {
+            .datos-programa > .field--type-string:first-child .field__label {
+                width: 31%;
+            }
+            .datos-programa>.field--type-string:first-child .field__item {
+                width: 67%;
+            }
+        }
+    }
+    &.page-faculties-especializacion {
+        @media only screen and (max-width: $tablet) {
+            .datos-programa > .field--type-string:first-child .field__label {
+                width: 31%;
+            }
+            .datos-programa>.field--type-string:first-child .field__item {
+                width: 67%;
+            }
+        }
+    }
+    //cursos preuniversitarios
+    &.grouptype-curso_basico_preuniver {
+        .informacion-adicional {
+            .tabMakerContentInner {
+                .courses-group {
+                    background-color: #7bc142;
+                    position: relative;
+                    z-index: 10;
+                    +.ooms {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .acerca-de {
+            .field--type-text-long {
+                max-width: 725px;
+                margin: 0 auto;
+                text-align: left;
+                @media only screen and (min-width: $mobile) {
+                    column-count: 2;
+                    column-gap: 90px;
+                }
+                p {
+                    max-width: none;
+                    &:first-child {
+                        padding-right: 0;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    &.category-cursos-preuniversitarios {
+        .main-image {
+            .text-content {
+                width: 370px;
+                @media only screen and (min-width: $tablet) {
+                    padding-top: 110px;
+                }
+                @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+                    padding-top: 70px;
+                }
+                @media only screen and (max-width: $mobile) {
+                    padding-top: 14px;
+                    padding-bottom: 0;
+                    width: 100%;
+                    height: 143px;
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+            .content-image-text {
+                width: calc(100% - 370px);
+                @media only screen and (max-width: $mobile) {
+                    width: 100%;
+                }
+            }
+            .field--name-field-titulo-bold {
+                margin-bottom: 6px;
+                @media only screen and (max-width: $mobile) {
+                    margin-bottom: 0;
+                }
+            }
+            .field--name-field-titulo-sin-bold.multi-words {
+                font-size: 39px;
+                line-height: 43px;
+            }
+        }
+        .informacion-adicional .tabMakerContentInner>.courses-group {
+            padding-top: 0;
+        }
+        .informacion-adicional .tabMakerTab:first-child::before,
+        .informacion-adicional .tabMakerTab:nth-last-of-type(2)::before {
+            background-color: $color-brand;
+        }
+    }
+    &.page-curso-basico-preuniversitario {
+        .field--name-field-titulo-bold {
+            @media only screen and (max-width: $mobile) {
+                //	padding-top: 40px;
+            }
+        }
+    }
+    &.page-curso-basico-de-formacion-musical,
+    &.page-curso-basico-de-ingenierias-y-ciencias-ambientales {
+        .main-image {
+            .text-content {
+                @media only screen and (min-width: $mobile) and (max-width: $tablet) {
+                    width: 295px;
+                }
+            }
+        }
+        .field--name-field-titulo-bold {
+            // Evita que se desborde el texto que dice: "Curso Básico de"
+            @media only screen and (max-width: 365px) {
+                max-width: 75%;
+            }
+        }
+    }
+    &.page-audiencias {
+		/*
+        .form-inscription-process {
+            margin-top: -55px;
+            margin-bottom: 30px;
+        }
+        .layout-content--post-content {
+            @include bg-laterales(#F7F7F7,
+            100%);
+            background-color: #F7F7F7;
+        }
+        .conectandome-ubosque {
+            float: left;
+        }
+        .conectandome-ubosque .field--name-field-bocadillo {
+            font-size: 33px;
+            line-height: 40px;
+            text-align: center;
+        }*/
+    }
+    &.page-nuestro-bosque {
+        .node--type-bosque-001-main-image .field--name-field-image:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 99%;
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+    &.directivos {
+        .block.nuestro-bosque-directivos .rowsote {
+            margin: 0;
+        }
+    }
+
+	// URL: nuestro-bosque/catalogo
+    &.catalogo {
+		.layout-content {
+			margin-top: 0;
+		}
+		
+        .catalogo-editoriales .field--name-field-imagenes-multiples {
+            margin-bottom: 10px;
+        }
+        .catalogo-editoriales .field--name-node-link a {
+            font-size: 10px;
+        }
+        .wrapper-rectangulos {
+            .field--name-field-image {
+             //   top: -56px;
+            }
+            .field--name-field-title h3 {
+                font-family: $font-basel;
+                letter-spacing: 1px;
+            }
+			/*
+            &-3 {
+                .field--name-field-title {
+                    max-width: 200px;
+                }
+            }
+			
+            &-4 {
+                .field--name-field-title {
+                    max-width: 300px;
+                }
+                .field--name-field-title h3 {
+                    color: white;
+                }
+            }*/
+        }
+    }
+    &.page-faculties-doctorado {
+        .field--name-dynamic-token-fieldgroup-pregrado-boton-back {
+            display: none;
+        }
+    }
+}

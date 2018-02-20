@@ -1,0 +1,68 @@
+.path-noticias {
+	.layout-content
+	{
+		@include Mobile // Menor a: $mobile-l-width: 425px;
+		{
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
+	
+	.view-filters {
+		@include form-input-select ('.form-item-field-noticias-taxonomia-target-id', 'select');
+		@include form-select('.form-item-field-noticias-taxonomia-target-id', 'select');
+		
+		@include form-input-select ('.form-item-field-noticias-taxonomia-target-id-1', 'select');
+		@include form-select('.form-item-field-noticias-taxonomia-target-id-1', 'select');
+		padding-bottom: 30px;
+		
+
+		label {
+			@include pt_serifitalic(12px);
+		}
+
+		.js-form-type-select {
+			vertical-align: bottom;
+			margin-right: 25px;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
+			select {
+				border-width: 1px;
+				min-width: 254px;
+			}			
+		}
+
+		.form-actions {
+			display: inline-block;
+			vertical-align: bottom;
+			margin-right: 25px;
+			padding-top: 18px;
+			position: relative;
+			@include Mobile // Menor a: $mobile-l-width: 425px;
+			{
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			
+			label {
+				position: absolute;
+				top: 0;
+				left: 0;
+				text-align: center;
+				width: 100%;
+			}
+			input
+			{
+				@include Mobile // Menor a: $mobile-l-width: 425px;
+				{
+					//width: 100%;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}

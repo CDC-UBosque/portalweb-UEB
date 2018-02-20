@@ -1,0 +1,45 @@
+// URL: /bienestar-universitario/semana-induccion
+.page-node-type-pagina-basica-image-video {
+	.content.region-content {
+		position: relative;
+		height: 492px;
+	}
+
+	.region-section-1 {
+		@include grilla-3-columns-bs('.region-content', '.block');
+
+		.block {
+			box-sizing: border-box;
+			padding: 0 100px;
+		}
+	}
+
+	.region-section-2 {
+		@include block-pintadinho;
+		@include grilla-3-columns-bs('.region-content', '.block');
+
+		.block-block-content84b478cc-6461-450a-9b47-f1ebeac7c56e {
+			width: 100% !important;
+		}
+	}
+	
+	.region-section-3 {
+		@include grilla-4-columns-bs('.region-content', '.block');
+
+		.block-block-content52400d9e-ec0b-451c-8273-cb89a83749a1 {
+			width: 100% !important;
+		}
+	}
+
+	.region-section-4 {
+		@include grilla-2-columns-bs('.region-content', '.block');
+	}
+	
+	.region-section-5 {
+		
+	}
+
+	.region-section-6 {
+		@include block-pintadinho;
+	}
+}
