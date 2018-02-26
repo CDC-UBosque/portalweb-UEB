@@ -330,10 +330,10 @@
 		.node--type-eventos.node--view-mode-resumen-3 .item-month-day .item-day {
 			color: $color_gray_80;
 		}
-		.layout-content--post-content {
-			
+		.layout-content--post-content {			
 			background-color: #F9F9F9;
 			@include bg-laterales(#F9F9F9, 100%);
+			clear: left;
 			.field--name-node-title {
 				h3 {
 					@include latoregular(16px);
