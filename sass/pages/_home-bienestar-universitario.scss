@@ -560,9 +560,26 @@
     }
     #block-ebienestarnuestrosserviciosbienestaruniversitario,
     #block-disfrutaconveniosnuestrosserviciosbienestaruniversitario,
-    #block-yotambiennuestrosserviciosbienestaruniversitario {
+    #block-yotambiennuestrosserviciosbienestaruniversitario,
+    #block-nuestroequipodebienestarnuestrosserviciosbienestaruniversitario,
+    #block-seleccionesyequiposnuestrosserviciosbienestaruniversitario,
+    #block-yotambiensoydeelbosquenuestrosserviciosbienestaruniversitario {
         position: relative;
+        margin-bottom:20px;
     }
+
+    #block-nuestroequipodebienestarnuestrosserviciosbienestaruniversitario,
+    #block-seleccionesyequiposnuestrosserviciosbienestaruniversitario,
+    #block-yotambiensoydeelbosquenuestrosserviciosbienestaruniversitario{
+        .field--name-field-imagen{
+                bottom: -8px;
+        }
+        .field--name-field-subtitle-block{
+                position: relative;
+                z-index: 1;
+        }
+    }
+    
     &.page-node-type-pagina-basica-image-video .agenda-bienestar-title {
         width: 100% !important;
     }
